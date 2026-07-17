@@ -46,6 +46,14 @@ body {
   color: var(--muted);
 }
 
+/* .page--home, .page--quiz, .page--stats intentionally have no overrides here —
+   they inherit all layout from .page. .page--exam gets extra width below since
+   the exam view renders three whole subjects (including wide matrix expressions)
+   at once and benefits from more horizontal room. */
+.page--exam {
+  max-width: 900px;
+}
+
 .topic-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -98,6 +106,10 @@ body {
 .question-card__label {
   font-weight: 600;
   margin-bottom: 4px;
+}
+
+.question-card__prompt {
+  line-height: 1.5;
 }
 
 .question-card__options {
