@@ -10,6 +10,7 @@ import { determinantiSetExercises } from "./questions/determinantiSets";
 import { sistemeExercises } from "./questions/sisteme";
 import { sistemeSetExercises } from "./questions/sistemeSets";
 import { limiteExercises } from "./questions/limite";
+import { limiteSetExercises } from "./questions/limiteSets";
 import { derivateExercises } from "./questions/derivate";
 import { integraleExercises } from "./questions/integrale";
 import { algebraProblems, analysisProblems } from "./questions/problems";
@@ -48,6 +49,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...sistemeExercises,
   ...sistemeSetExercises,
   ...limiteExercises,
+  ...limiteSetExercises,
   ...derivateExercises,
   ...integraleExercises,
 ];
