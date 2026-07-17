@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import type { Problem } from "../types";
-import { ALL_EXERCISES, ALL_PROBLEMS } from "../data";
-import { buildExam, gradeExam, type ExamResult, type ExamSession } from "../lib/examBuilder";
+import { ALL_EXERCISES, ALL_PROBLEMS, examVariantByNumber } from "../data";
+import { buildExam, buildVariantExam, gradeExam, type ExamResult, type ExamSession } from "../lib/examBuilder";
 import { logAttempt } from "../lib/storage";
 import { QuestionCard } from "../components/QuestionCard";
 import { MathText } from "../components/MathText";
@@ -44,9 +44,26 @@ function ProblemBlock({
 }
 
 export function Exam() {
-  const [session] = useState<ExamSession>(() => buildExam(ALL_EXERCISES, ALL_PROBLEMS));
+  const { number } = useParams<{ number?: string }>();
+  const variant = number ? examVariantByNumber(Number(number)) : undefined;
+  const variantError = number !== undefined && !variant;
+
+  const [session] = useState<ExamSession | null>(() => {
+    if (variantError) return null;
+    if (variant) return buildVariantExam(variant, ALL_EXERCISES, ALL_PROBLEMS);
+    return buildExam(ALL_EXERCISES, ALL_PROBLEMS);
+  });
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [result, setResult] = useState<ExamResult | null>(null);
+
+  if (!session) {
+    return (
+      <div className="page">
+        <p>Varianta necunoscută.</p>
+        <Link to="/exam/variants">Alege o variantă</Link>
+      </div>
+    );
+  }
 
   const handleChange = (id: string, value: string) => {
     setAnswers((prev) => ({ ...prev, [id]: value }));
@@ -69,7 +86,7 @@ export function Exam() {
 
   return (
     <div className="page page--exam">
-      <h1>Examen simulat — Bacalaureat M2</h1>
+      <h1>{variant ? `Bacalaureat M2 — Varianta ${variant.number}` : "Examen simulat — Bacalaureat M2"}</h1>
 
       <section>
         <h2>SUBIECTUL I ({result ? result.subtotalI : 30} puncte)</h2>

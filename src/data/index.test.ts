@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { ALL_EXERCISES, ALL_PROBLEMS, TOPICS, exercisesByTopic } from "./index";
+import { ALL_EXERCISES, ALL_PROBLEMS, EXAM_VARIANTS, TOPICS, exercisesByTopic } from "./index";
+import { buildVariantExam } from "../lib/examBuilder";
 
 describe("question bank integrity", () => {
   it("has unique exercise ids", () => {
@@ -44,5 +45,35 @@ describe("question bank integrity", () => {
         expect(item.options).toContain(item.correctAnswer);
       }
     }
+  });
+});
+
+describe("exam variants", () => {
+  it("has exactly 25 numbered variants", () => {
+    expect(EXAM_VARIANTS).toHaveLength(25);
+    expect(EXAM_VARIANTS.map((v) => v.number).sort((a, b) => a - b)).toEqual(
+      Array.from({ length: 25 }, (_, i) => i + 1)
+    );
+  });
+
+  it("every variant's ids resolve against the real content pools without error", () => {
+    for (const variant of EXAM_VARIANTS) {
+      expect(() => buildVariantExam(variant, ALL_EXERCISES, ALL_PROBLEMS)).not.toThrow();
+      const session = buildVariantExam(variant, ALL_EXERCISES, ALL_PROBLEMS);
+      expect(session.subiectI).toHaveLength(5);
+      expect(session.subiectII).toHaveLength(2);
+      expect(session.subiectIII).toHaveLength(2);
+      expect(session.subiectII.every((p) => p.subject === "II")).toBe(true);
+      expect(session.subiectIII.every((p) => p.subject === "III")).toBe(true);
+    }
+  });
+
+  it("no exercise or problem id is reused across any of the 25 variants", () => {
+    const allExerciseIds = EXAM_VARIANTS.flatMap((v) => v.subiectIIds);
+    const allIIIds = EXAM_VARIANTS.flatMap((v) => v.subiectIIIds);
+    const allIIIIds = EXAM_VARIANTS.flatMap((v) => v.subiectIIIIds);
+    expect(new Set(allExerciseIds).size).toBe(allExerciseIds.length);
+    expect(new Set(allIIIds).size).toBe(allIIIds.length);
+    expect(new Set(allIIIIds).size).toBe(allIIIIds.length);
   });
 });

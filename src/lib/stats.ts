@@ -15,6 +15,26 @@ export interface OverallStats {
   byTopic: TopicStats[];
 }
 
+export interface SetScore {
+  correct: number;
+  attempted: number;
+}
+
+export function computeSetScore(attempts: Attempt[], itemIds: string[]): SetScore {
+  let correct = 0;
+  let attempted = 0;
+
+  for (const itemId of itemIds) {
+    const itemAttempts = attempts.filter((a) => a.itemId === itemId);
+    if (itemAttempts.length === 0) continue;
+    attempted += 1;
+    const latest = itemAttempts.reduce((a, b) => (a.timestamp > b.timestamp ? a : b));
+    if (latest.correct) correct += 1;
+  }
+
+  return { correct, attempted };
+}
+
 export function computeStats(attempts: Attempt[], topics: Topic[]): OverallStats {
   const total = attempts.length;
   const correct = attempts.filter((a) => a.correct).length;

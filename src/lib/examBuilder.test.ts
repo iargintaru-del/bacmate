@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
-import { buildExam, gradeExam } from "./examBuilder";
-import type { Exercise, Problem } from "../types";
+import { buildExam, buildVariantExam, gradeExam } from "./examBuilder";
+import type { ExamVariant, Exercise, Problem } from "../types";
 
 function makeExercise(id: string): Exercise {
   return {
@@ -50,6 +50,29 @@ describe("buildExam", () => {
     const session = buildExam(exercises, problems);
     const ids = session.subiectI.map((e) => e.id);
     expect(new Set(ids).size).toBe(ids.length);
+  });
+});
+
+describe("buildVariantExam", () => {
+  const variant: ExamVariant = {
+    number: 1,
+    subiectIIds: ["ex-0", "ex-1", "ex-2", "ex-3", "ex-4"],
+    subiectIIIds: ["p2-1", "p2-2"],
+    subiectIIIIds: ["p3-1", "p3-2"],
+  };
+
+  it("resolves the variant's fixed ids into the same exercise/problem objects every time", () => {
+    const first = buildVariantExam(variant, exercises, problems);
+    const second = buildVariantExam(variant, exercises, problems);
+    expect(first.subiectI.map((e) => e.id)).toEqual(["ex-0", "ex-1", "ex-2", "ex-3", "ex-4"]);
+    expect(first.subiectII.map((p) => p.id)).toEqual(["p2-1", "p2-2"]);
+    expect(first.subiectIII.map((p) => p.id)).toEqual(["p3-1", "p3-2"]);
+    expect(second).toEqual(first);
+  });
+
+  it("throws a descriptive error when an id is missing from the pool", () => {
+    const brokenVariant: ExamVariant = { ...variant, subiectIIds: ["ex-0", "ex-1", "ex-2", "ex-3", "missing-id"] };
+    expect(() => buildVariantExam(brokenVariant, exercises, problems)).toThrow(/missing-id/);
   });
 });
 
