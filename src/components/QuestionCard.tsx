@@ -18,8 +18,8 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
   const [practiceSubmitted, setPracticeSubmitted] = useState(false);
   const [practiceCorrect, setPracticeCorrect] = useState(false);
 
-  const currentValue = mode === "collect" ? value ?? "" : practiceValue;
-  const isLocked = mode === "practice" && practiceSubmitted;
+  const currentValue = mode === "practice" ? practiceValue : value ?? "";
+  const isLocked = mode === "review" || (mode === "practice" && practiceSubmitted);
 
   const submitPractice = (answer: string) => {
     if (isLocked) return;
