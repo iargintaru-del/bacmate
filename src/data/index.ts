@@ -1,5 +1,6 @@
 import type { Exercise, Problem, Topic } from "../types";
 import { numereComplexeExercises } from "./questions/numereComplexe";
+import { numereComplexeSetExercises } from "./questions/numereComplexeSets";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { matriceExercises } from "./questions/matrice";
 import { determinantiExercises } from "./questions/determinanti";
@@ -33,6 +34,7 @@ export const TOPIC_LABELS: Record<Topic, string> = {
 
 export const ALL_EXERCISES: Exercise[] = [
   ...numereComplexeExercises,
+  ...numereComplexeSetExercises,
   ...combinatoricaExercises,
   ...matriceExercises,
   ...determinantiExercises,
@@ -46,4 +48,18 @@ export const ALL_PROBLEMS: Problem[] = [...algebraProblems, ...analysisProblems]
 
 export function exercisesByTopic(topic: Topic): Exercise[] {
   return ALL_EXERCISES.filter((exercise) => exercise.topic === topic);
+}
+
+export function setNumbersForTopic(topic: Topic): number[] {
+  const sets = new Set<number>();
+  for (const exercise of ALL_EXERCISES) {
+    if (exercise.topic === topic && exercise.set !== undefined) {
+      sets.add(exercise.set);
+    }
+  }
+  return [...sets].sort((a, b) => a - b);
+}
+
+export function exercisesForSet(topic: Topic, setNumber: number): Exercise[] {
+  return ALL_EXERCISES.filter((exercise) => exercise.topic === topic && exercise.set === setNumber);
 }
