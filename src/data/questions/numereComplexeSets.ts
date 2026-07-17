@@ -10,6 +10,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z_1+z_2$ pentru $z_1=2+3i$, $z_2=1-4i$.",
     correctAnswer: "3-i",
+    acceptedAnswers: ["-i+3"],
     explanation: "$(2+3i)+(1-4i) = 3 - i$.",
   },
   {
@@ -20,6 +21,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z_1-z_2$ pentru $z_1=5-2i$, $z_2=-3+i$.",
     correctAnswer: "8-3i",
+    acceptedAnswers: ["-3i+8"],
     explanation: "$(5-2i)-(-3+i) = 8 - 3i$.",
   },
   {
@@ -41,6 +43,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $(3+2i)(1+i)$.",
     correctAnswer: "1+5i",
+    acceptedAnswers: ["5i+1"],
     explanation: "$(3+2i)(1+i) = 3 + 3i + 2i + 2i^2 = 3 + 5i - 2 = 1 + 5i$.",
   },
   {
@@ -51,6 +54,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\dfrac{3+i}{1-i}$.",
     correctAnswer: "1+2i",
+    acceptedAnswers: ["2i+1"],
     explanation: "Amplificăm cu $1+i$: $\\dfrac{(3+i)(1+i)}{(1-i)(1+i)} = \\dfrac{2+4i}{2} = 1+2i$.",
   },
   {
@@ -72,6 +76,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $i(2+3i)$.",
     correctAnswer: "-3+2i",
+    acceptedAnswers: ["2i-3"],
     explanation: "$i(2+3i) = 2i + 3i^2 = 2i - 3 = -3 + 2i$.",
   },
   {
@@ -189,6 +194,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\overline{z^2}$ pentru $z=2-i$.",
     correctAnswer: "3+4i",
+    acceptedAnswers: ["4i+3"],
     explanation: "$z^2=(2-i)^2=3-4i$, deci $\\overline{z^2}=3+4i$.",
   },
   {
@@ -294,6 +300,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z^3$ pentru $z=1+i$.",
     correctAnswer: "-2+2i",
+    acceptedAnswers: ["2i-2"],
     explanation: "$z^2=2i$, deci $z^3=2i(1+i)=2i+2i^2=-2+2i$.",
   },
   {
@@ -348,6 +355,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați $z^2-2z+5=0$ și determinați soluția cu parte imaginară pozitivă.",
     correctAnswer: "1+2i",
+    acceptedAnswers: ["2i+1"],
     explanation: "$\\Delta=4-20=-16$, $z=\\dfrac{2\\pm4i}{2}=1\\pm2i$.",
   },
   {
@@ -507,6 +515,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați afixul vectorului $\\overrightarrow{AB}$ pentru $A(2,1)$ și $B(5,4)$.",
     correctAnswer: "3+3i",
+    acceptedAnswers: ["3i+3"],
     explanation: "Afixul vectorului este $z_B-z_A=(5+4i)-(2+i)=3+3i$.",
   },
   {
@@ -994,6 +1003,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați afixul centrului de greutate al triunghiului cu afixele $z_1=0$, $z_2=6$, $z_3=3i$.",
     correctAnswer: "2+i",
+    acceptedAnswers: ["i+2"],
     explanation: "Afixul centrului de greutate este $\\dfrac{z_1+z_2+z_3}{3}=\\dfrac{0+6+3i}{3}=2+i$.",
   },
 
@@ -1006,6 +1016,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z_1+z_2$ pentru $z_1=4-3i$, $z_2=-1+5i$.",
     correctAnswer: "3+2i",
+    acceptedAnswers: ["2i+3"],
     explanation: "$(4-3i)+(-1+5i)=3+2i$.",
   },
   {
