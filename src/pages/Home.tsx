@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useMemo } from "react";
-import { TOPICS, TOPIC_LABELS } from "../data";
+import { TOPICS, TOPIC_LABELS, setNumbersForTopic } from "../data";
 import { getAttempts } from "../lib/storage";
 import { computeStats } from "../lib/stats";
 import { TopicCard } from "../components/TopicCard";
@@ -30,6 +30,7 @@ export function Home() {
               label={TOPIC_LABELS[topic]}
               accuracy={topicStats.accuracy}
               attempted={topicStats.total}
+              hasSets={setNumbersForTopic(topic).length > 0}
             />
           );
         })}

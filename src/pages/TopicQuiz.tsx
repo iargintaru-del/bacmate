@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import type { Topic } from "../types";
-import { TOPIC_LABELS, exercisesByTopic } from "../data";
+import { TOPIC_LABELS, exercisesByTopic, exercisesForSet } from "../data";
 import { logAttempt } from "../lib/storage";
 import { QuestionCard } from "../components/QuestionCard";
 
@@ -10,8 +10,13 @@ function shuffle<T>(items: T[]): T[] {
 }
 
 export function TopicQuiz() {
-  const { topic } = useParams<{ topic: Topic }>();
-  const exercises = useMemo(() => (topic ? shuffle(exercisesByTopic(topic)) : []), [topic]);
+  const { topic, setNumber } = useParams<{ topic: Topic; setNumber?: string }>();
+  const isSetMode = setNumber !== undefined;
+  const exercises = useMemo(() => {
+    if (!topic) return [];
+    if (isSetMode) return exercisesForSet(topic, Number(setNumber));
+    return shuffle(exercisesByTopic(topic));
+  }, [topic, setNumber, isSetMode]);
   const [index, setIndex] = useState(0);
   const [correctCount, setCorrectCount] = useState(0);
   const [currentAnswered, setCurrentAnswered] = useState(false);
@@ -25,13 +30,20 @@ export function TopicQuiz() {
     );
   }
 
+  const heading = isSetMode ? `${TOPIC_LABELS[topic]} — Setul ${setNumber}` : TOPIC_LABELS[topic];
+
   if (index >= exercises.length) {
     return (
       <div className="page page--quiz">
-        <h1>{TOPIC_LABELS[topic]}</h1>
+        <h1>{heading}</h1>
         <p>
           Ai terminat! Scor: {correctCount}/{exercises.length}.
         </p>
+        {isSetMode && (
+          <p>
+            <Link to={`/quiz/${topic}/sets`}>Alege alt set</Link>
+          </p>
+        )}
         <Link to="/">Înapoi acasă</Link>
       </div>
     );
@@ -52,7 +64,7 @@ export function TopicQuiz() {
 
   return (
     <div className="page page--quiz">
-      <h1>{TOPIC_LABELS[topic]}</h1>
+      <h1>{heading}</h1>
       <p className="page__progress">
         Întrebarea {index + 1} din {exercises.length}
       </p>

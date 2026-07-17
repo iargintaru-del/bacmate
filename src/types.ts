@@ -23,6 +23,7 @@ export interface GradableItem {
 
 export interface Exercise extends GradableItem {
   topic: Topic;
+  set?: number;
 }
 
 export interface Subpoint extends GradableItem {

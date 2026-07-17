@@ -46,10 +46,10 @@ body {
   color: var(--muted);
 }
 
-/* .page--home, .page--quiz, .page--stats intentionally have no overrides here —
-   they inherit all layout from .page. .page--exam gets extra width below since
-   the exam view renders three whole subjects (including wide matrix expressions)
-   at once and benefits from more horizontal room. */
+/* .page--home, .page--quiz, .page--stats, .page--sets intentionally have no
+   overrides here — they inherit all layout from .page. .page--exam gets extra
+   width below since the exam view renders three whole subjects (including wide
+   matrix expressions) at once and benefits from more horizontal room. */
 .page--exam {
   max-width: 900px;
 }
@@ -62,11 +62,14 @@ body {
 }
 
 .topic-card {
-  display: block;
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--card-bg);
+}
+
+.topic-card__link {
+  display: block;
   color: inherit;
   text-decoration: none;
 }
@@ -79,6 +82,33 @@ body {
 .topic-card__stats {
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.topic-card__sets-link {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.set-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  margin: 24px 0;
+}
+
+.set-card {
+  display: block;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--card-bg);
+  color: inherit;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
 }
 
 .exam-cta,
