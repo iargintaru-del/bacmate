@@ -36,9 +36,14 @@ export function Home() {
         })}
       </div>
 
-      <Link to="/exam" className="exam-cta">
-        Susține un examen simulat (Subiectul I, II, III)
-      </Link>
+      <div className="exam-cta-row">
+        <Link to="/exam" className="exam-cta">
+          Examen aleatoriu (Subiectul I, II, III)
+        </Link>
+        <Link to="/exam/variants" className="exam-cta exam-cta--secondary">
+          Alege o variantă (1-25)
+        </Link>
+      </div>
     </div>
   );
 }
