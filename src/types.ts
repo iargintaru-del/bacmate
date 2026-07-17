@@ -37,3 +37,10 @@ export interface Problem {
   statement: string;
   subpoints: Subpoint[];
 }
+
+export interface ExamVariant {
+  number: number;
+  subiectIIds: [string, string, string, string, string];
+  subiectIIIds: [string, string];
+  subiectIIIIds: [string, string];
+}

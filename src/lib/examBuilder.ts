@@ -1,4 +1,4 @@
-import type { Exercise, Problem } from "../types";
+import type { Exercise, ExamVariant, Problem } from "../types";
 import { isCorrectAnswer } from "./grading";
 
 export interface ExamSession {
@@ -38,6 +38,25 @@ export function buildExam(exercises: Exercise[], problems: Problem[]): ExamSessi
     subiectI: pickRandom(exercises, 5),
     subiectII: pickRandom(algebraProblems, 2),
     subiectIII: pickRandom(analysisProblems, 2),
+  };
+}
+
+export function buildVariantExam(variant: ExamVariant, exercises: Exercise[], problems: Problem[]): ExamSession {
+  const findExercise = (id: string): Exercise => {
+    const exercise = exercises.find((candidate) => candidate.id === id);
+    if (!exercise) throw new Error(`Varianta ${variant.number}: exercițiul "${id}" nu a fost găsit.`);
+    return exercise;
+  };
+  const findProblem = (id: string): Problem => {
+    const problem = problems.find((candidate) => candidate.id === id);
+    if (!problem) throw new Error(`Varianta ${variant.number}: problema "${id}" nu a fost găsită.`);
+    return problem;
+  };
+
+  return {
+    subiectI: variant.subiectIIds.map(findExercise),
+    subiectII: variant.subiectIIIds.map(findProblem),
+    subiectIII: variant.subiectIIIIds.map(findProblem),
   };
 }
 
