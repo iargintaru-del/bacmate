@@ -725,7 +725,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-1",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-1-a",
@@ -734,7 +734,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "4",
-        explanation: "$A^2 = \begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
+        explanation: "$A^2 = \\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
       },
       {
         id: "ea-mt-1-b",
@@ -742,9 +742,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 2 & 4 \\ 0 & 0 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 4 \\\\ 0 & 0 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-1-c",
@@ -761,7 +761,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-2",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-2-a",
@@ -770,7 +770,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "4",
-        explanation: "$A^2 = \begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
+        explanation: "$A^2 = \\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
       },
       {
         id: "ea-mt-2-b",
@@ -778,9 +778,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}$", "$\begin{pmatrix} 4 & 0 \\ 4 & 4 \end{pmatrix}$", "$\begin{pmatrix} 2 & 1 \\ 0 & 2 \end{pmatrix}$", "$\begin{pmatrix} 5 & 4 \\ 0 & 3 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}$", "$\\begin{pmatrix} 5 & 4 \\\\ 0 & 3 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-2-c",
@@ -797,7 +797,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-3",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 1 & 3 \\\\ 0 & 1 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-3-a",
@@ -806,7 +806,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "6",
-        explanation: "$A^2 = \begin{pmatrix} 1 & 6 \\ 0 & 1 \end{pmatrix}$, deci elementul $(1,2)$ este $6$.",
+        explanation: "$A^2 = \\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $6$.",
       },
       {
         id: "ea-mt-3-b",
@@ -814,9 +814,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 1 & 6 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 0 \\ 6 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 3 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 2 & 6 \\ 0 & 0 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 1 & 6 \\ 0 & 1 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 1 & 6 \\ 0 & 1 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 6 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 3 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 6 \\\\ 0 & 0 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-3-c",
@@ -833,7 +833,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-4",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 3 & 1 \\ 0 & 3 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 3 & 1 \\\\ 0 & 3 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-4-a",
@@ -842,7 +842,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "6",
-        explanation: "$A^2 = \begin{pmatrix} 9 & 6 \\ 0 & 9 \end{pmatrix}$, deci elementul $(1,2)$ este $6$.",
+        explanation: "$A^2 = \\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$, deci elementul $(1,2)$ este $6$.",
       },
       {
         id: "ea-mt-4-b",
@@ -850,9 +850,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 9 & 6 \\ 0 & 9 \end{pmatrix}$", "$\begin{pmatrix} 9 & 0 \\ 6 & 9 \end{pmatrix}$", "$\begin{pmatrix} 3 & 1 \\ 0 & 3 \end{pmatrix}$", "$\begin{pmatrix} 10 & 6 \\ 0 & 8 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 9 & 6 \\ 0 & 9 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 9 & 6 \\ 0 & 9 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$", "$\\begin{pmatrix} 9 & 0 \\\\ 6 & 9 \\end{pmatrix}$", "$\\begin{pmatrix} 3 & 1 \\\\ 0 & 3 \\end{pmatrix}$", "$\\begin{pmatrix} 10 & 6 \\\\ 0 & 8 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-4-c",
@@ -869,7 +869,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-5",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-5-a",
@@ -878,7 +878,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "2",
-        explanation: "$A^2 = \begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$, deci elementul $(1,2)$ este $2$.",
+        explanation: "$A^2 = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $2$.",
       },
       {
         id: "ea-mt-5-b",
@@ -886,9 +886,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 1 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 2 & 2 \\ 0 & 0 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 1 & 2 \\ 0 & 1 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 2 \\\\ 0 & 0 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-5-c",
@@ -905,7 +905,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-6",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 2 & 0 \\ 1 & 2 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 2 & 0 \\\\ 1 & 2 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-6-a",
@@ -914,7 +914,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "0",
-        explanation: "$A^2 = \begin{pmatrix} 4 & 0 \\ 4 & 4 \end{pmatrix}$, deci elementul $(1,2)$ este $0$.",
+        explanation: "$A^2 = \\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ este $0$.",
       },
       {
         id: "ea-mt-6-b",
@@ -922,9 +922,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 4 & 0 \\ 4 & 4 \end{pmatrix}$", "$\begin{pmatrix} 4 & 4 \\ 0 & 4 \end{pmatrix}$", "$\begin{pmatrix} 2 & 0 \\ 1 & 2 \end{pmatrix}$", "$\begin{pmatrix} 5 & 0 \\ 4 & 3 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 4 & 0 \\ 4 & 4 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 4 & 0 \\ 4 & 4 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 0 \\\\ 1 & 2 \\end{pmatrix}$", "$\\begin{pmatrix} 5 & 0 \\\\ 4 & 3 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-6-c",
@@ -941,7 +941,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-7",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-7-a",
@@ -950,7 +950,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "0",
-        explanation: "$A^2 = \begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}$, deci elementul $(1,2)$ este $0$.",
+        explanation: "$A^2 = \\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $0$.",
       },
       {
         id: "ea-mt-7-b",
@@ -958,9 +958,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 4 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 0 \\ 2 & 1 \end{pmatrix}$", "$\begin{pmatrix} 2 & 0 \\ 4 & 0 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 1 & 0 \\ 4 & 1 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 0 \\\\ 4 & 0 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-7-c",
@@ -977,7 +977,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-8",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 3 & 2 \\ 0 & 1 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 3 & 2 \\\\ 0 & 1 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-8-a",
@@ -986,7 +986,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "8",
-        explanation: "$A^2 = \begin{pmatrix} 9 & 8 \\ 0 & 1 \end{pmatrix}$, deci elementul $(1,2)$ este $8$.",
+        explanation: "$A^2 = \\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $8$.",
       },
       {
         id: "ea-mt-8-b",
@@ -994,9 +994,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 9 & 8 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 9 & 0 \\ 8 & 1 \end{pmatrix}$", "$\begin{pmatrix} 3 & 2 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 10 & 8 \\ 0 & 0 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 9 & 8 \\ 0 & 1 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 9 & 8 \\ 0 & 1 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 9 & 0 \\\\ 8 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 3 & 2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 10 & 8 \\\\ 0 & 0 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-8-c",
@@ -1013,7 +1013,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-9",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 1 & 4 \\ 0 & 2 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 1 & 4 \\\\ 0 & 2 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-9-a",
@@ -1022,7 +1022,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "12",
-        explanation: "$A^2 = \begin{pmatrix} 1 & 12 \\ 0 & 4 \end{pmatrix}$, deci elementul $(1,2)$ este $12$.",
+        explanation: "$A^2 = \\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ este $12$.",
       },
       {
         id: "ea-mt-9-b",
@@ -1030,9 +1030,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 1 & 12 \\ 0 & 4 \end{pmatrix}$", "$\begin{pmatrix} 1 & 0 \\ 12 & 4 \end{pmatrix}$", "$\begin{pmatrix} 1 & 4 \\ 0 & 2 \end{pmatrix}$", "$\begin{pmatrix} 2 & 12 \\ 0 & 3 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 1 & 12 \\ 0 & 4 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 1 & 12 \\ 0 & 4 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 12 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 2 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 12 \\\\ 0 & 3 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-9-c",
@@ -1049,7 +1049,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-mt-10",
     topic: "matrice",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} 1 & -1 \\ 0 & 1 \end{pmatrix}.$$",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \\end{pmatrix}.$$",
     subpoints: [
       {
         id: "ea-mt-10-a",
@@ -1058,7 +1058,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "-2",
-        explanation: "$A^2 = \begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix}$, deci elementul $(1,2)$ este $-2$.",
+        explanation: "$A^2 = \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $-2$.",
       },
       {
         id: "ea-mt-10-b",
@@ -1066,9 +1066,9 @@ export const examAlgebraProblems: Problem[] = [
         type: "mcq",
         points: 5,
         prompt: "Matricea $A^2$ este:",
-        options: ["$\begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & 0 \\ -2 & 1 \end{pmatrix}$", "$\begin{pmatrix} 1 & -1 \\ 0 & 1 \end{pmatrix}$", "$\begin{pmatrix} 2 & -2 \\ 0 & 0 \end{pmatrix}$"],
-        correctAnswer: "$\begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\begin{pmatrix} 1 & -2 \\ 0 & 1 \end{pmatrix}$.",
+        options: ["$\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ -2 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & -2 \\\\ 0 & 0 \\end{pmatrix}$"],
+        correctAnswer: "$\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$",
+        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$.",
       },
       {
         id: "ea-mt-10-c",
@@ -1085,7 +1085,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-1",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 1 \\ 2 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 1 \\\\ 2 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-1-a",
@@ -1122,7 +1122,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-2",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 1 \\ 3 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 1 \\\\ 3 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-2-a",
@@ -1159,7 +1159,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-3",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 2 \\ 3 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 2 \\\\ 3 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-3-a",
@@ -1196,7 +1196,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-4",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 1 \\ 4 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 1 \\\\ 4 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-4-a",
@@ -1232,7 +1232,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-5",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 3 \\ 4 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 3 \\\\ 4 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-5-a",
@@ -1260,8 +1260,8 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(12)",
-        acceptedAnswers: ["\u221a12", "3.46", "3,46"],
-        explanation: "$m^2 - 12 = 0 \\Rightarrow m = \\pm\\sqrt{12}$. Soluția pozitivă este $\\sqrt{12}$.",
+        acceptedAnswers: ["\u221a12", "3.46", "3,46", "2sqrt(3)", "2\u221a3"],
+        explanation: "$m^2 - 12 = 0 \\Rightarrow m = \\pm\\sqrt{12}$. Soluția pozitivă este $\\sqrt{12}$ $= 2\\sqrt{3}$.",
       },
     ],
   },
@@ -1269,7 +1269,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-6",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 2 \\ 5 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 2 \\\\ 5 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-6-a",
@@ -1306,7 +1306,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-7",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 1 \\ 6 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 1 \\\\ 6 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-7-a",
@@ -1343,7 +1343,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-8",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 4 \\ 5 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 4 \\\\ 5 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-8-a",
@@ -1371,8 +1371,8 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(20)",
-        acceptedAnswers: ["\u221a20", "4.47", "4,47"],
-        explanation: "$m^2 - 20 = 0 \\Rightarrow m = \\pm\\sqrt{20}$. Soluția pozitivă este $\\sqrt{20}$.",
+        acceptedAnswers: ["\u221a20", "4.47", "4,47", "2sqrt(5)", "2\u221a5"],
+        explanation: "$m^2 - 20 = 0 \\Rightarrow m = \\pm\\sqrt{20}$. Soluția pozitivă este $\\sqrt{20}$ $= 2\\sqrt{5}$.",
       },
     ],
   },
@@ -1380,7 +1380,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-9",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 1 \\ 9 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 1 \\\\ 9 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-9-a",
@@ -1416,7 +1416,7 @@ export const examAlgebraProblems: Problem[] = [
     id: "ea-dt-10",
     topic: "determinanti",
     subject: "II",
-    statement: "Se consideră matricea $$A = \begin{pmatrix} m & 2 \\ 7 & m \end{pmatrix},$$ unde $m$ este un parametru real.",
+    statement: "Se consideră matricea $$A = \\begin{pmatrix} m & 2 \\\\ 7 & m \\end{pmatrix},$$ unde $m$ este un parametru real.",
     subpoints: [
       {
         id: "ea-dt-10-a",
