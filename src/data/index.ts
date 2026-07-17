@@ -25,7 +25,7 @@ export const TOPICS: Topic[] = [
 export const TOPIC_LABELS: Record<Topic, string> = {
   "numere-complexe": "Numere complexe",
   combinatorica: "Combinatorică",
-  matrice: "Matrice",
+  matrice: "Matrici",
   determinanti: "Determinanți",
   sisteme: "Sisteme de ecuații liniare",
   limite: "Limite de funcții",
