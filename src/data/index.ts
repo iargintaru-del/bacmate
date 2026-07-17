@@ -2,6 +2,7 @@ import type { Exercise, Problem, Topic } from "../types";
 import { numereComplexeExercises } from "./questions/numereComplexe";
 import { numereComplexeSetExercises } from "./questions/numereComplexeSets";
 import { combinatoricaExercises } from "./questions/combinatorica";
+import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
 import { determinantiExercises } from "./questions/determinanti";
 import { sistemeExercises } from "./questions/sisteme";
@@ -24,7 +25,7 @@ export const TOPICS: Topic[] = [
 export const TOPIC_LABELS: Record<Topic, string> = {
   "numere-complexe": "Numere complexe",
   combinatorica: "Combinatorică",
-  matrice: "Matrice",
+  matrice: "Matrici",
   determinanti: "Determinanți",
   sisteme: "Sisteme de ecuații liniare",
   limite: "Limite de funcții",
@@ -36,6 +37,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...numereComplexeExercises,
   ...numereComplexeSetExercises,
   ...combinatoricaExercises,
+  ...combinatoricaSetExercises,
   ...matriceExercises,
   ...determinantiExercises,
   ...sistemeExercises,

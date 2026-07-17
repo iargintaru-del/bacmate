@@ -1,11 +1,21 @@
 import { Link } from "react-router-dom";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { TOPICS, TOPIC_LABELS } from "../data";
-import { getAttempts } from "../lib/storage";
+import { getAttempts, clearAttempts } from "../lib/storage";
 import { computeStats } from "../lib/stats";
 
 export function Stats() {
-  const stats = useMemo(() => computeStats(getAttempts(), TOPICS), []);
+  const [attempts, setAttempts] = useState(() => getAttempts());
+  const stats = useMemo(() => computeStats(attempts, TOPICS), [attempts]);
+
+  const handleReset = () => {
+    const confirmed = window.confirm(
+      "Ești sigur că vrei să ștergi tot progresul salvat? Această acțiune nu poate fi anulată."
+    );
+    if (!confirmed) return;
+    clearAttempts();
+    setAttempts([]);
+  };
 
   return (
     <div className="page page--stats">
@@ -36,6 +46,11 @@ export function Stats() {
             ))}
           </ul>
         </>
+      )}
+      {stats.total > 0 && (
+        <button type="button" className="stats-reset" onClick={handleReset}>
+          Resetează statisticile
+        </button>
       )}
       <Link to="/">Înapoi acasă</Link>
     </div>

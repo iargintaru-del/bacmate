@@ -125,6 +125,18 @@ body {
   cursor: pointer;
 }
 
+.stats-reset {
+  display: block;
+  margin-top: 24px;
+  padding: 10px 18px;
+  background: transparent;
+  color: var(--incorrect);
+  border: 1px solid var(--incorrect);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .question-card {
   border: 1px solid var(--border);
   border-radius: 10px;
