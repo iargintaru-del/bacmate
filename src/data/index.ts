@@ -17,6 +17,7 @@ import { integraleExercises } from "./questions/integrale";
 import { integraleSetExercises } from "./questions/integraleSets";
 import { algebraProblems, analysisProblems } from "./questions/problems";
 import { examAlgebraProblems } from "./questions/examProblemsAlgebra";
+import { examAnalysisProblems } from "./questions/examProblemsAnalysis";
 
 export const TOPICS: Topic[] = [
   "numere-complexe",
@@ -59,7 +60,12 @@ export const ALL_EXERCISES: Exercise[] = [
   ...integraleSetExercises,
 ];
 
-export const ALL_PROBLEMS: Problem[] = [...algebraProblems, ...analysisProblems, ...examAlgebraProblems];
+export const ALL_PROBLEMS: Problem[] = [
+  ...algebraProblems,
+  ...analysisProblems,
+  ...examAlgebraProblems,
+  ...examAnalysisProblems,
+];
 
 export function exercisesByTopic(topic: Topic): Exercise[] {
   return ALL_EXERCISES.filter((exercise) => exercise.topic === topic);
