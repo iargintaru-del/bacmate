@@ -554,7 +554,7 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 2 \\\\ 3 & x \\end{pmatrix}=0$ și determinați soluția pozitivă.",
     correctAnswer: "sqrt(6)",
-    acceptedAnswers: ["√6", "2.44", "2,44"],
+    acceptedAnswers: ["√6", "2.45", "2,45", "2.44", "2,44"],
     explanation: "$x^2-6=0\\Rightarrow x=\\pm\\sqrt6$, soluția pozitivă este $\\sqrt6$.",
   },
   {
