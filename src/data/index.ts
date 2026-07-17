@@ -14,6 +14,7 @@ import { limiteSetExercises } from "./questions/limiteSets";
 import { derivateExercises } from "./questions/derivate";
 import { derivateSetExercises } from "./questions/derivateSets";
 import { integraleExercises } from "./questions/integrale";
+import { integraleSetExercises } from "./questions/integraleSets";
 import { algebraProblems, analysisProblems } from "./questions/problems";
 
 export const TOPICS: Topic[] = [
@@ -54,6 +55,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...derivateExercises,
   ...derivateSetExercises,
   ...integraleExercises,
+  ...integraleSetExercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [...algebraProblems, ...analysisProblems];
