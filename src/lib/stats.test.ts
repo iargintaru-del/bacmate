@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { computeStats } from "./stats";
+import { computeStats, computeSetScore } from "./stats";
 import type { Attempt } from "./storage";
 import type { Topic } from "../types";
 
@@ -32,5 +32,34 @@ describe("computeStats", () => {
 
     const derivate = result.byTopic.find((t) => t.topic === "derivate")!;
     expect(derivate).toEqual({ topic: "derivate", total: 1, correct: 1, accuracy: 1 });
+  });
+});
+
+describe("computeSetScore", () => {
+  const itemIds = ["a", "b", "c"];
+
+  it("reports zero attempted and zero correct when the set has never been attempted", () => {
+    const result = computeSetScore([], itemIds);
+    expect(result).toEqual({ correct: 0, attempted: 0 });
+  });
+
+  it("counts each item's most recent attempt only, ignoring earlier retries", () => {
+    const attempts: Attempt[] = [
+      { itemId: "a", topic: "limite", correct: false, timestamp: 1 },
+      { itemId: "a", topic: "limite", correct: true, timestamp: 2 }, // retried and fixed
+      { itemId: "b", topic: "limite", correct: true, timestamp: 1 },
+      { itemId: "b", topic: "limite", correct: false, timestamp: 2 }, // retried and got wrong
+    ];
+    const result = computeSetScore(attempts, itemIds);
+    expect(result).toEqual({ correct: 1, attempted: 2 }); // a=correct(latest), b=incorrect(latest), c=untouched
+  });
+
+  it("ignores attempts for items outside the given set", () => {
+    const attempts: Attempt[] = [
+      { itemId: "a", topic: "limite", correct: true, timestamp: 1 },
+      { itemId: "not-in-set", topic: "limite", correct: true, timestamp: 1 },
+    ];
+    const result = computeSetScore(attempts, itemIds);
+    expect(result).toEqual({ correct: 1, attempted: 1 });
   });
 });

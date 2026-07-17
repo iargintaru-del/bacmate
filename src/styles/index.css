@@ -101,7 +101,10 @@ body {
 }
 
 .set-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -110,6 +113,34 @@ body {
   text-decoration: none;
   text-align: center;
   font-weight: 600;
+}
+
+.set-card__title {
+  font-weight: 600;
+}
+
+.set-card__score {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.set-card--weak {
+  border-color: var(--incorrect);
+  background: color-mix(in srgb, var(--incorrect) 12%, var(--card-bg));
+}
+
+.set-card--weak .set-card__score {
+  color: var(--incorrect);
+}
+
+.set-card--strong {
+  border-color: var(--correct);
+  background: color-mix(in srgb, var(--correct) 12%, var(--card-bg));
+}
+
+.set-card--strong .set-card__score {
+  color: var(--correct);
 }
 
 .exam-cta,
