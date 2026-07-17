@@ -12,6 +12,7 @@ import { sistemeSetExercises } from "./questions/sistemeSets";
 import { limiteExercises } from "./questions/limite";
 import { limiteSetExercises } from "./questions/limiteSets";
 import { derivateExercises } from "./questions/derivate";
+import { derivateSetExercises } from "./questions/derivateSets";
 import { integraleExercises } from "./questions/integrale";
 import { algebraProblems, analysisProblems } from "./questions/problems";
 
@@ -51,6 +52,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...limiteExercises,
   ...limiteSetExercises,
   ...derivateExercises,
+  ...derivateSetExercises,
   ...integraleExercises,
 ];
 
