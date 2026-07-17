@@ -4,6 +4,7 @@ import { numereComplexeSetExercises } from "./questions/numereComplexeSets";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
+import { matriceSetExercises } from "./questions/matriceSets";
 import { determinantiExercises } from "./questions/determinanti";
 import { sistemeExercises } from "./questions/sisteme";
 import { limiteExercises } from "./questions/limite";
@@ -39,6 +40,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...combinatoricaExercises,
   ...combinatoricaSetExercises,
   ...matriceExercises,
+  ...matriceSetExercises,
   ...determinantiExercises,
   ...sistemeExercises,
   ...limiteExercises,
