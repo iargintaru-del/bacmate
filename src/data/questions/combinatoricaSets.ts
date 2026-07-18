@@ -10,7 +10,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $4!$.",
     correctAnswer: "24",
-    explanation: "$4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24$.",
+    explanation: [
+      "Factorialul lui $n$ este produsul numerelor naturale de la $1$ la $n$: $n!=1\\cdot2\\cdots n$.",
+      "Pentru $n=4$: $4!=4\\cdot3\\cdot2\\cdot1$.",
+      "Calculăm produsul: $4\\cdot3=12$, $12\\cdot2=24$, $24\\cdot1=24$.",
+      "Rezultă $4!=24$.",
+    ],
   },
   {
     id: "cb-s1-2",
@@ -21,7 +26,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $6!$.",
     options: ["$720$", "$120$", "$360$", "$5040$"],
     correctAnswer: "$720$",
-    explanation: "$6! = 6 \\cdot 5 \\cdot 4 \\cdot 3 \\cdot 2 \\cdot 1 = 720$.",
+    explanation: [
+      "Factorialul lui $n$ este produsul numerelor naturale de la $1$ la $n$: $n!=1\\cdot2\\cdots n$.",
+      "Pentru $n=6$: $6!=6\\cdot5\\cdot4\\cdot3\\cdot2\\cdot1$.",
+      "Calculăm produsul: $6\\cdot5=30$, $30\\cdot4=120$, $120\\cdot3=360$, $360\\cdot2=720$.",
+      "Rezultă $6!=720$.",
+    ],
   },
   {
     id: "cb-s1-3",
@@ -31,7 +41,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $0!$.",
     correctAnswer: "1",
-    explanation: "Prin convenție, $0! = 1$.",
+    explanation: [
+      "Prin convenție, $0!=1$.",
+      "Această valoare este stabilită astfel încât formulele de combinatorică ce implică factoriali (permutări, aranjamente, combinări) să rămână valabile și pentru $n=0$.",
+      "Rezultă $0!=1$.",
+    ],
   },
   {
     id: "cb-s1-4",
@@ -41,7 +55,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\dfrac{6!}{4!}$.",
     correctAnswer: "30",
-    explanation: "$\\dfrac{6!}{4!} = 6 \\cdot 5 = 30$.",
+    explanation: [
+      "Scriem $6! = 6\\cdot5\\cdot4!$, pentru a simplifica cu $4!$ de la numitor.",
+      "Înlocuim: $\\dfrac{6!}{4!} = \\dfrac{6\\cdot5\\cdot4!}{4!}=6\\cdot5$.",
+      "Calculăm: $6\\cdot5=30$.",
+      "Rezultă $\\dfrac{6!}{4!}=30$.",
+    ],
   },
   {
     id: "cb-s1-5",
@@ -52,7 +71,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $\\dfrac{7!}{5! \\cdot 2!}$.",
     options: ["$21$", "$42$", "$7$", "$35$"],
     correctAnswer: "$21$",
-    explanation: "$\\dfrac{7!}{5! \\cdot 2!} = \\dfrac{5040}{240} = 21$.",
+    explanation: [
+      "Scriem $7!=7\\cdot6\\cdot5!$, pentru a simplifica cu $5!$ de la numitor.",
+      "Înlocuim: $\\dfrac{7!}{5! \\cdot 2!}=\\dfrac{7\\cdot6\\cdot5!}{5! \\cdot 2!}=\\dfrac{7\\cdot6}{2!}$.",
+      "Calculăm: $\\dfrac{7\\cdot6}{2}=\\dfrac{42}{2}=21$.",
+      "Rezultă $\\dfrac{7!}{5! \\cdot 2!}=21$.",
+    ],
   },
   {
     id: "cb-s1-6",
@@ -62,7 +86,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $3! + 4!$.",
     correctAnswer: "30",
-    explanation: "$3! + 4! = 6 + 24 = 30$.",
+    explanation: [
+      "Calculăm fiecare factorial separat: $3!=3\\cdot2\\cdot1=6$ și $4!=4\\cdot3\\cdot2\\cdot1=24$.",
+      "Adunăm valorile obținute: $6+24$.",
+      "Rezultă $3!+4!=30$.",
+    ],
   },
   {
     id: "cb-s1-7",
@@ -73,7 +101,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $5! - 4!$.",
     options: ["$96$", "$24$", "$120$", "$1$"],
     correctAnswer: "$96$",
-    explanation: "$5! - 4! = 120 - 24 = 96$.",
+    explanation: [
+      "Calculăm fiecare factorial separat: $5!=120$ și $4!=24$.",
+      "Scădem valorile obținute: $120-24$.",
+      "Rezultă $5!-4!=96$.",
+    ],
   },
   {
     id: "cb-s1-8",
@@ -84,7 +116,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Simplificați $\\dfrac{n!}{(n-1)!}$.",
     options: ["$n$", "$n-1$", "$n(n-1)$", "$1$"],
     correctAnswer: "$n$",
-    explanation: "$\\dfrac{n!}{(n-1)!} = n$.",
+    explanation: [
+      "Scriem $n!=n\\cdot(n-1)!$, pentru a putea simplifica cu $(n-1)!$.",
+      "Înlocuim: $\\dfrac{n!}{(n-1)!}=\\dfrac{n\\cdot(n-1)!}{(n-1)!}$.",
+      "Simplificăm cu $(n-1)!$: rezultă $n$.",
+    ],
   },
   {
     id: "cb-s1-9",
@@ -94,7 +130,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\dfrac{8!}{6!}$.",
     correctAnswer: "56",
-    explanation: "$\\dfrac{8!}{6!} = 8 \\cdot 7 = 56$.",
+    explanation: [
+      "Scriem $8!=8\\cdot7\\cdot6!$, pentru a simplifica cu $6!$ de la numitor.",
+      "Înlocuim: $\\dfrac{8!}{6!}=\\dfrac{8\\cdot7\\cdot6!}{6!}=8\\cdot7$.",
+      "Calculăm: $8\\cdot7=56$.",
+      "Rezultă $\\dfrac{8!}{6!}=56$.",
+    ],
   },
   {
     id: "cb-s1-10",
@@ -104,7 +145,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați $n \\in \\mathbb{N}$ pentru care $n! = 120$.",
     correctAnswer: "5",
-    explanation: "$5! = 120$, deci $n = 5$.",
+    explanation: [
+      "Căutăm $n \\in \\mathbb{N}$ astfel încât $n!=120$.",
+      "Calculăm factoriale succesive: $4!=24$, $5!=5\\cdot24=120$.",
+      "Cum $5!=120$, rezultă $n=5$.",
+    ],
   },
 
   // Set 2 — Permutări
@@ -116,7 +161,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte moduri există de a aranja 5 persoane într-un rând?",
     correctAnswer: "120",
-    explanation: "$P_5 = 5! = 120$.",
+    explanation: [
+      "Aranjarea a $n$ elemente distincte într-un șir se numără cu formula permutărilor: $P_n=n!$.",
+      "Aici avem $n=5$ persoane, deci numărul căutat este $P_5=5!$.",
+      "Calculăm: $5!=120$.",
+      "Rezultă $P_5=120$ moduri.",
+    ],
   },
   {
     id: "cb-s2-2",
@@ -127,7 +177,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $P_4$ (numărul de permutări a 4 elemente).",
     options: ["$24$", "$4$", "$12$", "$16$"],
     correctAnswer: "$24$",
-    explanation: "$P_4 = 4! = 24$.",
+    explanation: [
+      "Formula permutărilor este $P_n=n!$, cu $n=4$.",
+      "Înlocuim: $P_4=4!=4\\cdot3\\cdot2\\cdot1$.",
+      "Calculăm produsul: $4\\cdot3\\cdot2\\cdot1=24$.",
+      "Rezultă $P_4=24$.",
+    ],
   },
   {
     id: "cb-s2-3",
@@ -137,7 +192,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte anagrame are un cuvânt format din 6 litere distincte?",
     correctAnswer: "720",
-    explanation: "$P_6 = 6! = 720$.",
+    explanation: [
+      "Anagramele unui cuvânt cu litere distincte corespund permutărilor literelor: $P_n=n!$.",
+      "Aici avem $n=6$ litere distincte, deci numărul căutat este $P_6=6!$.",
+      "Calculăm: $6!=720$.",
+      "Rezultă $P_6=720$ anagrame.",
+    ],
   },
   {
     id: "cb-s2-4",
@@ -148,7 +208,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $P_6$.",
     options: ["$720$", "$120$", "$36$", "$6$"],
     correctAnswer: "$720$",
-    explanation: "$P_6 = 6! = 720$.",
+    explanation: [
+      "Formula permutărilor este $P_n=n!$, cu $n=6$.",
+      "Înlocuim: $P_6=6!=6\\cdot5\\cdot4\\cdot3\\cdot2\\cdot1$.",
+      "Calculăm produsul: $720$.",
+      "Rezultă $P_6=720$.",
+    ],
   },
   {
     id: "cb-s2-5",
@@ -158,7 +223,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte numere de 4 cifre distincte se pot forma folosind toate cifrele $1,2,3,4$ (fiecare o singură dată)?",
     correctAnswer: "24",
-    explanation: "$P_4 = 4! = 24$.",
+    explanation: [
+      "Cum trebuie folosite toate cele 4 cifre, fiecare o singură dată, numărul de aranjări posibile este dat de permutări: $P_n=n!$.",
+      "Aici avem $n=4$ cifre, deci numărul căutat este $P_4=4!$.",
+      "Calculăm: $4!=24$.",
+      "Rezultă $P_4=24$ numere.",
+    ],
   },
   {
     id: "cb-s2-6",
@@ -169,7 +239,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte moduri există de a așeza 3 cărți diferite pe un raft?",
     options: ["$6$", "$3$", "$9$", "$1$"],
     correctAnswer: "$6$",
-    explanation: "$P_3 = 3! = 6$.",
+    explanation: [
+      "Așezarea a $n$ obiecte distincte într-o ordine se numără cu formula permutărilor: $P_n=n!$.",
+      "Aici $n=3$, deci numărul căutat este $P_3=3!$.",
+      "Calculăm: $3!=6$.",
+      "Rezultă $P_3=6$ moduri.",
+    ],
   },
   {
     id: "cb-s2-7",
@@ -179,7 +254,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $P_7/P_5$.",
     correctAnswer: "42",
-    explanation: "$7!/5! = 7 \\cdot 6 = 42$.",
+    explanation: [
+      "Scriem $P_7=7!$ și $P_5=5!$, cu $7!=7\\cdot6\\cdot5!$.",
+      "Înlocuim: $\\dfrac{P_7}{P_5}=\\dfrac{7!}{5!}=\\dfrac{7\\cdot6\\cdot5!}{5!}=7\\cdot6$.",
+      "Calculăm: $7\\cdot6=42$.",
+      "Rezultă $P_7/P_5=42$.",
+    ],
   },
   {
     id: "cb-s2-8",
@@ -190,7 +270,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte moduri diferite de ordonare are cuvântul CARTE (5 litere distincte)?",
     options: ["$120$", "$24$", "$60$", "$720$"],
     correctAnswer: "$120$",
-    explanation: "$P_5 = 5! = 120$.",
+    explanation: [
+      "Ordonările posibile ale celor 5 litere distincte se numără cu formula permutărilor: $P_n=n!$.",
+      "Aici $n=5$, deci numărul căutat este $P_5=5!$.",
+      "Calculăm: $5!=120$.",
+      "Rezultă $P_5=120$ moduri.",
+    ],
   },
   {
     id: "cb-s2-9",
@@ -200,7 +285,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați $n \\in \\mathbb{N}^*$ pentru care $P_n = 720$.",
     correctAnswer: "6",
-    explanation: "$6! = 720$, deci $n = 6$.",
+    explanation: [
+      "Căutăm $n\\in\\mathbb{N}^*$ astfel încât $P_n=n!=720$.",
+      "Calculăm factoriale succesive: $5!=120$, $6!=6\\cdot120=720$.",
+      "Cum $6!=720$, rezultă $n=6$.",
+    ],
   },
   {
     id: "cb-s2-10",
@@ -211,7 +300,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Într-o cursă cu 6 alergători, în câte moduri diferite se poate termina cursa (fără ex-aequo)?",
     options: ["$720$", "$120$", "$36$", "$6$"],
     correctAnswer: "$720$",
-    explanation: "$P_6 = 6! = 720$.",
+    explanation: [
+      "Numărul de moduri de a ordona (termina cursa) $n$ concurenți fără ex-aequo este dat de formula permutărilor: $P_n=n!$.",
+      "Aici $n=6$, deci numărul căutat este $P_6=6!$.",
+      "Calculăm: $6!=720$.",
+      "Rezultă $P_6=720$ moduri.",
+    ],
   },
 
   // Set 3 — Aranjamente
@@ -223,7 +317,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $A_5^2$.",
     correctAnswer: "20",
-    explanation: "$A_5^2 = 5 \\cdot 4 = 20$.",
+    explanation: [
+      "Aplicăm formula aranjamentelor: $A_n^k=n(n-1)\\cdots(n-k+1)$, cu $n=5$, $k=2$.",
+      "Înlocuim: $A_5^2=5\\cdot4$.",
+      "Calculăm: $5\\cdot4=20$.",
+      "Rezultă $A_5^2=20$.",
+    ],
   },
   {
     id: "cb-s3-2",
@@ -234,7 +333,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $A_6^3$.",
     options: ["$120$", "$20$", "$720$", "$60$"],
     correctAnswer: "$120$",
-    explanation: "$A_6^3 = 6 \\cdot 5 \\cdot 4 = 120$.",
+    explanation: [
+      "Aplicăm formula aranjamentelor: $A_n^k=n(n-1)\\cdots(n-k+1)$, cu $n=6$, $k=3$.",
+      "Înlocuim: $A_6^3=6\\cdot5\\cdot4$.",
+      "Calculăm: $6\\cdot5=30$, $30\\cdot4=120$.",
+      "Rezultă $A_6^3=120$.",
+    ],
   },
   {
     id: "cb-s3-3",
@@ -244,7 +348,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte numere de 3 cifre distincte se pot forma cu cifrele $1,2,\\ldots,9$ (fiecare cifră o singură dată)?",
     correctAnswer: "504",
-    explanation: "$A_9^3 = 9 \\cdot 8 \\cdot 7 = 504$.",
+    explanation: [
+      "Cum cifrele trebuie să fie distincte și ordinea contează (formăm un număr), folosim aranjamente.",
+      "Numărul căutat este $A_9^3$, adică numărul de moduri de a alege și ordona 3 cifre din cele 9 disponibile.",
+      "Aplicăm formula: $A_9^3=9\\cdot8\\cdot7$.",
+      "Calculăm: $9\\cdot8=72$, $72\\cdot7=504$. Rezultă $A_9^3=504$.",
+    ],
   },
   {
     id: "cb-s3-4",
@@ -255,7 +364,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $A_7^2$.",
     options: ["$42$", "$21$", "$14$", "$49$"],
     correctAnswer: "$42$",
-    explanation: "$A_7^2 = 7 \\cdot 6 = 42$.",
+    explanation: [
+      "Aplicăm formula aranjamentelor: $A_n^k=n(n-1)\\cdots(n-k+1)$, cu $n=7$, $k=2$.",
+      "Înlocuim: $A_7^2=7\\cdot6$.",
+      "Calculăm: $7\\cdot6=42$.",
+      "Rezultă $A_7^2=42$.",
+    ],
   },
   {
     id: "cb-s3-5",
@@ -265,7 +379,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Într-o cursă cu 8 concurenți, în câte moduri se pot acorda locurile 1, 2 și 3 (fără ex-aequo)?",
     correctAnswer: "336",
-    explanation: "$A_8^3 = 8 \\cdot 7 \\cdot 6 = 336$.",
+    explanation: [
+      "Cum locurile 1, 2 și 3 sunt distincte și ordinea contează, folosim aranjamente.",
+      "Numărul căutat este $A_8^3$, adică numărul de moduri de a alege și ordona 3 concurenți din cei 8 disponibili.",
+      "Aplicăm formula: $A_8^3=8\\cdot7\\cdot6$.",
+      "Calculăm: $8\\cdot7=56$, $56\\cdot6=336$. Rezultă $A_8^3=336$.",
+    ],
   },
   {
     id: "cb-s3-6",
@@ -276,7 +395,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $A_4^4$.",
     options: ["$24$", "$4$", "$16$", "$12$"],
     correctAnswer: "$24$",
-    explanation: "$A_n^n = n!$, deci $A_4^4 = 4! = 24$.",
+    explanation: [
+      "Când $k=n$, formula aranjamentelor se reduce la permutări: $A_n^n=n!$.",
+      "Aici $n=4$, deci $A_4^4=4!$.",
+      "Calculăm: $4!=24$.",
+      "Rezultă $A_4^4=24$.",
+    ],
   },
   {
     id: "cb-s3-7",
@@ -286,7 +410,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Dintr-o clasă de 25 de elevi se aleg un căpitan și un secretar (roluri distincte). Câte moduri există?",
     correctAnswer: "600",
-    explanation: "$A_{25}^2 = 25 \\cdot 24 = 600$.",
+    explanation: [
+      "Cum rolurile (căpitan, secretar) sunt distincte, ordinea contează, deci folosim aranjamente.",
+      "Numărul căutat este $A_{25}^2$, adică numărul de moduri de a alege și ordona 2 persoane din cele 25 disponibile.",
+      "Aplicăm formula: $A_{25}^2=25\\cdot24$.",
+      "Calculăm: $25\\cdot24=600$. Rezultă $A_{25}^2=600$.",
+    ],
   },
   {
     id: "cb-s3-8",
@@ -297,7 +426,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $A_{10}^1$.",
     options: ["$10$", "$1$", "$100$", "$90$"],
     correctAnswer: "$10$",
-    explanation: "$A_{10}^1 = 10$.",
+    explanation: [
+      "Aplicăm formula aranjamentelor: $A_n^k=n(n-1)\\cdots(n-k+1)$, cu $n=10$, $k=1$.",
+      "Pentru $k=1$ produsul are un singur factor: $A_{10}^1=10$.",
+      "Rezultă $A_{10}^1=10$.",
+    ],
   },
   {
     id: "cb-s3-9",
@@ -308,7 +441,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Simplificați $\\dfrac{A_n^k}{A_n^{k-1}}$.",
     options: ["$n-k+1$", "$n-k$", "$n-k-1$", "$k$"],
     correctAnswer: "$n-k+1$",
-    explanation: "$A_n^k = A_n^{k-1} \\cdot (n-k+1)$, deci raportul este $n-k+1$.",
+    explanation: [
+      "Scriem aranjamentele desfășurat: $A_n^k=n(n-1)\\cdots(n-k+2)(n-k+1)$ și $A_n^{k-1}=n(n-1)\\cdots(n-k+2)$.",
+      "Observăm că $A_n^k=A_n^{k-1}\\cdot(n-k+1)$.",
+      "Împărțind, obținem $\\dfrac{A_n^k}{A_n^{k-1}}=n-k+1$.",
+    ],
   },
   {
     id: "cb-s3-10",
@@ -318,7 +455,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați $n \\in \\mathbb{N}$, $n \\ge 2$, pentru care $A_n^2 = 90$.",
     correctAnswer: "10",
-    explanation: "$n(n-1) = 90 \\Rightarrow n = 10$.",
+    explanation: [
+      "Aplicăm formula aranjamentelor: $A_n^2=n(n-1)$.",
+      "Punem condiția: $n(n-1)=90$.",
+      "Căutăm două numere naturale consecutive cu produsul 90: $10\\cdot9=90$.",
+      "Rezultă $n=10$.",
+    ],
   },
 
   // Set 4 — Combinări
@@ -330,7 +472,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $C_5^2$.",
     correctAnswer: "10",
-    explanation: "$C_5^2 = \\dfrac{5 \\cdot 4}{2} = 10$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$, cu $n=5$, $k=2$.",
+      "Înlocuim: $C_5^2=\\dfrac{5\\cdot4}{2!}$.",
+      "Calculăm: $\\dfrac{5\\cdot4}{2}=\\dfrac{20}{2}=10$.",
+      "Rezultă $C_5^2=10$.",
+    ],
   },
   {
     id: "cb-s4-2",
@@ -341,7 +488,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_6^3$.",
     options: ["$20$", "$120$", "$15$", "$10$"],
     correctAnswer: "$20$",
-    explanation: "$C_6^3 = \\dfrac{6 \\cdot 5 \\cdot 4}{3!} = 20$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$, cu $n=6$, $k=3$.",
+      "Înlocuim: $C_6^3=\\dfrac{6\\cdot5\\cdot4}{3!}$.",
+      "Calculăm: $6\\cdot5\\cdot4=120$, iar $3!=6$, deci $\\dfrac{120}{6}=20$.",
+      "Rezultă $C_6^3=20$.",
+    ],
   },
   {
     id: "cb-s4-3",
@@ -351,7 +503,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte submulțimi de 3 elemente are o mulțime cu 7 elemente?",
     correctAnswer: "35",
-    explanation: "$C_7^3 = \\dfrac{7 \\cdot 6 \\cdot 5}{3!} = 35$.",
+    explanation: [
+      "Alegerea unei submulțimi de $k$ elemente dintr-o mulțime de $n$ elemente, fără a conta ordinea, se numără cu formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+      "Aici $n=7$, $k=3$, deci numărul căutat este $C_7^3=\\dfrac{7\\cdot6\\cdot5}{3!}$.",
+      "Calculăm: $7\\cdot6\\cdot5=210$, iar $3!=6$, deci $\\dfrac{210}{6}=35$.",
+      "Rezultă $C_7^3=35$ submulțimi.",
+    ],
   },
   {
     id: "cb-s4-4",
@@ -362,7 +519,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_8^2$.",
     options: ["$28$", "$56$", "$16$", "$14$"],
     correctAnswer: "$28$",
-    explanation: "$C_8^2 = \\dfrac{8 \\cdot 7}{2} = 28$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$, cu $n=8$, $k=2$.",
+      "Înlocuim: $C_8^2=\\dfrac{8\\cdot7}{2!}$.",
+      "Calculăm: $\\dfrac{8\\cdot7}{2}=\\dfrac{56}{2}=28$.",
+      "Rezultă $C_8^2=28$.",
+    ],
   },
   {
     id: "cb-s4-5",
@@ -370,9 +532,15 @@ export const combinatoricaSetExercises: Exercise[] = [
     set: 4,
     type: "input",
     points: 6,
-    prompt: "Dintr-un grup de 10 persoane se aleg 4 pentru un comitet (fără roluri distincte). Câte comitete diferite se pot forma?",
+    prompt:
+      "Dintr-un grup de 10 persoane se aleg 4 pentru un comitet (fără roluri distincte). Câte comitete diferite se pot forma?",
     correctAnswer: "210",
-    explanation: "$C_{10}^4 = 210$.",
+    explanation: [
+      "Alegerea unui comitet de $k$ persoane dintr-un grup de $n$, fără roluri distincte, se numără cu formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+      "Aici $n=10$, $k=4$, deci numărul căutat este $C_{10}^4=\\dfrac{10\\cdot9\\cdot8\\cdot7}{4!}$.",
+      "Calculăm: $10\\cdot9\\cdot8\\cdot7=5040$, iar $4!=24$, deci $\\dfrac{5040}{24}=210$.",
+      "Rezultă $C_{10}^4=210$ comitete.",
+    ],
   },
   {
     id: "cb-s4-6",
@@ -383,7 +551,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_n^0$.",
     options: ["$1$", "$0$", "$n$", "$n!$"],
     correctAnswer: "$1$",
-    explanation: "$C_n^0 = 1$ pentru orice $n$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^0=\\dfrac{n!}{0!\\cdot n!}$.",
+      "Cum $0!=1$, obținem $C_n^0=\\dfrac{n!}{n!}=1$.",
+      "Rezultă $C_n^0=1$ pentru orice $n$.",
+    ],
   },
   {
     id: "cb-s4-7",
@@ -394,7 +566,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_n^n$.",
     options: ["$1$", "$0$", "$n$", "$n!$"],
     correctAnswer: "$1$",
-    explanation: "$C_n^n = 1$ pentru orice $n$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^n=\\dfrac{n!}{n!\\cdot0!}$.",
+      "Cum $0!=1$, obținem $C_n^n=\\dfrac{n!}{n!}=1$.",
+      "Rezultă $C_n^n=1$ pentru orice $n$.",
+    ],
   },
   {
     id: "cb-s4-8",
@@ -404,7 +580,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $C_9^1$.",
     correctAnswer: "9",
-    explanation: "$C_9^1 = 9$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^1=\\dfrac{n!}{1!\\cdot(n-1)!}=n$.",
+      "Pentru $n=9$: $C_9^1=9$.",
+      "Rezultă $C_9^1=9$.",
+    ],
   },
   {
     id: "cb-s4-9",
@@ -415,7 +595,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Se aleg 3 cărți dintr-un pachet de 52. Câte grupuri de 3 cărți diferite există?",
     options: ["$22100$", "$132600$", "$156$", "$19600$"],
     correctAnswer: "$22100$",
-    explanation: "$C_{52}^3 = \\dfrac{52 \\cdot 51 \\cdot 50}{3!} = 22100$.",
+    explanation: [
+      "Alegerea a 3 cărți dintr-un pachet de 52, fără a conta ordinea, se numără cu formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+      "Aici $n=52$, $k=3$, deci numărul căutat este $C_{52}^3=\\dfrac{52\\cdot51\\cdot50}{3!}$.",
+      "Calculăm: $52\\cdot51\\cdot50=132600$, iar $3!=6$, deci $\\dfrac{132600}{6}=22100$.",
+      "Rezultă $C_{52}^3=22100$ grupuri.",
+    ],
   },
   {
     id: "cb-s4-10",
@@ -425,7 +610,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați $n \\in \\mathbb{N}$, $n \\ge 2$, pentru care $C_n^2 = 15$.",
     correctAnswer: "6",
-    explanation: "$\\dfrac{n(n-1)}{2} = 15 \\Rightarrow n(n-1) = 30 \\Rightarrow n = 6$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^2=\\dfrac{n(n-1)}{2}$.",
+      "Punem condiția: $\\dfrac{n(n-1)}{2}=15$, adică $n(n-1)=30$.",
+      "Căutăm două numere naturale consecutive cu produsul 30: $6\\cdot5=30$.",
+      "Rezultă $n=6$.",
+    ],
   },
 
   // Set 5 — Proprietăți ale combinărilor
@@ -437,7 +627,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind proprietatea $C_n^k = C_n^{n-k}$, calculați $C_{10}^8$ știind că $C_{10}^2 = 45$.",
     correctAnswer: "45",
-    explanation: "$C_{10}^8 = C_{10}^2 = 45$.",
+    explanation: [
+      "Folosim proprietatea de simetrie a combinărilor: $C_n^k=C_n^{n-k}$.",
+      "Aici $n=10$, $k=8$, deci $C_{10}^8=C_{10}^{10-8}=C_{10}^2$.",
+      "Cum $C_{10}^2=45$ (dat), rezultă $C_{10}^8=45$.",
+    ],
   },
   {
     id: "cb-s5-2",
@@ -448,7 +642,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Formula lui Pascal: $C_n^k + C_n^{k+1} = $",
     options: ["$C_{n+1}^{k+1}$", "$C_n^{k+2}$", "$C_{n+1}^{k}$", "$2C_n^k$"],
     correctAnswer: "$C_{n+1}^{k+1}$",
-    explanation: "Aceasta este formula de recurență a lui Pascal.",
+    explanation: [
+      "Formula de recurență a lui Pascal exprimă suma a două combinări consecutive de același ordin $n$ printr-o combinare de ordin $n+1$.",
+      "Relația este: $C_n^k+C_n^{k+1}=C_{n+1}^{k+1}$.",
+      "Rezultă că răspunsul corect este $C_{n+1}^{k+1}$.",
+    ],
   },
   {
     id: "cb-s5-3",
@@ -458,7 +656,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $C_7^3 + C_7^4$ folosind formula lui Pascal.",
     correctAnswer: "70",
-    explanation: "$C_7^3 + C_7^4 = C_8^4 = 70$.",
+    explanation: [
+      "Aplicăm formula lui Pascal: $C_n^k+C_n^{k+1}=C_{n+1}^{k+1}$, cu $n=7$, $k=3$.",
+      "Înlocuim: $C_7^3+C_7^4=C_8^4$.",
+      "Calculăm $C_8^4=\\dfrac{8\\cdot7\\cdot6\\cdot5}{4!}=\\dfrac{1680}{24}=70$.",
+      "Rezultă $C_7^3+C_7^4=70$.",
+    ],
   },
   {
     id: "cb-s5-4",
@@ -469,7 +672,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_5^2 + C_5^3$.",
     options: ["$20$", "$10$", "$15$", "$30$"],
     correctAnswer: "$20$",
-    explanation: "$C_5^2 + C_5^3 = C_6^3 = 20$.",
+    explanation: [
+      "Aplicăm formula lui Pascal: $C_n^k+C_n^{k+1}=C_{n+1}^{k+1}$, cu $n=5$, $k=2$.",
+      "Înlocuim: $C_5^2+C_5^3=C_6^3$.",
+      "Calculăm $C_6^3=\\dfrac{6\\cdot5\\cdot4}{3!}=\\dfrac{120}{6}=20$.",
+      "Rezultă $C_5^2+C_5^3=20$.",
+    ],
   },
   {
     id: "cb-s5-5",
@@ -480,7 +688,10 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Relația dintre combinări și aranjamente este:",
     options: ["$A_n^k=C_n^k\\cdot k!$", "$A_n^k=C_n^k/k!$", "$A_n^k=C_n^k+k!$", "$A_n^k=k!-C_n^k$"],
     correctAnswer: "$A_n^k=C_n^k\\cdot k!$",
-    explanation: "$A_n^k = C_n^k \\cdot k!$.",
+    explanation: [
+      "Aranjamentele numără alegerile ordonate, iar combinările pe cele neordonate; fiecare combinare de $k$ elemente poate fi ordonată în $k!$ moduri.",
+      "Rezultă relația $A_n^k=C_n^k\\cdot k!$.",
+    ],
   },
   {
     id: "cb-s5-6",
@@ -490,7 +701,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind $A_n^k=C_n^k\\cdot k!$, calculați $C_8^3$ știind că $A_8^3=336$.",
     correctAnswer: "56",
-    explanation: "$C_8^3 = \\dfrac{A_8^3}{3!} = \\dfrac{336}{6} = 56$.",
+    explanation: [
+      "Folosim relația $A_n^k=C_n^k\\cdot k!$, deci $C_n^k=\\dfrac{A_n^k}{k!}$.",
+      "Aici $n=8$, $k=3$, deci $C_8^3=\\dfrac{A_8^3}{3!}$.",
+      "Înlocuim: $C_8^3=\\dfrac{336}{6}$.",
+      "Calculăm: $\\dfrac{336}{6}=56$, deci $C_8^3=56$.",
+    ],
   },
   {
     id: "cb-s5-7",
@@ -501,7 +717,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_n^0+C_n^1+\\ldots+C_n^n$.",
     options: ["$2^n$", "$n^2$", "$n!$", "$2n$"],
     correctAnswer: "$2^n$",
-    explanation: "Suma tuturor combinărilor de ordin $n$ este $2^n$.",
+    explanation: [
+      "Suma tuturor combinărilor de ordin $n$ reprezintă numărul total de submulțimi ale unei mulțimi cu $n$ elemente.",
+      "Această sumă este $C_n^0+C_n^1+\\cdots+C_n^n=2^n$.",
+      "Rezultă că răspunsul corect este $2^n$.",
+    ],
   },
   {
     id: "cb-s5-8",
@@ -511,7 +731,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind proprietatea de mai sus, calculați $C_4^0+C_4^1+C_4^2+C_4^3+C_4^4$.",
     correctAnswer: "16",
-    explanation: "$2^4 = 16$.",
+    explanation: [
+      "Aplicăm proprietatea $C_n^0+C_n^1+\\cdots+C_n^n=2^n$, cu $n=4$.",
+      "Înlocuim: $C_4^0+C_4^1+C_4^2+C_4^3+C_4^4=2^4$.",
+      "Calculăm: $2^4=16$.",
+      "Rezultă suma este $16$.",
+    ],
   },
   {
     id: "cb-s5-9",
@@ -522,7 +747,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_6^2 - C_6^4$.",
     options: ["$0$", "$15$", "$30$", "$-15$"],
     correctAnswer: "$0$",
-    explanation: "$C_6^4 = C_6^2$ (proprietatea de simetrie), deci diferența este $0$.",
+    explanation: [
+      "Folosim proprietatea de simetrie: $C_n^k=C_n^{n-k}$, cu $n=6$.",
+      "Aici $C_6^4=C_6^{6-4}=C_6^2$.",
+      "Rezultă $C_6^2-C_6^4=C_6^2-C_6^2=0$.",
+    ],
   },
   {
     id: "cb-s5-10",
@@ -532,7 +761,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați valoarea lui $k \\ne 3$ pentru care $C_9^k = C_9^3$.",
     correctAnswer: "6",
-    explanation: "$C_9^k = C_9^{9-k}$, deci $k = 9 - 3 = 6$.",
+    explanation: [
+      "Folosim proprietatea de simetrie: $C_n^k=C_n^{n-k}$, cu $n=9$.",
+      "Aplicată aici: $C_9^3=C_9^{9-3}=C_9^6$.",
+      "Cum se cere $k\\ne3$, rezultă $k=6$.",
+    ],
   },
 
   // Set 6 — Binomul lui Newton: dezvoltare, termen general
@@ -544,7 +777,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câți termeni are dezvoltarea $(x+y)^7$?",
     correctAnswer: "8",
-    explanation: "Dezvoltarea $(x+y)^n$ are $n+1$ termeni, deci $8$.",
+    explanation: [
+      "Dezvoltarea binomului $(x+y)^n$ are $n+1$ termeni, corespunzători valorilor $k=0,1,\\ldots,n$.",
+      "Aici $n=7$, deci numărul de termeni este $7+1$.",
+      "Rezultă $8$ termeni.",
+    ],
   },
   {
     id: "cb-s6-2",
@@ -560,7 +797,11 @@ export const combinatoricaSetExercises: Exercise[] = [
       "$T_{k+1}=C_n^k (x+y)^k$",
     ],
     correctAnswer: "$T_{k+1}=C_n^k x^{n-k}y^k$",
-    explanation: "Aceasta este formula binomului lui Newton.",
+    explanation: [
+      "Binomul lui Newton dezvoltă $(x+y)^n$ ca sumă de termeni de forma $C_n^k x^{n-k}y^k$, pentru $k=0,\\ldots,n$.",
+      "Termenul de rang $k+1$ din această dezvoltare este, prin definiție, $T_{k+1}=C_n^k x^{n-k}y^k$.",
+      "Rezultă că formula corectă este $T_{k+1}=C_n^k x^{n-k}y^k$.",
+    ],
   },
   {
     id: "cb-s6-3",
@@ -571,7 +812,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați al treilea termen din dezvoltarea $(x+1)^5$.",
     options: ["$10x^3$", "$5x^3$", "$10x^2$", "$x^3$"],
     correctAnswer: "$10x^3$",
-    explanation: "Al treilea termen are $k=2$: $C_5^2 x^3 = 10x^3$.",
+    explanation: [
+      "Termenul de rang $k+1$ din dezvoltarea $(x+1)^n$ este $T_{k+1}=C_n^k x^{n-k}$.",
+      "Al treilea termen corespunde lui $k=2$ (rangul $k+1=3$), iar aici $n=5$.",
+      "Înlocuim: $T_3=C_5^2 x^{5-2}=C_5^2 x^3$.",
+      "Calculăm $C_5^2=\\dfrac{5\\cdot4}{2!}=10$, deci $T_3=10x^3$.",
+    ],
   },
   {
     id: "cb-s6-4",
@@ -582,7 +828,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați coeficientul termenului al patrulea din dezvoltarea $(x+1)^6$.",
     options: ["$20$", "$15$", "$6$", "$1$"],
     correctAnswer: "$20$",
-    explanation: "Al patrulea termen are $k=3$: $C_6^3 = 20$.",
+    explanation: [
+      "Termenul de rang $k+1$ din dezvoltarea $(x+1)^n$ este $T_{k+1}=C_n^k x^{n-k}$.",
+      "Al patrulea termen corespunde lui $k=3$ (rangul $k+1=4$), iar aici $n=6$.",
+      "Coeficientul acestui termen este $C_6^3=\\dfrac{6\\cdot5\\cdot4}{3!}=\\dfrac{120}{6}=20$.",
+      "Rezultă coeficientul căutat este $20$.",
+    ],
   },
   {
     id: "cb-s6-5",
@@ -592,7 +843,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma tuturor coeficienților din dezvoltarea $(x+1)^5$ (înlocuind $x=1$).",
     correctAnswer: "32",
-    explanation: "$(1+1)^5 = 2^5 = 32$.",
+    explanation: [
+      "Suma tuturor coeficienților binomiali din dezvoltarea $(x+1)^n$ se obține înlocuind $x=1$.",
+      "Aici $n=5$, deci suma este $(1+1)^5=2^5$.",
+      "Calculăm: $2^5=32$.",
+      "Rezultă suma coeficienților este $32$.",
+    ],
   },
   {
     id: "cb-s6-6",
@@ -603,7 +859,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câți termeni are dezvoltarea $(2x-1)^9$?",
     options: ["$10$", "$9$", "$8$", "$18$"],
     correctAnswer: "$10$",
-    explanation: "Dezvoltarea $(2x-1)^9$ are $9+1=10$ termeni.",
+    explanation: [
+      "Dezvoltarea binomului $(2x-1)^n$ are $n+1$ termeni, indiferent de forma particulară a bazei.",
+      "Aici $n=9$, deci numărul de termeni este $9+1$.",
+      "Rezultă $10$ termeni.",
+    ],
   },
   {
     id: "cb-s6-7",
@@ -614,7 +874,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați primul termen al dezvoltării $(x+2)^4$.",
     options: ["$x^4$", "$2x^4$", "$4x^4$", "$8x^4$"],
     correctAnswer: "$x^4$",
-    explanation: "Primul termen are $k=0$: $C_4^0 x^4 \\cdot 2^0 = x^4$.",
+    explanation: [
+      "Termenul de rang $k+1$ din dezvoltarea $(x+2)^n$ este $T_{k+1}=C_n^k x^{n-k}\\cdot2^k$.",
+      "Primul termen corespunde lui $k=0$, iar aici $n=4$.",
+      "Înlocuim: $T_1=C_4^0 x^4\\cdot2^0=1\\cdot x^4\\cdot1=x^4$.",
+      "Rezultă primul termen este $x^4$.",
+    ],
   },
   {
     id: "cb-s6-8",
@@ -625,7 +890,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați ultimul termen al dezvoltării $(x+3)^4$.",
     options: ["$81$", "$27$", "$9$", "$3$"],
     correctAnswer: "$81$",
-    explanation: "Ultimul termen are $k=4$: $C_4^4 \\cdot 3^4 = 81$.",
+    explanation: [
+      "Termenul de rang $k+1$ din dezvoltarea $(x+3)^n$ este $T_{k+1}=C_n^k x^{n-k}\\cdot3^k$.",
+      "Ultimul termen corespunde lui $k=n$, iar aici $n=4$.",
+      "Înlocuim: $T_5=C_4^4 x^0\\cdot3^4=1\\cdot1\\cdot81$.",
+      "Rezultă ultimul termen este $81$.",
+    ],
   },
   {
     id: "cb-s6-9",
@@ -635,7 +905,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câți termeni are dezvoltarea $(a-b)^{10}$?",
     correctAnswer: "11",
-    explanation: "Dezvoltarea $(a-b)^{10}$ are $10+1=11$ termeni.",
+    explanation: [
+      "Dezvoltarea binomului $(a-b)^n$ are $n+1$ termeni.",
+      "Aici $n=10$, deci numărul de termeni este $10+1$.",
+      "Rezultă $11$ termeni.",
+    ],
   },
   {
     id: "cb-s6-10",
@@ -645,7 +919,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați rangul termenului care conține $x^3$ în dezvoltarea $(x+1)^7$.",
     correctAnswer: "5",
-    explanation: "$7-k=3 \\Rightarrow k=4$, rangul este $k+1=5$.",
+    explanation: [
+      "Termenul de rang $k+1$ din dezvoltarea $(x+1)^7$ este $T_{k+1}=C_7^k x^{7-k}$.",
+      "Punem condiția ca puterea lui $x$ să fie $3$: $7-k=3$.",
+      "Rezolvăm: $k=4$.",
+      "Rangul termenului este $k+1=5$.",
+    ],
   },
 
   // Set 7 — Binomul lui Newton: coeficienți, termen din mijloc
@@ -657,7 +936,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați coeficientul lui $x^2$ din dezvoltarea $(x+1)^4$.",
     correctAnswer: "6",
-    explanation: "$k=2$: $C_4^2 = 6$.",
+    explanation: [
+      "Termenul general al dezvoltării $(x+1)^4$ este $T_{k+1}=C_4^k x^{4-k}$.",
+      "Punem condiția $4-k=2$, de unde $k=2$.",
+      "Coeficientul este $C_4^2=\\dfrac{4\\cdot3}{2!}=6$.",
+      "Rezultă coeficientul lui $x^2$ este $6$.",
+    ],
   },
   {
     id: "cb-s7-2",
@@ -668,7 +952,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați coeficientul lui $x^3$ din dezvoltarea $(x+2)^5$.",
     options: ["$40$", "$10$", "$20$", "$80$"],
     correctAnswer: "$40$",
-    explanation: "$k=2$: $C_5^2 \\cdot 2^2 = 10 \\cdot 4 = 40$.",
+    explanation: [
+      "Termenul general al dezvoltării $(x+2)^5$ este $T_{k+1}=C_5^k x^{5-k}\\cdot2^k$.",
+      "Punem condiția $5-k=3$, de unde $k=2$.",
+      "Coeficientul este $C_5^2\\cdot2^2=10\\cdot4$.",
+      "Calculăm: $10\\cdot4=40$. Rezultă coeficientul lui $x^3$ este $40$.",
+    ],
   },
   {
     id: "cb-s7-3",
@@ -679,7 +968,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați termenul din mijloc al dezvoltării $(x+1)^6$.",
     options: ["$20x^3$", "$15x^2$", "$6x^5$", "$20x^2$"],
     correctAnswer: "$20x^3$",
-    explanation: "Termenul din mijloc are $k=3$: $C_6^3 x^3 = 20x^3$.",
+    explanation: [
+      "Pentru $n$ par, dezvoltarea $(x+1)^n$ are un singur termen din mijloc, corespunzător lui $k=n/2$.",
+      "Aici $n=6$, deci $k=3$, iar termenul din mijloc este $T_4=C_6^3 x^{6-3}=C_6^3 x^3$.",
+      "Calculăm $C_6^3=\\dfrac{6\\cdot5\\cdot4}{3!}=20$.",
+      "Rezultă termenul din mijloc este $20x^3$.",
+    ],
   },
   {
     id: "cb-s7-4",
@@ -690,7 +984,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câți termeni \"din mijloc\" are dezvoltarea $(x+1)^7$ (n impar)?",
     options: ["$2$", "$1$", "$3$", "$4$"],
     correctAnswer: "$2$",
-    explanation: "Pentru $n$ impar, dezvoltarea are doi termeni din mijloc.",
+    explanation: [
+      "Pentru $n$ par, dezvoltarea are un singur termen din mijloc; pentru $n$ impar, are doi termeni din mijloc (rangurile $\\frac{n+1}{2}$ și $\\frac{n+3}{2}$).",
+      "Aici $n=7$ este impar.",
+      "Rezultă că dezvoltarea are $2$ termeni din mijloc.",
+    ],
   },
   {
     id: "cb-s7-5",
@@ -700,7 +998,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați coeficientul lui $x^5$ din dezvoltarea $(x-1)^5$.",
     correctAnswer: "1",
-    explanation: "$k=0$: $C_5^0 \\cdot (-1)^0 = 1$.",
+    explanation: [
+      "Termenul general al dezvoltării $(x-1)^5$ este $T_{k+1}=C_5^k x^{5-k}\\cdot(-1)^k$.",
+      "Punem condiția $5-k=5$, de unde $k=0$.",
+      "Coeficientul este $C_5^0\\cdot(-1)^0=1\\cdot1$.",
+      "Rezultă coeficientul lui $x^5$ este $1$.",
+    ],
   },
   {
     id: "cb-s7-6",
@@ -711,7 +1014,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați coeficientul lui $x^4$ din dezvoltarea $(x-1)^6$.",
     options: ["$15$", "$-15$", "$6$", "$20$"],
     correctAnswer: "$15$",
-    explanation: "$k=2$: $C_6^2 \\cdot (-1)^2 = 15$.",
+    explanation: [
+      "Termenul general al dezvoltării $(x-1)^6$ este $T_{k+1}=C_6^k x^{6-k}\\cdot(-1)^k$.",
+      "Punem condiția $6-k=4$, de unde $k=2$.",
+      "Coeficientul este $C_6^2\\cdot(-1)^2=15\\cdot1$.",
+      "Rezultă coeficientul lui $x^4$ este $15$.",
+    ],
   },
   {
     id: "cb-s7-7",
@@ -721,7 +1029,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați coeficientul lui $x^3$ din dezvoltarea $(x-2)^5$.",
     correctAnswer: "40",
-    explanation: "$k=2$: $C_5^2 \\cdot (-2)^2 = 10 \\cdot 4 = 40$.",
+    explanation: [
+      "Termenul general al dezvoltării $(x-2)^5$ este $T_{k+1}=C_5^k x^{5-k}\\cdot(-2)^k$.",
+      "Punem condiția $5-k=3$, de unde $k=2$.",
+      "Coeficientul este $C_5^2\\cdot(-2)^2=10\\cdot4$.",
+      "Calculăm: $10\\cdot4=40$. Rezultă coeficientul lui $x^3$ este $40$.",
+    ],
   },
   {
     id: "cb-s7-8",
@@ -732,7 +1045,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați suma coeficienților din dezvoltarea $(2x-1)^4$ (înlocuind $x=1$).",
     options: ["$1$", "$16$", "$81$", "$0$"],
     correctAnswer: "$1$",
-    explanation: "$(2 \\cdot 1 - 1)^4 = 1^4 = 1$.",
+    explanation: [
+      "Suma coeficienților dezvoltării se obține înlocuind $x=1$ în expresia $(2x-1)^4$.",
+      "Înlocuim: $(2\\cdot1-1)^4=1^4$.",
+      "Calculăm: $1^4=1$.",
+      "Rezultă suma coeficienților este $1$.",
+    ],
   },
   {
     id: "cb-s7-9",
@@ -742,7 +1060,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma coeficienților din dezvoltarea $(x+1)^{10}$.",
     correctAnswer: "1024",
-    explanation: "$(1+1)^{10} = 2^{10} = 1024$.",
+    explanation: [
+      "Suma coeficienților dezvoltării $(x+1)^n$ se obține înlocuind $x=1$: $(1+1)^n=2^n$.",
+      "Aici $n=10$, deci suma este $2^{10}$.",
+      "Calculăm: $2^{10}=1024$.",
+      "Rezultă suma coeficienților este $1024$.",
+    ],
   },
   {
     id: "cb-s7-10",
@@ -752,7 +1075,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați $n$ pentru care dezvoltarea $(x+1)^n$ are exact 9 termeni.",
     correctAnswer: "8",
-    explanation: "Dezvoltarea are $n+1$ termeni, deci $n+1=9 \\Rightarrow n=8$.",
+    explanation: [
+      "Dezvoltarea $(x+1)^n$ are $n+1$ termeni.",
+      "Punem condiția: $n+1=9$.",
+      "Rezolvăm: $n=8$.",
+    ],
   },
 
   // Set 8 — Probleme de numărare cu restricții
@@ -764,7 +1091,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte parole formate din 2 litere (dintr-un alfabet de 26) urmate de 3 cifre se pot forma, cu repetiție permisă?",
     correctAnswer: "676000",
-    explanation: "$26 \\cdot 26 \\cdot 10 \\cdot 10 \\cdot 10 = 676000$.",
+    explanation: [
+      "Cum literele și cifrele se aleg independent, iar repetiția este permisă, aplicăm regula produsului pentru fiecare poziție.",
+      "Avem 2 poziții cu câte 26 de opțiuni (litere) și 3 poziții cu câte 10 opțiuni (cifre): $26\\cdot26\\cdot10\\cdot10\\cdot10$.",
+      "Calculăm: $26\\cdot26=676$, iar $10\\cdot10\\cdot10=1000$, deci produsul total este $676\\cdot1000$.",
+      "Rezultă $676000$ parole.",
+    ],
   },
   {
     id: "cb-s8-2",
@@ -772,10 +1104,15 @@ export const combinatoricaSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "La un restaurant sunt 4 feluri de supă și 5 feluri de fel principal. În câte moduri se poate alege un meniu format dintr-o supă și un fel principal?",
+    prompt:
+      "La un restaurant sunt 4 feluri de supă și 5 feluri de fel principal. În câte moduri se poate alege un meniu format dintr-o supă și un fel principal?",
     options: ["$20$", "$9$", "$45$", "$14$"],
     correctAnswer: "$20$",
-    explanation: "Regula produsului: $4 \\cdot 5 = 20$.",
+    explanation: [
+      "Alegerea meniului implică o alegere din fiecare categorie, deci aplicăm regula produsului.",
+      "Avem $4$ opțiuni pentru supă și $5$ pentru felul principal: $4\\cdot5$.",
+      "Rezultă $20$ meniuri.",
+    ],
   },
   {
     id: "cb-s8-3",
@@ -783,9 +1120,14 @@ export const combinatoricaSetExercises: Exercise[] = [
     set: 8,
     type: "input",
     points: 6,
-    prompt: "Un elev alege o materie opțională dintr-un grup de 3 și una dintr-un alt grup de 4. Câte combinații de 2 materii poate alege?",
+    prompt:
+      "Un elev alege o materie opțională dintr-un grup de 3 și una dintr-un alt grup de 4. Câte combinații de 2 materii poate alege?",
     correctAnswer: "12",
-    explanation: "Regula produsului: $3 \\cdot 4 = 12$.",
+    explanation: [
+      "Alegerea celor două materii, câte una din fiecare grup, se face aplicând regula produsului.",
+      "Avem $3$ opțiuni pentru primul grup și $4$ pentru al doilea: $3\\cdot4$.",
+      "Rezultă $12$ combinații.",
+    ],
   },
   {
     id: "cb-s8-4",
@@ -793,10 +1135,16 @@ export const combinatoricaSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Numărul plăcuțelor de înmatriculare formate din 3 litere (din 26, cu repetiție) urmate de 4 cifre (cu repetiție) este:",
+    prompt:
+      "Numărul plăcuțelor de înmatriculare formate din 3 litere (din 26, cu repetiție) urmate de 4 cifre (cu repetiție) este:",
     options: ["$26^3\\cdot10^4$", "$26^4\\cdot10^3$", "$26\\cdot3\\cdot10\\cdot4$", "$(26+10)^7$"],
     correctAnswer: "$26^3\\cdot10^4$",
-    explanation: "Regula produsului aplicată succesiv fiecărei poziții.",
+    explanation: [
+      "Fiecare din cele 3 poziții de litere are 26 de opțiuni (repetiție permisă), iar fiecare din cele 4 poziții de cifre are 10 opțiuni.",
+      "Aplicăm regula produsului succesiv fiecărei poziții: $26\\cdot26\\cdot26\\cdot10\\cdot10\\cdot10\\cdot10$.",
+      "Grupăm factorii identici: $26^3\\cdot10^4$.",
+      "Rezultă că formula corectă este $26^3\\cdot10^4$.",
+    ],
   },
   {
     id: "cb-s8-5",
@@ -806,7 +1154,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "La un magazin sunt 3 modele de pantofi, fiecare disponibil în 5 culori. Câte alegeri distincte (model, culoare) există?",
     correctAnswer: "15",
-    explanation: "Regula produsului: $3 \\cdot 5 = 15$.",
+    explanation: [
+      "Alegerea unei perechi (model, culoare) implică o alegere din fiecare categorie, deci aplicăm regula produsului.",
+      "Avem $3$ modele și $5$ culori: $3\\cdot5$.",
+      "Rezultă $15$ alegeri distincte.",
+    ],
   },
   {
     id: "cb-s8-6",
@@ -814,10 +1166,15 @@ export const combinatoricaSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Un mic dejun conține o băutură (din 3 opțiuni) SAU un desert (din 2 opțiuni), dar nu ambele. Câte opțiuni are un client?",
+    prompt:
+      "Un mic dejun conține o băutură (din 3 opțiuni) SAU un desert (din 2 opțiuni), dar nu ambele. Câte opțiuni are un client?",
     options: ["$5$", "$6$", "$1$", "$3$"],
     correctAnswer: "$5$",
-    explanation: "Regula sumei (evenimente disjuncte): $3+2=5$.",
+    explanation: [
+      "Cum evenimentele sunt disjuncte (se alege fie o băutură, fie un desert, nu ambele), aplicăm regula sumei.",
+      "Avem $3$ opțiuni de băutură și $2$ de desert: $3+2$.",
+      "Rezultă $5$ opțiuni.",
+    ],
   },
   {
     id: "cb-s8-7",
@@ -827,7 +1184,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Se aruncă un zar și apoi se dă cu banul. Câte rezultate posibile există?",
     correctAnswer: "12",
-    explanation: "Regula produsului: $6 \\cdot 2 = 12$.",
+    explanation: [
+      "Cele două aruncări sunt independente și au loc succesiv, deci aplicăm regula produsului.",
+      "Zarul are $6$ rezultate posibile, iar moneda $2$: $6\\cdot2$.",
+      "Rezultă $12$ rezultate posibile.",
+    ],
   },
   {
     id: "cb-s8-8",
@@ -838,7 +1199,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "O comisie are un singur membru, ales fie dintr-un grup de 5 profesori, fie dintr-un grup de 3 părinți. Câte alegeri există?",
     options: ["$8$", "$15$", "$2$", "$5$"],
     correctAnswer: "$8$",
-    explanation: "Regula sumei: $5+3=8$.",
+    explanation: [
+      "Cum se alege un singur membru, fie dintr-un grup, fie din celălalt (evenimente disjuncte), aplicăm regula sumei.",
+      "Avem $5$ opțiuni dintre profesori și $3$ dintre părinți: $5+3$.",
+      "Rezultă $8$ alegeri.",
+    ],
   },
   {
     id: "cb-s8-9",
@@ -848,7 +1213,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Se formează numere de 2 cifre folosind cifrele $1,2,3,4,5$, repetiția fiind permisă. Câte astfel de numere există?",
     correctAnswer: "25",
-    explanation: "Regula produsului: $5 \\cdot 5 = 25$.",
+    explanation: [
+      "Cum repetiția este permisă și fiecare poziție se alege independent din cele 5 cifre, aplicăm regula produsului.",
+      "Avem 2 poziții, fiecare cu 5 opțiuni: $5\\cdot5$.",
+      "Rezultă $25$ numere.",
+    ],
   },
   {
     id: "cb-s8-10",
@@ -859,8 +1228,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte numere pare de 3 cifre distincte se pot forma cu cifrele $1,2,3,4,5$?",
     options: ["$24$", "$12$", "$48$", "$60$"],
     correctAnswer: "$24$",
-    explanation:
-      "Ultima cifră pară (2 sau 4): 2 opțiuni; primele două cifre din cele 4 rămase, ordonate: $A_4^2=12$; total $2\\cdot12=24$.",
+    explanation: [
+      "Cum numărul trebuie să fie par, ultima cifră trebuie să fie $2$ sau $4$, deci avem 2 opțiuni pentru ultima poziție.",
+      "Primele două cifre se aleg distincte, ordonate, din cele 4 cifre rămase: acesta este un aranjament, $A_4^2$.",
+      "Calculăm $A_4^2=4\\cdot3=12$, apoi aplicăm regula produsului: $2\\cdot12$.",
+      "Rezultă $24$ numere pare.",
+    ],
   },
 
   // Set 9 — Permutări/aranjamente/combinări cu repetiție
@@ -872,7 +1245,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte anagrame distincte are cuvântul MAMA?",
     correctAnswer: "6",
-    explanation: "$\\dfrac{4!}{2! \\cdot 2!} = 6$.",
+    explanation: [
+      "Cuvântul MAMA are 4 litere, dintre care M se repetă de 2 ori și A se repetă de 2 ori, deci folosim formula permutărilor cu repetiție.",
+      "Numărul de anagrame distincte este $\\dfrac{4!}{2! \\cdot 2!}$.",
+      "Calculăm: $4!=24$, iar $2!\\cdot2!=4$, deci $\\dfrac{24}{4}=6$.",
+      "Rezultă $6$ anagrame distincte.",
+    ],
   },
   {
     id: "cb-s9-2",
@@ -883,7 +1261,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte anagrame distincte are cuvântul ANA?",
     options: ["$3$", "$6$", "$2$", "$1$"],
     correctAnswer: "$3$",
-    explanation: "$\\dfrac{3!}{2!} = 3$.",
+    explanation: [
+      "Cuvântul ANA are 3 litere, dintre care A se repetă de 2 ori, deci folosim formula permutărilor cu repetiție.",
+      "Numărul de anagrame distincte este $\\dfrac{3!}{2!}$.",
+      "Calculăm: $3!=6$, iar $2!=2$, deci $\\dfrac{6}{2}=3$.",
+      "Rezultă $3$ anagrame distincte.",
+    ],
   },
   {
     id: "cb-s9-3",
@@ -893,7 +1276,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte anagrame distincte are cuvântul MATE (4 litere distincte)?",
     correctAnswer: "24",
-    explanation: "$4! = 24$.",
+    explanation: [
+      "Cuvântul MATE are 4 litere distincte, deci numărul de anagrame este dat de permutări: $P_4=4!$.",
+      "Calculăm: $4!=24$.",
+      "Rezultă $24$ anagrame distincte.",
+    ],
   },
   {
     id: "cb-s9-4",
@@ -904,7 +1291,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte anagrame distincte are cuvântul CASA?",
     options: ["$12$", "$24$", "$6$", "$4$"],
     correctAnswer: "$12$",
-    explanation: "$\\dfrac{4!}{2!} = 12$ (litera A apare de 2 ori).",
+    explanation: [
+      "Cuvântul CASA are 4 litere, dintre care A se repetă de 2 ori, deci folosim formula permutărilor cu repetiție.",
+      "Numărul de anagrame distincte este $\\dfrac{4!}{2!}$.",
+      "Calculăm: $4!=24$, iar $2!=2$, deci $\\dfrac{24}{2}=12$.",
+      "Rezultă $12$ anagrame distincte.",
+    ],
   },
   {
     id: "cb-s9-5",
@@ -914,7 +1306,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Se aruncă un zar de 3 ori. Câte rezultate posibile există?",
     correctAnswer: "216",
-    explanation: "$6^3 = 216$.",
+    explanation: [
+      "Fiecare aruncare are 6 rezultate posibile, iar aruncările sunt independente, deci aplicăm regula produsului de 3 ori.",
+      "Numărul total de rezultate este $6\\cdot6\\cdot6=6^3$.",
+      "Calculăm: $6^3=216$.",
+      "Rezultă $216$ rezultate posibile.",
+    ],
   },
   {
     id: "cb-s9-6",
@@ -925,7 +1322,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte numere de 3 cifre (nu neapărat distincte) se pot forma cu cifrele $1,2,3$ (repetiție permisă)?",
     options: ["$27$", "$9$", "$6$", "$3$"],
     correctAnswer: "$27$",
-    explanation: "$3^3 = 27$.",
+    explanation: [
+      "Cum repetiția este permisă și fiecare poziție se alege independent din cele 3 cifre, aplicăm regula produsului.",
+      "Avem 3 poziții, fiecare cu 3 opțiuni: $3\\cdot3\\cdot3=3^3$.",
+      "Calculăm: $3^3=27$.",
+      "Rezultă $27$ numere.",
+    ],
   },
   {
     id: "cb-s9-7",
@@ -935,7 +1337,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte submulțimi (inclusiv mulțimea vidă) are o mulțime cu 5 elemente?",
     correctAnswer: "32",
-    explanation: "$2^5 = 32$.",
+    explanation: [
+      "Numărul total de submulțimi ale unei mulțimi cu $n$ elemente (inclusiv mulțimea vidă) este $2^n$.",
+      "Aici $n=5$, deci numărul căutat este $2^5$.",
+      "Calculăm: $2^5=32$.",
+      "Rezultă $32$ submulțimi.",
+    ],
   },
   {
     id: "cb-s9-8",
@@ -946,7 +1353,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte submulțimi nevide are o mulțime cu 4 elemente?",
     options: ["$15$", "$16$", "$14$", "$8$"],
     correctAnswer: "$15$",
-    explanation: "$2^4 - 1 = 15$ (excludem mulțimea vidă).",
+    explanation: [
+      "Numărul total de submulțimi ale unei mulțimi cu $n$ elemente este $2^n$; excluzând mulțimea vidă, rămân $2^n-1$.",
+      "Aici $n=4$, deci numărul căutat este $2^4-1$.",
+      "Calculăm: $2^4=16$, deci $16-1=15$.",
+      "Rezultă $15$ submulțimi nevide.",
+    ],
   },
   {
     id: "cb-s9-9",
@@ -956,7 +1368,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Se aleg 2 bile dintr-o urnă cu 5 bile numerotate, cu revenire, ordinea contând. Câte rezultate există?",
     correctAnswer: "25",
-    explanation: "$5^2 = 25$.",
+    explanation: [
+      "Cum extragerea se face cu revenire (repetiție permisă) și ordinea contează, fiecare extragere are 5 opțiuni independente.",
+      "Numărul total de rezultate este $5\\cdot5=5^2$.",
+      "Calculăm: $5^2=25$.",
+      "Rezultă $25$ rezultate.",
+    ],
   },
   {
     id: "cb-s9-10",
@@ -967,7 +1384,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Se aleg 2 bile dintr-o urnă cu 5 bile numerotate, fără revenire, ordinea nefiind importantă. Câte rezultate există?",
     options: ["$10$", "$20$", "$25$", "$5$"],
     correctAnswer: "$10$",
-    explanation: "$C_5^2 = 10$.",
+    explanation: [
+      "Cum extragerea se face fără revenire și ordinea nu contează, folosim formula combinărilor.",
+      "Numărul căutat este $C_5^2=\\dfrac{5\\cdot4}{2!}$.",
+      "Calculăm: $\\dfrac{5\\cdot4}{2}=\\dfrac{20}{2}=10$.",
+      "Rezultă $10$ rezultate.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -979,7 +1401,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $5!$.",
     correctAnswer: "120",
-    explanation: "$5! = 120$.",
+    explanation: [
+      "Factorialul lui $n$ este produsul numerelor naturale de la $1$ la $n$: $n!=1\\cdot2\\cdots n$.",
+      "Pentru $n=5$: $5!=5\\cdot4\\cdot3\\cdot2\\cdot1$.",
+      "Calculăm produsul: $120$.",
+      "Rezultă $5!=120$.",
+    ],
   },
   {
     id: "cb-s10-2",
@@ -990,7 +1417,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $A_6^2$.",
     options: ["$30$", "$15$", "$36$", "$12$"],
     correctAnswer: "$30$",
-    explanation: "$A_6^2 = 6 \\cdot 5 = 30$.",
+    explanation: [
+      "Aplicăm formula aranjamentelor: $A_n^k=n(n-1)\\cdots(n-k+1)$, cu $n=6$, $k=2$.",
+      "Înlocuim: $A_6^2=6\\cdot5$.",
+      "Calculăm: $6\\cdot5=30$.",
+      "Rezultă $A_6^2=30$.",
+    ],
   },
   {
     id: "cb-s10-3",
@@ -1000,7 +1432,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $C_7^2$.",
     correctAnswer: "21",
-    explanation: "$C_7^2 = \\dfrac{7 \\cdot 6}{2} = 21$.",
+    explanation: [
+      "Aplicăm formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$, cu $n=7$, $k=2$.",
+      "Înlocuim: $C_7^2=\\dfrac{7\\cdot6}{2!}$.",
+      "Calculăm: $\\dfrac{7\\cdot6}{2}=\\dfrac{42}{2}=21$.",
+      "Rezultă $C_7^2=21$.",
+    ],
   },
   {
     id: "cb-s10-4",
@@ -1011,7 +1448,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte moduri există de a aranja 4 cărți diferite într-un rând?",
     options: ["$24$", "$12$", "$4$", "$16$"],
     correctAnswer: "$24$",
-    explanation: "$P_4 = 4! = 24$.",
+    explanation: [
+      "Aranjarea a $n$ obiecte distincte într-un rând se numără cu formula permutărilor: $P_n=n!$.",
+      "Aici $n=4$, deci numărul căutat este $P_4=4!$.",
+      "Calculăm: $4!=24$.",
+      "Rezultă $P_4=24$ moduri.",
+    ],
   },
   {
     id: "cb-s10-5",
@@ -1022,7 +1464,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Determinați al doilea termen din dezvoltarea $(x+1)^4$.",
     options: ["$4x^3$", "$6x^2$", "$x^4$", "$4x^2$"],
     correctAnswer: "$4x^3$",
-    explanation: "Al doilea termen are $k=1$: $C_4^1 x^3 = 4x^3$.",
+    explanation: [
+      "Termenul de rang $k+1$ din dezvoltarea $(x+1)^4$ este $T_{k+1}=C_4^k x^{4-k}$.",
+      "Al doilea termen corespunde lui $k=1$ (rangul $k+1=2$).",
+      "Înlocuim: $T_2=C_4^1 x^{4-1}=C_4^1 x^3$.",
+      "Calculăm $C_4^1=4$, deci $T_2=4x^3$.",
+    ],
   },
   {
     id: "cb-s10-6",
@@ -1033,7 +1480,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Calculați $C_n^0+C_n^n$.",
     options: ["$2$", "$1$", "$0$", "$n$"],
     correctAnswer: "$2$",
-    explanation: "$C_n^0=1$ și $C_n^n=1$, suma este $2$.",
+    explanation: [
+      "Folosim proprietățile $C_n^0=1$ și $C_n^n=1$, valabile pentru orice $n$.",
+      "Adunăm cele două valori: $1+1$.",
+      "Rezultă $C_n^0+C_n^n=2$.",
+    ],
   },
   {
     id: "cb-s10-7",
@@ -1043,7 +1494,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Dintr-un grup de 8 persoane se aleg 3 pentru un comitet fără roluri distincte. Câte comitete există?",
     correctAnswer: "56",
-    explanation: "$C_8^3 = 56$.",
+    explanation: [
+      "Alegerea unui comitet de $k$ persoane dintr-un grup de $n$, fără roluri distincte, se numără cu formula combinărilor: $C_n^k=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+      "Aici $n=8$, $k=3$, deci numărul căutat este $C_8^3=\\dfrac{8\\cdot7\\cdot6}{3!}$.",
+      "Calculăm: $8\\cdot7\\cdot6=336$, iar $3!=6$, deci $\\dfrac{336}{6}=56$.",
+      "Rezultă $C_8^3=56$ comitete.",
+    ],
   },
   {
     id: "cb-s10-8",
@@ -1054,7 +1510,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     prompt: "Câte numere de 2 cifre distincte se pot forma cu cifrele $1,2,3,4$?",
     options: ["$12$", "$6$", "$24$", "$16$"],
     correctAnswer: "$12$",
-    explanation: "$A_4^2 = 4 \\cdot 3 = 12$.",
+    explanation: [
+      "Cum cifrele trebuie să fie distincte și ordinea contează (formăm un număr), folosim aranjamente.",
+      "Numărul căutat este $A_4^2$, adică numărul de moduri de a alege și ordona 2 cifre din cele 4 disponibile.",
+      "Aplicăm formula: $A_4^2=4\\cdot3$.",
+      "Calculăm: $4\\cdot3=12$. Rezultă $A_4^2=12$ numere.",
+    ],
   },
   {
     id: "cb-s10-9",
@@ -1064,7 +1525,12 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma coeficienților din dezvoltarea $(x+1)^6$.",
     correctAnswer: "64",
-    explanation: "$2^6 = 64$.",
+    explanation: [
+      "Suma coeficienților dezvoltării $(x+1)^n$ se obține înlocuind $x=1$: $(1+1)^n=2^n$.",
+      "Aici $n=6$, deci suma este $2^6$.",
+      "Calculăm: $2^6=64$.",
+      "Rezultă suma coeficienților este $64$.",
+    ],
   },
   {
     id: "cb-s10-10",
@@ -1074,6 +1540,11 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte anagrame distincte are cuvântul BANANA?",
     correctAnswer: "60",
-    explanation: "$\\dfrac{6!}{3! \\cdot 2!} = 60$ (B o dată, A de 3 ori, N de 2 ori).",
+    explanation: [
+      "Cuvântul BANANA are 6 litere, dintre care A se repetă de 3 ori, N se repetă de 2 ori, iar B apare o singură dată; folosim formula permutărilor cu repetiție.",
+      "Numărul de anagrame distincte este $\\dfrac{6!}{3! \\cdot 2!}$.",
+      "Calculăm: $6!=720$, iar $3!\\cdot2!=6\\cdot2=12$, deci $\\dfrac{720}{12}=60$.",
+      "Rezultă $60$ anagrame distincte.",
+    ],
   },
 ];
