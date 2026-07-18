@@ -11,7 +11,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $z_1+z_2$ pentru $z_1=2+3i$, $z_2=1-4i$.",
     correctAnswer: "3-i",
     acceptedAnswers: ["-i+3"],
-    explanation: "$(2+3i)+(1-4i) = 3 - i$.",
+    explanation: [
+      "Adunarea numerelor complexe se face pe componente: $(a+bi)+(c+di)=(a+c)+(b+d)i$.",
+      "Aici $z_1=2+3i$, $z_2=1-4i$.",
+      "Adunăm părțile reale: $2+1=3$. Adunăm părțile imaginare: $3+(-4)=-1$.",
+      "Rezultă $z_1+z_2 = 3-i$.",
+    ],
   },
   {
     id: "nc-s1-2",
@@ -22,7 +27,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $z_1-z_2$ pentru $z_1=5-2i$, $z_2=-3+i$.",
     correctAnswer: "8-3i",
     acceptedAnswers: ["-3i+8"],
-    explanation: "$(5-2i)-(-3+i) = 8 - 3i$.",
+    explanation: [
+      "Scăderea numerelor complexe se face pe componente: $(a+bi)-(c+di)=(a-c)+(b-d)i$.",
+      "Aici $z_1=5-2i$, $z_2=-3+i$.",
+      "Scădem părțile reale: $5-(-3)=8$. Scădem părțile imaginare: $-2-1=-3$.",
+      "Rezultă $z_1-z_2 = 8-3i$.",
+    ],
   },
   {
     id: "nc-s1-3",
@@ -33,7 +43,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $(1+i)(2-i)$.",
     options: ["$3+i$", "$1+3i$", "$2-i$", "$3-i$"],
     correctAnswer: "$3+i$",
-    explanation: "$(1+i)(2-i) = 2 - i + 2i - i^2 = 2 + i + 1 = 3 + i$.",
+    explanation: [
+      "Înmulțirea a două numere complexe se face distributiv, ca la binoame, folosind $i^2=-1$.",
+      "Aici $z_1=1+i$, $z_2=2-i$: $(1+i)(2-i) = 2 - i + 2i - i^2$.",
+      "Grupăm termenii: $2 + i - i^2$.",
+      "Folosim $i^2=-1$: $2 + i + 1 = 3+i$.",
+    ],
   },
   {
     id: "nc-s1-4",
@@ -44,7 +59,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $(3+2i)(1+i)$.",
     correctAnswer: "1+5i",
     acceptedAnswers: ["5i+1"],
-    explanation: "$(3+2i)(1+i) = 3 + 3i + 2i + 2i^2 = 3 + 5i - 2 = 1 + 5i$.",
+    explanation: [
+      "Înmulțim distributiv cele două numere complexe, folosind $i^2=-1$.",
+      "Aici $z_1=3+2i$, $z_2=1+i$: $(3+2i)(1+i) = 3 + 3i + 2i + 2i^2$.",
+      "Grupăm termenii: $3 + 5i + 2i^2$.",
+      "Folosim $i^2=-1$: $3 + 5i - 2 = 1 + 5i$.",
+    ],
   },
   {
     id: "nc-s1-5",
@@ -55,7 +75,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $\\dfrac{3+i}{1-i}$.",
     correctAnswer: "1+2i",
     acceptedAnswers: ["2i+1"],
-    explanation: "Amplificăm cu $1+i$: $\\dfrac{(3+i)(1+i)}{(1-i)(1+i)} = \\dfrac{2+4i}{2} = 1+2i$.",
+    explanation: [
+      "Pentru a împărți numere complexe, amplificăm fracția cu conjugatul numitorului.",
+      "Conjugatul lui $1-i$ este $1+i$, deci înmulțim numărătorul și numitorul cu $1+i$.",
+      "Numitorul devine $(1-i)(1+i) = 1-i^2 = 1+1 = 2$. Numărătorul devine $(3+i)(1+i) = 3+3i+i+i^2 = 2+4i$.",
+      "Rezultă $\\dfrac{2+4i}{2} = 1+2i$.",
+    ],
   },
   {
     id: "nc-s1-6",
@@ -66,7 +91,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $\\dfrac{4-2i}{1+i}$.",
     options: ["$1-3i$", "$1+3i$", "$2-6i$", "$-1-3i$"],
     correctAnswer: "$1-3i$",
-    explanation: "Amplificăm cu $1-i$: $\\dfrac{(4-2i)(1-i)}{2} = \\dfrac{2-6i}{2} = 1-3i$.",
+    explanation: [
+      "Amplificăm fracția cu conjugatul numitorului, $1-i$.",
+      "Numitorul devine $(1+i)(1-i)=1-i^2=1+1=2$.",
+      "Numărătorul devine $(4-2i)(1-i)=4-4i-2i+2i^2=4-6i-2=2-6i$.",
+      "Rezultă $\\dfrac{2-6i}{2}=1-3i$.",
+    ],
   },
   {
     id: "nc-s1-7",
@@ -77,7 +107,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $i(2+3i)$.",
     correctAnswer: "-3+2i",
     acceptedAnswers: ["2i-3"],
-    explanation: "$i(2+3i) = 2i + 3i^2 = 2i - 3 = -3 + 2i$.",
+    explanation: [
+      "Înmulțim distribuind $i$ fiecărui termen: $i(2+3i)=2i+3i^2$.",
+      "Folosim $i^2=-1$: $2i+3\\cdot(-1) = 2i-3$.",
+      "Rezultă $-3+2i$.",
+    ],
   },
   {
     id: "nc-s1-8",
@@ -88,7 +122,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $(1+i)^2$.",
     options: ["$2i$", "$2$", "$1+2i$", "$-2i$"],
     correctAnswer: "$2i$",
-    explanation: "$(1+i)^2 = 1 + 2i + i^2 = 2i$.",
+    explanation: [
+      "Folosim formula pătratului unui binom: $(a+b)^2=a^2+2ab+b^2$ cu $a=1$, $b=i$.",
+      "Calculăm: $(1+i)^2 = 1^2+2\\cdot1\\cdot i+i^2 = 1+2i+i^2$.",
+      "Folosim $i^2=-1$: $1+2i-1 = 2i$.",
+    ],
   },
   {
     id: "nc-s1-9",
@@ -98,7 +136,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $(1-i)^2$.",
     correctAnswer: "-2i",
-    explanation: "$(1-i)^2 = 1 - 2i + i^2 = -2i$.",
+    explanation: [
+      "Folosim formula pătratului unui binom: $(a-b)^2=a^2-2ab+b^2$ cu $a=1$, $b=i$.",
+      "Calculăm: $(1-i)^2=1^2-2\\cdot1\\cdot i+i^2=1-2i+i^2$.",
+      "Folosim $i^2=-1$: $1-2i-1=-2i$.",
+    ],
   },
   {
     id: "nc-s1-10",
@@ -109,7 +151,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $z_1z_2-z_1$ pentru $z_1=1+2i$, $z_2=3-i$.",
     options: ["$4+3i$", "$5+5i$", "$4+5i$", "$3+3i$"],
     correctAnswer: "$4+3i$",
-    explanation: "$z_1z_2 = (1+2i)(3-i) = 5+5i$, deci $z_1z_2-z_1 = 5+5i-(1+2i) = 4+3i$.",
+    explanation: [
+      "Calculăm mai întâi produsul $z_1z_2$, apoi scădem $z_1$.",
+      "$z_1z_2=(1+2i)(3-i)=3-i+6i-2i^2=3+5i+2=5+5i$.",
+      "Scădem $z_1$: $z_1z_2-z_1=(5+5i)-(1+2i)$.",
+      "Rezultă $4+3i$.",
+    ],
   },
 
   // Set 2 — Conjugat și modul
@@ -121,7 +168,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $|z|$ pentru $z=6-8i$.",
     correctAnswer: "10",
-    explanation: "$|z|=\\sqrt{6^2+8^2}=\\sqrt{100}=10$.",
+    explanation: [
+      "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+      "Aici $a=6$, $b=-8$: $|z|=\\sqrt{6^2+(-8)^2}$.",
+      "Calculăm sub radical: $36+64=100$.",
+      "Rezultă $|z|=\\sqrt{100}=10$.",
+    ],
   },
   {
     id: "nc-s2-2",
@@ -132,7 +184,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Care este conjugatul lui $z=-4+7i$?",
     options: ["$-4-7i$", "$4-7i$", "$4+7i$", "$7-4i$"],
     correctAnswer: "$-4-7i$",
-    explanation: "Conjugatul lui $a+bi$ este $a-bi$, deci $\\overline{-4+7i}=-4-7i$.",
+    explanation: [
+      "Conjugatul unui număr complex $a+bi$ este $a-bi$ (se schimbă semnul părții imaginare).",
+      "Aici $z=-4+7i$, cu $a=-4$ și partea imaginară $7$.",
+      "Schimbăm semnul părții imaginare: $\\overline{z}=-4-7i$.",
+    ],
   },
   {
     id: "nc-s2-3",
@@ -142,7 +198,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $|z|$ pentru $z=5+12i$.",
     correctAnswer: "13",
-    explanation: "$|z|=\\sqrt{5^2+12^2}=\\sqrt{169}=13$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$.",
+      "Aici $a=5$, $b=12$: $|z|=\\sqrt{5^2+12^2}$.",
+      "Calculăm sub radical: $25+144=169$.",
+      "Rezultă $|z|=\\sqrt{169}=13$.",
+    ],
   },
   {
     id: "nc-s2-4",
@@ -152,7 +213,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z+\\bar z$ pentru $z=6-2i$.",
     correctAnswer: "12",
-    explanation: "$(6-2i)+(6+2i)=12$.",
+    explanation: [
+      "Pentru $z=a+bi$, suma $z+\\overline z$ este întotdeauna un număr real: $z+\\overline z=2a$.",
+      "Aici $z=6-2i$, deci $\\overline z=6+2i$.",
+      "Adunăm: $(6-2i)+(6+2i)=12$ (părțile imaginare se anulează).",
+    ],
   },
   {
     id: "nc-s2-5",
@@ -163,7 +228,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $z-\\bar z$ pentru $z=3+5i$.",
     options: ["$10i$", "$6$", "$-10i$", "$10$"],
     correctAnswer: "$10i$",
-    explanation: "$(3+5i)-(3-5i)=10i$.",
+    explanation: [
+      "Pentru $z=a+bi$, diferența $z-\\overline z$ este întotdeauna un număr pur imaginar: $z-\\overline z=2bi$.",
+      "Aici $z=3+5i$, deci $\\overline z=3-5i$.",
+      "Scădem: $(3+5i)-(3-5i)=10i$ (părțile reale se anulează).",
+    ],
   },
   {
     id: "nc-s2-6",
@@ -173,7 +242,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z\\bar z$ pentru $z=2+3i$.",
     correctAnswer: "13",
-    explanation: "$z\\bar z=|z|^2=2^2+3^2=13$.",
+    explanation: [
+      "Produsul $z\\bar z$ este egal cu $|z|^2=a^2+b^2$.",
+      "Aici $a=2$, $b=3$: $z\\bar z=2^2+3^2$.",
+      "Rezultă $4+9=13$.",
+    ],
   },
   {
     id: "nc-s2-7",
@@ -184,7 +257,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Dacă $|z_1|=5$ și $|z_2|=\\sqrt2$, calculați $|z_1z_2|$.",
     options: ["$5\\sqrt{2}$", "$5+\\sqrt2$", "$\\sqrt{10}$", "$25\\sqrt2$"],
     correctAnswer: "$5\\sqrt{2}$",
-    explanation: "$|z_1z_2|=|z_1|\\cdot|z_2|=5\\sqrt2$.",
+    explanation: [
+      "Modulul unui produs este produsul modulelor: $|z_1z_2|=|z_1|\\cdot|z_2|$.",
+      "Aici $|z_1|=5$, $|z_2|=\\sqrt2$.",
+      "Rezultă $|z_1z_2|=5\\sqrt2$.",
+    ],
   },
   {
     id: "nc-s2-8",
@@ -195,7 +272,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $\\overline{z^2}$ pentru $z=2-i$.",
     correctAnswer: "3+4i",
     acceptedAnswers: ["4i+3"],
-    explanation: "$z^2=(2-i)^2=3-4i$, deci $\\overline{z^2}=3+4i$.",
+    explanation: [
+      "Calculăm mai întâi $z^2$, apoi aplicăm conjugarea.",
+      "$z^2=(2-i)^2=4-4i+i^2=4-4i-1=3-4i$.",
+      "Conjugatul lui $3-4i$ se obține schimbând semnul părții imaginare.",
+      "Rezultă $\\overline{z^2}=3+4i$.",
+    ],
   },
   {
     id: "nc-s2-9",
@@ -205,7 +287,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $|z|$ pentru $z=-5$ (număr real).",
     correctAnswer: "5",
-    explanation: "$|z|=\\sqrt{(-5)^2+0^2}=5$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$; pentru un număr real, $b=0$.",
+      "Aici $a=-5$, $b=0$: $|z|=\\sqrt{(-5)^2+0^2}$.",
+      "Rezultă $|z|=\\sqrt{25}=5$.",
+    ],
   },
   {
     id: "nc-s2-10",
@@ -215,7 +301,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați valoarea pozitivă a lui $a\\in\\mathbb{R}$ pentru care $|a+3i|=5$.",
     correctAnswer: "4",
-    explanation: "$a^2+9=25\\Rightarrow a^2=16\\Rightarrow a=\\pm4$; valoarea pozitivă este $4$.",
+    explanation: [
+      "Aplicăm formula modulului: $|a+3i|=\\sqrt{a^2+3^2}=5$.",
+      "Ridicăm la pătrat: $a^2+9=25$.",
+      "Rezolvăm: $a^2=16\\Rightarrow a=\\pm4$.",
+      "Valoarea pozitivă cerută este $a=4$.",
+    ],
   },
 
   // Set 3 — Puteri ale lui i și puteri de numere complexe
@@ -227,7 +318,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $i^{10}$.",
     correctAnswer: "-1",
-    explanation: "$10=4\\cdot2+2$, deci $i^{10}=i^2=-1$.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4: $i^1=i,\\,i^2=-1,\\,i^3=-i,\\,i^4=1$.",
+      "Împărțim exponentul la 4: $10=4\\cdot2+2$.",
+      "Restul este $2$, deci $i^{10}=i^2$.",
+      "Rezultă $i^{10}=-1$.",
+    ],
   },
   {
     id: "nc-s3-2",
@@ -238,7 +334,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $i^{15}$.",
     options: ["$-i$", "$i$", "$-1$", "$1$"],
     correctAnswer: "$-i$",
-    explanation: "$15=4\\cdot3+3$, deci $i^{15}=i^3=-i$.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4.",
+      "Împărțim exponentul la 4: $15=4\\cdot3+3$.",
+      "Restul este $3$, deci $i^{15}=i^3$.",
+      "Rezultă $i^{15}=-i$.",
+    ],
   },
   {
     id: "nc-s3-3",
@@ -248,7 +349,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $i^{100}$.",
     correctAnswer: "1",
-    explanation: "$100=4\\cdot25$, deci $i^{100}=1$.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4.",
+      "Împărțim exponentul la 4: $100=4\\cdot25$, rest $0$.",
+      "Cum restul este $0$, $i^{100}=i^4=1$.",
+    ],
   },
   {
     id: "nc-s3-4",
@@ -259,7 +364,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $i^{37}$.",
     options: ["$i$", "$-i$", "$1$", "$-1$"],
     correctAnswer: "$i$",
-    explanation: "$37=4\\cdot9+1$, deci $i^{37}=i$.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4.",
+      "Împărțim exponentul la 4: $37=4\\cdot9+1$.",
+      "Restul este $1$, deci $i^{37}=i^1=i$.",
+    ],
   },
   {
     id: "nc-s3-5",
@@ -269,7 +378,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $i^{-1}$.",
     correctAnswer: "-i",
-    explanation: "$i^{-1}=\\dfrac{1}{i}=\\dfrac{i}{i^2}=-i$.",
+    explanation: [
+      "Puterea negativă se scrie ca inversă: $i^{-1}=\\dfrac{1}{i}$.",
+      "Amplificăm cu $i$: $\\dfrac{1}{i}=\\dfrac{i}{i^2}$.",
+      "Folosim $i^2=-1$: $\\dfrac{i}{-1}=-i$.",
+    ],
   },
   {
     id: "nc-s3-6",
@@ -279,7 +392,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $(1+i)^4$.",
     correctAnswer: "-4",
-    explanation: "$(1+i)^2=2i$, deci $(1+i)^4=(2i)^2=-4$.",
+    explanation: [
+      "Calculăm mai întâi $(1+i)^2$, apoi ridicăm rezultatul la pătrat.",
+      "$(1+i)^2=1+2i+i^2=2i$.",
+      "$(1+i)^4=\\left[(1+i)^2\\right]^2=(2i)^2=4i^2$.",
+      "Folosim $i^2=-1$: $4\\cdot(-1)=-4$.",
+    ],
   },
   {
     id: "nc-s3-7",
@@ -290,7 +408,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $i^{2024}$.",
     options: ["$1$", "$i$", "$-1$", "$-i$"],
     correctAnswer: "$1$",
-    explanation: "$2024=4\\cdot506$, deci $i^{2024}=1$.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4.",
+      "Împărțim exponentul la 4: $2024=4\\cdot506$, rest $0$.",
+      "Cum restul este $0$, $i^{2024}=1$.",
+    ],
   },
   {
     id: "nc-s3-8",
@@ -301,7 +423,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $z^3$ pentru $z=1+i$.",
     correctAnswer: "-2+2i",
     acceptedAnswers: ["2i-2"],
-    explanation: "$z^2=2i$, deci $z^3=2i(1+i)=2i+2i^2=-2+2i$.",
+    explanation: [
+      "Scriem $z^3=z^2\\cdot z$ și calculăm întâi $z^2$.",
+      "$z^2=(1+i)^2=1+2i+i^2=2i$.",
+      "$z^3=z^2\\cdot z=2i(1+i)=2i+2i^2$.",
+      "Folosim $i^2=-1$: $2i-2=-2+2i$.",
+    ],
   },
   {
     id: "nc-s3-9",
@@ -312,7 +439,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $(\\sqrt3+i)^2$.",
     options: ["$2+2\\sqrt{3}i$", "$4+2\\sqrt3i$", "$2-2\\sqrt3i$", "$4$"],
     correctAnswer: "$2+2\\sqrt{3}i$",
-    explanation: "$(\\sqrt3+i)^2=3+2\\sqrt3i+i^2=2+2\\sqrt3i$.",
+    explanation: [
+      "Folosim formula pătratului unui binom: $(a+b)^2=a^2+2ab+b^2$ cu $a=\\sqrt3$, $b=i$.",
+      "Calculăm: $(\\sqrt3+i)^2=(\\sqrt3)^2+2\\sqrt3\\cdot i+i^2=3+2\\sqrt3i+i^2$.",
+      "Folosim $i^2=-1$: $3+2\\sqrt3i-1=2+2\\sqrt3i$.",
+    ],
   },
   {
     id: "nc-s3-10",
@@ -322,7 +453,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați cel mai mic număr natural nenul $n$ pentru care $i^n=1$.",
     correctAnswer: "4",
-    explanation: "Puterile lui $i$ au perioada $4$, iar $i^4=1$ este primul caz pozitiv.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4: $i^1=i,\\,i^2=-1,\\,i^3=-i,\\,i^4=1$.",
+      "Verificăm valorile $n=1,2,3$: niciuna nu dă $1$.",
+      "Primul exponent pozitiv pentru care $i^n=1$ este $n=4$.",
+    ],
   },
 
   // Set 4 — Ecuații cu coeficienți compleși
@@ -334,7 +469,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați $z^2+1=0$ în $\\mathbb{C}$ și determinați soluția cu parte imaginară pozitivă.",
     correctAnswer: "i",
-    explanation: "$z^2=-1\\Rightarrow z=\\pm i$; soluția cu parte imaginară pozitivă este $i$.",
+    explanation: [
+      "Ecuația $z^2+1=0$ este echivalentă cu $z^2=-1$.",
+      "Extragem rădăcina: $z=\\pm\\sqrt{-1}=\\pm i$.",
+      "Soluția cu parte imaginară pozitivă este $z=i$.",
+    ],
   },
   {
     id: "nc-s4-2",
@@ -345,7 +484,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Rezolvați $z^2+4=0$ și determinați soluția cu parte imaginară pozitivă.",
     options: ["$2i$", "$-2i$", "$4i$", "$-4i$"],
     correctAnswer: "$2i$",
-    explanation: "$z^2=-4\\Rightarrow z=\\pm2i$; soluția cerută este $2i$.",
+    explanation: [
+      "Ecuația $z^2+4=0$ este echivalentă cu $z^2=-4$.",
+      "Extragem rădăcina: $z=\\pm\\sqrt{-4}=\\pm2i$.",
+      "Soluția cu parte imaginară pozitivă este $z=2i$.",
+    ],
   },
   {
     id: "nc-s4-3",
@@ -356,7 +499,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Rezolvați $z^2-2z+5=0$ și determinați soluția cu parte imaginară pozitivă.",
     correctAnswer: "1+2i",
     acceptedAnswers: ["2i+1"],
-    explanation: "$\\Delta=4-20=-16$, $z=\\dfrac{2\\pm4i}{2}=1\\pm2i$.",
+    explanation: [
+      "Calculăm discriminantul: $\\Delta=(-2)^2-4\\cdot1\\cdot5=4-20=-16$.",
+      "Cum $\\Delta<0$, soluțiile sunt complexe: $z=\\dfrac{2\\pm\\sqrt{-16}}{2}=\\dfrac{2\\pm4i}{2}$.",
+      "Simplificăm: $z=1\\pm2i$.",
+      "Soluția cu parte imaginară pozitivă este $z=1+2i$.",
+    ],
   },
   {
     id: "nc-s4-4",
@@ -367,7 +515,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Rezolvați $z^2+2z+2=0$ și determinați soluția cu parte imaginară pozitivă.",
     options: ["$-1+i$", "$1+i$", "$-1-i$", "$1-i$"],
     correctAnswer: "$-1+i$",
-    explanation: "$\\Delta=4-8=-4$, $z=\\dfrac{-2\\pm2i}{2}=-1\\pm i$.",
+    explanation: [
+      "Calculăm discriminantul: $\\Delta=2^2-4\\cdot1\\cdot2=4-8=-4$.",
+      "Cum $\\Delta<0$: $z=\\dfrac{-2\\pm\\sqrt{-4}}{2}=\\dfrac{-2\\pm2i}{2}$.",
+      "Simplificăm: $z=-1\\pm i$.",
+      "Soluția cu parte imaginară pozitivă este $z=-1+i$.",
+    ],
   },
   {
     id: "nc-s4-5",
@@ -377,7 +530,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma soluțiilor ecuației $z^2-4z+13=0$.",
     correctAnswer: "4",
-    explanation: "Conform relațiilor lui Viète, suma soluțiilor este $-b/a=4$.",
+    explanation: [
+      "Pentru ecuația $az^2+bz+c=0$, relațiile lui Viète dau suma soluțiilor $z_1+z_2=-b/a$.",
+      "Aici $a=1$, $b=-4$.",
+      "Rezultă suma $z_1+z_2=-(-4)/1=4$.",
+    ],
   },
   {
     id: "nc-s4-6",
@@ -387,7 +544,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Ecuația $z^2-6z+c=0$ are soluțiile $z_{1,2}=3\\pm2i$. Determinați $c$.",
     correctAnswer: "13",
-    explanation: "$c=z_1z_2=(3+2i)(3-2i)=9+4=13$.",
+    explanation: [
+      "Produsul soluțiilor unei ecuații $z^2-6z+c=0$ este $z_1z_2=c$ (relațiile lui Viète, cu $a=1$).",
+      "Calculăm produsul: $z_1z_2=(3+2i)(3-2i)=3^2-(2i)^2$.",
+      "Folosim $i^2=-1$: $9-4i^2=9+4=13$.",
+      "Rezultă $c=13$.",
+    ],
   },
   {
     id: "nc-s4-7",
@@ -398,7 +560,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați produsul soluțiilor ecuației $z^2+2z+10=0$.",
     options: ["$10$", "$2$", "$-10$", "$-2$"],
     correctAnswer: "$10$",
-    explanation: "Conform relațiilor lui Viète, produsul soluțiilor este $c/a=10$.",
+    explanation: [
+      "Pentru ecuația $az^2+bz+c=0$, relațiile lui Viète dau produsul soluțiilor $z_1z_2=c/a$.",
+      "Aici $a=1$, $c=10$.",
+      "Rezultă produsul $z_1z_2=10/1=10$.",
+    ],
   },
   {
     id: "nc-s4-8",
@@ -408,7 +574,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma soluțiilor ecuației $z^2-8z+20=0$.",
     correctAnswer: "8",
-    explanation: "Suma soluțiilor este $-b/a=8$.",
+    explanation: [
+      "Relațiile lui Viète dau suma soluțiilor $z_1+z_2=-b/a$.",
+      "Aici $a=1$, $b=-8$.",
+      "Rezultă suma $z_1+z_2=-(-8)/1=8$.",
+    ],
   },
   {
     id: "nc-s4-9",
@@ -419,7 +589,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați produsul soluțiilor ecuației $z^2+9=0$.",
     options: ["$9$", "$-9$", "$3$", "$-3$"],
     correctAnswer: "$9$",
-    explanation: "Produsul soluțiilor este $c/a=9$.",
+    explanation: [
+      "Ecuația $z^2+9=0$ se scrie $z^2+0\\cdot z+9=0$, cu $a=1$, $c=9$.",
+      "Relațiile lui Viète dau produsul soluțiilor $z_1z_2=c/a$.",
+      "Rezultă produsul $z_1z_2=9/1=9$.",
+    ],
   },
   {
     id: "nc-s4-10",
@@ -429,7 +603,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați cel mai mic număr întreg $m$ pentru care ecuația $z^2-4z+m=0$ are soluții complexe nereale.",
     correctAnswer: "5",
-    explanation: "$\\Delta=16-4m<0\\Rightarrow m>4$; cel mai mic număr întreg care satisface condiția este $5$.",
+    explanation: [
+      "Ecuația $z^2-4z+m=0$ are soluții complexe nereale atunci când $\\Delta<0$.",
+      "Calculăm discriminantul: $\\Delta=(-4)^2-4\\cdot1\\cdot m=16-4m$.",
+      "Punem condiția $16-4m<0\\Rightarrow m>4$.",
+      "Cel mai mic număr întreg mai mare decât $4$ este $m=5$.",
+    ],
   },
 
   // Set 5 — Interpretare geometrică
@@ -442,7 +621,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Care sunt coordonatele punctului care reprezintă $z=3-5i$ în planul complex?",
     options: ["(3, -5)", "(3, 5)", "(-3, -5)", "(-5, 3)"],
     correctAnswer: "(3, -5)",
-    explanation: "Punctul asociat lui $z=a+bi$ are coordonatele $(a,b)$, deci $(3,-5)$.",
+    explanation: [
+      "Numărul complex $z=a+bi$ este reprezentat în planul complex prin punctul de coordonate $(a,b)$.",
+      "Aici $z=3-5i$, deci $a=3$, $b=-5$.",
+      "Rezultă coordonatele $(3,-5)$.",
+    ],
   },
   {
     id: "nc-s5-2",
@@ -452,7 +635,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați distanța dintre punctele de afixe $z_1=1+2i$ și $z_2=4+6i$.",
     correctAnswer: "5",
-    explanation: "Distanța este $|z_2-z_1|=|3+4i|=5$.",
+    explanation: [
+      "Distanța dintre punctele de afixe $z_1$ și $z_2$ este $|z_2-z_1|$.",
+      "Calculăm diferența: $z_2-z_1=(4+6i)-(1+2i)=3+4i$.",
+      "Aplicăm formula modulului: $|3+4i|=\\sqrt{3^2+4^2}=\\sqrt{25}$.",
+      "Rezultă distanța $5$.",
+    ],
   },
   {
     id: "nc-s5-3",
@@ -463,7 +651,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați afixul mijlocului segmentului determinat de $z_1=2+3i$ și $z_2=6-i$.",
     options: ["$4+i$", "$4+2i$", "$8+2i$", "$2+i$"],
     correctAnswer: "$4+i$",
-    explanation: "Afixul mijlocului este $\\dfrac{z_1+z_2}{2}=4+i$.",
+    explanation: [
+      "Afixul mijlocului unui segment este media aritmetică a afixelor capetelor: $\\dfrac{z_1+z_2}{2}$.",
+      "Calculăm suma: $z_1+z_2=(2+3i)+(6-i)=8+2i$.",
+      "Împărțim la 2: $\\dfrac{8+2i}{2}=4+i$.",
+    ],
   },
   {
     id: "nc-s5-4",
@@ -473,7 +665,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați distanța de la origine la punctul de afix $z=6+8i$.",
     correctAnswer: "10",
-    explanation: "Distanța este $|z|=\\sqrt{36+64}=10$.",
+    explanation: [
+      "Distanța de la origine la punctul de afix $z$ este $|z|$.",
+      "Aplicăm formula modulului: $|z|=\\sqrt{6^2+8^2}$.",
+      "Calculăm sub radical: $36+64=100$.",
+      "Rezultă $|z|=\\sqrt{100}=10$.",
+    ],
   },
   {
     id: "nc-s5-5",
@@ -489,7 +686,11 @@ export const numereComplexeSetExercises: Exercise[] = [
       "un cerc cu centrul în origine și raza 9",
     ],
     correctAnswer: "un cerc cu centrul în origine și raza 3",
-    explanation: "$|z|=3$ exprimă distanța constantă de $3$ până la origine, deci un cerc de rază $3$ centrat în origine.",
+    explanation: [
+      "Condiția $|z|=3$ exprimă faptul că distanța de la punctul $z$ la origine este constantă, egală cu $3$.",
+      "Mulțimea punctelor situate la distanță constantă de un punct fix formează un cerc.",
+      "Rezultă un cerc cu centrul în origine și raza $3$.",
+    ],
   },
   {
     id: "nc-s5-6",
@@ -505,7 +706,11 @@ export const numereComplexeSetExercises: Exercise[] = [
       "un punct",
     ],
     correctAnswer: "axa $Oy$ (mediatoarea segmentului $[-2,2]$)",
-    explanation: "Condiția cere ca $z$ să fie egal depărtat de $2$ și $-2$, deci mediatoarea segmentului, adică axa $Oy$.",
+    explanation: [
+      "$|z-2|$ este distanța de la $z$ la punctul $2$, iar $|z+2|$ este distanța de la $z$ la punctul $-2$.",
+      "Condiția $|z-2|=|z+2|$ cere ca $z$ să fie egal depărtat de cele două puncte.",
+      "Mulțimea punctelor egal depărtate de $2$ și $-2$ este mediatoarea segmentului $[-2,2]$, adică axa $Oy$.",
+    ],
   },
   {
     id: "nc-s5-7",
@@ -516,7 +721,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați afixul vectorului $\\overrightarrow{AB}$ pentru $A(2,1)$ și $B(5,4)$.",
     correctAnswer: "3+3i",
     acceptedAnswers: ["3i+3"],
-    explanation: "Afixul vectorului este $z_B-z_A=(5+4i)-(2+i)=3+3i$.",
+    explanation: [
+      "Afixul vectorului $\\overrightarrow{AB}$ este $z_B-z_A$, unde $z_A$, $z_B$ sunt afixele punctelor.",
+      "Aici $A(2,1)$ dă $z_A=2+i$, iar $B(5,4)$ dă $z_B=5+4i$.",
+      "Calculăm diferența: $z_B-z_A=(5+4i)-(2+i)$.",
+      "Rezultă $3+3i$.",
+    ],
   },
   {
     id: "nc-s5-8",
@@ -526,7 +736,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului determinat de afixele $0$, $z_1=4$, $z_2=3i$.",
     correctAnswer: "6",
-    explanation: "Triunghiul are catetele $4$ și $3$ pe axele de coordonate, deci aria este $\\dfrac{4\\cdot3}{2}=6$.",
+    explanation: [
+      "Cele trei afixe $0$, $4$, $3i$ corespund punctelor $O(0,0)$, $A(4,0)$, $B(0,3)$.",
+      "Segmentele $OA$ și $OB$ se află pe axele de coordonate și sunt perpendiculare, deci sunt catetele unui triunghi dreptunghic.",
+      "Lungimile catetelor sunt $|OA|=4$ și $|OB|=3$.",
+      "Aria triunghiului dreptunghic este $\\dfrac{4\\cdot3}{2}=6$.",
+    ],
   },
   {
     id: "nc-s5-9",
@@ -537,7 +752,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Mulțimea punctelor $z$ pentru care $\\mathrm{Re}(z)=2$ reprezintă:",
     options: ["o dreaptă verticală", "o dreaptă orizontală", "un cerc", "o dreaptă care trece prin origine"],
     correctAnswer: "o dreaptă verticală",
-    explanation: "Condiția $\\mathrm{Re}(z)=2$ fixează abscisa la $2$, deci o dreaptă verticală.",
+    explanation: [
+      "Condiția $\\mathrm{Re}(z)=2$ înseamnă că abscisa punctului $z=a+bi$ este fixă, $a=2$, iar $b$ variază liber.",
+      "Mulțimea punctelor cu abscisă constantă formează o dreaptă verticală.",
+    ],
   },
   {
     id: "nc-s5-10",
@@ -547,7 +765,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați distanța dintre punctele de afixe $z_1=-2+i$ și $z_2=1-3i$.",
     correctAnswer: "5",
-    explanation: "Distanța este $|z_2-z_1|=|3-4i|=5$.",
+    explanation: [
+      "Distanța dintre punctele de afixe $z_1$ și $z_2$ este $|z_2-z_1|$.",
+      "Calculăm diferența: $z_2-z_1=(1-3i)-(-2+i)=3-4i$.",
+      "Aplicăm formula modulului: $|3-4i|=\\sqrt{3^2+4^2}=\\sqrt{25}$.",
+      "Rezultă distanța $5$.",
+    ],
   },
 
   // Set 6 — Forma trigonometrică
@@ -560,7 +783,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați modulul lui $z=1+i$.",
     correctAnswer: "sqrt(2)",
     acceptedAnswers: ["√2", "1.41", "1,41"],
-    explanation: "$|z|=\\sqrt{1^2+1^2}=\\sqrt2$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$.",
+      "Aici $a=1$, $b=1$: $|z|=\\sqrt{1^2+1^2}$.",
+      "Rezultă $|z|=\\sqrt2$.",
+    ],
   },
   {
     id: "nc-s6-2",
@@ -571,7 +798,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați argumentul principal al lui $z=1+i$.",
     options: ["$\\pi/4$", "$\\pi/2$", "$\\pi/3$", "$3\\pi/4$"],
     correctAnswer: "$\\pi/4$",
-    explanation: "Punctul $(1,1)$ este în primul cadran, iar $\\tan\\theta=1\\Rightarrow\\theta=\\pi/4$.",
+    explanation: [
+      "Argumentul unui număr complex $z=a+bi$ se determină folosind poziția punctului $(a,b)$ și $\\tan\\theta=b/a$.",
+      "Aici $a=1$, $b=1$, deci punctul $(1,1)$ se află în primul cadran.",
+      "Din $\\tan\\theta=1$ rezultă $\\theta=\\pi/4$.",
+    ],
   },
   {
     id: "nc-s6-3",
@@ -581,7 +812,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați modulul lui $z=-1+i\\sqrt3$.",
     correctAnswer: "2",
-    explanation: "$|z|=\\sqrt{(-1)^2+(\\sqrt3)^2}=\\sqrt4=2$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$.",
+      "Aici $a=-1$, $b=\\sqrt3$: $|z|=\\sqrt{(-1)^2+(\\sqrt3)^2}$.",
+      "Calculăm sub radical: $1+3=4$.",
+      "Rezultă $|z|=\\sqrt4=2$.",
+    ],
   },
   {
     id: "nc-s6-4",
@@ -592,8 +828,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați argumentul principal al lui $z=-1+i\\sqrt3$.",
     options: ["$2\\pi/3$", "$\\pi/3$", "$\\pi/6$", "$5\\pi/6$"],
     correctAnswer: "$2\\pi/3$",
-    explanation:
-      "Punctul este în cadranul al II-lea, iar argumentul de referință este $\\pi/3$, deci argumentul principal este $\\pi-\\pi/3=2\\pi/3$.",
+    explanation: [
+      "Punctul $(-1,\\sqrt3)$ se află în cadranul al II-lea (abscisă negativă, ordonată pozitivă).",
+      "Argumentul de referință (unghiul față de axa reală) este $\\arctan\\left(\\dfrac{\\sqrt3}{1}\\right)=\\pi/3$.",
+      "În cadranul al II-lea, argumentul principal este $\\pi$ minus argumentul de referință: $\\pi-\\pi/3=2\\pi/3$.",
+    ],
   },
   {
     id: "nc-s6-5",
@@ -609,7 +848,12 @@ export const numereComplexeSetExercises: Exercise[] = [
       "$2(\\cos(\\pi/4)+i\\sin(\\pi/4))$",
     ],
     correctAnswer: "$2(\\cos(\\pi/2)+i\\sin(\\pi/2))$",
-    explanation: "$z=2i$ are modulul $2$ și argumentul $\\pi/2$ (se află pe axa $Oy$ pozitivă).",
+    explanation: [
+      "Forma trigonometrică a unui număr complex este $z=|z|(\\cos\\theta+i\\sin\\theta)$, unde $|z|$ este modulul, iar $\\theta$ argumentul.",
+      "Pentru $z=2i$, avem $a=0$, $b=2$, deci $|z|=\\sqrt{0^2+2^2}=2$.",
+      "Punctul $(0,2)$ se află pe axa $Oy$ pozitivă, deci argumentul este $\\theta=\\pi/2$.",
+      "Rezultă $z=2(\\cos(\\pi/2)+i\\sin(\\pi/2))$.",
+    ],
   },
   {
     id: "nc-s6-6",
@@ -619,7 +863,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați modulul lui $z=-3$.",
     correctAnswer: "3",
-    explanation: "$|z|=\\sqrt{(-3)^2}=3$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$; pentru un număr real, $b=0$.",
+      "Aici $a=-3$, $b=0$: $|z|=\\sqrt{(-3)^2+0^2}$.",
+      "Rezultă $|z|=\\sqrt9=3$.",
+    ],
   },
   {
     id: "nc-s6-7",
@@ -630,7 +878,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați argumentul principal al lui $z=-3$.",
     options: ["$\\pi$", "$0$", "$\\pi/2$", "$-\\pi$"],
     correctAnswer: "$\\pi$",
-    explanation: "$z=-3$ se află pe axa reală negativă, deci argumentul principal este $\\pi$.",
+    explanation: [
+      "Numărul $z=-3$ are partea imaginară nulă și partea reală negativă, deci punctul se află pe axa reală negativă.",
+      "Argumentul asociat semiaxei reale negative este $\\pi$.",
+    ],
   },
   {
     id: "nc-s6-8",
@@ -640,7 +891,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați modulul lui $z=\\sqrt3-i$.",
     correctAnswer: "2",
-    explanation: "$|z|=\\sqrt{(\\sqrt3)^2+(-1)^2}=\\sqrt4=2$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$.",
+      "Aici $a=\\sqrt3$, $b=-1$: $|z|=\\sqrt{(\\sqrt3)^2+(-1)^2}$.",
+      "Calculăm sub radical: $3+1=4$.",
+      "Rezultă $|z|=\\sqrt4=2$.",
+    ],
   },
   {
     id: "nc-s6-9",
@@ -651,8 +907,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați argumentul principal al lui $z=\\sqrt3-i$.",
     options: ["$-\\pi/6$", "$\\pi/6$", "$-\\pi/3$", "$\\pi/3$"],
     correctAnswer: "$-\\pi/6$",
-    explanation:
-      "Punctul este în cadranul al IV-lea, iar argumentul de referință este $\\pi/6$, deci argumentul principal este $-\\pi/6$.",
+    explanation: [
+      "Punctul $(\\sqrt3,-1)$ se află în cadranul al IV-lea (abscisă pozitivă, ordonată negativă).",
+      "Argumentul de referință este $\\arctan\\left(\\dfrac{1}{\\sqrt3}\\right)=\\pi/6$.",
+      "În cadranul al IV-lea, argumentul principal este negativ: $\\theta=-\\pi/6$.",
+    ],
   },
   {
     id: "nc-s6-10",
@@ -668,7 +927,12 @@ export const numereComplexeSetExercises: Exercise[] = [
       "$\\sqrt2(\\cos(3\\pi/4)+i\\sin(3\\pi/4))$",
     ],
     correctAnswer: "$\\sqrt2(\\cos(-\\pi/4)+i\\sin(-\\pi/4))$",
-    explanation: "$|z|=\\sqrt2$ și argumentul principal este $-\\pi/4$ (cadranul al IV-lea).",
+    explanation: [
+      "Forma trigonometrică este $z=|z|(\\cos\\theta+i\\sin\\theta)$.",
+      "Pentru $z=1-i$: $|z|=\\sqrt{1^2+(-1)^2}=\\sqrt2$.",
+      "Punctul $(1,-1)$ se află în cadranul al IV-lea, cu argumentul de referință $\\pi/4$, deci $\\theta=-\\pi/4$.",
+      "Rezultă $z=\\sqrt2(\\cos(-\\pi/4)+i\\sin(-\\pi/4))$.",
+    ],
   },
 
   // Set 7 — Operații în formă trigonometrică. Formula lui Moivre
@@ -681,7 +945,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt:
       "Dacă $z_1=2(\\cos(\\pi/6)+i\\sin(\\pi/6))$ și $z_2=3(\\cos(\\pi/3)+i\\sin(\\pi/3))$, calculați $|z_1z_2|$.",
     correctAnswer: "6",
-    explanation: "$|z_1z_2|=|z_1|\\cdot|z_2|=2\\cdot3=6$.",
+    explanation: [
+      "Modulul unui produs este produsul modulelor: $|z_1z_2|=|z_1|\\cdot|z_2|$.",
+      "Aici $|z_1|=2$, $|z_2|=3$.",
+      "Rezultă $|z_1z_2|=2\\cdot3=6$.",
+    ],
   },
   {
     id: "nc-s7-2",
@@ -692,7 +960,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Pentru $z_1,z_2$ de mai sus, determinați un argument al lui $z_1z_2$.",
     options: ["$\\pi/2$", "$\\pi/3$", "$\\pi/6$", "$2\\pi/3$"],
     correctAnswer: "$\\pi/2$",
-    explanation: "Argumentul produsului este suma argumentelor: $\\pi/6+\\pi/3=\\pi/2$.",
+    explanation: [
+      "Argumentul unui produs este suma argumentelor factorilor: $\\arg(z_1z_2)=\\arg(z_1)+\\arg(z_2)$.",
+      "Aici $\\arg(z_1)=\\pi/6$, $\\arg(z_2)=\\pi/3$.",
+      "Rezultă $\\arg(z_1z_2)=\\pi/6+\\pi/3=\\pi/2$.",
+    ],
   },
   {
     id: "nc-s7-3",
@@ -702,7 +974,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Dacă $|z_1|=8$ și $|z_2|=2$, calculați $|z_1/z_2|$.",
     correctAnswer: "4",
-    explanation: "$|z_1/z_2|=|z_1|/|z_2|=8/2=4$.",
+    explanation: [
+      "Modulul unui cât este câtul modulelor: $|z_1/z_2|=|z_1|/|z_2|$.",
+      "Aici $|z_1|=8$, $|z_2|=2$.",
+      "Rezultă $|z_1/z_2|=8/2=4$.",
+    ],
   },
   {
     id: "nc-s7-4",
@@ -712,7 +988,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Dacă $|z|=2$, calculați $|z^5|$.",
     correctAnswer: "32",
-    explanation: "$|z^5|=|z|^5=2^5=32$.",
+    explanation: [
+      "Modulul unei puteri este puterea modulului: $|z^n|=|z|^n$.",
+      "Aici $|z|=2$, $n=5$.",
+      "Rezultă $|z^5|=2^5=32$.",
+    ],
   },
   {
     id: "nc-s7-5",
@@ -723,7 +1003,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Folosind formula lui Moivre, calculați $z^6$ pentru $z=\\cos(\\pi/6)+i\\sin(\\pi/6)$.",
     options: ["$-1$", "$1$", "$i$", "$-i$"],
     correctAnswer: "$-1$",
-    explanation: "Modulul rămâne $1$, iar argumentul devine $6\\cdot\\pi/6=\\pi$, deci $z^6=\\cos\\pi+i\\sin\\pi=-1$.",
+    explanation: [
+      "Aplicăm formula lui Moivre: dacă $z=\\cos\\theta+i\\sin\\theta$, atunci $z^n=\\cos(n\\theta)+i\\sin(n\\theta)$.",
+      "Aici $\\theta=\\pi/6$, $n=6$, deci modulul rămâne $1^6=1$.",
+      "Noul argument este $6\\cdot\\pi/6=\\pi$.",
+      "Rezultă $z^6=\\cos\\pi+i\\sin\\pi=-1$.",
+    ],
   },
   {
     id: "nc-s7-6",
@@ -733,7 +1018,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Dacă $|z|=1$, calculați $|z^{10}|$.",
     correctAnswer: "1",
-    explanation: "$|z^{10}|=|z|^{10}=1^{10}=1$.",
+    explanation: [
+      "Modulul unei puteri este puterea modulului: $|z^n|=|z|^n$.",
+      "Aici $|z|=1$, $n=10$.",
+      "Rezultă $|z^{10}|=1^{10}=1$.",
+    ],
   },
   {
     id: "nc-s7-7",
@@ -743,8 +1032,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $z^4$ pentru $z=2(\\cos(\\pi/4)+i\\sin(\\pi/4))$, folosind formula lui Moivre.",
     correctAnswer: "-16",
-    explanation:
-      "Modulul devine $2^4=16$, iar argumentul $4\\cdot\\pi/4=\\pi$, deci $z^4=16(\\cos\\pi+i\\sin\\pi)=-16$.",
+    explanation: [
+      "Aplicăm formula lui Moivre: $z^n=|z|^n(\\cos(n\\theta)+i\\sin(n\\theta))$.",
+      "Aici $|z|=2$, $\\theta=\\pi/4$, $n=4$, deci modulul devine $2^4=16$.",
+      "Noul argument este $4\\cdot\\pi/4=\\pi$.",
+      "Rezultă $z^4=16(\\cos\\pi+i\\sin\\pi)=-16$.",
+    ],
   },
   {
     id: "nc-s7-8",
@@ -755,7 +1048,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $|z^3|$ pentru $z=1+i$.",
     options: ["$2\\sqrt2$", "$2$", "$4$", "$\\sqrt2$"],
     correctAnswer: "$2\\sqrt2$",
-    explanation: "$|z|=\\sqrt2$, deci $|z^3|=(\\sqrt2)^3=2\\sqrt2$.",
+    explanation: [
+      "Calculăm mai întâi modulul lui $z$: $|z|=\\sqrt{1^2+1^2}=\\sqrt2$.",
+      "Folosim $|z^n|=|z|^n$ cu $n=3$: $|z^3|=(\\sqrt2)^3$.",
+      "Rezultă $|z^3|=2\\sqrt2$.",
+    ],
   },
   {
     id: "nc-s7-9",
@@ -765,8 +1062,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați cel mai mic număr natural nenul $n$ pentru care $(\\cos(\\pi/3)+i\\sin(\\pi/3))^n$ este real pozitiv.",
     correctAnswer: "6",
-    explanation:
-      "Argumentul devine $n\\pi/3$, care trebuie să fie multiplu de $2\\pi$; cel mai mic $n$ pentru care aceasta se întâmplă este $n=6$.",
+    explanation: [
+      "Aplicăm formula lui Moivre: $(\\cos(\\pi/3)+i\\sin(\\pi/3))^n=\\cos(n\\pi/3)+i\\sin(n\\pi/3)$.",
+      "Pentru ca rezultatul să fie real pozitiv, argumentul $n\\pi/3$ trebuie să fie multiplu de $2\\pi$.",
+      "Punem condiția $n\\pi/3=2\\pi k$, adică $n=6k$, pentru $k$ natural.",
+      "Cel mai mic $n$ natural nenul este $n=6$.",
+    ],
   },
   {
     id: "nc-s7-10",
@@ -777,7 +1078,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Dacă $|z|=r$, atunci $|z^n|$ este egal cu:",
     options: ["$r^n$", "$rn$", "$nr$", "$r/n$"],
     correctAnswer: "$r^n$",
-    explanation: "Conform formulei lui Moivre, $|z^n|=|z|^n=r^n$.",
+    explanation: [
+      "Modulul unei puteri este puterea modulului: $|z^n|=|z|^n$.",
+      "Aici $|z|=r$.",
+      "Rezultă $|z^n|=r^n$.",
+    ],
   },
 
   // Set 8 — Rădăcini de ordin n. Rădăcinile de ordin n ale unității
@@ -789,7 +1094,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați $z^2=-4$ și determinați soluția cu parte imaginară pozitivă.",
     correctAnswer: "2i",
-    explanation: "$z^2=-4\\Rightarrow z=\\pm2i$; soluția cerută este $2i$.",
+    explanation: [
+      "Ecuația $z^2=-4$ se rezolvă extrăgând rădăcina pătrată complexă.",
+      "$z=\\pm\\sqrt{-4}=\\pm2i$.",
+      "Soluția cu parte imaginară pozitivă este $z=2i$.",
+    ],
   },
   {
     id: "nc-s8-2",
@@ -799,7 +1108,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte rădăcini de ordinul 3 are un număr complex nenul, în $\\mathbb{C}$?",
     correctAnswer: "3",
-    explanation: "Orice număr complex nenul are exact $n$ rădăcini de ordinul $n$ distincte în $\\mathbb{C}$.",
+    explanation: [
+      "Orice număr complex nenul are exact $n$ rădăcini de ordinul $n$, distincte în $\\mathbb{C}$.",
+      "Pentru rădăcini de ordinul $3$, numărul de rădăcini este $3$.",
+    ],
   },
   {
     id: "nc-s8-3",
@@ -810,7 +1122,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Care sunt rădăcinile de ordinul 4 ale unității?",
     options: ["$\\{1,-1,i,-i\\}$", "$\\{1,i\\}$", "$\\{1,-1\\}$", "$\\{i,-i\\}$"],
     correctAnswer: "$\\{1,-1,i,-i\\}$",
-    explanation: "Rădăcinile ecuației $z^4=1$ sunt $1,i,-1,-i$.",
+    explanation: [
+      "Rădăcinile de ordinul $4$ ale unității sunt soluțiile ecuației $z^4=1$.",
+      "Verificăm valorile candidate: $1^4=1$, $(-1)^4=1$, $i^4=1$, $(-i)^4=1$.",
+      "Rezultă mulțimea $\\{1,-1,i,-i\\}$.",
+    ],
   },
   {
     id: "nc-s8-4",
@@ -820,7 +1136,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma tuturor rădăcinilor de ordinul $n\\ge2$ ale unității.",
     correctAnswer: "0",
-    explanation: "Suma rădăcinilor de ordinul $n\\ge2$ ale unității este întotdeauna $0$.",
+    explanation: [
+      "Rădăcinile de ordinul $n\\ge2$ ale unității sunt soluțiile ecuației $z^n=1$.",
+      "Suma tuturor rădăcinilor unei ecuații $z^n-1=0$ este dată de coeficientul lui $z^{n-1}$ (care este $0$), conform relațiilor lui Viète.",
+      "Rezultă că suma este întotdeauna $0$.",
+    ],
   },
   {
     id: "nc-s8-5",
@@ -831,7 +1151,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați produsul rădăcinilor de ordinul 3 ale unității.",
     options: ["$1$", "$-1$", "$0$", "$3$"],
     correctAnswer: "$1$",
-    explanation: "Produsul rădăcinilor de ordinul $3$ ale unității este $1$.",
+    explanation: [
+      "Rădăcinile de ordinul $3$ ale unității sunt soluțiile ecuației $z^3-1=0$, adică $z^3=1$.",
+      "Conform relațiilor lui Viète pentru ecuația $z^3-1=0$, produsul soluțiilor este $-(-1)=1$ (termenul liber cu semn schimbat, pentru grad impar).",
+      "Rezultă produsul $1$.",
+    ],
   },
   {
     id: "nc-s8-6",
@@ -841,7 +1165,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rădăcinile de ordinul 3 ale unității, altele decât $1$, sunt soluțiile ecuației $z^2+z+1=0$. Calculați suma lor.",
     correctAnswer: "-1",
-    explanation: "Conform relațiilor lui Viète pentru $z^2+z+1=0$, suma soluțiilor este $-1$.",
+    explanation: [
+      "Rădăcinile de ordinul $3$ ale unității, altele decât $1$, satisfac $z^2+z+1=0$.",
+      "Conform relațiilor lui Viète, suma soluțiilor ecuației $z^2+z+1=0$ este $-b/a=-1/1$.",
+      "Rezultă suma $-1$.",
+    ],
   },
   {
     id: "nc-s8-7",
@@ -857,8 +1185,12 @@ export const numereComplexeSetExercises: Exercise[] = [
       "$\\sqrt2+\\sqrt2i$",
     ],
     correctAnswer: "$\\dfrac{\\sqrt2}{2}+\\dfrac{\\sqrt2}{2}i$",
-    explanation:
+    explanation: [
+      "Căutăm $w$ astfel încât $w^2=i$; forma trigonometrică a lui $i$ este $\\cos(\\pi/2)+i\\sin(\\pi/2)$.",
+      "O rădăcină pătrată are argumentul înjumătățit, $\\pi/4$, și modulul $\\sqrt1=1$.",
+      "Rezultă $w=\\cos(\\pi/4)+i\\sin(\\pi/4)=\\dfrac{\\sqrt2}{2}+\\dfrac{\\sqrt2}{2}i$.",
       "Verificăm: $\\left(\\dfrac{\\sqrt2}{2}+\\dfrac{\\sqrt2}{2}i\\right)^2=\\dfrac12+i+\\dfrac12i^2=i$.",
+    ],
   },
   {
     id: "nc-s8-8",
@@ -868,7 +1200,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte dintre rădăcinile de ordinul 6 ale unității sunt numere reale?",
     correctAnswer: "2",
-    explanation: "Rădăcinile reale de ordinul 6 ale unității sunt $1$ și $-1$, deci $2$.",
+    explanation: [
+      "Rădăcinile de ordinul $6$ ale unității sunt soluțiile ecuației $z^6=1$.",
+      "Dintre acestea, cele reale satisfac $z=\\pm1$ (verificăm: $1^6=1$, $(-1)^6=1$).",
+      "Rezultă că există exact $2$ rădăcini reale.",
+    ],
   },
   {
     id: "nc-s8-9",
@@ -884,8 +1220,11 @@ export const numereComplexeSetExercises: Exercise[] = [
       "segment de dreaptă",
     ],
     correctAnswer: "poligon regulat cu $n$ laturi înscris în cercul unitate",
-    explanation:
-      "Rădăcinile de ordinul $n$ ale unității sunt distribuite uniform pe cercul unitate, formând un poligon regulat cu $n$ laturi.",
+    explanation: [
+      "Rădăcinile de ordinul $n$ ale unității au toate modulul $1$, deci se află pe cercul unitate.",
+      "Argumentele lor sunt $\\dfrac{2k\\pi}{n}$ pentru $k=0,1,\\dots,n-1$, distanțate uniform.",
+      "Distribuția uniformă pe cerc formează vârfurile unui poligon regulat cu $n$ laturi.",
+    ],
   },
   {
     id: "nc-s8-10",
@@ -896,7 +1235,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Dacă $|z|=r$, modulul oricărei rădăcini de ordinul $n$ a lui $z$ este:",
     options: ["$\\sqrt[n]{r}$", "$r^n$", "$r/n$", "$nr$"],
     correctAnswer: "$\\sqrt[n]{r}$",
-    explanation: "Modulul unei rădăcini de ordinul $n$ a lui $z$ este $\\sqrt[n]{|z|}=\\sqrt[n]{r}$.",
+    explanation: [
+      "Dacă $z$ are modulul $r$, o rădăcină de ordinul $n$ a lui $z$ este un număr $w$ cu $w^n=z$.",
+      "Aplicând modulul: $|w|^n=|z|=r$.",
+      "Rezultă $|w|=\\sqrt[n]{r}$.",
+    ],
   },
 
   // Set 9 — Aplicații geometrice
@@ -909,7 +1252,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Punctele de afixe $z_1,z_2,z_3$ sunt vârfurile unui triunghi echilateral dacă și numai dacă $z_1^2+z_2^2+z_3^2$ este egal cu:",
     options: ["$z_1z_2+z_2z_3+z_3z_1$", "$0$", "$z_1+z_2+z_3$", "$3z_1z_2z_3$"],
     correctAnswer: "$z_1z_2+z_2z_3+z_3z_1$",
-    explanation: "Această egalitate este condiția necesară și suficientă ca triunghiul cu vârfurile $z_1,z_2,z_3$ să fie echilateral.",
+    explanation: [
+      "Condiția ca punctele de afixe $z_1,z_2,z_3$ să formeze un triunghi echilateral este o identitate algebrică cunoscută.",
+      "Aceasta afirmă că $z_1^2+z_2^2+z_3^2=z_1z_2+z_2z_3+z_3z_1$.",
+      "Rezultă că expresia egală cu $z_1^2+z_2^2+z_3^2$ este $z_1z_2+z_2z_3+z_3z_1$.",
+    ],
   },
   {
     id: "nc-s9-2",
@@ -920,7 +1267,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Punctele de afixe $z_1,z_2,z_3$ sunt coliniare dacă și numai dacă $\\dfrac{z_3-z_1}{z_2-z_1}$ este:",
     options: ["un număr real", "un număr pur imaginar", "un număr de modul 1", "întotdeauna nul"],
     correctAnswer: "un număr real",
-    explanation: "Coliniaritatea a trei puncte este echivalentă cu faptul că raportul respectiv este real.",
+    explanation: [
+      "Trei puncte de afixe $z_1,z_2,z_3$ sunt coliniare dacă vectorii $\\overrightarrow{z_1z_3}$ și $\\overrightarrow{z_1z_2}$ sunt paraleli.",
+      "Paralelismul se exprimă prin faptul că raportul $\\dfrac{z_3-z_1}{z_2-z_1}$ este un număr real.",
+    ],
   },
   {
     id: "nc-s9-3",
@@ -931,7 +1281,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Segmentele $[AB]$ și $[CD]$ sunt paralele dacă și numai dacă $\\dfrac{z_B-z_A}{z_D-z_C}$ este:",
     options: ["un număr real", "un număr pur imaginar", "egal cu $1$", "egal cu $-1$"],
     correctAnswer: "un număr real",
-    explanation: "Paralelismul a două segmente este echivalent cu faptul că raportul afixelor diferențelor este real.",
+    explanation: [
+      "Segmentele $[AB]$ și $[CD]$ sunt paralele dacă vectorii lor sunt proporționali cu un scalar real.",
+      "Aceasta se exprimă prin faptul că raportul afixelor diferențelor, $\\dfrac{z_B-z_A}{z_D-z_C}$, este un număr real.",
+    ],
   },
   {
     id: "nc-s9-4",
@@ -942,7 +1295,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Segmentele $[AB]$ și $[CD]$ sunt perpendiculare dacă și numai dacă $\\dfrac{z_B-z_A}{z_D-z_C}$ este:",
     options: ["un număr pur imaginar", "un număr real", "egal cu $0$", "un număr negativ"],
     correctAnswer: "un număr pur imaginar",
-    explanation: "Perpendicularitatea a două segmente este echivalentă cu faptul că raportul respectiv este pur imaginar.",
+    explanation: [
+      "Segmentele $[AB]$ și $[CD]$ sunt perpendiculare dacă vectorii lor sunt rotiți unul față de celălalt cu $90°$.",
+      "Rotația cu $90°$ corespunde înmulțirii cu un număr pur imaginar, deci raportul $\\dfrac{z_B-z_A}{z_D-z_C}$ este pur imaginar.",
+    ],
   },
   {
     id: "nc-s9-5",
@@ -952,7 +1308,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Se dau $A(1,1)$, $B(4,1)$, $C(4,5)$. Calculați $|AB|$.",
     correctAnswer: "3",
-    explanation: "$|AB|=|4-1|=3$ (segment orizontal).",
+    explanation: [
+      "Segmentul $AB$ este orizontal, deoarece $A$ și $B$ au aceeași ordonată.",
+      "Lungimea unui segment orizontal este diferența absciselor: $|AB|=|4-1|$.",
+      "Rezultă $|AB|=3$.",
+    ],
   },
   {
     id: "nc-s9-6",
@@ -962,7 +1322,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru punctele de mai sus, calculați $|BC|$.",
     correctAnswer: "4",
-    explanation: "$|BC|=|5-1|=4$ (segment vertical, de la $y=1$ la $y=5$).",
+    explanation: [
+      "Segmentul $BC$ este vertical, deoarece $B$ și $C$ au aceeași abscisă.",
+      "Lungimea unui segment vertical este diferența ordonatelor: $|BC|=|5-1|$.",
+      "Rezultă $|BC|=4$.",
+    ],
   },
   {
     id: "nc-s9-7",
@@ -972,7 +1336,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru punctele de mai sus, calculați $|AC|$.",
     correctAnswer: "5",
-    explanation: "Triunghiul $ABC$ este dreptunghic în $B$ (catete $3$ și $4$), deci $|AC|=\\sqrt{3^2+4^2}=5$.",
+    explanation: [
+      "Din pașii anteriori, $|AB|=3$ și $|BC|=4$, iar $AB\\perp BC$ (unul orizontal, celălalt vertical), deci triunghiul $ABC$ este dreptunghic în $B$.",
+      "Aplicăm teorema lui Pitagora: $|AC|=\\sqrt{|AB|^2+|BC|^2}=\\sqrt{3^2+4^2}$.",
+      "Rezultă $|AC|=\\sqrt{25}=5$.",
+    ],
   },
   {
     id: "nc-s9-8",
@@ -982,7 +1350,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului $ABC$ de mai sus.",
     correctAnswer: "6",
-    explanation: "Aria triunghiului dreptunghic cu catetele $3$ și $4$ este $\\dfrac{3\\cdot4}{2}=6$.",
+    explanation: [
+      "Triunghiul $ABC$ este dreptunghic în $B$, cu catetele $|AB|=3$ și $|BC|=4$.",
+      "Aria unui triunghi dreptunghic este jumătate din produsul catetelor: $\\dfrac{|AB|\\cdot|BC|}{2}$.",
+      "Rezultă aria $\\dfrac{3\\cdot4}{2}=6$.",
+    ],
   },
   {
     id: "nc-s9-9",
@@ -993,7 +1365,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Punctul $M$ este mijlocul segmentului $[AB]$, $A(2,3)$, $B(8,7)$. Determinați afixul lui $M$.",
     options: ["$5+5i$", "$10+10i$", "$6+4i$", "$4+2i$"],
     correctAnswer: "$5+5i$",
-    explanation: "Afixul mijlocului este $\\dfrac{z_A+z_B}{2}=\\dfrac{(2+3i)+(8+7i)}{2}=5+5i$.",
+    explanation: [
+      "Afixul mijlocului unui segment este media aritmetică a afixelor capetelor: $\\dfrac{z_A+z_B}{2}$.",
+      "Aici $z_A=2+3i$, $z_B=8+7i$.",
+      "Calculăm suma: $z_A+z_B=10+10i$.",
+      "Împărțim la 2: $\\dfrac{10+10i}{2}=5+5i$.",
+    ],
   },
   {
     id: "nc-s9-10",
@@ -1004,7 +1381,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați afixul centrului de greutate al triunghiului cu afixele $z_1=0$, $z_2=6$, $z_3=3i$.",
     correctAnswer: "2+i",
     acceptedAnswers: ["i+2"],
-    explanation: "Afixul centrului de greutate este $\\dfrac{z_1+z_2+z_3}{3}=\\dfrac{0+6+3i}{3}=2+i$.",
+    explanation: [
+      "Afixul centrului de greutate al unui triunghi este media aritmetică a afixelor vârfurilor: $\\dfrac{z_1+z_2+z_3}{3}$.",
+      "Calculăm suma: $z_1+z_2+z_3=0+6+3i=6+3i$.",
+      "Împărțim la 3: $\\dfrac{6+3i}{3}=2+i$.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -1017,7 +1398,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $z_1+z_2$ pentru $z_1=4-3i$, $z_2=-1+5i$.",
     correctAnswer: "3+2i",
     acceptedAnswers: ["2i+3"],
-    explanation: "$(4-3i)+(-1+5i)=3+2i$.",
+    explanation: [
+      "Adunarea numerelor complexe se face pe componente: $(a+bi)+(c+di)=(a+c)+(b+d)i$.",
+      "Aici $z_1=4-3i$, $z_2=-1+5i$.",
+      "Adunăm părțile reale: $4+(-1)=3$. Adunăm părțile imaginare: $-3+5=2$.",
+      "Rezultă $z_1+z_2=3+2i$.",
+    ],
   },
   {
     id: "nc-s10-2",
@@ -1027,7 +1413,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $|z|$ pentru $z=8-6i$.",
     correctAnswer: "10",
-    explanation: "$|z|=\\sqrt{8^2+6^2}=\\sqrt{100}=10$.",
+    explanation: [
+      "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$.",
+      "Aici $a=8$, $b=-6$: $|z|=\\sqrt{8^2+6^2}$.",
+      "Calculăm sub radical: $64+36=100$.",
+      "Rezultă $|z|=\\sqrt{100}=10$.",
+    ],
   },
   {
     id: "nc-s10-3",
@@ -1038,7 +1429,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați $i^{2025}$.",
     options: ["$i$", "$-i$", "$1$", "$-1$"],
     correctAnswer: "$i$",
-    explanation: "$2025=4\\cdot506+1$, deci $i^{2025}=i^1=i$.",
+    explanation: [
+      "Puterile lui $i$ se repetă cu perioada 4.",
+      "Împărțim exponentul la 4: $2025=4\\cdot506+1$.",
+      "Restul este $1$, deci $i^{2025}=i^1=i$.",
+    ],
   },
   {
     id: "nc-s10-4",
@@ -1048,7 +1443,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați $z^2+16=0$ și determinați soluția cu parte imaginară pozitivă.",
     correctAnswer: "4i",
-    explanation: "$z^2=-16\\Rightarrow z=\\pm4i$; soluția cerută este $4i$.",
+    explanation: [
+      "Ecuația $z^2+16=0$ este echivalentă cu $z^2=-16$.",
+      "Extragem rădăcina: $z=\\pm\\sqrt{-16}=\\pm4i$.",
+      "Soluția cu parte imaginară pozitivă este $z=4i$.",
+    ],
   },
   {
     id: "nc-s10-5",
@@ -1059,7 +1458,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați conjugatul lui $(1+i)^2$.",
     options: ["$-2i$", "$2i$", "$-2$", "$2$"],
     correctAnswer: "$-2i$",
-    explanation: "$(1+i)^2=2i$, deci conjugatul este $-2i$.",
+    explanation: [
+      "Calculăm mai întâi $(1+i)^2$, apoi aplicăm conjugarea.",
+      "$(1+i)^2=1+2i+i^2=2i$ (am folosit $i^2=-1$).",
+      "Conjugatul lui $2i$ se obține schimbând semnul părții imaginare.",
+      "Rezultă $-2i$.",
+    ],
   },
   {
     id: "nc-s10-6",
@@ -1069,7 +1473,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $|z|^2$ pentru $z=3+4i$.",
     correctAnswer: "25",
-    explanation: "$|z|^2=3^2+4^2=25$.",
+    explanation: [
+      "Pentru $z=a+bi$, avem $|z|^2=a^2+b^2$.",
+      "Aici $a=3$, $b=4$: $|z|^2=3^2+4^2$.",
+      "Rezultă $9+16=25$.",
+    ],
   },
   {
     id: "nc-s10-7",
@@ -1079,7 +1487,11 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați suma soluțiilor ecuației $z^2-2z+5=0$.",
     correctAnswer: "2",
-    explanation: "Conform relațiilor lui Viète, suma soluțiilor este $-b/a=2$.",
+    explanation: [
+      "Relațiile lui Viète dau suma soluțiilor $z_1+z_2=-b/a$.",
+      "Aici $a=1$, $b=-2$.",
+      "Rezultă suma $-(-2)/1=2$.",
+    ],
   },
   {
     id: "nc-s10-8",
@@ -1089,7 +1501,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte rădăcini de ordinul 5 are un număr complex nenul?",
     correctAnswer: "5",
-    explanation: "Orice număr complex nenul are exact $5$ rădăcini de ordinul $5$ distincte.",
+    explanation: [
+      "Orice număr complex nenul are exact $n$ rădăcini de ordinul $n$, distincte în $\\mathbb{C}$.",
+      "Pentru rădăcini de ordinul $5$, numărul de rădăcini este $5$.",
+    ],
   },
   {
     id: "nc-s10-9",
@@ -1100,7 +1515,12 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Calculați distanța dintre afixele $z_1=2-i$ și $z_2=-1+3i$.",
     options: ["$5$", "$4$", "$3$", "$25$"],
     correctAnswer: "$5$",
-    explanation: "Distanța este $|z_2-z_1|=|-3+4i|=5$.",
+    explanation: [
+      "Distanța dintre punctele de afixe $z_1$ și $z_2$ este $|z_2-z_1|$.",
+      "Calculăm diferența: $z_2-z_1=(-1+3i)-(2-i)=-3+4i$.",
+      "Aplicăm formula modulului: $|-3+4i|=\\sqrt{3^2+4^2}=\\sqrt{25}$.",
+      "Rezultă distanța $5$.",
+    ],
   },
   {
     id: "nc-s10-10",
@@ -1111,6 +1531,9 @@ export const numereComplexeSetExercises: Exercise[] = [
     prompt: "Determinați argumentul principal al lui $z=-i$.",
     options: ["$-\\pi/2$", "$\\pi/2$", "$\\pi$", "$0$"],
     correctAnswer: "$-\\pi/2$",
-    explanation: "$z=-i$ se află pe axa $Oy$ negativă, deci argumentul principal este $-\\pi/2$.",
+    explanation: [
+      "Numărul $z=-i$ are partea reală $0$ și partea imaginară negativă, deci punctul se află pe axa $Oy$ negativă.",
+      "Argumentul asociat semiaxei imaginare negative este $-\\pi/2$.",
+    ],
   },
 ];
