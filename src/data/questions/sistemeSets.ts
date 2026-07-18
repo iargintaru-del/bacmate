@@ -1540,7 +1540,7 @@ export const sistemeSetExercises: Exercise[] = [
     explanation: [
       "Termenul \"incompatibil\" descrie un sistem fără nicio soluție comună.",
       "Geometric, aceasta corespunde unor drepte paralele și distincte, care nu se intersectează.",
-      "Deci sistemul are nicio soluție.",
+      "Deci sistemul nu are nicio soluție.",
     ],
   },
 ];
