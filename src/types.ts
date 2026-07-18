@@ -17,7 +17,7 @@ export interface GradableItem {
   options?: string[];
   correctAnswer: string;
   acceptedAnswers?: string[];
-  explanation: string | string[];
+  explanation: string[];
   points: number;
 }
 

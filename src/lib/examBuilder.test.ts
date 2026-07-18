@@ -10,7 +10,7 @@ function makeExercise(id: string): Exercise {
     points: 6,
     prompt: `prompt ${id}`,
     correctAnswer: "42",
-    explanation: "because",
+    explanation: ["because"],
   };
 }
 
@@ -21,9 +21,9 @@ function makeProblem(id: string, subject: "II" | "III"): Problem {
     subject,
     statement: `statement ${id}`,
     subpoints: [
-      { id: `${id}-a`, label: "a", type: "input", points: 5, prompt: "a", correctAnswer: "1", explanation: "e" },
-      { id: `${id}-b`, label: "b", type: "input", points: 5, prompt: "b", correctAnswer: "2", explanation: "e" },
-      { id: `${id}-c`, label: "c", type: "input", points: 5, prompt: "c", correctAnswer: "3", explanation: "e" },
+      { id: `${id}-a`, label: "a", type: "input", points: 5, prompt: "a", correctAnswer: "1", explanation: ["e"] },
+      { id: `${id}-b`, label: "b", type: "input", points: 5, prompt: "b", correctAnswer: "2", explanation: ["e"] },
+      { id: `${id}-c`, label: "c", type: "input", points: 5, prompt: "c", correctAnswer: "3", explanation: ["e"] },
     ],
   };
 }

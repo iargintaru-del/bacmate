@@ -79,20 +79,17 @@ describe("exam variants", () => {
 });
 
 describe("explanation format", () => {
-  function isNonEmptyExplanation(explanation: string | string[]): boolean {
-    if (Array.isArray(explanation)) {
-      return explanation.length > 0 && explanation.every((step) => step.trim().length > 0);
-    }
-    return explanation.trim().length > 0;
+  function isNonEmptyExplanation(explanation: string[]): boolean {
+    return explanation.length > 0 && explanation.every((step) => step.trim().length > 0);
   }
 
-  it("every exercise explanation is non-empty", () => {
+  it("every exercise explanation is a non-empty step array", () => {
     for (const exercise of ALL_EXERCISES) {
       expect(isNonEmptyExplanation(exercise.explanation)).toBe(true);
     }
   });
 
-  it("every problem subpoint explanation is non-empty", () => {
+  it("every problem subpoint explanation is a non-empty step array", () => {
     for (const problem of ALL_PROBLEMS) {
       for (const subpoint of problem.subpoints) {
         expect(isNonEmptyExplanation(subpoint.explanation)).toBe(true);
