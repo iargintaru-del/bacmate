@@ -10,7 +10,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=x^3$ este $F(x)=\\dfrac{x^4}{4}$. Calculați $F(2)$.",
     correctAnswer: "4",
-    explanation: "$F(2) = \\dfrac{2^4}{4} = \\dfrac{16}{4} = 4$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\dfrac{x^4}{4}$, obținută din formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$.",
+      "Calculăm: $F(2) = \\dfrac{2^4}{4} = \\dfrac{16}{4}$.",
+      "Rezultatul este $4$.",
+    ],
   },
   {
     id: "in-s1-2",
@@ -21,7 +25,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=x^4$ este:",
     options: ["$\\dfrac{x^5}{5}$", "$\\dfrac{x^5}{4}$", "$5x^3$", "$4x^3$"],
     correctAnswer: "$\\dfrac{x^5}{5}$",
-    explanation: "$\\left(\\dfrac{x^5}{5}\\right)' = x^4$, deci $\\dfrac{x^5}{5}$ este o primitivă a lui $x^4$.",
+    explanation: [
+      "Aplicăm formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ pentru $n=4$: obținem $\\dfrac{x^5}{5}$.",
+      "Verificăm prin derivare: $\\left(\\dfrac{x^5}{5}\\right)' = x^4$, deci coincide cu $f(x)=x^4$.",
+      "Rezultă că $\\dfrac{x^5}{5}$ este o primitivă a lui $x^4$.",
+    ],
   },
   {
     id: "in-s1-3",
@@ -31,7 +39,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției constante $f(x)=5$ este $F(x)=5x$. Calculați $F(3)$.",
     correctAnswer: "15",
-    explanation: "$F(3) = 5 \\cdot 3 = 15$.",
+    explanation: [
+      "Pentru o funcție constantă $f(x)=c$, o primitivă este $F(x)=cx$; aici $F(x)=5x$.",
+      "Calculăm: $F(3) = 5\\cdot3$.",
+      "Rezultatul este $15$.",
+    ],
   },
   {
     id: "in-s1-4",
@@ -42,7 +54,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=x^2$ este:",
     options: ["$\\dfrac{x^3}{3}$", "$\\dfrac{x^3}{2}$", "$3x$", "$2x$"],
     correctAnswer: "$\\dfrac{x^3}{3}$",
-    explanation: "$\\left(\\dfrac{x^3}{3}\\right)' = x^2$.",
+    explanation: [
+      "Aplicăm formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ pentru $n=2$: obținem $\\dfrac{x^3}{3}$.",
+      "Verificăm prin derivare: $\\left(\\dfrac{x^3}{3}\\right)' = x^2$, deci coincide cu $f(x)=x^2$.",
+      "Rezultă că $\\dfrac{x^3}{3}$ este o primitivă a lui $x^2$.",
+    ],
   },
   {
     id: "in-s1-5",
@@ -52,7 +68,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=3x^2$ este $F(x)=x^3$. Calculați $F(-1)$.",
     correctAnswer: "-1",
-    explanation: "$F(-1) = (-1)^3 = -1$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=x^3$, obținută din formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ aplicată lui $3x^2$.",
+      "Calculăm: $F(-1) = (-1)^3$.",
+      "Rezultatul este $-1$.",
+    ],
   },
   {
     id: "in-s1-6",
@@ -63,7 +83,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=2x+1$ este:",
     options: ["$x^2+x$", "$x^2+1$", "$2x^2+x$", "$x^2$"],
     correctAnswer: "$x^2+x$",
-    explanation: "$(x^2+x)' = 2x+1$.",
+    explanation: [
+      "Aplicăm formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ termen cu termen: pentru $2x$ obținem $x^2$, iar pentru $1$ obținem $x$.",
+      "Verificăm prin derivare: $(x^2+x)' = 2x+1$, deci coincide cu $f(x)=2x+1$.",
+      "Rezultă că $x^2+x$ este o primitivă a lui $2x+1$.",
+    ],
   },
   {
     id: "in-s1-7",
@@ -74,7 +98,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\sqrt{x}$ este $F(x)=\\dfrac{2x\\sqrt{x}}{3}$. Calculați $F(4)$.",
     correctAnswer: "16/3",
     acceptedAnswers: ["5.33", "5,33"],
-    explanation: "$F(4) = \\dfrac{2 \\cdot 4 \\cdot 2}{3} = \\dfrac{16}{3}$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\dfrac{2x\\sqrt{x}}{3}$.",
+      "Calculăm: $F(4) = \\dfrac{2\\cdot4\\cdot\\sqrt4}{3} = \\dfrac{2\\cdot4\\cdot2}{3}$.",
+      "Rezultatul este $\\dfrac{16}{3}$.",
+    ],
   },
   {
     id: "in-s1-8",
@@ -85,7 +113,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\dfrac1{x^2}$ (pentru $x\\ne0$) este:",
     options: ["$-\\dfrac1x$", "$\\dfrac1x$", "$-\\dfrac2{x^3}$", "$\\ln x$"],
     correctAnswer: "$-\\dfrac1x$",
-    explanation: "$\\left(-\\dfrac1x\\right)' = \\dfrac1{x^2}$.",
+    explanation: [
+      "Căutăm o funcție $F$ astfel încât $F'(x)=\\dfrac1{x^2}$.",
+      "Verificăm prin derivare: $\\left(-\\dfrac1x\\right)' = \\dfrac1{x^2}$, deci coincide cu $f(x)=\\dfrac1{x^2}$.",
+      "Rezultă că $-\\dfrac1x$ este o primitivă a lui $\\dfrac1{x^2}$.",
+    ],
   },
   {
     id: "in-s1-9",
@@ -95,7 +127,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=4x^3$ este $F(x)=x^4$. Calculați $F(2)-F(0)$.",
     correctAnswer: "16",
-    explanation: "$F(2)-F(0) = 16 - 0 = 16$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=x^4$, obținută din formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ aplicată lui $4x^3$.",
+      "Calculăm: $F(2)=2^4=16$ și $F(0)=0^4=0$.",
+      "Rezultă $F(2)-F(0) = 16-0=16$.",
+    ],
   },
   {
     id: "in-s1-10",
@@ -106,7 +142,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=6x^2-2x$ este:",
     options: ["$2x^3-x^2$", "$2x^3-2x^2$", "$6x^3-x^2$", "$3x^3-x^2$"],
     correctAnswer: "$2x^3-x^2$",
-    explanation: "$(2x^3-x^2)' = 6x^2-2x$.",
+    explanation: [
+      "Aplicăm formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ termen cu termen: pentru $6x^2$ obținem $2x^3$, iar pentru $-2x$ obținem $-x^2$.",
+      "Verificăm prin derivare: $(2x^3-x^2)' = 6x^2-2x$, deci coincide cu $f(x)=6x^2-2x$.",
+      "Rezultă că $2x^3-x^2$ este o primitivă a lui $6x^2-2x$.",
+    ],
   },
 
   // Set 2 — Proprietăți ale primitivelor (liniaritate)
@@ -119,7 +159,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Dacă $F$ este o primitivă a lui $f$ și $G$ este o primitivă a lui $g$, atunci o primitivă a lui $f+g$ este:",
     options: ["$F+G$", "$F\\cdot G$", "$F-G$", "$FG'$"],
     correctAnswer: "$F+G$",
-    explanation: "$(F+G)' = F'+G' = f+g$.",
+    explanation: [
+      "Folosim proprietatea de liniaritate: dacă $F'=f$ și $G'=g$, atunci $(F+G)'=F'+G'$.",
+      "Calculăm: $(F+G)' = f+g$.",
+      "Rezultă că o primitivă a lui $f+g$ este $F+G$.",
+    ],
   },
   {
     id: "in-s2-2",
@@ -129,7 +173,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=x^2+2x$ este $F(x)=\\dfrac{x^3}3+x^2$. Calculați $F(3)$.",
     correctAnswer: "18",
-    explanation: "$F(3) = \\dfrac{27}{3}+9 = 9+9 = 18$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\dfrac{x^3}3+x^2$, obținută prin liniaritate din primitivele lui $x^2$ și $2x$.",
+      "Calculăm: $F(3) = \\dfrac{27}{3}+9 = 9+9$.",
+      "Rezultatul este $18$.",
+    ],
   },
   {
     id: "in-s2-3",
@@ -140,7 +188,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Dacă $F$ este o primitivă a lui $f$, atunci o primitivă a lui $k\\cdot f$ (unde $k$ este o constantă) este:",
     options: ["$k\\cdot F$", "$F/k$", "$F+k$", "$kF'$"],
     correctAnswer: "$k\\cdot F$",
-    explanation: "$(kF)' = kF' = kf$.",
+    explanation: [
+      "Folosim proprietatea de omogenitate: dacă $F'=f$, atunci $(kF)'=kF'$ pentru orice constantă $k$.",
+      "Calculăm: $(kF)' = kf$.",
+      "Rezultă că o primitivă a lui $k\\cdot f$ este $k\\cdot F$.",
+    ],
   },
   {
     id: "in-s2-4",
@@ -150,7 +202,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=4x^3$ este $F(x)=x^4$. Calculați $F(1)$.",
     correctAnswer: "1",
-    explanation: "$F(1) = 1^4 = 1$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=x^4$, obținută din formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ aplicată lui $4x^3$.",
+      "Calculăm: $F(1) = 1^4$.",
+      "Rezultatul este $1$.",
+    ],
   },
   {
     id: "in-s2-5",
@@ -161,7 +217,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=3x^2-4x+5$ este:",
     options: ["$x^3-2x^2+5x$", "$3x^3-2x^2+5x$", "$x^3-4x^2+5x$", "$x^3-2x^2$"],
     correctAnswer: "$x^3-2x^2+5x$",
-    explanation: "$(x^3-2x^2+5x)' = 3x^2-4x+5$.",
+    explanation: [
+      "Aplicăm formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ termen cu termen: pentru $3x^2$ obținem $x^3$, pentru $-4x$ obținem $-2x^2$, iar pentru $5$ obținem $5x$.",
+      "Verificăm prin derivare: $(x^3-2x^2+5x)' = 3x^2-4x+5$, deci coincide cu $f(x)=3x^2-4x+5$.",
+      "Rezultă că $x^3-2x^2+5x$ este o primitivă a lui $3x^2-4x+5$.",
+    ],
   },
   {
     id: "in-s2-6",
@@ -172,7 +232,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Toate primitivele unei funcții $f$ diferă printr-o:",
     options: ["constantă", "funcție liniară", "valoare care depinde de $x$", "funcție pătratică"],
     correctAnswer: "constantă",
-    explanation: "Dacă $F$ și $G$ sunt primitive ale lui $f$, atunci $(F-G)'=0$, deci $F-G$ este constantă.",
+    explanation: [
+      "Dacă $F$ și $G$ sunt primitive ale aceleiași funcții $f$, atunci $F'=G'=f$.",
+      "Rezultă $(F-G)'=F'-G'=0$, deci $F-G$ este o funcție constantă.",
+      "Prin urmare, toate primitivele lui $f$ diferă printr-o constantă.",
+    ],
   },
   {
     id: "in-s2-7",
@@ -182,7 +246,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "$F(x)=x^3-x$ este o primitivă a lui $f(x)=3x^2-1$, cu $F(0)=0$. Calculați $F(2)$.",
     correctAnswer: "6",
-    explanation: "$F(2) = 8-2 = 6$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=x^3-x$.",
+      "Calculăm: $F(2) = 2^3-2 = 8-2$.",
+      "Rezultatul este $6$.",
+    ],
   },
   {
     id: "in-s2-8",
@@ -193,7 +261,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=-2x+3$ este:",
     options: ["$-x^2+3x$", "$-x^2+3$", "$-2x^2+3x$", "$x^2+3x$"],
     correctAnswer: "$-x^2+3x$",
-    explanation: "$(-x^2+3x)' = -2x+3$.",
+    explanation: [
+      "Aplicăm formula $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$ termen cu termen: pentru $-2x$ obținem $-x^2$, iar pentru $3$ obținem $3x$.",
+      "Verificăm prin derivare: $(-x^2+3x)' = -2x+3$, deci coincide cu $f(x)=-2x+3$.",
+      "Rezultă că $-x^2+3x$ este o primitivă a lui $-2x+3$.",
+    ],
   },
   {
     id: "in-s2-9",
@@ -203,7 +275,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $F$ o primitivă a lui $f(x)=x^2$ cu $F(0)=1$. Calculați $F(3)$.",
     correctAnswer: "10",
-    explanation: "$F(x)=\\dfrac{x^3}3+1$, deci $F(3) = \\dfrac{27}{3}+1 = 9+1 = 10$.",
+    explanation: [
+      "O primitivă a lui $x^2$ este $\\dfrac{x^3}3+C$; din condiția $F(0)=1$ obținem $C=1$, deci $F(x)=\\dfrac{x^3}3+1$.",
+      "Calculăm: $F(3) = \\dfrac{27}{3}+1 = 9+1$.",
+      "Rezultatul este $10$.",
+    ],
   },
   {
     id: "in-s2-10",
@@ -214,7 +290,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Derivata unei primitive $F$ a funcției $f$ satisface:",
     options: ["$F'=f$", "$F'=0$", "$F'=f'$", "$F'=\\int f$"],
     correctAnswer: "$F'=f$",
-    explanation: "Prin definiție, $F$ este o primitivă a lui $f$ dacă $F'=f$.",
+    explanation: [
+      "Prin definiție, $F$ este o primitivă a lui $f$ pe un interval dacă $F$ este derivabilă și $F'=f$.",
+      "Rezultă că relația căutată este $F'=f$.",
+    ],
   },
 
   // Set 3 — Integrale definite, calcul direct (Leibniz-Newton)
@@ -227,7 +306,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 x^2\\,dx.$$",
     correctAnswer: "1/3",
     acceptedAnswers: ["0.33", "0,33"],
-    explanation: "$\\int_0^1 x^2\\,dx = \\left[\\dfrac{x^3}3\\right]_0^1 = \\dfrac13$.",
+    explanation: [
+      "Găsim o primitivă a lui $x^2$: $F(x)=\\dfrac{x^3}3$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1 x^2\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=\\dfrac13$, $F(0)=0$.",
+      "Rezultatul este $\\dfrac13$.",
+    ],
   },
   {
     id: "in-s3-2",
@@ -238,7 +322,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^2 3\\,dx.$$",
     options: ["$6$", "$3$", "$2$", "$5$"],
     correctAnswer: "$6$",
-    explanation: "$\\int_0^2 3\\,dx = 3\\cdot(2-0) = 6$.",
+    explanation: [
+      "Pentru funcția constantă $f(x)=3$, integrala definită este $\\int_a^b 3\\,dx = 3\\cdot(b-a)$.",
+      "Înlocuim: $\\int_0^2 3\\,dx = 3\\cdot(2-0)$.",
+      "Rezultatul este $6$.",
+    ],
   },
   {
     id: "in-s3-3",
@@ -249,7 +337,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_1^2 x\\,dx.$$",
     correctAnswer: "3/2",
     acceptedAnswers: ["1.5", "1,5"],
-    explanation: "$\\int_1^2 x\\,dx = \\left[\\dfrac{x^2}2\\right]_1^2 = 2-\\dfrac12 = \\dfrac32$.",
+    explanation: [
+      "Găsim o primitivă a lui $x$: $F(x)=\\dfrac{x^2}2$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_1^2 x\\,dx = F(2)-F(1)$.",
+      "Calculăm: $F(2)=2$, $F(1)=\\dfrac12$.",
+      "Rezultatul este $2-\\dfrac12=\\dfrac32$.",
+    ],
   },
   {
     id: "in-s3-4",
@@ -260,7 +353,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 (2x+1)\\,dx.$$",
     options: ["$2$", "$1$", "$3$", "$0$"],
     correctAnswer: "$2$",
-    explanation: "$\\int_0^1(2x+1)\\,dx = \\left[x^2+x\\right]_0^1 = 1+1 = 2$.",
+    explanation: [
+      "Găsim o primitivă a lui $2x+1$: $F(x)=x^2+x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1(2x+1)\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=1+1=2$, $F(0)=0$.",
+      "Rezultatul este $2$.",
+    ],
   },
   {
     id: "in-s3-5",
@@ -271,7 +369,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^2 x^2\\,dx.$$",
     correctAnswer: "8/3",
     acceptedAnswers: ["2.67", "2,67"],
-    explanation: "$\\int_0^2 x^2\\,dx = \\left[\\dfrac{x^3}3\\right]_0^2 = \\dfrac83$.",
+    explanation: [
+      "Găsim o primitivă a lui $x^2$: $F(x)=\\dfrac{x^3}3$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^2 x^2\\,dx = F(2)-F(0)$.",
+      "Calculăm: $F(2)=\\dfrac83$, $F(0)=0$.",
+      "Rezultatul este $\\dfrac83$.",
+    ],
   },
   {
     id: "in-s3-6",
@@ -282,7 +385,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_{-1}^1 x^3\\,dx.$$",
     options: ["$0$", "$2$", "$1$", "$-1$"],
     correctAnswer: "$0$",
-    explanation: "$f(x)=x^3$ este impară, iar intervalul $[-1,1]$ este simetric, deci integrala este $0$.",
+    explanation: [
+      "Funcția $f(x)=x^3$ este impară, iar intervalul $[-1,1]$ este simetric față de origine.",
+      "Pentru o funcție impară pe un interval simetric, integrala definită este $0$.",
+      "Rezultatul este $0$.",
+    ],
   },
   {
     id: "in-s3-7",
@@ -292,7 +399,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\int_0^3 3x^2\\,dx.$$",
     correctAnswer: "27",
-    explanation: "$\\int_0^3 3x^2\\,dx = \\left[x^3\\right]_0^3 = 27$.",
+    explanation: [
+      "Găsim o primitivă a lui $3x^2$: $F(x)=x^3$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^3 3x^2\\,dx = F(3)-F(0)$.",
+      "Calculăm: $F(3)=27$, $F(0)=0$.",
+      "Rezultatul este $27$.",
+    ],
   },
   {
     id: "in-s3-8",
@@ -303,7 +415,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_1^3 2\\,dx.$$",
     options: ["$4$", "$2$", "$6$", "$3$"],
     correctAnswer: "$4$",
-    explanation: "$\\int_1^3 2\\,dx = 2\\cdot(3-1) = 4$.",
+    explanation: [
+      "Pentru funcția constantă $f(x)=2$, integrala definită este $\\int_a^b 2\\,dx = 2\\cdot(b-a)$.",
+      "Înlocuim: $\\int_1^3 2\\,dx = 2\\cdot(3-1)$.",
+      "Rezultatul este $4$.",
+    ],
   },
   {
     id: "in-s3-9",
@@ -314,7 +430,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 (x^2+x)\\,dx.$$",
     correctAnswer: "5/6",
     acceptedAnswers: ["0.83", "0,83"],
-    explanation: "$\\int_0^1(x^2+x)\\,dx = \\left[\\dfrac{x^3}3+\\dfrac{x^2}2\\right]_0^1 = \\dfrac13+\\dfrac12 = \\dfrac56$.",
+    explanation: [
+      "Găsim o primitivă a lui $x^2+x$: $F(x)=\\dfrac{x^3}3+\\dfrac{x^2}2$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1(x^2+x)\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=\\dfrac13+\\dfrac12=\\dfrac56$, $F(0)=0$.",
+      "Rezultatul este $\\dfrac56$.",
+    ],
   },
   {
     id: "in-s3-10",
@@ -330,7 +451,10 @@ export const integraleSetExercises: Exercise[] = [
       "$f(b)-f(a)$",
     ],
     correctAnswer: "$F(b)-F(a)$, unde $F$ este o primitivă a lui $f$",
-    explanation: "Aceasta este formula Leibniz-Newton pentru calculul integralei definite.",
+    explanation: [
+      "Formula Leibniz-Newton leagă integrala definită de o primitivă a funcției.",
+      "Dacă $F$ este o primitivă a lui $f$, atunci $\\int_a^b f(x)\\,dx = F(b)-F(a)$.",
+    ],
   },
 
   // Set 4 — Primitive ale funcțiilor trigonometrice
@@ -343,7 +467,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\cos x$ este:",
     options: ["$\\sin x$", "$-\\sin x$", "$\\cos x$", "$-\\cos x$"],
     correctAnswer: "$\\sin x$",
-    explanation: "$(\\sin x)' = \\cos x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\cos x$.",
+      "Verificăm prin derivare: $(\\sin x)' = \\cos x$, deci coincide cu $f(x)=\\cos x$.",
+      "Rezultă că $\\sin x$ este o primitivă a lui $\\cos x$.",
+    ],
   },
   {
     id: "in-s4-2",
@@ -354,7 +482,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\sin x$ este:",
     options: ["$-\\cos x$", "$\\cos x$", "$-\\sin x$", "$\\sin x$"],
     correctAnswer: "$-\\cos x$",
-    explanation: "$(-\\cos x)' = \\sin x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\sin x$.",
+      "Verificăm prin derivare: $(-\\cos x)' = \\sin x$, deci coincide cu $f(x)=\\sin x$.",
+      "Rezultă că $-\\cos x$ este o primitivă a lui $\\sin x$.",
+    ],
   },
   {
     id: "in-s4-3",
@@ -364,7 +496,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\int_0^{\\pi/2}\\cos x\\,dx.$$",
     correctAnswer: "1",
-    explanation: "$\\int_0^{\\pi/2}\\cos x\\,dx = [\\sin x]_0^{\\pi/2} = 1-0 = 1$.",
+    explanation: [
+      "O primitivă a lui $\\cos x$ este $F(x)=\\sin x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^{\\pi/2}\\cos x\\,dx = F(\\pi/2)-F(0)$.",
+      "Calculăm: $F(\\pi/2)=1$, $F(0)=0$.",
+      "Rezultatul este $1$.",
+    ],
   },
   {
     id: "in-s4-4",
@@ -375,7 +512,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^{\\pi}\\sin x\\,dx.$$",
     options: ["$2$", "$0$", "$1$", "$-2$"],
     correctAnswer: "$2$",
-    explanation: "$\\int_0^{\\pi}\\sin x\\,dx = [-\\cos x]_0^{\\pi} = 1-(-1) = 2$.",
+    explanation: [
+      "O primitivă a lui $\\sin x$ este $F(x)=-\\cos x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^\\pi \\sin x\\,dx = F(\\pi)-F(0)$.",
+      "Calculăm: $F(\\pi)=-\\cos\\pi=1$, $F(0)=-\\cos0=-1$.",
+      "Rezultatul este $1-(-1)=2$.",
+    ],
   },
   {
     id: "in-s4-5",
@@ -385,7 +527,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=2\\cos x$ este $F(x)=2\\sin x$. Calculați $F(0)$.",
     correctAnswer: "0",
-    explanation: "$F(0) = 2\\sin(0) = 0$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=2\\sin x$.",
+      "Calculăm: $F(0) = 2\\sin(0)$.",
+      "Rezultatul este $0$.",
+    ],
   },
   {
     id: "in-s4-6",
@@ -396,7 +542,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\dfrac1{\\cos^2x}$ este:",
     options: ["$\\tan x$", "$-\\tan x$", "$\\dfrac1{\\sin x}$", "$\\sin x$"],
     correctAnswer: "$\\tan x$",
-    explanation: "$(\\tan x)' = \\dfrac1{\\cos^2x}$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\dfrac1{\\cos^2x}$.",
+      "Verificăm prin derivare: $(\\tan x)' = \\dfrac1{\\cos^2x}$, deci coincide cu $f(x)$.",
+      "Rezultă că $\\tan x$ este o primitivă a lui $\\dfrac1{\\cos^2x}$.",
+    ],
   },
   {
     id: "in-s4-7",
@@ -406,7 +556,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\int_0^{\\pi/2}\\sin x\\,dx.$$",
     correctAnswer: "1",
-    explanation: "$\\int_0^{\\pi/2}\\sin x\\,dx = [-\\cos x]_0^{\\pi/2} = 0-(-1) = 1$.",
+    explanation: [
+      "O primitivă a lui $\\sin x$ este $F(x)=-\\cos x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^{\\pi/2}\\sin x\\,dx = F(\\pi/2)-F(0)$.",
+      "Calculăm: $F(\\pi/2)=0$, $F(0)=-1$.",
+      "Rezultatul este $0-(-1)=1$.",
+    ],
   },
   {
     id: "in-s4-8",
@@ -417,7 +572,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=3\\sin x$ este:",
     options: ["$-3\\cos x$", "$3\\cos x$", "$-3\\sin x$", "$\\cos x$"],
     correctAnswer: "$-3\\cos x$",
-    explanation: "$(-3\\cos x)' = 3\\sin x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=3\\sin x$.",
+      "Verificăm prin derivare: $(-3\\cos x)' = 3\\sin x$, deci coincide cu $f(x)$.",
+      "Rezultă că $-3\\cos x$ este o primitivă a lui $3\\sin x$.",
+    ],
   },
   {
     id: "in-s4-9",
@@ -427,7 +586,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=\\cos x+\\sin x$ este $F(x)=\\sin x-\\cos x$. Calculați $F(0)$.",
     correctAnswer: "-1",
-    explanation: "$F(0) = \\sin(0)-\\cos(0) = 0-1 = -1$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\sin x-\\cos x$.",
+      "Calculăm: $F(0) = \\sin(0)-\\cos(0) = 0-1$.",
+      "Rezultatul este $-1$.",
+    ],
   },
   {
     id: "in-s4-10",
@@ -438,7 +601,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^\\pi\\cos x\\,dx.$$",
     options: ["$0$", "$2$", "$\\pi$", "$-2$"],
     correctAnswer: "$0$",
-    explanation: "$\\int_0^\\pi\\cos x\\,dx = [\\sin x]_0^\\pi = 0-0 = 0$.",
+    explanation: [
+      "O primitivă a lui $\\cos x$ este $F(x)=\\sin x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^\\pi\\cos x\\,dx = F(\\pi)-F(0)$.",
+      "Calculăm: $F(\\pi)=\\sin\\pi=0$, $F(0)=\\sin0=0$.",
+      "Rezultatul este $0-0=0$.",
+    ],
   },
 
   // Set 5 — Primitive ale funcțiilor exponențiale și logaritmice
@@ -451,7 +619,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=e^x$ este:",
     options: ["$e^x$", "$xe^{x-1}$", "$e^{x-1}$", "$\\dfrac{e^x}{x}$"],
     correctAnswer: "$e^x$",
-    explanation: "$(e^x)' = e^x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=e^x$.",
+      "Verificăm prin derivare: $(e^x)' = e^x$, deci coincide cu $f(x)=e^x$.",
+      "Rezultă că $e^x$ este propria sa primitivă.",
+    ],
   },
   {
     id: "in-s5-2",
@@ -462,7 +634,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 e^x\\,dx.$$",
     correctAnswer: "e-1",
     acceptedAnswers: ["1.72", "1,72"],
-    explanation: "$\\int_0^1 e^x\\,dx = [e^x]_0^1 = e-1$.",
+    explanation: [
+      "O primitivă a lui $e^x$ este $F(x)=e^x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1 e^x\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=e$, $F(0)=1$.",
+      "Rezultatul este $e-1$.",
+    ],
   },
   {
     id: "in-s5-3",
@@ -473,7 +650,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\dfrac1x$ (pentru $x>0$) este:",
     options: ["$\\ln x$", "$\\dfrac1{x^2}$", "$x\\ln x$", "$e^x$"],
     correctAnswer: "$\\ln x$",
-    explanation: "$(\\ln x)' = \\dfrac1x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\dfrac1x$.",
+      "Verificăm prin derivare: $(\\ln x)' = \\dfrac1x$, deci coincide cu $f(x)=\\dfrac1x$.",
+      "Rezultă că $\\ln x$ este o primitivă a lui $\\dfrac1x$.",
+    ],
   },
   {
     id: "in-s5-4",
@@ -483,7 +664,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\int_1^e\\dfrac1x\\,dx.$$",
     correctAnswer: "1",
-    explanation: "$\\int_1^e\\dfrac1x\\,dx = [\\ln x]_1^e = 1-0 = 1$.",
+    explanation: [
+      "O primitivă a lui $\\dfrac1x$ este $F(x)=\\ln x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_1^e\\dfrac1x\\,dx = F(e)-F(1)$.",
+      "Calculăm: $F(e)=\\ln e=1$, $F(1)=\\ln1=0$.",
+      "Rezultatul este $1-0=1$.",
+    ],
   },
   {
     id: "in-s5-5",
@@ -494,7 +680,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=2e^x$ este:",
     options: ["$2e^x$", "$e^{2x}$", "$e^x$", "$2xe^x$"],
     correctAnswer: "$2e^x$",
-    explanation: "$(2e^x)' = 2e^x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=2e^x$.",
+      "Verificăm prin derivare: $(2e^x)' = 2e^x$, deci coincide cu $f(x)$.",
+      "Rezultă că $2e^x$ este o primitivă a lui $2e^x$.",
+    ],
   },
   {
     id: "in-s5-6",
@@ -504,7 +694,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=e^x+1$ este $F(x)=e^x+x$. Calculați $F(0)$.",
     correctAnswer: "1",
-    explanation: "$F(0) = e^0+0 = 1$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=e^x+x$.",
+      "Calculăm: $F(0) = e^0+0 = 1+0$.",
+      "Rezultatul este $1$.",
+    ],
   },
   {
     id: "in-s5-7",
@@ -515,7 +709,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 2e^x\\,dx.$$",
     options: ["$2e-2$", "$2e$", "$e-1$", "$2e+2$"],
     correctAnswer: "$2e-2$",
-    explanation: "$\\int_0^1 2e^x\\,dx = [2e^x]_0^1 = 2e-2$.",
+    explanation: [
+      "O primitivă a lui $2e^x$ este $F(x)=2e^x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1 2e^x\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=2e$, $F(0)=2$.",
+      "Rezultatul este $2e-2$.",
+    ],
   },
   {
     id: "in-s5-8",
@@ -526,7 +725,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_2^4\\dfrac1x\\,dx.$$",
     correctAnswer: "ln(2)",
     acceptedAnswers: ["0.69", "0,69"],
-    explanation: "$\\int_2^4\\dfrac1x\\,dx = [\\ln x]_2^4 = \\ln4-\\ln2 = \\ln2$.",
+    explanation: [
+      "O primitivă a lui $\\dfrac1x$ este $F(x)=\\ln x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_2^4\\dfrac1x\\,dx = F(4)-F(2)$.",
+      "Calculăm: $F(4)=\\ln4$, $F(2)=\\ln2$.",
+      "Rezultatul este $\\ln4-\\ln2=\\ln2$.",
+    ],
   },
   {
     id: "in-s5-9",
@@ -537,7 +741,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\dfrac1{2x}$ (pentru $x>0$) este:",
     options: ["$\\dfrac12\\ln x$", "$2\\ln x$", "$\\ln(2x)$", "$\\ln x$"],
     correctAnswer: "$\\dfrac12\\ln x$",
-    explanation: "$\\left(\\dfrac12\\ln x\\right)' = \\dfrac12\\cdot\\dfrac1x = \\dfrac1{2x}$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\dfrac1{2x}$.",
+      "Verificăm prin derivare: $\\left(\\dfrac12\\ln x\\right)' = \\dfrac12\\cdot\\dfrac1x = \\dfrac1{2x}$, deci coincide cu $f(x)$.",
+      "Rezultă că $\\dfrac12\\ln x$ este o primitivă a lui $\\dfrac1{2x}$.",
+    ],
   },
   {
     id: "in-s5-10",
@@ -548,7 +756,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^2 e^x\\,dx.$$",
     correctAnswer: "e^2-1",
     acceptedAnswers: ["6.39", "6,39"],
-    explanation: "$\\int_0^2 e^x\\,dx = [e^x]_0^2 = e^2-1$.",
+    explanation: [
+      "O primitivă a lui $e^x$ este $F(x)=e^x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^2 e^x\\,dx = F(2)-F(0)$.",
+      "Calculăm: $F(2)=e^2$, $F(0)=1$.",
+      "Rezultatul este $e^2-1$.",
+    ],
   },
 
   // Set 6 — Proprietăți ale integralei definite
@@ -566,7 +779,10 @@ export const integraleSetExercises: Exercise[] = [
       "$\\int_a^b f\\,dx=0$",
     ],
     correctAnswer: "$\\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx$",
-    explanation: "Integrala pe $[a,b]$ se poate descompune ca sumă a integralelor pe $[a,c]$ și $[c,b]$.",
+    explanation: [
+      "Proprietatea de aditivitate a integralei definite permite descompunerea intervalului $[a,b]$ în $[a,c]$ și $[c,b]$, pentru $a<c<b$.",
+      "Aceasta se scrie $\\int_a^b f\\,dx=\\int_a^c f\\,dx+\\int_c^b f\\,dx$.",
+    ],
   },
   {
     id: "in-s6-2",
@@ -576,7 +792,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Știind că $\\int_0^2 f(x)\\,dx=5$ și $\\int_2^4 f(x)\\,dx=3$, calculați $\\int_0^4 f(x)\\,dx$.",
     correctAnswer: "8",
-    explanation: "Prin aditivitate, $\\int_0^4 f\\,dx = 5+3 = 8$.",
+    explanation: [
+      "Aplicăm proprietatea de aditivitate: $\\int_0^4 f(x)\\,dx = \\int_0^2 f(x)\\,dx+\\int_2^4 f(x)\\,dx$.",
+      "Înlocuim valorile date: $5+3$.",
+      "Rezultatul este $8$.",
+    ],
   },
   {
     id: "in-s6-3",
@@ -592,7 +812,10 @@ export const integraleSetExercises: Exercise[] = [
       "niciuna dintre variante",
     ],
     correctAnswer: "$\\int_a^b f\\,dx+\\int_a^b g\\,dx$",
-    explanation: "Integrala este liniară în raport cu suma funcțiilor.",
+    explanation: [
+      "Integrala este liniară în raport cu suma funcțiilor.",
+      "Rezultă $\\int_a^b[f(x)+g(x)]\\,dx = \\int_a^b f\\,dx+\\int_a^b g\\,dx$.",
+    ],
   },
   {
     id: "in-s6-4",
@@ -602,7 +825,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Știind că $\\int_1^3 f(x)\\,dx=7$, calculați $\\int_3^1 f(x)\\,dx$.",
     correctAnswer: "-7",
-    explanation: "Schimbarea limitelor de integrare schimbă semnul integralei.",
+    explanation: [
+      "Schimbarea limitelor de integrare schimbă semnul integralei: $\\int_3^1 f(x)\\,dx = -\\int_1^3 f(x)\\,dx$.",
+      "Înlocuim valoarea dată: $-7$.",
+      "Rezultatul este $-7$.",
+    ],
   },
   {
     id: "in-s6-5",
@@ -613,7 +840,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $\\int_a^a f(x)\\,dx$.",
     options: ["$0$", "$1$", "$f(a)$", "nu se poate determina"],
     correctAnswer: "$0$",
-    explanation: "Integrala pe un interval de lungime $0$ este $0$.",
+    explanation: [
+      "Integrala pe un interval de lungime $0$ (capetele coincid) este întotdeauna $0$.",
+      "Rezultă $\\int_a^a f(x)\\,dx = 0$.",
+    ],
   },
   {
     id: "in-s6-6",
@@ -623,7 +853,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Știind că $\\int_0^5 f(x)\\,dx=12$, calculați $\\int_0^5 3f(x)\\,dx$.",
     correctAnswer: "36",
-    explanation: "Prin omogenitate, $\\int_0^5 3f\\,dx = 3\\cdot12 = 36$.",
+    explanation: [
+      "Aplicăm proprietatea de omogenitate: $\\int_0^5 3f(x)\\,dx = 3\\int_0^5 f(x)\\,dx$.",
+      "Înlocuim valoarea dată: $3\\cdot12$.",
+      "Rezultatul este $36$.",
+    ],
   },
   {
     id: "in-s6-7",
@@ -634,7 +868,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Dacă $f(x)\\ge0$ pe $[a,b]$, atunci $\\int_a^b f(x)\\,dx$ este:",
     options: ["$\\ge0$", "$\\le0$", "întotdeauna $0$", "întotdeauna negativ"],
     correctAnswer: "$\\ge0$",
-    explanation: "Integrala unei funcții nenegative pe un interval este nenegativă.",
+    explanation: [
+      "Dacă $f(x)\\ge0$ pe $[a,b]$, integrala păstrează semnul funcției.",
+      "Rezultă $\\int_a^b f(x)\\,dx \\ge 0$.",
+    ],
   },
   {
     id: "in-s6-8",
@@ -644,7 +881,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Știind că $\\int_0^3 f(x)\\,dx=10$ și $\\int_0^3 g(x)\\,dx=4$, calculați $\\int_0^3[f(x)-g(x)]\\,dx$.",
     correctAnswer: "6",
-    explanation: "Prin liniaritate, $\\int_0^3[f-g]\\,dx = 10-4 = 6$.",
+    explanation: [
+      "Aplicăm proprietatea de liniaritate: $\\int_0^3[f(x)-g(x)]\\,dx = \\int_0^3 f(x)\\,dx-\\int_0^3 g(x)\\,dx$.",
+      "Înlocuim valorile date: $10-4$.",
+      "Rezultatul este $6$.",
+    ],
   },
   {
     id: "in-s6-9",
@@ -655,7 +896,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Dacă $f$ este o funcție impară, atunci $\\int_{-a}^a f(x)\\,dx$ este:",
     options: ["$0$", "$2\\int_0^a f(x)\\,dx$", "$a$", "nu se poate determina"],
     correctAnswer: "$0$",
-    explanation: "Contribuțiile de pe $[-a,0]$ și $[0,a]$ se anulează reciproc pentru o funcție impară.",
+    explanation: [
+      "Dacă $f$ este impară, contribuțiile de pe $[-a,0]$ și $[0,a]$ sunt opuse și se anulează reciproc.",
+      "Rezultă $\\int_{-a}^a f(x)\\,dx = 0$.",
+    ],
   },
   {
     id: "in-s6-10",
@@ -665,7 +909,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "$f$ este o funcție pară și $\\int_0^3 f(x)\\,dx=6$. Calculați $\\int_{-3}^3 f(x)\\,dx$.",
     correctAnswer: "12",
-    explanation: "Pentru o funcție pară, $\\int_{-3}^3 f\\,dx = 2\\int_0^3 f\\,dx = 12$.",
+    explanation: [
+      "Pentru o funcție pară, $\\int_{-a}^a f(x)\\,dx = 2\\int_0^a f(x)\\,dx$.",
+      "Înlocuim: $2\\cdot6$.",
+      "Rezultatul este $12$.",
+    ],
   },
 
   // Set 7 — Aria unei suprafețe plane
@@ -678,7 +926,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați aria suprafeței delimitate de graficul funcției $f(x)=x^2$, axa $Ox$ și dreptele $x=0$, $x=1$.",
     correctAnswer: "1/3",
     acceptedAnswers: ["0.33", "0,33"],
-    explanation: "Aria $=\\int_0^1 x^2\\,dx = \\dfrac13$.",
+    explanation: [
+      "Aria subgraficului pentru $f(x)\\ge0$ pe $[a,b]$ este $\\int_a^b f(x)\\,dx$.",
+      "Găsim o primitivă a lui $x^2$: $F(x)=\\dfrac{x^3}3$.",
+      "Aplicăm Leibniz-Newton: Aria $=F(1)-F(0)=\\dfrac13-0$.",
+      "Rezultatul este $\\dfrac13$.",
+    ],
   },
   {
     id: "in-s7-2",
@@ -689,7 +942,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Formula ariei suprafeței delimitate de graficul unei funcții $f(x)\\ge0$, axa $Ox$ și dreptele $x=a$, $x=b$ este:",
     options: ["$\\int_a^b f(x)\\,dx$", "$f(b)-f(a)$", "$\\int_a^b f'(x)\\,dx$", "$b-a$"],
     correctAnswer: "$\\int_a^b f(x)\\,dx$",
-    explanation: "Aceasta este formula ariei subgraficului pentru $f\\ge0$.",
+    explanation: [
+      "Pentru $f(x)\\ge0$ pe $[a,b]$, aria suprafeței delimitate de grafic, axa $Ox$ și dreptele $x=a$, $x=b$ este dată de integrala definită a funcției.",
+      "Formula este $\\int_a^b f(x)\\,dx$.",
+    ],
   },
   {
     id: "in-s7-3",
@@ -699,7 +955,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria suprafeței delimitate de graficul funcției $f(x)=2$, axa $Ox$ și dreptele $x=1$, $x=4$.",
     correctAnswer: "6",
-    explanation: "Aria $=\\int_1^4 2\\,dx = 2\\cdot3 = 6$.",
+    explanation: [
+      "Aria subgraficului este $\\int_1^4 f(x)\\,dx$, iar $f(x)=2$ este constantă.",
+      "Calculăm: Aria $=2\\cdot(4-1)$.",
+      "Rezultatul este $6$.",
+    ],
   },
   {
     id: "in-s7-4",
@@ -710,7 +970,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați aria suprafeței delimitate de graficul funcției $f(x)=x$, axa $Ox$ și dreptele $x=0$, $x=2$.",
     options: ["$2$", "$4$", "$1$", "$0$"],
     correctAnswer: "$2$",
-    explanation: "Aria $=\\int_0^2 x\\,dx = \\left[\\dfrac{x^2}2\\right]_0^2 = 2$.",
+    explanation: [
+      "Aria subgraficului este Aria $=\\int_0^2 x\\,dx$.",
+      "Găsim o primitivă a lui $x$: $F(x)=\\dfrac{x^2}2$, deci Aria $=F(2)-F(0)$.",
+      "Calculăm: $F(2)=2$, $F(0)=0$.",
+      "Rezultatul este $2$.",
+    ],
   },
   {
     id: "in-s7-5",
@@ -720,7 +985,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria suprafeței delimitate de graficul funcției $f(x)=3x^2$, axa $Ox$ și dreptele $x=0$, $x=2$.",
     correctAnswer: "8",
-    explanation: "Aria $=\\int_0^2 3x^2\\,dx = \\left[x^3\\right]_0^2 = 8$.",
+    explanation: [
+      "Aria subgraficului este Aria $=\\int_0^2 3x^2\\,dx$.",
+      "Găsim o primitivă a lui $3x^2$: $F(x)=x^3$, deci Aria $=F(2)-F(0)$.",
+      "Calculăm: $F(2)=8$, $F(0)=0$.",
+      "Rezultatul este $8$.",
+    ],
   },
   {
     id: "in-s7-6",
@@ -736,7 +1006,10 @@ export const integraleSetExercises: Exercise[] = [
       "$\\int_a^bf(x)\\,dx\\cdot\\int_a^bg(x)\\,dx$",
     ],
     correctAnswer: "$\\int_a^b[f(x)-g(x)]\\,dx$",
-    explanation: "Aria dintre grafice este integrala diferenței funcției superioare și a celei inferioare.",
+    explanation: [
+      "Dacă $f(x)\\ge g(x)$ pe $[a,b]$, aria dintre cele două grafice este integrala diferenței funcției superioare și a celei inferioare.",
+      "Formula este $\\int_a^b[f(x)-g(x)]\\,dx$.",
+    ],
   },
   {
     id: "in-s7-7",
@@ -746,7 +1019,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria suprafeței dintre graficele funcțiilor $f(x)=x+2$ și $g(x)=x$ pe intervalul $[0,3]$.",
     correctAnswer: "6",
-    explanation: "Aria $=\\int_0^3[(x+2)-x]\\,dx = \\int_0^3 2\\,dx = 6$.",
+    explanation: [
+      "Aria dintre grafice este $\\int_0^3[(x+2)-x]\\,dx = \\int_0^3 2\\,dx$.",
+      "Calculăm integrala funcției constante: $2\\cdot(3-0)$.",
+      "Rezultatul este $6$.",
+    ],
   },
   {
     id: "in-s7-8",
@@ -762,7 +1039,10 @@ export const integraleSetExercises: Exercise[] = [
       "$f(x)=2\\pi x$",
     ],
     correctAnswer: "$f(x)=\\sqrt{r^2-x^2}$ (jumătatea superioară), înmulțită cu $2$",
-    explanation: "Semicercul superior este graficul lui $f(x)=\\sqrt{r^2-x^2}$; dublăm pentru cercul întreg.",
+    explanation: [
+      "Semicercul superior al cercului de rază $r$ este graficul funcției $f(x)=\\sqrt{r^2-x^2}$.",
+      "Aria cercului întreg se obține dublând aria semicercului superior, calculată ca integrală a lui $f$.",
+    ],
   },
   {
     id: "in-s7-9",
@@ -773,7 +1053,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați aria suprafeței delimitate de graficul funcției $f(x)=4-x^2$, axa $Ox$ și dreptele $x=0$, $x=2$.",
     correctAnswer: "16/3",
     acceptedAnswers: ["5.33", "5,33"],
-    explanation: "Aria $=\\int_0^2(4-x^2)\\,dx = \\left[4x-\\dfrac{x^3}3\\right]_0^2 = 8-\\dfrac83 = \\dfrac{16}3$.",
+    explanation: [
+      "Aria subgraficului este Aria $=\\int_0^2(4-x^2)\\,dx$.",
+      "Găsim o primitivă: $F(x)=4x-\\dfrac{x^3}3$, deci Aria $=F(2)-F(0)$.",
+      "Calculăm: $F(2)=8-\\dfrac83=\\dfrac{16}3$, $F(0)=0$.",
+      "Rezultatul este $\\dfrac{16}3$.",
+    ],
   },
   {
     id: "in-s7-10",
@@ -784,7 +1069,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Dacă $f(x)\\le0$ pe $[a,b]$, aria suprafeței delimitate de graficul lui $f$ și axa $Ox$ este:",
     options: ["$-\\int_a^b f(x)\\,dx$", "$\\int_a^b f(x)\\,dx$", "$0$", "$\\int_a^b|f(x)|\\,dx\\cdot(-1)$"],
     correctAnswer: "$-\\int_a^b f(x)\\,dx$",
-    explanation: "Deoarece integrala este negativă în acest caz, aria (pozitivă) este opusul ei.",
+    explanation: [
+      "Dacă $f(x)\\le0$ pe $[a,b]$, integrala $\\int_a^b f(x)\\,dx$ este negativă sau nulă, deci nu poate reprezenta direct o arie (pozitivă).",
+      "Aria (pozitivă) delimitată de grafic și axa $Ox$ este opusul integralei: $-\\int_a^b f(x)\\,dx$.",
+    ],
   },
 
   // Set 8 — Integrale cu funcții compuse simple
@@ -797,7 +1085,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=(2x+1)^2$ este $F(x)=\\dfrac{(2x+1)^3}6$. Calculați $F(0)$.",
     correctAnswer: "1/6",
     acceptedAnswers: ["0.17", "0,17"],
-    explanation: "$F(0) = \\dfrac{1^3}6 = \\dfrac16$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\dfrac{(2x+1)^3}6$.",
+      "Calculăm: $F(0) = \\dfrac{1^3}6$.",
+      "Rezultatul este $\\dfrac16$.",
+    ],
   },
   {
     id: "in-s8-2",
@@ -808,7 +1100,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=e^{2x}$ este:",
     options: ["$\\dfrac{e^{2x}}2$", "$2e^{2x}$", "$e^{2x}$", "$\\dfrac{e^{2x}}4$"],
     correctAnswer: "$\\dfrac{e^{2x}}2$",
-    explanation: "$\\left(\\dfrac{e^{2x}}2\\right)' = \\dfrac{2e^{2x}}2 = e^{2x}$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=e^{2x}$.",
+      "Verificăm prin derivare: $\\left(\\dfrac{e^{2x}}2\\right)' = \\dfrac{2e^{2x}}2 = e^{2x}$, deci coincide cu $f(x)$.",
+      "Rezultă că $\\dfrac{e^{2x}}2$ este o primitivă a lui $e^{2x}$.",
+    ],
   },
   {
     id: "in-s8-3",
@@ -819,7 +1115,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 e^{2x}\\,dx.$$",
     correctAnswer: "(e^2-1)/2",
     acceptedAnswers: ["3.19", "3,19"],
-    explanation: "$\\int_0^1 e^{2x}\\,dx = \\left[\\dfrac{e^{2x}}2\\right]_0^1 = \\dfrac{e^2-1}2$.",
+    explanation: [
+      "O primitivă a lui $e^{2x}$ este $F(x)=\\dfrac{e^{2x}}2$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1 e^{2x}\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=\\dfrac{e^2}2$, $F(0)=\\dfrac12$.",
+      "Rezultatul este $\\dfrac{e^2-1}2$.",
+    ],
   },
   {
     id: "in-s8-4",
@@ -830,7 +1131,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\cos(2x)$ este:",
     options: ["$\\dfrac{\\sin(2x)}2$", "$2\\sin(2x)$", "$-\\dfrac{\\sin(2x)}2$", "$\\sin(2x)$"],
     correctAnswer: "$\\dfrac{\\sin(2x)}2$",
-    explanation: "$\\left(\\dfrac{\\sin(2x)}2\\right)' = \\dfrac{2\\cos(2x)}2 = \\cos(2x)$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\cos(2x)$.",
+      "Verificăm prin derivare: $\\left(\\dfrac{\\sin(2x)}2\\right)' = \\dfrac{2\\cos(2x)}2 = \\cos(2x)$, deci coincide cu $f(x)$.",
+      "Rezultă că $\\dfrac{\\sin(2x)}2$ este o primitivă a lui $\\cos(2x)$.",
+    ],
   },
   {
     id: "in-s8-5",
@@ -840,7 +1145,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\int_0^{\\pi/2}\\cos(2x)\\,dx.$$",
     correctAnswer: "0",
-    explanation: "$\\int_0^{\\pi/2}\\cos(2x)\\,dx = \\left[\\dfrac{\\sin(2x)}2\\right]_0^{\\pi/2} = 0-0 = 0$.",
+    explanation: [
+      "O primitivă a lui $\\cos(2x)$ este $F(x)=\\dfrac{\\sin(2x)}2$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^{\\pi/2}\\cos(2x)\\,dx = F(\\pi/2)-F(0)$.",
+      "Calculăm: $F(\\pi/2)=\\dfrac{\\sin\\pi}2=0$, $F(0)=\\dfrac{\\sin0}2=0$.",
+      "Rezultatul este $0-0=0$.",
+    ],
   },
   {
     id: "in-s8-6",
@@ -851,7 +1161,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\dfrac1{2x+1}$ (pentru $2x+1>0$) este:",
     options: ["$\\dfrac12\\ln(2x+1)$", "$\\ln(2x+1)$", "$2\\ln(2x+1)$", "$\\dfrac1{(2x+1)^2}$"],
     correctAnswer: "$\\dfrac12\\ln(2x+1)$",
-    explanation: "$\\left(\\dfrac12\\ln(2x+1)\\right)' = \\dfrac12\\cdot\\dfrac2{2x+1} = \\dfrac1{2x+1}$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\dfrac1{2x+1}$.",
+      "Verificăm prin derivare: $\\left(\\dfrac12\\ln(2x+1)\\right)' = \\dfrac12\\cdot\\dfrac2{2x+1} = \\dfrac1{2x+1}$, deci coincide cu $f(x)$.",
+      "Rezultă că $\\dfrac12\\ln(2x+1)$ este o primitivă a lui $\\dfrac1{2x+1}$.",
+    ],
   },
   {
     id: "in-s8-7",
@@ -862,7 +1176,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=(2x-1)^2$ este $F(x)=\\dfrac{(2x-1)^3}6$. Calculați $F(1)$.",
     correctAnswer: "1/6",
     acceptedAnswers: ["0.17", "0,17"],
-    explanation: "$F(1) = \\dfrac{1^3}6 = \\dfrac16$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\dfrac{(2x-1)^3}6$.",
+      "Calculăm: $F(1) = \\dfrac{1^3}6$.",
+      "Rezultatul este $\\dfrac16$.",
+    ],
   },
   {
     id: "in-s8-8",
@@ -873,7 +1191,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\dfrac1{x+3}$ (pentru $x>-3$) este:",
     options: ["$\\ln(x+3)$", "$\\dfrac1{(x+3)^2}$", "$\\ln x+3$", "$(x+3)\\ln(x+3)$"],
     correctAnswer: "$\\ln(x+3)$",
-    explanation: "$(\\ln(x+3))' = \\dfrac1{x+3}$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\dfrac1{x+3}$.",
+      "Verificăm prin derivare: $(\\ln(x+3))' = \\dfrac1{x+3}$, deci coincide cu $f(x)$.",
+      "Rezultă că $\\ln(x+3)$ este o primitivă a lui $\\dfrac1{x+3}$.",
+    ],
   },
   {
     id: "in-s8-9",
@@ -884,7 +1206,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1\\dfrac1{x+1}\\,dx.$$",
     correctAnswer: "ln(2)",
     acceptedAnswers: ["0.69", "0,69"],
-    explanation: "$\\int_0^1\\dfrac1{x+1}\\,dx = [\\ln(x+1)]_0^1 = \\ln2-\\ln1 = \\ln2$.",
+    explanation: [
+      "O primitivă a lui $\\dfrac1{x+1}$ este $F(x)=\\ln(x+1)$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1\\dfrac1{x+1}\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=\\ln2$, $F(0)=\\ln1=0$.",
+      "Rezultatul este $\\ln2$.",
+    ],
   },
   {
     id: "in-s8-10",
@@ -895,7 +1222,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=\\sin(3x)$ este:",
     options: ["$-\\dfrac{\\cos(3x)}3$", "$\\dfrac{\\cos(3x)}3$", "$3\\cos(3x)$", "$-\\cos(3x)$"],
     correctAnswer: "$-\\dfrac{\\cos(3x)}3$",
-    explanation: "$\\left(-\\dfrac{\\cos(3x)}3\\right)' = \\dfrac{3\\sin(3x)}3 = \\sin(3x)$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=\\sin(3x)$.",
+      "Verificăm prin derivare: $\\left(-\\dfrac{\\cos(3x)}3\\right)' = \\dfrac{3\\sin(3x)}3 = \\sin(3x)$, deci coincide cu $f(x)$.",
+      "Rezultă că $-\\dfrac{\\cos(3x)}3$ este o primitivă a lui $\\sin(3x)$.",
+    ],
   },
 
   // Set 9 — Volumul unui corp de rotație
@@ -913,7 +1244,10 @@ export const integraleSetExercises: Exercise[] = [
       "$\\pi\\int_a^bf(x)\\,dx$",
     ],
     correctAnswer: "$\\pi\\int_a^b[f(x)]^2\\,dx$",
-    explanation: "Aceasta este formula volumului corpului de rotație în jurul axei $Ox$.",
+    explanation: [
+      "Volumul corpului obținut prin rotația graficului lui $f$ în jurul axei $Ox$, pe $[a,b]$, se calculează integrând aria discului de rază $f(x)$.",
+      "Formula este $V=\\pi\\int_a^b[f(x)]^2\\,dx$.",
+    ],
   },
   {
     id: "in-s9-2",
@@ -924,7 +1258,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Volumul corpului obținut prin rotația funcției $f(x)=x$ în jurul axei $Ox$, pe $[0,1]$, este $\\dfrac{\\pi}{3}$. Determinați coeficientul lui $\\pi$.",
     correctAnswer: "1/3",
     acceptedAnswers: ["0.33", "0,33"],
-    explanation: "$V=\\pi\\int_0^1x^2\\,dx = \\pi\\cdot\\dfrac13$.",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^1 [f(x)]^2\\,dx = \\pi\\int_0^1 x^2\\,dx$.",
+      "Găsim o primitivă a lui $x^2$: $F(x)=\\dfrac{x^3}3$, deci $\\int_0^1 x^2\\,dx = F(1)-F(0)=\\dfrac13$.",
+      "Coeficientul lui $\\pi$ este $\\dfrac13$.",
+    ],
   },
   {
     id: "in-s9-3",
@@ -935,7 +1273,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Volumul obținut prin rotația graficului funcției constante $f(x)=2$ în jurul axei $Ox$, pe $[0,3]$, este:",
     options: ["$12\\pi$", "$6\\pi$", "$4\\pi$", "$9\\pi$"],
     correctAnswer: "$12\\pi$",
-    explanation: "$V=\\pi\\int_0^3 4\\,dx = \\pi\\cdot4\\cdot3 = 12\\pi$ (cilindru de rază $2$ și înălțime $3$).",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^3[f(x)]^2\\,dx = \\pi\\int_0^3 4\\,dx$.",
+      "Calculăm integrala funcției constante: $4\\cdot(3-0)=12$.",
+      "Rezultatul este $V=12\\pi$ (cilindru de rază $2$ și înălțime $3$).",
+    ],
   },
   {
     id: "in-s9-4",
@@ -945,7 +1287,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Volumul corpului obținut prin rotația funcției $f(x)=\\sqrt{x}$ în jurul axei $Ox$, pe $[0,4]$, este $8\\pi$. Determinați coeficientul lui $\\pi$.",
     correctAnswer: "8",
-    explanation: "$V=\\pi\\int_0^4 x\\,dx = \\pi\\cdot\\left[\\dfrac{x^2}2\\right]_0^4 = \\pi\\cdot8$.",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^4[f(x)]^2\\,dx = \\pi\\int_0^4 x\\,dx$.",
+      "Găsim o primitivă a lui $x$: $F(x)=\\dfrac{x^2}2$, deci $\\int_0^4 x\\,dx = F(4)-F(0)=8-0$.",
+      "Coeficientul lui $\\pi$ este $8$.",
+    ],
   },
   {
     id: "in-s9-5",
@@ -956,7 +1302,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Corpul obținut prin rotația graficului funcției $f(x)=r$ (constantă) în jurul axei $Ox$, pe $[0,h]$, este:",
     options: ["un cilindru de rază $r$ și înălțime $h$", "un con", "o sferă", "un trunchi de con"],
     correctAnswer: "un cilindru de rază $r$ și înălțime $h$",
-    explanation: "Rotind o dreaptă orizontală la înălțimea $r$ se obține un cilindru.",
+    explanation: [
+      "Rotind graficul unei funcții constante $f(x)=r$ (o dreaptă orizontală la distanța $r$ de axa $Ox$) în jurul axei $Ox$, pe $[0,h]$, se obține o suprafață cilindrică.",
+      "Corpul rezultat este un cilindru de rază $r$ și înălțime $h$.",
+    ],
   },
   {
     id: "in-s9-6",
@@ -967,7 +1316,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Volumul corpului obținut prin rotația funcției $f(x)=x^2$ în jurul axei $Ox$, pe $[0,1]$, este $\\dfrac{\\pi}{5}$. Determinați coeficientul lui $\\pi$.",
     correctAnswer: "1/5",
     acceptedAnswers: ["0.2", "0,2"],
-    explanation: "$V=\\pi\\int_0^1 x^4\\,dx = \\pi\\cdot\\left[\\dfrac{x^5}5\\right]_0^1 = \\pi\\cdot\\dfrac15$.",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^1[f(x)]^2\\,dx = \\pi\\int_0^1 x^4\\,dx$.",
+      "Găsim o primitivă a lui $x^4$: $F(x)=\\dfrac{x^5}5$, deci $\\int_0^1 x^4\\,dx = F(1)-F(0)=\\dfrac15$.",
+      "Coeficientul lui $\\pi$ este $\\dfrac15$.",
+    ],
   },
   {
     id: "in-s9-7",
@@ -978,7 +1331,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Formula volumului conului obținut prin rotația dreptei $f(x)=\\dfrac rh x$ în jurul axei $Ox$, pe $[0,h]$, este cunoscută ca fiind:",
     options: ["$\\dfrac13\\pi r^2h$", "$\\pi r^2h$", "$\\dfrac43\\pi r^3$", "$2\\pi rh$"],
     correctAnswer: "$\\dfrac13\\pi r^2h$",
-    explanation: "Aceasta este formula cunoscută a volumului unui con circular drept.",
+    explanation: [
+      "Rotația segmentului de dreaptă $f(x)=\\dfrac rh x$ în jurul axei $Ox$, pe $[0,h]$, generează un con circular drept de rază $r$ și înălțime $h$.",
+      "Volumul acestui con este dat de formula cunoscută $V=\\dfrac13\\pi r^2h$.",
+    ],
   },
   {
     id: "in-s9-8",
@@ -988,7 +1344,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Volumul corpului obținut prin rotația funcției constante $f(x)=1$ în jurul axei $Ox$, pe $[0,5]$, este $5\\pi$. Determinați coeficientul lui $\\pi$.",
     correctAnswer: "5",
-    explanation: "$V=\\pi\\int_0^5 1\\,dx = \\pi\\cdot5$.",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^5[f(x)]^2\\,dx = \\pi\\int_0^5 1\\,dx$.",
+      "Calculăm integrala funcției constante: $1\\cdot(5-0)=5$.",
+      "Coeficientul lui $\\pi$ este $5$.",
+    ],
   },
   {
     id: "in-s9-9",
@@ -1004,7 +1364,10 @@ export const integraleSetExercises: Exercise[] = [
       "înmulțită cu $2\\pi$",
     ],
     correctAnswer: "integrată pe intervalul dat, apoi înmulțită cu $\\pi$",
-    explanation: "Formula este $V=\\pi\\int_a^b[f(x)]^2\\,dx$.",
+    explanation: [
+      "Formula volumului corpului de rotație este $V=\\pi\\int_a^b[f(x)]^2\\,dx$.",
+      "Prin urmare, funcția $[f(x)]^2$ trebuie integrată pe intervalul dat, iar rezultatul înmulțit cu $\\pi$.",
+    ],
   },
   {
     id: "in-s9-10",
@@ -1015,7 +1378,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Volumul corpului obținut prin rotația funcției $f(x)=2x$ în jurul axei $Ox$, pe $[0,1]$, este $\\dfrac{4\\pi}3$. Determinați coeficientul lui $\\pi$.",
     correctAnswer: "4/3",
     acceptedAnswers: ["1.33", "1,33"],
-    explanation: "$V=\\pi\\int_0^1 4x^2\\,dx = \\pi\\cdot4\\cdot\\left[\\dfrac{x^3}3\\right]_0^1 = \\pi\\cdot\\dfrac43$.",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^1[f(x)]^2\\,dx = \\pi\\int_0^1 4x^2\\,dx$.",
+      "Găsim o primitivă a lui $4x^2$: $F(x)=\\dfrac{4x^3}3$, deci $\\int_0^1 4x^2\\,dx = F(1)-F(0)=\\dfrac43$.",
+      "Coeficientul lui $\\pi$ este $\\dfrac43$.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -1027,7 +1394,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "O primitivă a funcției $f(x)=x^2$ este $F(x)=\\dfrac{x^3}3$. Calculați $F(3)$.",
     correctAnswer: "9",
-    explanation: "$F(3) = \\dfrac{27}3 = 9$.",
+    explanation: [
+      "Folosim primitiva dată $F(x)=\\dfrac{x^3}3$.",
+      "Calculăm: $F(3) = \\dfrac{27}3$.",
+      "Rezultatul este $9$.",
+    ],
   },
   {
     id: "in-s10-2",
@@ -1038,7 +1409,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_0^1 3x^2\\,dx.$$",
     options: ["$1$", "$3$", "$0$", "$2$"],
     correctAnswer: "$1$",
-    explanation: "$\\int_0^1 3x^2\\,dx = [x^3]_0^1 = 1$.",
+    explanation: [
+      "O primitivă a lui $3x^2$ este $F(x)=x^3$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^1 3x^2\\,dx = F(1)-F(0)$.",
+      "Calculăm: $F(1)=1$, $F(0)=0$.",
+      "Rezultatul este $1$.",
+    ],
   },
   {
     id: "in-s10-3",
@@ -1048,7 +1424,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\int_0^{\\pi}\\sin x\\,dx.$$",
     correctAnswer: "2",
-    explanation: "$\\int_0^{\\pi}\\sin x\\,dx = [-\\cos x]_0^{\\pi} = 1+1 = 2$.",
+    explanation: [
+      "O primitivă a lui $\\sin x$ este $F(x)=-\\cos x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_0^\\pi\\sin x\\,dx = F(\\pi)-F(0)$.",
+      "Calculăm: $F(\\pi)=-\\cos\\pi=1$, $F(0)=-\\cos0=-1$.",
+      "Rezultatul este $1-(-1)=2$.",
+    ],
   },
   {
     id: "in-s10-4",
@@ -1059,7 +1440,11 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "O primitivă a funcției $f(x)=e^x$ este:",
     options: ["$e^x$", "$xe^x$", "$\\dfrac{e^x}x$", "$e^{x-1}$"],
     correctAnswer: "$e^x$",
-    explanation: "$(e^x)' = e^x$.",
+    explanation: [
+      "Căutăm $F$ cu $F'(x)=e^x$.",
+      "Verificăm prin derivare: $(e^x)' = e^x$, deci coincide cu $f(x)=e^x$.",
+      "Rezultă că $e^x$ este propria sa primitivă.",
+    ],
   },
   {
     id: "in-s10-5",
@@ -1069,7 +1454,12 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria suprafeței delimitate de graficul funcției $f(x)=x$, axa $Ox$ și dreptele $x=0$, $x=4$.",
     correctAnswer: "8",
-    explanation: "Aria $=\\int_0^4 x\\,dx = \\left[\\dfrac{x^2}2\\right]_0^4 = 8$.",
+    explanation: [
+      "Aria subgraficului este Aria $=\\int_0^4 x\\,dx$.",
+      "Găsim o primitivă a lui $x$: $F(x)=\\dfrac{x^2}2$, deci Aria $=F(4)-F(0)$.",
+      "Calculăm: $F(4)=8$, $F(0)=0$.",
+      "Rezultatul este $8$.",
+    ],
   },
   {
     id: "in-s10-6",
@@ -1085,7 +1475,10 @@ export const integraleSetExercises: Exercise[] = [
       "primitivei unei funcții necunoscute",
     ],
     correctAnswer: "integralei definite folosind o primitivă",
-    explanation: "Formula Leibniz-Newton exprimă integrala definită prin diferența valorilor unei primitive.",
+    explanation: [
+      "Formula Leibniz-Newton exprimă integrala definită a unei funcții ca diferența valorilor unei primitive la capetele intervalului.",
+      "Prin urmare, ea este utilizată pentru calculul integralei definite folosind o primitivă.",
+    ],
   },
   {
     id: "in-s10-7",
@@ -1095,7 +1488,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Știind că $\\int_0^2f(x)\\,dx=6$ și $\\int_2^5f(x)\\,dx=4$, calculați $\\int_0^5f(x)\\,dx$.",
     correctAnswer: "10",
-    explanation: "Prin aditivitate, $\\int_0^5 f\\,dx = 6+4 = 10$.",
+    explanation: [
+      "Aplicăm proprietatea de aditivitate: $\\int_0^5 f(x)\\,dx = \\int_0^2 f(x)\\,dx+\\int_2^5 f(x)\\,dx$.",
+      "Înlocuim valorile date: $6+4$.",
+      "Rezultatul este $10$.",
+    ],
   },
   {
     id: "in-s10-8",
@@ -1106,7 +1503,12 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_1^2\\dfrac1x\\,dx.$$",
     options: ["$\\ln2$", "$1$", "$2$", "$\\ln1$"],
     correctAnswer: "$\\ln2$",
-    explanation: "$\\int_1^2\\dfrac1x\\,dx = [\\ln x]_1^2 = \\ln2-\\ln1 = \\ln2$.",
+    explanation: [
+      "O primitivă a lui $\\dfrac1x$ este $F(x)=\\ln x$.",
+      "Aplicăm formula Leibniz-Newton: $\\int_1^2\\dfrac1x\\,dx = F(2)-F(1)$.",
+      "Calculăm: $F(2)=\\ln2$, $F(1)=\\ln1=0$.",
+      "Rezultatul este $\\ln2$.",
+    ],
   },
   {
     id: "in-s10-9",
@@ -1116,7 +1518,11 @@ export const integraleSetExercises: Exercise[] = [
     points: 6,
     prompt: "Volumul corpului obținut prin rotația funcției $f(x)=3$ în jurul axei $Ox$, pe $[0,2]$, este $18\\pi$. Determinați coeficientul lui $\\pi$.",
     correctAnswer: "18",
-    explanation: "$V=\\pi\\int_0^2 9\\,dx = \\pi\\cdot9\\cdot2 = 18\\pi$.",
+    explanation: [
+      "Aplicăm formula $V=\\pi\\int_0^2[f(x)]^2\\,dx = \\pi\\int_0^2 9\\,dx$.",
+      "Calculăm integrala funcției constante: $9\\cdot(2-0)=18$.",
+      "Coeficientul lui $\\pi$ este $18$.",
+    ],
   },
   {
     id: "in-s10-10",
@@ -1127,6 +1533,10 @@ export const integraleSetExercises: Exercise[] = [
     prompt: "Calculați $$\\int_{-2}^2 x^3\\,dx.$$",
     options: ["$0$", "$4$", "$-4$", "$8$"],
     correctAnswer: "$0$",
-    explanation: "$f(x)=x^3$ este impară, iar intervalul este simetric, deci integrala este $0$.",
+    explanation: [
+      "Funcția $f(x)=x^3$ este impară, iar intervalul $[-2,2]$ este simetric față de origine.",
+      "Pentru o funcție impară pe un interval simetric, integrala definită este $0$.",
+      "Rezultatul este $0$.",
+    ],
   },
 ];
