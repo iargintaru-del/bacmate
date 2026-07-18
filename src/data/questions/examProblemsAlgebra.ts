@@ -14,7 +14,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "5",
-        explanation: "$|z| = \\sqrt{3^2 + 4^2} = \\sqrt{25} = 5$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=3$, $b=4$: $|z|=\\sqrt{3^2+4^2}=\\sqrt{9+16}=\\sqrt{25}$.",
+          "Rezultă $|z|=5$.",
+        ],
       },
       {
         id: "ea-nc-1-b",
@@ -24,7 +28,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$-7+24i$", "$7+24i$", "$-7-24i$", "$24-7i$"],
         correctAnswer: "$-7+24i$",
-        explanation: "$z^2 = -7 + 24i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(3+4i)^2=3^2+2\\cdot3\\cdot4i+(4i)^2$.",
+          "Calculăm fiecare termen: $9+24i+16i^2$, iar $i^2=-1$ dă $9+24i-16$.",
+          "Rezultă $z^2=-7+24i$.",
+        ],
       },
       {
         id: "ea-nc-1-c",
@@ -33,7 +41,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "-7",
-        explanation: "Din $z^2 = -7+24i$, partea reală este $-7$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=-7+24i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $-7$.",
+        ],
       },
     ],
   },
@@ -50,7 +61,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "10",
-        explanation: "$|z| = \\sqrt{6^2 + 8^2} = \\sqrt{100} = 10$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=6$, $b=8$: $|z|=\\sqrt{6^2+8^2}=\\sqrt{36+64}=\\sqrt{100}$.",
+          "Rezultă $|z|=10$.",
+        ],
       },
       {
         id: "ea-nc-2-b",
@@ -60,7 +75,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$-28+96i$", "$28+96i$", "$-28-96i$", "$96-28i$"],
         correctAnswer: "$-28+96i$",
-        explanation: "$z^2 = -28 + 96i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(6+8i)^2=6^2+2\\cdot6\\cdot8i+(8i)^2$.",
+          "Calculăm fiecare termen: $36+96i+64i^2$, iar $i^2=-1$ dă $36+96i-64$.",
+          "Rezultă $z^2=-28+96i$.",
+        ],
       },
       {
         id: "ea-nc-2-c",
@@ -69,7 +88,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "-28",
-        explanation: "Din $z^2 = -28+96i$, partea reală este $-28$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=-28+96i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $-28$.",
+        ],
       },
     ],
   },
@@ -86,7 +108,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "13",
-        explanation: "$|z| = \\sqrt{5^2 + 12^2} = \\sqrt{169} = 13$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=5$, $b=12$: $|z|=\\sqrt{5^2+12^2}=\\sqrt{25+144}=\\sqrt{169}$.",
+          "Rezultă $|z|=13$.",
+        ],
       },
       {
         id: "ea-nc-3-b",
@@ -96,7 +122,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$-119+120i$", "$119+120i$", "$-119-120i$", "$120-119i$"],
         correctAnswer: "$-119+120i$",
-        explanation: "$z^2 = -119 + 120i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(5+12i)^2=5^2+2\\cdot5\\cdot12i+(12i)^2$.",
+          "Calculăm fiecare termen: $25+120i+144i^2$, iar $i^2=-1$ dă $25+120i-144$.",
+          "Rezultă $z^2=-119+120i$.",
+        ],
       },
       {
         id: "ea-nc-3-c",
@@ -105,7 +135,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "-119",
-        explanation: "Din $z^2 = -119+120i$, partea reală este $-119$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=-119+120i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $-119$.",
+        ],
       },
     ],
   },
@@ -122,7 +155,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "10",
-        explanation: "$|z| = \\sqrt{8^2 + 6^2} = \\sqrt{100} = 10$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=8$, $b=6$: $|z|=\\sqrt{8^2+6^2}=\\sqrt{64+36}=\\sqrt{100}$.",
+          "Rezultă $|z|=10$.",
+        ],
       },
       {
         id: "ea-nc-4-b",
@@ -132,7 +169,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$28+96i$", "$-28+96i$", "$28-96i$", "$96+28i$"],
         correctAnswer: "$28+96i$",
-        explanation: "$z^2 = 28 + 96i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(8+6i)^2=8^2+2\\cdot8\\cdot6i+(6i)^2$.",
+          "Calculăm fiecare termen: $64+96i+36i^2$, iar $i^2=-1$ dă $64+96i-36$.",
+          "Rezultă $z^2=28+96i$.",
+        ],
       },
       {
         id: "ea-nc-4-c",
@@ -141,7 +182,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "28",
-        explanation: "Din $z^2 = 28+96i$, partea reală este $28$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=28+96i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $28$.",
+        ],
       },
     ],
   },
@@ -158,7 +202,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "15",
-        explanation: "$|z| = \\sqrt{9^2 + 12^2} = \\sqrt{225} = 15$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=9$, $b=12$: $|z|=\\sqrt{9^2+12^2}=\\sqrt{81+144}=\\sqrt{225}$.",
+          "Rezultă $|z|=15$.",
+        ],
       },
       {
         id: "ea-nc-5-b",
@@ -168,7 +216,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$-63+216i$", "$63+216i$", "$-63-216i$", "$216-63i$"],
         correctAnswer: "$-63+216i$",
-        explanation: "$z^2 = -63 + 216i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(9+12i)^2=9^2+2\\cdot9\\cdot12i+(12i)^2$.",
+          "Calculăm fiecare termen: $81+216i+144i^2$, iar $i^2=-1$ dă $81+216i-144$.",
+          "Rezultă $z^2=-63+216i$.",
+        ],
       },
       {
         id: "ea-nc-5-c",
@@ -177,7 +229,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "-63",
-        explanation: "Din $z^2 = -63+216i$, partea reală este $-63$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=-63+216i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $-63$.",
+        ],
       },
     ],
   },
@@ -194,7 +249,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "13",
-        explanation: "$|z| = \\sqrt{12^2 + 5^2} = \\sqrt{169} = 13$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=12$, $b=5$: $|z|=\\sqrt{12^2+5^2}=\\sqrt{144+25}=\\sqrt{169}$.",
+          "Rezultă $|z|=13$.",
+        ],
       },
       {
         id: "ea-nc-6-b",
@@ -204,7 +263,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$119+120i$", "$-119+120i$", "$119-120i$", "$120+119i$"],
         correctAnswer: "$119+120i$",
-        explanation: "$z^2 = 119 + 120i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(12+5i)^2=12^2+2\\cdot12\\cdot5i+(5i)^2$.",
+          "Calculăm fiecare termen: $144+120i+25i^2$, iar $i^2=-1$ dă $144+120i-25$.",
+          "Rezultă $z^2=119+120i$.",
+        ],
       },
       {
         id: "ea-nc-6-c",
@@ -213,7 +276,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "119",
-        explanation: "Din $z^2 = 119+120i$, partea reală este $119$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=119+120i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $119$.",
+        ],
       },
     ],
   },
@@ -230,7 +296,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "25",
-        explanation: "$|z| = \\sqrt{7^2 + 24^2} = \\sqrt{625} = 25$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=7$, $b=24$: $|z|=\\sqrt{7^2+24^2}=\\sqrt{49+576}=\\sqrt{625}$.",
+          "Rezultă $|z|=25$.",
+        ],
       },
       {
         id: "ea-nc-7-b",
@@ -240,7 +310,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$-527+336i$", "$527+336i$", "$-527-336i$", "$336-527i$"],
         correctAnswer: "$-527+336i$",
-        explanation: "$z^2 = -527 + 336i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(7+24i)^2=7^2+2\\cdot7\\cdot24i+(24i)^2$.",
+          "Calculăm fiecare termen: $49+336i+576i^2$, iar $i^2=-1$ dă $49+336i-576$.",
+          "Rezultă $z^2=-527+336i$.",
+        ],
       },
       {
         id: "ea-nc-7-c",
@@ -249,7 +323,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "-527",
-        explanation: "Din $z^2 = -527+336i$, partea reală este $-527$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=-527+336i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $-527$.",
+        ],
       },
     ],
   },
@@ -266,7 +343,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "25",
-        explanation: "$|z| = \\sqrt{20^2 + 15^2} = \\sqrt{625} = 25$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=20$, $b=15$: $|z|=\\sqrt{20^2+15^2}=\\sqrt{400+225}=\\sqrt{625}$.",
+          "Rezultă $|z|=25$.",
+        ],
       },
       {
         id: "ea-nc-8-b",
@@ -276,7 +357,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$175+600i$", "$-175+600i$", "$175-600i$", "$600+175i$"],
         correctAnswer: "$175+600i$",
-        explanation: "$z^2 = 175 + 600i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(20+15i)^2=20^2+2\\cdot20\\cdot15i+(15i)^2$.",
+          "Calculăm fiecare termen: $400+600i+225i^2$, iar $i^2=-1$ dă $400+600i-225$.",
+          "Rezultă $z^2=175+600i$.",
+        ],
       },
       {
         id: "ea-nc-8-c",
@@ -285,7 +370,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "175",
-        explanation: "Din $z^2 = 175+600i$, partea reală este $175$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=175+600i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $175$.",
+        ],
       },
     ],
   },
@@ -302,7 +390,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "5",
-        explanation: "$|z| = \\sqrt{4^2 + 3^2} = \\sqrt{25} = 5$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=4$, $b=3$: $|z|=\\sqrt{4^2+3^2}=\\sqrt{16+9}=\\sqrt{25}$.",
+          "Rezultă $|z|=5$.",
+        ],
       },
       {
         id: "ea-nc-9-b",
@@ -312,7 +404,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$7+24i$", "$-7+24i$", "$7-24i$", "$24+7i$"],
         correctAnswer: "$7+24i$",
-        explanation: "$z^2 = 7 + 24i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(4+3i)^2=4^2+2\\cdot4\\cdot3i+(3i)^2$.",
+          "Calculăm fiecare termen: $16+24i+9i^2$, iar $i^2=-1$ dă $16+24i-9$.",
+          "Rezultă $z^2=7+24i$.",
+        ],
       },
       {
         id: "ea-nc-9-c",
@@ -321,7 +417,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "7",
-        explanation: "Din $z^2 = 7+24i$, partea reală este $7$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=7+24i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $7$.",
+        ],
       },
     ],
   },
@@ -338,7 +437,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "25",
-        explanation: "$|z| = \\sqrt{24^2 + 7^2} = \\sqrt{625} = 25$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=24$, $b=7$: $|z|=\\sqrt{24^2+7^2}=\\sqrt{576+49}=\\sqrt{625}$.",
+          "Rezultă $|z|=25$.",
+        ],
       },
       {
         id: "ea-nc-10-b",
@@ -348,7 +451,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$527+336i$", "$-527+336i$", "$527-336i$", "$336+527i$"],
         correctAnswer: "$527+336i$",
-        explanation: "$z^2 = 527 + 336i$.",
+        explanation: [
+          "Ridicăm la pătrat: $z^2=(24+7i)^2=24^2+2\\cdot24\\cdot7i+(7i)^2$.",
+          "Calculăm fiecare termen: $576+336i+49i^2$, iar $i^2=-1$ dă $576+336i-49$.",
+          "Rezultă $z^2=527+336i$.",
+        ],
       },
       {
         id: "ea-nc-10-c",
@@ -357,7 +464,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$.",
         correctAnswer: "527",
-        explanation: "Din $z^2 = 527+336i$, partea reală este $527$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=527+336i$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $527$.",
+        ],
       },
     ],
   },
@@ -374,7 +484,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{10}^{3}$.",
         correctAnswer: "120",
-        explanation: "$C_{10}^{3} = 120$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)(n-2)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=10$, $k=3$: $C_{10}^{3}=\\dfrac{10\\cdot9\\cdot8}{3!}=\\dfrac{720}{6}$.",
+          "Rezultă $C_{10}^{3}=120$.",
+        ],
       },
       {
         id: "ea-cb-1-b",
@@ -384,7 +498,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 3 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{10}^{3} = 720$", "$C_{10}^{3} = 120$", "$10^{3} = 1000$", "$3! = 6$"],
         correctAnswer: "$A_{10}^{3} = 720$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{10}^{3} = 720$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=10$, $k=3$: $A_{10}^{3}=10\\cdot9\\cdot8=720$.",
+          "Rezultă $A_{10}^{3}=720$.",
+        ],
       },
       {
         id: "ea-cb-1-c",
@@ -393,7 +511,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{10}^{3} - C_{10}^{3}$.",
         correctAnswer: "600",
-        explanation: "$720 - 120 = 600$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{10}^{3}=720$ și $C_{10}^{3}=120$.",
+          "Rezultă $A_{10}^{3}-C_{10}^{3}=720-120=600$.",
+        ],
       },
     ],
   },
@@ -410,7 +531,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{12}^{3}$.",
         correctAnswer: "220",
-        explanation: "$C_{12}^{3} = 220$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)(n-2)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=12$, $k=3$: $C_{12}^{3}=\\dfrac{12\\cdot11\\cdot10}{3!}=\\dfrac{1320}{6}$.",
+          "Rezultă $C_{12}^{3}=220$.",
+        ],
       },
       {
         id: "ea-cb-2-b",
@@ -420,7 +545,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 3 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{12}^{3} = 1320$", "$C_{12}^{3} = 220$", "$12^{3} = 1728$", "$3! = 6$"],
         correctAnswer: "$A_{12}^{3} = 1320$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{12}^{3} = 1320$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=12$, $k=3$: $A_{12}^{3}=12\\cdot11\\cdot10=1320$.",
+          "Rezultă $A_{12}^{3}=1320$.",
+        ],
       },
       {
         id: "ea-cb-2-c",
@@ -429,7 +558,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{12}^{3} - C_{12}^{3}$.",
         correctAnswer: "1100",
-        explanation: "$1320 - 220 = 1100$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{12}^{3}=1320$ și $C_{12}^{3}=220$.",
+          "Rezultă $A_{12}^{3}-C_{12}^{3}=1320-220=1100$.",
+        ],
       },
     ],
   },
@@ -446,7 +578,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{15}^{2}$.",
         correctAnswer: "105",
-        explanation: "$C_{15}^{2} = 105$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=15$, $k=2$: $C_{15}^{2}=\\dfrac{15\\cdot14}{2!}=\\dfrac{210}{2}$.",
+          "Rezultă $C_{15}^{2}=105$.",
+        ],
       },
       {
         id: "ea-cb-3-b",
@@ -456,7 +592,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 2 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{15}^{2} = 210$", "$C_{15}^{2} = 105$", "$15^{2} = 225$", "$2! = 2$"],
         correctAnswer: "$A_{15}^{2} = 210$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{15}^{2} = 210$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=15$, $k=2$: $A_{15}^{2}=15\\cdot14=210$.",
+          "Rezultă $A_{15}^{2}=210$.",
+        ],
       },
       {
         id: "ea-cb-3-c",
@@ -465,7 +605,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{15}^{2} - C_{15}^{2}$.",
         correctAnswer: "105",
-        explanation: "$210 - 105 = 105$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{15}^{2}=210$ și $C_{15}^{2}=105$.",
+          "Rezultă $A_{15}^{2}-C_{15}^{2}=210-105=105$.",
+        ],
       },
     ],
   },
@@ -482,7 +625,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{20}^{3}$.",
         correctAnswer: "1140",
-        explanation: "$C_{20}^{3} = 1140$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)(n-2)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=20$, $k=3$: $C_{20}^{3}=\\dfrac{20\\cdot19\\cdot18}{3!}=\\dfrac{6840}{6}$.",
+          "Rezultă $C_{20}^{3}=1140$.",
+        ],
       },
       {
         id: "ea-cb-4-b",
@@ -492,7 +639,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 3 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{20}^{3} = 6840$", "$C_{20}^{3} = 1140$", "$20^{3} = 8000$", "$3! = 6$"],
         correctAnswer: "$A_{20}^{3} = 6840$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{20}^{3} = 6840$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=20$, $k=3$: $A_{20}^{3}=20\\cdot19\\cdot18=6840$.",
+          "Rezultă $A_{20}^{3}=6840$.",
+        ],
       },
       {
         id: "ea-cb-4-c",
@@ -501,7 +652,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{20}^{3} - C_{20}^{3}$.",
         correctAnswer: "5700",
-        explanation: "$6840 - 1140 = 5700$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{20}^{3}=6840$ și $C_{20}^{3}=1140$.",
+          "Rezultă $A_{20}^{3}-C_{20}^{3}=6840-1140=5700$.",
+        ],
       },
     ],
   },
@@ -518,7 +672,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{8}^{3}$.",
         correctAnswer: "56",
-        explanation: "$C_{8}^{3} = 56$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)(n-2)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=8$, $k=3$: $C_{8}^{3}=\\dfrac{8\\cdot7\\cdot6}{3!}=\\dfrac{336}{6}$.",
+          "Rezultă $C_{8}^{3}=56$.",
+        ],
       },
       {
         id: "ea-cb-5-b",
@@ -528,7 +686,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 3 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{8}^{3} = 336$", "$C_{8}^{3} = 56$", "$8^{3} = 512$", "$3! = 6$"],
         correctAnswer: "$A_{8}^{3} = 336$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{8}^{3} = 336$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=8$, $k=3$: $A_{8}^{3}=8\\cdot7\\cdot6=336$.",
+          "Rezultă $A_{8}^{3}=336$.",
+        ],
       },
       {
         id: "ea-cb-5-c",
@@ -537,7 +699,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{8}^{3} - C_{8}^{3}$.",
         correctAnswer: "280",
-        explanation: "$336 - 56 = 280$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{8}^{3}=336$ și $C_{8}^{3}=56$.",
+          "Rezultă $A_{8}^{3}-C_{8}^{3}=336-56=280$.",
+        ],
       },
     ],
   },
@@ -554,7 +719,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{9}^{2}$.",
         correctAnswer: "36",
-        explanation: "$C_{9}^{2} = 36$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=9$, $k=2$: $C_{9}^{2}=\\dfrac{9\\cdot8}{2!}=\\dfrac{72}{2}$.",
+          "Rezultă $C_{9}^{2}=36$.",
+        ],
       },
       {
         id: "ea-cb-6-b",
@@ -564,7 +733,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 2 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{9}^{2} = 72$", "$C_{9}^{2} = 36$", "$9^{2} = 81$", "$2! = 2$"],
         correctAnswer: "$A_{9}^{2} = 72$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{9}^{2} = 72$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=9$, $k=2$: $A_{9}^{2}=9\\cdot8=72$.",
+          "Rezultă $A_{9}^{2}=72$.",
+        ],
       },
       {
         id: "ea-cb-6-c",
@@ -573,7 +746,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{9}^{2} - C_{9}^{2}$.",
         correctAnswer: "36",
-        explanation: "$72 - 36 = 36$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{9}^{2}=72$ și $C_{9}^{2}=36$.",
+          "Rezultă $A_{9}^{2}-C_{9}^{2}=72-36=36$.",
+        ],
       },
     ],
   },
@@ -590,7 +766,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{14}^{3}$.",
         correctAnswer: "364",
-        explanation: "$C_{14}^{3} = 364$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)(n-2)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=14$, $k=3$: $C_{14}^{3}=\\dfrac{14\\cdot13\\cdot12}{3!}=\\dfrac{2184}{6}$.",
+          "Rezultă $C_{14}^{3}=364$.",
+        ],
       },
       {
         id: "ea-cb-7-b",
@@ -600,7 +780,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 3 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{14}^{3} = 2184$", "$C_{14}^{3} = 364$", "$14^{3} = 2744$", "$3! = 6$"],
         correctAnswer: "$A_{14}^{3} = 2184$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{14}^{3} = 2184$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=14$, $k=3$: $A_{14}^{3}=14\\cdot13\\cdot12=2184$.",
+          "Rezultă $A_{14}^{3}=2184$.",
+        ],
       },
       {
         id: "ea-cb-7-c",
@@ -609,7 +793,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{14}^{3} - C_{14}^{3}$.",
         correctAnswer: "1820",
-        explanation: "$2184 - 364 = 1820$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{14}^{3}=2184$ și $C_{14}^{3}=364$.",
+          "Rezultă $A_{14}^{3}-C_{14}^{3}=2184-364=1820$.",
+        ],
       },
     ],
   },
@@ -626,7 +813,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{11}^{2}$.",
         correctAnswer: "55",
-        explanation: "$C_{11}^{2} = 55$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=11$, $k=2$: $C_{11}^{2}=\\dfrac{11\\cdot10}{2!}=\\dfrac{110}{2}$.",
+          "Rezultă $C_{11}^{2}=55$.",
+        ],
       },
       {
         id: "ea-cb-8-b",
@@ -636,7 +827,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 2 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{11}^{2} = 110$", "$C_{11}^{2} = 55$", "$11^{2} = 121$", "$2! = 2$"],
         correctAnswer: "$A_{11}^{2} = 110$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{11}^{2} = 110$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=11$, $k=2$: $A_{11}^{2}=11\\cdot10=110$.",
+          "Rezultă $A_{11}^{2}=110$.",
+        ],
       },
       {
         id: "ea-cb-8-c",
@@ -645,7 +840,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{11}^{2} - C_{11}^{2}$.",
         correctAnswer: "55",
-        explanation: "$110 - 55 = 55$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{11}^{2}=110$ și $C_{11}^{2}=55$.",
+          "Rezultă $A_{11}^{2}-C_{11}^{2}=110-55=55$.",
+        ],
       },
     ],
   },
@@ -662,7 +860,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{16}^{3}$.",
         correctAnswer: "560",
-        explanation: "$C_{16}^{3} = 560$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)(n-2)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=16$, $k=3$: $C_{16}^{3}=\\dfrac{16\\cdot15\\cdot14}{3!}=\\dfrac{3360}{6}$.",
+          "Rezultă $C_{16}^{3}=560$.",
+        ],
       },
       {
         id: "ea-cb-9-b",
@@ -672,7 +874,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 3 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{16}^{3} = 3360$", "$C_{16}^{3} = 560$", "$16^{3} = 4096$", "$3! = 6$"],
         correctAnswer: "$A_{16}^{3} = 3360$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{16}^{3} = 3360$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=16$, $k=3$: $A_{16}^{3}=16\\cdot15\\cdot14=3360$.",
+          "Rezultă $A_{16}^{3}=3360$.",
+        ],
       },
       {
         id: "ea-cb-9-c",
@@ -681,7 +887,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{16}^{3} - C_{16}^{3}$.",
         correctAnswer: "2800",
-        explanation: "$3360 - 560 = 2800$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{16}^{3}=3360$ și $C_{16}^{3}=560$.",
+          "Rezultă $A_{16}^{3}-C_{16}^{3}=3360-560=2800$.",
+        ],
       },
     ],
   },
@@ -698,7 +907,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri de a alege comitetul dacă ordinea nu contează, adică $C_{7}^{2}$.",
         correctAnswer: "21",
-        explanation: "$C_{7}^{2} = 21$.",
+        explanation: [
+          "Formula combinărilor este $C_n^k=\\dfrac{n!}{k!(n-k)!}=\\dfrac{n(n-1)\\cdots(n-k+1)}{k!}$.",
+          "Aici $n=7$, $k=2$: $C_{7}^{2}=\\dfrac{7\\cdot6}{2!}=\\dfrac{42}{2}$.",
+          "Rezultă $C_{7}^{2}=21$.",
+        ],
       },
       {
         id: "ea-cb-10-b",
@@ -708,7 +921,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Dacă cele 2 persoane primesc roluri distincte, numărul de moduri este:",
         options: ["$A_{7}^{2} = 42$", "$C_{7}^{2} = 21$", "$7^{2} = 49$", "$2! = 2$"],
         correctAnswer: "$A_{7}^{2} = 42$",
-        explanation: "Rolurile fiind distincte, se folosesc aranjamente: $A_{7}^{2} = 42$.",
+        explanation: [
+          "Deoarece rolurile sunt distincte, ordinea contează, deci se folosesc aranjamente: $A_n^k=\\dfrac{n!}{(n-k)!}=n(n-1)\\cdots(n-k+1)$.",
+          "Aici $n=7$, $k=2$: $A_{7}^{2}=7\\cdot6=42$.",
+          "Rezultă $A_{7}^{2}=42$.",
+        ],
       },
       {
         id: "ea-cb-10-c",
@@ -717,7 +934,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{7}^{2} - C_{7}^{2}$.",
         correctAnswer: "21",
-        explanation: "$42 - 21 = 21$.",
+        explanation: [
+          "Folosim rezultatele anterioare: $A_{7}^{2}=42$ și $C_{7}^{2}=21$.",
+          "Rezultă $A_{7}^{2}-C_{7}^{2}=42-21=21$.",
+        ],
       },
     ],
   },
@@ -734,7 +954,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "4",
-        explanation: "$A^2 = \\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(1,2)$, cu coloana 2 din $A$, $(2,1)$: $1\\cdot2+2\\cdot1$.",
+          "Calculăm: $1\\cdot2+2\\cdot1=2+2=4$.",
+        ],
       },
       {
         id: "ea-mt-1-b",
@@ -744,7 +968,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 4 \\\\ 0 & 0 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $1\\cdot1+2\\cdot0=1$. Elementul $(1,2)$: $1\\cdot2+2\\cdot1=4$.",
+          "Elementul $(2,1)$: $0\\cdot1+1\\cdot0=0$. Elementul $(2,2)$: $0\\cdot2+1\\cdot1=1$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-1-c",
@@ -753,7 +981,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "2",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 1$, deci urma este $2$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $1, 1$.",
+          "Urma este suma elementelor de pe diagonala principală: $1+1=2$.",
+        ],
       },
     ],
   },
@@ -770,7 +1001,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "4",
-        explanation: "$A^2 = \\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(2,1)$, cu coloana 2 din $A$, $(1,2)$: $2\\cdot1+1\\cdot2$.",
+          "Calculăm: $2\\cdot1+1\\cdot2=2+2=4$.",
+        ],
       },
       {
         id: "ea-mt-2-b",
@@ -780,7 +1015,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 1 \\\\ 0 & 2 \\end{pmatrix}$", "$\\begin{pmatrix} 5 & 4 \\\\ 0 & 3 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $2\\cdot2+1\\cdot0=4$. Elementul $(1,2)$: $2\\cdot1+1\\cdot2=4$.",
+          "Elementul $(2,1)$: $0\\cdot2+2\\cdot0=0$. Elementul $(2,2)$: $0\\cdot1+2\\cdot2=4$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-2-c",
@@ -789,7 +1028,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "8",
-        explanation: "Diagonala principală a lui $A^2$ este $4, 4$, deci urma este $8$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $4, 4$.",
+          "Urma este suma elementelor de pe diagonala principală: $4+4=8$.",
+        ],
       },
     ],
   },
@@ -806,7 +1048,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "6",
-        explanation: "$A^2 = \\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $6$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(1,3)$, cu coloana 2 din $A$, $(3,1)$: $1\\cdot3+3\\cdot1$.",
+          "Calculăm: $1\\cdot3+3\\cdot1=3+3=6$.",
+        ],
       },
       {
         id: "ea-mt-3-b",
@@ -816,7 +1062,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 6 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 3 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 6 \\\\ 0 & 0 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $1\\cdot1+3\\cdot0=1$. Elementul $(1,2)$: $1\\cdot3+3\\cdot1=6$.",
+          "Elementul $(2,1)$: $0\\cdot1+1\\cdot0=0$. Elementul $(2,2)$: $0\\cdot3+1\\cdot1=1$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 1 & 6 \\\\ 0 & 1 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-3-c",
@@ -825,7 +1075,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "2",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 1$, deci urma este $2$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $1, 1$.",
+          "Urma este suma elementelor de pe diagonala principală: $1+1=2$.",
+        ],
       },
     ],
   },
@@ -842,7 +1095,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "6",
-        explanation: "$A^2 = \\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$, deci elementul $(1,2)$ este $6$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(3,1)$, cu coloana 2 din $A$, $(1,3)$: $3\\cdot1+1\\cdot3$.",
+          "Calculăm: $3\\cdot1+1\\cdot3=3+3=6$.",
+        ],
       },
       {
         id: "ea-mt-4-b",
@@ -852,7 +1109,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$", "$\\begin{pmatrix} 9 & 0 \\\\ 6 & 9 \\end{pmatrix}$", "$\\begin{pmatrix} 3 & 1 \\\\ 0 & 3 \\end{pmatrix}$", "$\\begin{pmatrix} 10 & 6 \\\\ 0 & 8 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $3\\cdot3+1\\cdot0=9$. Elementul $(1,2)$: $3\\cdot1+1\\cdot3=6$.",
+          "Elementul $(2,1)$: $0\\cdot3+3\\cdot0=0$. Elementul $(2,2)$: $0\\cdot1+3\\cdot3=9$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 9 & 6 \\\\ 0 & 9 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-4-c",
@@ -861,7 +1122,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "18",
-        explanation: "Diagonala principală a lui $A^2$ este $9, 9$, deci urma este $18$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $9, 9$.",
+          "Urma este suma elementelor de pe diagonala principală: $9+9=18$.",
+        ],
       },
     ],
   },
@@ -878,7 +1142,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "2",
-        explanation: "$A^2 = \\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $2$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(1,1)$, cu coloana 2 din $A$, $(1,1)$: $1\\cdot1+1\\cdot1$.",
+          "Calculăm: $1\\cdot1+1\\cdot1=1+1=2$.",
+        ],
       },
       {
         id: "ea-mt-5-b",
@@ -888,7 +1156,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 2 \\\\ 0 & 0 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $1\\cdot1+1\\cdot0=1$. Elementul $(1,2)$: $1\\cdot1+1\\cdot1=2$.",
+          "Elementul $(2,1)$: $0\\cdot1+1\\cdot0=0$. Elementul $(2,2)$: $0\\cdot1+1\\cdot1=1$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-5-c",
@@ -897,7 +1169,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "2",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 1$, deci urma este $2$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $1, 1$.",
+          "Urma este suma elementelor de pe diagonala principală: $1+1=2$.",
+        ],
       },
     ],
   },
@@ -914,7 +1189,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "0",
-        explanation: "$A^2 = \\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ este $0$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(2,0)$, cu coloana 2 din $A$, $(0,2)$: $2\\cdot0+0\\cdot2$.",
+          "Calculăm: $2\\cdot0+0\\cdot2=0+0=0$.",
+        ],
       },
       {
         id: "ea-mt-6-b",
@@ -924,7 +1203,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 4 & 4 \\\\ 0 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 0 \\\\ 1 & 2 \\end{pmatrix}$", "$\\begin{pmatrix} 5 & 0 \\\\ 4 & 3 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $2\\cdot2+0\\cdot1=4$. Elementul $(1,2)$: $2\\cdot0+0\\cdot2=0$.",
+          "Elementul $(2,1)$: $1\\cdot2+2\\cdot1=4$. Elementul $(2,2)$: $1\\cdot0+2\\cdot2=4$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 4 & 0 \\\\ 4 & 4 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-6-c",
@@ -933,7 +1216,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "8",
-        explanation: "Diagonala principală a lui $A^2$ este $4, 4$, deci urma este $8$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $4, 4$.",
+          "Urma este suma elementelor de pe diagonala principală: $4+4=8$.",
+        ],
       },
     ],
   },
@@ -950,7 +1236,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "0",
-        explanation: "$A^2 = \\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $0$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(1,0)$, cu coloana 2 din $A$, $(0,1)$: $1\\cdot0+0\\cdot1$.",
+          "Calculăm: $1\\cdot0+0\\cdot1=0+0=0$.",
+        ],
       },
       {
         id: "ea-mt-7-b",
@@ -960,7 +1250,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 2 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 0 \\\\ 4 & 0 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $1\\cdot1+0\\cdot2=1$. Elementul $(1,2)$: $1\\cdot0+0\\cdot1=0$.",
+          "Elementul $(2,1)$: $2\\cdot1+1\\cdot2=4$. Elementul $(2,2)$: $2\\cdot0+1\\cdot1=1$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 1 & 0 \\\\ 4 & 1 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-7-c",
@@ -969,7 +1263,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "2",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 1$, deci urma este $2$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $1, 1$.",
+          "Urma este suma elementelor de pe diagonala principală: $1+1=2$.",
+        ],
       },
     ],
   },
@@ -986,7 +1283,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "8",
-        explanation: "$A^2 = \\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $8$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(3,2)$, cu coloana 2 din $A$, $(2,1)$: $3\\cdot2+2\\cdot1$.",
+          "Calculăm: $3\\cdot2+2\\cdot1=6+2=8$.",
+        ],
       },
       {
         id: "ea-mt-8-b",
@@ -996,7 +1297,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 9 & 0 \\\\ 8 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 3 & 2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 10 & 8 \\\\ 0 & 0 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $3\\cdot3+2\\cdot0=9$. Elementul $(1,2)$: $3\\cdot2+2\\cdot1=8$.",
+          "Elementul $(2,1)$: $0\\cdot3+1\\cdot0=0$. Elementul $(2,2)$: $0\\cdot2+1\\cdot1=1$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 9 & 8 \\\\ 0 & 1 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-8-c",
@@ -1005,7 +1310,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "10",
-        explanation: "Diagonala principală a lui $A^2$ este $9, 1$, deci urma este $10$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $9, 1$.",
+          "Urma este suma elementelor de pe diagonala principală: $9+1=10$.",
+        ],
       },
     ],
   },
@@ -1022,7 +1330,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "12",
-        explanation: "$A^2 = \\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ este $12$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(1,4)$, cu coloana 2 din $A$, $(4,2)$: $1\\cdot4+4\\cdot2$.",
+          "Calculăm: $1\\cdot4+4\\cdot2=4+8=12$.",
+        ],
       },
       {
         id: "ea-mt-9-b",
@@ -1032,7 +1344,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ 12 & 4 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 2 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & 12 \\\\ 0 & 3 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $1\\cdot1+4\\cdot0=1$. Elementul $(1,2)$: $1\\cdot4+4\\cdot2=12$.",
+          "Elementul $(2,1)$: $0\\cdot1+2\\cdot0=0$. Elementul $(2,2)$: $0\\cdot4+2\\cdot2=4$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 1 & 12 \\\\ 0 & 4 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-9-c",
@@ -1041,7 +1357,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "5",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 4$, deci urma este $5$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $1, 4$.",
+          "Urma este suma elementelor de pe diagonala principală: $1+4=5$.",
+        ],
       },
     ],
   },
@@ -1058,7 +1377,11 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "-2",
-        explanation: "$A^2 = \\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $-2$.",
+        explanation: [
+          "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, $(1,-1)$, cu coloana 2 din $A$, $(-1,1)$: $1\\cdot(-1)+(-1)\\cdot1$.",
+          "Calculăm: $1\\cdot(-1)+(-1)\\cdot1=-1-1=-2$.",
+        ],
       },
       {
         id: "ea-mt-10-b",
@@ -1068,7 +1391,11 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Matricea $A^2$ este:",
         options: ["$\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & 0 \\\\ -2 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 1 & -1 \\\\ 0 & 1 \\end{pmatrix}$", "$\\begin{pmatrix} 2 & -2 \\\\ 0 & 0 \\end{pmatrix}$"],
         correctAnswer: "$\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Elementul $(1,1)$: $1\\cdot1+(-1)\\cdot0=1$. Elementul $(1,2)$: $1\\cdot(-1)+(-1)\\cdot1=-2$.",
+          "Elementul $(2,1)$: $0\\cdot1+1\\cdot0=0$. Elementul $(2,2)$: $0\\cdot(-1)+1\\cdot1=1$.",
+          "Rezultatul este $$A^2=\\begin{pmatrix} 1 & -2 \\\\ 0 & 1 \\end{pmatrix}.$$",
+        ],
       },
       {
         id: "ea-mt-10-c",
@@ -1077,7 +1404,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "2",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 1$, deci urma este $2$.",
+        explanation: [
+          "Din subpunctul anterior, diagonala principală a lui $A^2$ este $1, 1$.",
+          "Urma este suma elementelor de pe diagonala principală: $1+1=2$.",
+        ],
       },
     ],
   },
@@ -1094,7 +1424,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 3$.",
         correctAnswer: "7",
-        explanation: "$\\det(A) = m^2 - 2$. Pentru $m=3$: $9 - 2 = 7$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=1$, $c=2$, deci $\\det(A)=m\\cdot m-1\\cdot2=m^2-2$.",
+          "Pentru $m=3$: $\\det(A)=3^2-2=9-2=7$.",
+        ],
       },
       {
         id: "ea-dt-1-b",
@@ -1104,7 +1437,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 2$", "$m^2 + 2$", "$3m - 2$", "$m - 2$"],
         correctAnswer: "$m^2 - 2$",
-        explanation: "$\\det(A) = m \\cdot m - 1 \\cdot 2 = m^2 - 2$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=1$, $c=2$: $\\det(A)=m\\cdot m-1\\cdot2=m^2-2$.",
+        ],
       },
       {
         id: "ea-dt-1-c",
@@ -1114,7 +1450,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(2)",
         acceptedAnswers: ["\u221a2", "1.41", "1,41"],
-        explanation: "$m^2 - 2 = 0 \\Rightarrow m = \\pm\\sqrt{2}$. Soluția pozitivă este $\\sqrt{2}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-2=0$.",
+          "Rezultă $m=\\pm\\sqrt{2}$, iar soluția pozitivă este $\\sqrt{2}$.",
+        ],
       },
     ],
   },
@@ -1131,7 +1470,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 3$.",
         correctAnswer: "6",
-        explanation: "$\\det(A) = m^2 - 3$. Pentru $m=3$: $9 - 3 = 6$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=1$, $c=3$, deci $\\det(A)=m\\cdot m-1\\cdot3=m^2-3$.",
+          "Pentru $m=3$: $\\det(A)=3^2-3=9-3=6$.",
+        ],
       },
       {
         id: "ea-dt-2-b",
@@ -1141,7 +1483,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 3$", "$m^2 + 3$", "$4m - 3$", "$m - 3$"],
         correctAnswer: "$m^2 - 3$",
-        explanation: "$\\det(A) = m \\cdot m - 1 \\cdot 3 = m^2 - 3$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=1$, $c=3$: $\\det(A)=m\\cdot m-1\\cdot3=m^2-3$.",
+        ],
       },
       {
         id: "ea-dt-2-c",
@@ -1151,7 +1496,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(3)",
         acceptedAnswers: ["\u221a3", "1.73", "1,73"],
-        explanation: "$m^2 - 3 = 0 \\Rightarrow m = \\pm\\sqrt{3}$. Soluția pozitivă este $\\sqrt{3}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-3=0$.",
+          "Rezultă $m=\\pm\\sqrt{3}$, iar soluția pozitivă este $\\sqrt{3}$.",
+        ],
       },
     ],
   },
@@ -1168,7 +1516,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 4$.",
         correctAnswer: "10",
-        explanation: "$\\det(A) = m^2 - 6$. Pentru $m=4$: $16 - 6 = 10$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=2$, $c=3$, deci $\\det(A)=m\\cdot m-2\\cdot3=m^2-6$.",
+          "Pentru $m=4$: $\\det(A)=4^2-6=16-6=10$.",
+        ],
       },
       {
         id: "ea-dt-3-b",
@@ -1178,7 +1529,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 6$", "$m^2 + 6$", "$5m - 6$", "$m - 6$"],
         correctAnswer: "$m^2 - 6$",
-        explanation: "$\\det(A) = m \\cdot m - 2 \\cdot 3 = m^2 - 6$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=2$, $c=3$: $\\det(A)=m\\cdot m-2\\cdot3=m^2-6$.",
+        ],
       },
       {
         id: "ea-dt-3-c",
@@ -1188,7 +1542,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(6)",
         acceptedAnswers: ["\u221a6", "2.45", "2,45"],
-        explanation: "$m^2 - 6 = 0 \\Rightarrow m = \\pm\\sqrt{6}$. Soluția pozitivă este $\\sqrt{6}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-6=0$.",
+          "Rezultă $m=\\pm\\sqrt{6}$, iar soluția pozitivă este $\\sqrt{6}$.",
+        ],
       },
     ],
   },
@@ -1205,7 +1562,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 4$.",
         correctAnswer: "12",
-        explanation: "$\\det(A) = m^2 - 4$. Pentru $m=4$: $16 - 4 = 12$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=1$, $c=4$, deci $\\det(A)=m\\cdot m-1\\cdot4=m^2-4$.",
+          "Pentru $m=4$: $\\det(A)=4^2-4=16-4=12$.",
+        ],
       },
       {
         id: "ea-dt-4-b",
@@ -1215,7 +1575,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 4$", "$m^2 + 4$", "$5m - 4$", "$m - 4$"],
         correctAnswer: "$m^2 - 4$",
-        explanation: "$\\det(A) = m \\cdot m - 1 \\cdot 4 = m^2 - 4$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=1$, $c=4$: $\\det(A)=m\\cdot m-1\\cdot4=m^2-4$.",
+        ],
       },
       {
         id: "ea-dt-4-c",
@@ -1224,7 +1587,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "2",
-        explanation: "$m^2 - 4 = 0 \\Rightarrow m = \\pm 2$. Soluția pozitivă este $2$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-4=0$.",
+          "Rezultă $m=\\pm2$, iar soluția pozitivă este $2$.",
+        ],
       },
     ],
   },
@@ -1241,7 +1607,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 5$.",
         correctAnswer: "13",
-        explanation: "$\\det(A) = m^2 - 12$. Pentru $m=5$: $25 - 12 = 13$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=3$, $c=4$, deci $\\det(A)=m\\cdot m-3\\cdot4=m^2-12$.",
+          "Pentru $m=5$: $\\det(A)=5^2-12=25-12=13$.",
+        ],
       },
       {
         id: "ea-dt-5-b",
@@ -1251,7 +1620,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 12$", "$m^2 + 12$", "$7m - 12$", "$m - 12$"],
         correctAnswer: "$m^2 - 12$",
-        explanation: "$\\det(A) = m \\cdot m - 3 \\cdot 4 = m^2 - 12$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=3$, $c=4$: $\\det(A)=m\\cdot m-3\\cdot4=m^2-12$.",
+        ],
       },
       {
         id: "ea-dt-5-c",
@@ -1261,7 +1633,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(12)",
         acceptedAnswers: ["\u221a12", "3.46", "3,46", "2sqrt(3)", "2\u221a3"],
-        explanation: "$m^2 - 12 = 0 \\Rightarrow m = \\pm\\sqrt{12}$. Soluția pozitivă este $\\sqrt{12}$ $= 2\\sqrt{3}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-12=0$.",
+          "Rezultă $m=\\pm\\sqrt{12}$, iar soluția pozitivă este $\\sqrt{12}=2\\sqrt{3}$.",
+        ],
       },
     ],
   },
@@ -1278,7 +1653,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 5$.",
         correctAnswer: "15",
-        explanation: "$\\det(A) = m^2 - 10$. Pentru $m=5$: $25 - 10 = 15$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=2$, $c=5$, deci $\\det(A)=m\\cdot m-2\\cdot5=m^2-10$.",
+          "Pentru $m=5$: $\\det(A)=5^2-10=25-10=15$.",
+        ],
       },
       {
         id: "ea-dt-6-b",
@@ -1288,7 +1666,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 10$", "$m^2 + 10$", "$7m - 10$", "$m - 10$"],
         correctAnswer: "$m^2 - 10$",
-        explanation: "$\\det(A) = m \\cdot m - 2 \\cdot 5 = m^2 - 10$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=2$, $c=5$: $\\det(A)=m\\cdot m-2\\cdot5=m^2-10$.",
+        ],
       },
       {
         id: "ea-dt-6-c",
@@ -1298,7 +1679,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(10)",
         acceptedAnswers: ["\u221a10", "3.16", "3,16"],
-        explanation: "$m^2 - 10 = 0 \\Rightarrow m = \\pm\\sqrt{10}$. Soluția pozitivă este $\\sqrt{10}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-10=0$.",
+          "Rezultă $m=\\pm\\sqrt{10}$, iar soluția pozitivă este $\\sqrt{10}$.",
+        ],
       },
     ],
   },
@@ -1315,7 +1699,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 6$.",
         correctAnswer: "30",
-        explanation: "$\\det(A) = m^2 - 6$. Pentru $m=6$: $36 - 6 = 30$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=1$, $c=6$, deci $\\det(A)=m\\cdot m-1\\cdot6=m^2-6$.",
+          "Pentru $m=6$: $\\det(A)=6^2-6=36-6=30$.",
+        ],
       },
       {
         id: "ea-dt-7-b",
@@ -1325,7 +1712,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 6$", "$m^2 + 6$", "$7m - 6$", "$m - 6$"],
         correctAnswer: "$m^2 - 6$",
-        explanation: "$\\det(A) = m \\cdot m - 1 \\cdot 6 = m^2 - 6$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=1$, $c=6$: $\\det(A)=m\\cdot m-1\\cdot6=m^2-6$.",
+        ],
       },
       {
         id: "ea-dt-7-c",
@@ -1335,7 +1725,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(6)",
         acceptedAnswers: ["\u221a6", "2.45", "2,45"],
-        explanation: "$m^2 - 6 = 0 \\Rightarrow m = \\pm\\sqrt{6}$. Soluția pozitivă este $\\sqrt{6}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-6=0$.",
+          "Rezultă $m=\\pm\\sqrt{6}$, iar soluția pozitivă este $\\sqrt{6}$.",
+        ],
       },
     ],
   },
@@ -1352,7 +1745,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 6$.",
         correctAnswer: "16",
-        explanation: "$\\det(A) = m^2 - 20$. Pentru $m=6$: $36 - 20 = 16$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=4$, $c=5$, deci $\\det(A)=m\\cdot m-4\\cdot5=m^2-20$.",
+          "Pentru $m=6$: $\\det(A)=6^2-20=36-20=16$.",
+        ],
       },
       {
         id: "ea-dt-8-b",
@@ -1362,7 +1758,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 20$", "$m^2 + 20$", "$9m - 20$", "$m - 20$"],
         correctAnswer: "$m^2 - 20$",
-        explanation: "$\\det(A) = m \\cdot m - 4 \\cdot 5 = m^2 - 20$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=4$, $c=5$: $\\det(A)=m\\cdot m-4\\cdot5=m^2-20$.",
+        ],
       },
       {
         id: "ea-dt-8-c",
@@ -1372,7 +1771,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(20)",
         acceptedAnswers: ["\u221a20", "4.47", "4,47", "2sqrt(5)", "2\u221a5"],
-        explanation: "$m^2 - 20 = 0 \\Rightarrow m = \\pm\\sqrt{20}$. Soluția pozitivă este $\\sqrt{20}$ $= 2\\sqrt{5}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-20=0$.",
+          "Rezultă $m=\\pm\\sqrt{20}$, iar soluția pozitivă este $\\sqrt{20}=2\\sqrt{5}$.",
+        ],
       },
     ],
   },
@@ -1389,7 +1791,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 4$.",
         correctAnswer: "7",
-        explanation: "$\\det(A) = m^2 - 9$. Pentru $m=4$: $16 - 9 = 7$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=1$, $c=9$, deci $\\det(A)=m\\cdot m-1\\cdot9=m^2-9$.",
+          "Pentru $m=4$: $\\det(A)=4^2-9=16-9=7$.",
+        ],
       },
       {
         id: "ea-dt-9-b",
@@ -1399,7 +1804,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 9$", "$m^2 + 9$", "$10m - 9$", "$m - 9$"],
         correctAnswer: "$m^2 - 9$",
-        explanation: "$\\det(A) = m \\cdot m - 1 \\cdot 9 = m^2 - 9$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=1$, $c=9$: $\\det(A)=m\\cdot m-1\\cdot9=m^2-9$.",
+        ],
       },
       {
         id: "ea-dt-9-c",
@@ -1408,7 +1816,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "3",
-        explanation: "$m^2 - 9 = 0 \\Rightarrow m = \\pm 3$. Soluția pozitivă este $3$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-9=0$.",
+          "Rezultă $m=\\pm3$, iar soluția pozitivă este $3$.",
+        ],
       },
     ],
   },
@@ -1425,7 +1836,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 5$.",
         correctAnswer: "11",
-        explanation: "$\\det(A) = m^2 - 14$. Pentru $m=5$: $25 - 14 = 11$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$, cu $a=d=m$, $b=2$, $c=7$, deci $\\det(A)=m\\cdot m-2\\cdot7=m^2-14$.",
+          "Pentru $m=5$: $\\det(A)=5^2-14=25-14=11$.",
+        ],
       },
       {
         id: "ea-dt-10-b",
@@ -1435,7 +1849,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 14$", "$m^2 + 14$", "$9m - 14$", "$m - 14$"],
         correctAnswer: "$m^2 - 14$",
-        explanation: "$\\det(A) = m \\cdot m - 2 \\cdot 7 = m^2 - 14$.",
+        explanation: [
+          "Aplicăm formula determinantului de ordin 2: $\\det(A)=a\\cdot d-b\\cdot c$.",
+          "Aici $a=d=m$, $b=2$, $c=7$: $\\det(A)=m\\cdot m-2\\cdot7=m^2-14$.",
+        ],
       },
       {
         id: "ea-dt-10-c",
@@ -1445,7 +1862,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(14)",
         acceptedAnswers: ["\u221a14", "3.74", "3,74"],
-        explanation: "$m^2 - 14 = 0 \\Rightarrow m = \\pm\\sqrt{14}$. Soluția pozitivă este $\\sqrt{14}$.",
+        explanation: [
+          "Punem condiția $\\det(A)=0$: $m^2-14=0$.",
+          "Rezultă $m=\\pm\\sqrt{14}$, iar soluția pozitivă este $\\sqrt{14}$.",
+        ],
       },
     ],
   },
@@ -1462,7 +1882,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "7",
-        explanation: "Adunând cele două ecuații: $2x = 14 \\Rightarrow x = 7$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=10+4$.",
+          "Rezultă $2x=14 \\Rightarrow x=7$.",
+        ],
       },
       {
         id: "ea-sy-1-b",
@@ -1472,7 +1895,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$3$", "$-3$", "$7$", "$10$"],
         correctAnswer: "$3$",
-        explanation: "Din $x + y = 10$ și $x = 7$, rezultă $y = 3$.",
+        explanation: [
+          "Înlocuim $x=7$ în prima ecuație: $7+y=10$.",
+          "Rezultă $y=10-7=3$.",
+        ],
       },
       {
         id: "ea-sy-1-c",
@@ -1481,7 +1907,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1498,7 +1927,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "7",
-        explanation: "Adunând cele două ecuații: $2x = 14 \\Rightarrow x = 7$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=12+2$.",
+          "Rezultă $2x=14 \\Rightarrow x=7$.",
+        ],
       },
       {
         id: "ea-sy-2-b",
@@ -1508,7 +1940,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$5$", "$-5$", "$7$", "$12$"],
         correctAnswer: "$5$",
-        explanation: "Din $x + y = 12$ și $x = 7$, rezultă $y = 5$.",
+        explanation: [
+          "Înlocuim $x=7$ în prima ecuație: $7+y=12$.",
+          "Rezultă $y=12-7=5$.",
+        ],
       },
       {
         id: "ea-sy-2-c",
@@ -1517,7 +1952,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1534,7 +1972,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "10",
-        explanation: "Adunând cele două ecuații: $2x = 20 \\Rightarrow x = 10$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=14+6$.",
+          "Rezultă $2x=20 \\Rightarrow x=10$.",
+        ],
       },
       {
         id: "ea-sy-3-b",
@@ -1544,7 +1985,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$4$", "$-4$", "$10$", "$14$"],
         correctAnswer: "$4$",
-        explanation: "Din $x + y = 14$ și $x = 10$, rezultă $y = 4$.",
+        explanation: [
+          "Înlocuim $x=10$ în prima ecuație: $10+y=14$.",
+          "Rezultă $y=14-10=4$.",
+        ],
       },
       {
         id: "ea-sy-3-c",
@@ -1553,7 +1997,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1570,7 +2017,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "12",
-        explanation: "Adunând cele două ecuații: $2x = 24 \\Rightarrow x = 12$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=16+8$.",
+          "Rezultă $2x=24 \\Rightarrow x=12$.",
+        ],
       },
       {
         id: "ea-sy-4-b",
@@ -1580,7 +2030,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$4$", "$-4$", "$12$", "$16$"],
         correctAnswer: "$4$",
-        explanation: "Din $x + y = 16$ și $x = 12$, rezultă $y = 4$.",
+        explanation: [
+          "Înlocuim $x=12$ în prima ecuație: $12+y=16$.",
+          "Rezultă $y=16-12=4$.",
+        ],
       },
       {
         id: "ea-sy-4-c",
@@ -1589,7 +2042,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1606,7 +2062,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "11",
-        explanation: "Adunând cele două ecuații: $2x = 22 \\Rightarrow x = 11$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=18+4$.",
+          "Rezultă $2x=22 \\Rightarrow x=11$.",
+        ],
       },
       {
         id: "ea-sy-5-b",
@@ -1616,7 +2075,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$7$", "$-7$", "$11$", "$18$"],
         correctAnswer: "$7$",
-        explanation: "Din $x + y = 18$ și $x = 11$, rezultă $y = 7$.",
+        explanation: [
+          "Înlocuim $x=11$ în prima ecuație: $11+y=18$.",
+          "Rezultă $y=18-11=7$.",
+        ],
       },
       {
         id: "ea-sy-5-c",
@@ -1625,7 +2087,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1642,7 +2107,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "15",
-        explanation: "Adunând cele două ecuații: $2x = 30 \\Rightarrow x = 15$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=20+10$.",
+          "Rezultă $2x=30 \\Rightarrow x=15$.",
+        ],
       },
       {
         id: "ea-sy-6-b",
@@ -1652,7 +2120,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$5$", "$-5$", "$15$", "$20$"],
         correctAnswer: "$5$",
-        explanation: "Din $x + y = 20$ și $x = 15$, rezultă $y = 5$.",
+        explanation: [
+          "Înlocuim $x=15$ în prima ecuație: $15+y=20$.",
+          "Rezultă $y=20-15=5$.",
+        ],
       },
       {
         id: "ea-sy-6-c",
@@ -1661,7 +2132,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1678,7 +2152,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "5",
-        explanation: "Adunând cele două ecuații: $2x = 10 \\Rightarrow x = 5$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=8+2$.",
+          "Rezultă $2x=10 \\Rightarrow x=5$.",
+        ],
       },
       {
         id: "ea-sy-7-b",
@@ -1688,7 +2165,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$3$", "$-3$", "$5$", "$8$"],
         correctAnswer: "$3$",
-        explanation: "Din $x + y = 8$ și $x = 5$, rezultă $y = 3$.",
+        explanation: [
+          "Înlocuim $x=5$ în prima ecuație: $5+y=8$.",
+          "Rezultă $y=8-5=3$.",
+        ],
       },
       {
         id: "ea-sy-7-c",
@@ -1697,7 +2177,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1714,7 +2197,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "14",
-        explanation: "Adunând cele două ecuații: $2x = 28 \\Rightarrow x = 14$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=22+6$.",
+          "Rezultă $2x=28 \\Rightarrow x=14$.",
+        ],
       },
       {
         id: "ea-sy-8-b",
@@ -1724,7 +2210,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$8$", "$-8$", "$14$", "$22$"],
         correctAnswer: "$8$",
-        explanation: "Din $x + y = 22$ și $x = 14$, rezultă $y = 8$.",
+        explanation: [
+          "Înlocuim $x=14$ în prima ecuație: $14+y=22$.",
+          "Rezultă $y=22-14=8$.",
+        ],
       },
       {
         id: "ea-sy-8-c",
@@ -1733,7 +2222,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1750,7 +2242,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "16",
-        explanation: "Adunând cele două ecuații: $2x = 32 \\Rightarrow x = 16$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=24+8$.",
+          "Rezultă $2x=32 \\Rightarrow x=16$.",
+        ],
       },
       {
         id: "ea-sy-9-b",
@@ -1760,7 +2255,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$8$", "$-8$", "$16$", "$24$"],
         correctAnswer: "$8$",
-        explanation: "Din $x + y = 24$ și $x = 16$, rezultă $y = 8$.",
+        explanation: [
+          "Înlocuim $x=16$ în prima ecuație: $16+y=24$.",
+          "Rezultă $y=24-16=8$.",
+        ],
       },
       {
         id: "ea-sy-9-c",
@@ -1769,7 +2267,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
@@ -1786,7 +2287,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Rezolvați sistemul prin adunare și determinați $x$.",
         correctAnswer: "18",
-        explanation: "Adunând cele două ecuații: $2x = 36 \\Rightarrow x = 18$.",
+        explanation: [
+          "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=26+10$.",
+          "Rezultă $2x=36 \\Rightarrow x=18$.",
+        ],
       },
       {
         id: "ea-sy-10-b",
@@ -1796,7 +2300,10 @@ export const examAlgebraProblems: Problem[] = [
         prompt: "Determinați $y$.",
         options: ["$8$", "$-8$", "$18$", "$26$"],
         correctAnswer: "$8$",
-        explanation: "Din $x + y = 26$ și $x = 18$, rezultă $y = 8$.",
+        explanation: [
+          "Înlocuim $x=18$ în prima ecuație: $18+y=26$.",
+          "Rezultă $y=26-18=8$.",
+        ],
       },
       {
         id: "ea-sy-10-c",
@@ -1805,7 +2312,10 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$ (determinantul sistemului).",
         correctAnswer: "-2",
-        explanation: "$1\\cdot(-1) - 1\\cdot1 = -2$.",
+        explanation: [
+          "Determinantul sistemului este $\\Delta=\\begin{vmatrix}1&1\\\\1&-1\\end{vmatrix}=1\\cdot(-1)-1\\cdot1$.",
+          "Rezultă $\\Delta=-1-1=-2$.",
+        ],
       },
     ],
   },
