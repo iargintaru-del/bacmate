@@ -18,11 +18,16 @@ export function TopicCard({ topic, label, accuracy, attempted, hasSets }: TopicC
           {attempted === 0 ? "Neîncercat încă" : `${Math.round(accuracy * 100)}% corect (${attempted} întrebări)`}
         </div>
       </Link>
-      {hasSets && (
-        <Link to={`/quiz/${topic}/sets`} className="topic-card__sets-link">
-          Seturi de exerciții
+      <div className="topic-card__actions">
+        <Link to={`/theory/${topic}`} className="topic-card__theory-link">
+          Teorie
         </Link>
-      )}
+        {hasSets && (
+          <Link to={`/quiz/${topic}/sets`} className="topic-card__sets-link">
+            Seturi de exerciții
+          </Link>
+        )}
+      </div>
     </div>
   );
 }

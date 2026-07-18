@@ -93,6 +93,18 @@ body {
   text-decoration: none;
 }
 
+.topic-card__actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.topic-card__theory-link {
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
 .set-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -292,6 +304,28 @@ body {
 .problem-block__statement {
   font-weight: 500;
   margin-bottom: 12px;
+}
+
+.theory-page__concept {
+  margin: 16px 0;
+}
+
+.theory-page__concept-heading {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.theory-page__example {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin: 16px 0;
+  background: var(--card-bg);
+}
+
+.theory-page__example-statement {
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .stats-list {

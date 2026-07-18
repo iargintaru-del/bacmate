@@ -5,6 +5,7 @@ import { SetPicker } from "./pages/SetPicker";
 import { Exam } from "./pages/Exam";
 import { VariantPicker } from "./pages/VariantPicker";
 import { Stats } from "./pages/Stats";
+import { Theory } from "./pages/Theory";
 
 function ExamVariantRoute() {
   const { number } = useParams<{ number: string }>();
@@ -16,6 +17,7 @@ export default function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/quiz/:topic" element={<TopicQuiz />} />
+      <Route path="/theory/:topic" element={<Theory />} />
       <Route path="/quiz/:topic/sets" element={<SetPicker />} />
       <Route path="/quiz/:topic/set/:setNumber" element={<TopicQuiz />} />
       <Route path="/exam" element={<Exam />} />
