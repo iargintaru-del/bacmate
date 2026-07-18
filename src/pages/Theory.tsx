@@ -23,7 +23,7 @@ export function Theory() {
 
       {section.concepts.map((concept) => (
         <div className="theory-page__concept" key={concept.heading}>
-          <div className="theory-page__concept-heading">{concept.heading}</div>
+          <div className="theory-page__concept-heading"><MathText text={concept.heading} /></div>
           {concept.body.map((paragraph, index) => (
             <p key={index}>
               <MathText text={paragraph} />
