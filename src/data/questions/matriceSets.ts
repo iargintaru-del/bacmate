@@ -16,7 +16,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 6 & 8 \\\\ 9 & 12 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 6 & 8 \\\\ 10 & 12 \\end{pmatrix}$",
-    explanation: "Se adună elementele corespunzătoare: $\\begin{pmatrix} 1+5 & 2+6 \\\\ 3+7 & 4+8 \\end{pmatrix} = \\begin{pmatrix} 6 & 8 \\\\ 10 & 12 \\end{pmatrix}$.",
+    explanation: [
+      "Pentru a calcula $A+B$, adunăm elementele aflate pe aceeași poziție din cele două matrice.",
+      "Linia 1: $1+5=6$, $2+6=8$. Linia 2: $3+7=10$, $4+8=12$.",
+      "Rezultatul este $$A+B=\\begin{pmatrix} 6 & 8 \\\\ 10 & 12 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s1-2",
@@ -27,7 +31,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 5 & 3 \\\\ 2 & 7 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & 4 \\\\ 6 & 2 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $A-B$.",
     correctAnswer: "-1",
-    explanation: "Elementul $(1,2)$ este $3-4=-1$.",
+    explanation: [
+      "Scăderea a două matrice se face element cu element, pe aceeași poziție.",
+      "Elementul de pe linia 1, coloana 2 al lui $A$ este $3$, iar al lui $B$ este $4$.",
+      "Scădem: $3-4=-1$.",
+    ],
   },
   {
     id: "mt-s1-3",
@@ -43,7 +51,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} -1 & 3 \\\\ 2 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 3 \\\\ 2 & 1 \\end{pmatrix}$",
-    explanation: "$\\begin{pmatrix} 2-1 & -1+4 \\\\ 0+2 & 3-2 \\end{pmatrix} = \\begin{pmatrix} 1 & 3 \\\\ 2 & 1 \\end{pmatrix}$.",
+    explanation: [
+      "Adunăm elementele corespunzătoare ale celor două matrice.",
+      "Linia 1: $2+(-1)=1$, $-1+4=3$. Linia 2: $0+2=2$, $3+(-2)=1$.",
+      "Rezultatul este $$A+B=\\begin{pmatrix} 1 & 3 \\\\ 2 & 1 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s1-4",
@@ -54,7 +66,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 6 & 1 \\\\ 4 & 9 \\end{pmatrix}$, $B=\\begin{pmatrix} 2 & 5 \\\\ 7 & 3 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 1 al matricei $A-B$.",
     correctAnswer: "-3",
-    explanation: "Elementul $(2,1)$ este $4-7=-3$.",
+    explanation: [
+      "Scăderea matricelor se face element cu element.",
+      "Elementul de pe linia 2, coloana 1 al lui $A$ este $4$, iar al lui $B$ este $7$.",
+      "Scădem: $4-7=-3$.",
+    ],
   },
   {
     id: "mt-s1-5",
@@ -70,7 +86,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} -4 & 0 \\\\ 2 & 6 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 4 & 0 \\\\ -2 & 6 \\end{pmatrix}$",
-    explanation: "$\\begin{pmatrix} 0+4 & 2-2 \\\\ -3+1 & 1+5 \\end{pmatrix} = \\begin{pmatrix} 4 & 0 \\\\ -2 & 6 \\end{pmatrix}$.",
+    explanation: [
+      "Adunăm elementele aflate pe aceeași poziție.",
+      "Linia 1: $0+4=4$, $2-2=0$. Linia 2: $-3+1=-2$, $1+5=6$.",
+      "Rezultatul este $$A+B=\\begin{pmatrix} 4 & 0 \\\\ -2 & 6 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s1-6",
@@ -81,7 +101,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 3 & 2 \\\\ 1 & 5 \\end{pmatrix}$, $B=\\begin{pmatrix} 4 & 0 \\\\ 2 & 1 \\end{pmatrix}$. Calculați urma matricei $A+B$.",
     correctAnswer: "13",
-    explanation: "$A+B=\\begin{pmatrix} 7 & 2 \\\\ 3 & 6 \\end{pmatrix}$, urma este $7+6=13$.",
+    explanation: [
+      "Calculăm mai întâi suma $A+B$, adunând elementele corespunzătoare.",
+      "$A+B=\\begin{pmatrix} 3+4 & 2+0 \\\\ 1+2 & 5+1 \\end{pmatrix}=\\begin{pmatrix} 7 & 2 \\\\ 3 & 6 \\end{pmatrix}$.",
+      "Urma este suma elementelor de pe diagonala principală: $7+6=13$.",
+    ],
   },
   {
     id: "mt-s1-7",
@@ -97,7 +121,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 4 & 4 \\\\ 4 & 4 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
-    explanation: "$2A=\\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$, deci $2A-B$ este matricea nulă.",
+    explanation: [
+      "Calculăm întâi $2A$, înmulțind fiecare element al lui $A$ cu $2$.",
+      "$2A=\\begin{pmatrix} 2 & 2 \\\\ 2 & 2 \\end{pmatrix}$.",
+      "Scădem $B$ din $2A$: $2A-B=\\begin{pmatrix} 2-2 & 2-2 \\\\ 2-2 & 2-2 \\end{pmatrix}=\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$, matricea nulă.",
+    ],
   },
   {
     id: "mt-s1-8",
@@ -107,7 +135,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & 5 \\\\ -1 & 4 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al matricei $3A$.",
     correctAnswer: "6",
-    explanation: "Elementul $(1,1)$ este $3\\cdot2=6$.",
+    explanation: [
+      "Înmulțirea cu un scalar înmulțește fiecare element al matricei cu acel scalar.",
+      "Elementul de pe linia 1, coloana 1 al lui $A$ este $2$.",
+      "În matricea $3A$, acesta devine $3\\cdot2=6$.",
+    ],
   },
   {
     id: "mt-s1-9",
@@ -123,7 +155,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
-    explanation: "Diferența unei matrice cu ea însăși este matricea nulă.",
+    explanation: [
+      "Scăderea matricelor se face element cu element.",
+      "Deoarece $A$ și $B$ sunt identice, fiecare diferență de elemente este $0$.",
+      "Rezultă $A-B=\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$, matricea nulă.",
+    ],
   },
   {
     id: "mt-s1-10",
@@ -134,7 +170,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 4 & -2 \\\\ 3 & 1 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & 2 \\\\ -1 & 5 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 2 al matricei $A+B$.",
     correctAnswer: "6",
-    explanation: "Elementul $(2,2)$ este $1+5=6$.",
+    explanation: [
+      "Adunarea matricelor se face element cu element.",
+      "Elementul de pe linia 2, coloana 2 al lui $A$ este $1$, iar al lui $B$ este $5$.",
+      "Adunăm: $1+5=6$.",
+    ],
   },
 
   // Set 2 — Înmulțirea cu un scalar
@@ -146,7 +186,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 3 & 1 \\\\ 0 & 5 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al matricei $2A$.",
     correctAnswer: "6",
-    explanation: "Elementul $(1,1)$ este $2\\cdot3=6$.",
+    explanation: [
+      "Înmulțirea cu scalarul $2$ înmulțește fiecare element al matricei cu $2$.",
+      "Elementul de pe linia 1, coloana 1 al lui $A$ este $3$.",
+      "În $2A$, acesta devine $2\\cdot3=6$.",
+    ],
   },
   {
     id: "mt-s2-2",
@@ -162,7 +206,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 4 & 5 \\\\ 3 & 2 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & 6 \\\\ 0 & -3 \\end{pmatrix}$",
-    explanation: "Se înmulțește fiecare element cu $3$: $\\begin{pmatrix} 3 & 6 \\\\ 0 & -3 \\end{pmatrix}$.",
+    explanation: [
+      "Înmulțirea cu scalarul $3$ înmulțește fiecare element al matricei cu $3$.",
+      "Linia 1: $3\\cdot1=3$, $3\\cdot2=6$. Linia 2: $3\\cdot0=0$, $3\\cdot(-1)=-3$.",
+      "Rezultatul este $$3A=\\begin{pmatrix} 3 & 6 \\\\ 0 & -3 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s2-3",
@@ -172,7 +220,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 4 & 1 \\\\ 3 & -2 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 1 al matricei $-2A$.",
     correctAnswer: "-6",
-    explanation: "Elementul $(2,1)$ este $-2\\cdot3=-6$.",
+    explanation: [
+      "Înmulțirea cu scalarul $-2$ înmulțește fiecare element al matricei cu $-2$.",
+      "Elementul de pe linia 2, coloana 1 al lui $A$ este $3$.",
+      "În $-2A$, acesta devine $-2\\cdot3=-6$.",
+    ],
   },
   {
     id: "mt-s2-4",
@@ -188,7 +240,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 4 & 4 \\\\ 1 & 3 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 4 \\\\ 1 & 3 \\end{pmatrix}$",
-    explanation: "Se împarte fiecare element la $2$: $\\begin{pmatrix} 2 & 4 \\\\ 1 & 3 \\end{pmatrix}$.",
+    explanation: [
+      "Înmulțirea cu scalarul $\\dfrac12$ înjumătățește fiecare element al matricei.",
+      "Linia 1: $4/2=2$, $8/2=4$. Linia 2: $2/2=1$, $6/2=3$.",
+      "Rezultatul este $$\\dfrac12A=\\begin{pmatrix} 2 & 4 \\\\ 1 & 3 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s2-5",
@@ -198,7 +254,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$. Calculați suma tuturor elementelor matricei $2A$.",
     correctAnswer: "20",
-    explanation: "Suma elementelor lui $A$ este $10$, deci suma elementelor lui $2A$ este $20$.",
+    explanation: [
+      "Înmulțirea cu scalarul $2$ înmulțește fiecare element al matricei cu $2$, deci și suma tuturor elementelor se dublează.",
+      "Suma elementelor lui $A$ este $1+2+3+4=10$.",
+      "Suma elementelor lui $2A$ este $2\\cdot10=20$.",
+    ],
   },
   {
     id: "mt-s2-6",
@@ -214,7 +274,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 2 & -3 \\\\ -1 & 5 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} -2 & 3 \\\\ 1 & -5 \\end{pmatrix}$",
-    explanation: "Se schimbă semnul fiecărui element: $\\begin{pmatrix} -2 & 3 \\\\ 1 & -5 \\end{pmatrix}$.",
+    explanation: [
+      "Opusa unei matrice se obține înmulțind fiecare element cu scalarul $-1$, adică schimbând semnul.",
+      "Linia 1: $-2$, $3$. Linia 2: $1$, $-5$.",
+      "Rezultatul este $$-A=\\begin{pmatrix} -2 & 3 \\\\ 1 & -5 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s2-7",
@@ -224,7 +288,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați numărul real $k$ pentru care $kA=\\begin{pmatrix} 6 & 9 \\\\ 3 & 12 \\end{pmatrix}$, dacă $A=\\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix}$.",
     correctAnswer: "3",
-    explanation: "Comparând elementele, $k=6/2=3$.",
+    explanation: [
+      "Înmulțirea cu scalarul $k$ înmulțește fiecare element al lui $A$ cu $k$.",
+      "Comparăm elementul de pe linia 1, coloana 1: $k\\cdot2=6$.",
+      "Rezultă $k=6/2=3$.",
+    ],
   },
   {
     id: "mt-s2-8",
@@ -240,7 +308,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 2 \\\\ 2 & 3 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 3 \\\\ 3 & 2 \\end{pmatrix}$",
-    explanation: "$2A=\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$, $3B=\\begin{pmatrix} 0 & 3 \\\\ 3 & 0 \\end{pmatrix}$, suma este $\\begin{pmatrix} 2 & 3 \\\\ 3 & 2 \\end{pmatrix}$.",
+    explanation: [
+      "Calculăm mai întâi $2A$ și $3B$, înmulțind fiecare element cu scalarul respectiv.",
+      "$2A=\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$ și $3B=\\begin{pmatrix} 0 & 3 \\\\ 3 & 0 \\end{pmatrix}$.",
+      "Adunăm cele două matrice: $2A+3B=\\begin{pmatrix} 2 & 3 \\\\ 3 & 2 \\end{pmatrix}$.",
+    ],
   },
   {
     id: "mt-s2-9",
@@ -250,7 +322,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} -1 & 2 \\\\ 5 & 0 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $4A$.",
     correctAnswer: "8",
-    explanation: "Elementul $(1,2)$ este $4\\cdot2=8$.",
+    explanation: [
+      "Înmulțirea cu scalarul $4$ înmulțește fiecare element al matricei cu $4$.",
+      "Elementul de pe linia 1, coloana 2 al lui $A$ este $2$.",
+      "În $4A$, acesta devine $4\\cdot2=8$.",
+    ],
   },
   {
     id: "mt-s2-10",
@@ -266,7 +342,11 @@ export const matriceSetExercises: Exercise[] = [
       "matricea transpusă a lui $A$",
     ],
     correctAnswer: "matricea nulă (toate elementele $0$)",
-    explanation: "Orice element înmulțit cu $0$ devine $0$, deci se obține matricea nulă.",
+    explanation: [
+      "Înmulțirea cu scalarul este operația care înmulțește fiecare element al matricei cu acel scalar.",
+      "Dacă scalarul este $0$, fiecare element devine $0$.",
+      "Rezultă matricea nulă (toate elementele $0$).",
+    ],
   },
 
   // Set 3 — Înmulțirea a două matrice
@@ -284,7 +364,12 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 5 & 2 \\\\ 0 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 5 & 2 \\\\ 2 & 1 \\end{pmatrix}$",
-    explanation: "Linia 1: $1\\cdot1+2\\cdot2=5$, $1\\cdot0+2\\cdot1=2$. Linia 2: $0\\cdot1+1\\cdot2=2$, $0\\cdot0+1\\cdot1=1$.",
+    explanation: [
+      "Înmulțirea matricelor: fiecare element al produsului se obține înmulțind linia din $A$ cu coloana din $B$ și adunând produsele.",
+      "Linia 1: $1\\cdot1+2\\cdot2=5$, $1\\cdot0+2\\cdot1=2$.",
+      "Linia 2: $0\\cdot1+1\\cdot2=2$, $0\\cdot0+1\\cdot1=1$.",
+      "Rezultatul este $$A\\cdot B=\\begin{pmatrix} 5 & 2 \\\\ 2 & 1 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s3-2",
@@ -295,7 +380,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 2 & 1 \\\\ 3 & 0 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & 2 \\\\ 4 & 1 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al produsului $A\\cdot B$.",
     correctAnswer: "6",
-    explanation: "Elementul $(1,1)$ este $2\\cdot1+1\\cdot4=6$.",
+    explanation: [
+      "Elementul $(1,1)$ al produsului $A\\cdot B$ se obține înmulțind linia 1 din $A$ cu coloana 1 din $B$.",
+      "Linia 1 din $A$ este $(2,1)$, iar coloana 1 din $B$ este $(1,4)$.",
+      "Calculăm: $2\\cdot1+1\\cdot4=6$.",
+    ],
   },
   {
     id: "mt-s3-3",
@@ -311,7 +400,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 2 \\\\ 5 & 7 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & 5 \\\\ 2 & 7 \\end{pmatrix}$",
-    explanation: "Matricea identitate lasă orice matrice neschimbată la înmulțire.",
+    explanation: [
+      "Înmulțirea cu matricea identitate: elementul $(i,j)$ al produsului $I\\cdot B$ se obține înmulțind linia $i$ din $I$ (care are un singur $1$, pe poziția $i$) cu coloana $j$ din $B$.",
+      "Acest calcul selectează exact elementul $B_{ij}$, deci fiecare element rămâne neschimbat.",
+      "Rezultă $I\\cdot B=B=\\begin{pmatrix} 3 & 5 \\\\ 2 & 7 \\end{pmatrix}$.",
+    ],
   },
   {
     id: "mt-s3-4",
@@ -322,7 +415,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$, $B=\\begin{pmatrix} 5 & 2 \\\\ 3 & 8 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 2 al produsului $A\\cdot B$.",
     correctAnswer: "2",
-    explanation: "Elementul $(2,2)$ este $1\\cdot2+0\\cdot8=2$.",
+    explanation: [
+      "Elementul $(2,2)$ al produsului $A\\cdot B$ se obține înmulțind linia 2 din $A$ cu coloana 2 din $B$.",
+      "Linia 2 din $A$ este $(1,0)$, iar coloana 2 din $B$ este $(2,8)$.",
+      "Calculăm: $1\\cdot2+0\\cdot8=2$.",
+    ],
   },
   {
     id: "mt-s3-5",
@@ -339,7 +436,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 8 & 3 \\\\ 2 & 5 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 5 \\\\ 8 & 3 \\end{pmatrix}$",
-    explanation: "$B\\cdot A$ inversează ordinea coloanelor lui $B$: $\\begin{pmatrix} 2 & 5 \\\\ 8 & 3 \\end{pmatrix}$, diferit de $A\\cdot B$.",
+    explanation: [
+      "Înmulțim matricele în ordinea $B\\cdot A$: fiecare element se obține înmulțind linia din $B$ cu coloana din $A$.",
+      "Linia 1: $5\\cdot0+2\\cdot1=2$, $5\\cdot1+2\\cdot0=5$. Linia 2: $3\\cdot0+8\\cdot1=8$, $3\\cdot1+8\\cdot0=3$.",
+      "Rezultatul este $$B\\cdot A=\\begin{pmatrix} 2 & 5 \\\\ 8 & 3 \\end{pmatrix},$$ diferit de $A\\cdot B$, deci înmulțirea matricelor nu este comutativă.",
+    ],
   },
   {
     id: "mt-s3-6",
@@ -349,7 +450,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
     correctAnswer: "2",
-    explanation: "$A^2=\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, elementul $(1,2)$ este $2$.",
+    explanation: [
+      "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+      "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, adică $(1,1)$, cu coloana 2 din $A$, adică $(1,1)$.",
+      "Calculăm: $1\\cdot1+1\\cdot1=2$.",
+    ],
   },
   {
     id: "mt-s3-7",
@@ -365,7 +470,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 2 & 3 \\\\ 4 & 10 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 6 \\\\ 8 & 10 \\end{pmatrix}$",
-    explanation: "$2I\\cdot B=2B=\\begin{pmatrix} 2 & 6 \\\\ 8 & 10 \\end{pmatrix}$.",
+    explanation: [
+      "Matricea $A=2I$ este scalarul $2$ înmulțit cu matricea identitate, deci $A\\cdot B=2B$.",
+      "Înmulțim fiecare element al lui $B$ cu $2$: $\\begin{pmatrix} 2\\cdot1 & 2\\cdot3 \\\\ 2\\cdot4 & 2\\cdot5 \\end{pmatrix}$.",
+      "Rezultatul este $$A\\cdot B=\\begin{pmatrix} 2 & 6 \\\\ 8 & 10 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s3-8",
@@ -376,7 +485,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 3 & 1 \\end{pmatrix}$, $B=\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 1 al produsului $A\\cdot B$.",
     correctAnswer: "1",
-    explanation: "Elementul $(2,1)$ este $3\\cdot0+1\\cdot1=1$.",
+    explanation: [
+      "Elementul $(2,1)$ al produsului $A\\cdot B$ se obține înmulțind linia 2 din $A$ cu coloana 1 din $B$.",
+      "Linia 2 din $A$ este $(3,1)$, iar coloana 1 din $B$ este $(0,1)$.",
+      "Calculăm: $3\\cdot0+1\\cdot1=1$.",
+    ],
   },
   {
     id: "mt-s3-9",
@@ -387,7 +500,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Fie $A$ o matrice $2\\times3$ și $B$ o matrice $3\\times2$. Ce dimensiune are $A\\cdot B$?",
     options: ["$2\\times2$", "$3\\times3$", "$2\\times3$", "$3\\times2$"],
     correctAnswer: "$2\\times2$",
-    explanation: "Produsul unei matrice $m\\times n$ cu una $n\\times p$ are dimensiunea $m\\times p$, deci $2\\times2$.",
+    explanation: [
+      "Produsul $A\\cdot B$ este definit atunci când numărul de coloane al lui $A$ este egal cu numărul de linii al lui $B$; aici $3=3$, deci produsul există.",
+      "Dimensiunea produsului este dată de numărul de linii al lui $A$ și numărul de coloane al lui $B$.",
+      "Rezultă că $A\\cdot B$ are dimensiunea $2\\times2$.",
+    ],
   },
   {
     id: "mt-s3-10",
@@ -397,7 +514,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A$ o matrice $3\\times4$ și $B$ o matrice $4\\times5$. Câte linii are matricea $A\\cdot B$?",
     correctAnswer: "3",
-    explanation: "Matricea produs are numărul de linii al lui $A$, adică $3$.",
+    explanation: [
+      "Produsul $A\\cdot B$ este definit deoarece numărul de coloane al lui $A$ ($4$) este egal cu numărul de linii al lui $B$ ($4$).",
+      "Matricea produs are numărul de linii egal cu numărul de linii al lui $A$.",
+      "Rezultă că $A\\cdot B$ are $3$ linii.",
+    ],
   },
 
   // Set 4 — Matrice speciale (identitate, nulă, transpusă)
@@ -415,7 +536,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 0 & 0 & 0 \\\\ 0 & 0 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$",
-    explanation: "Matricea identitate are $1$ pe diagonala principală și $0$ în rest.",
+    explanation: [
+      "Matricea identitate de ordinul $n$ are $1$ pe toate pozițiile diagonalei principale și $0$ în rest.",
+      "Pentru ordinul $3$, diagonala principală conține pozițiile $(1,1)$, $(2,2)$, $(3,3)$.",
+      "Rezultă $$I_3=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s4-2",
@@ -425,7 +550,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Câte elemente egale cu $1$ are matricea identitate de ordinul $4$ pe diagonala principală?",
     correctAnswer: "4",
-    explanation: "Diagonala principală a matricei $I_4$ are $4$ elemente, toate egale cu $1$.",
+    explanation: [
+      "Matricea identitate $I_n$ are $1$ pe fiecare din cele $n$ poziții ale diagonalei principale.",
+      "Pentru $n=4$, diagonala principală are $4$ poziții.",
+      "Rezultă că $I_4$ are $4$ elemente egale cu $1$ pe diagonala principală.",
+    ],
   },
   {
     id: "mt-s4-3",
@@ -441,7 +570,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
-    explanation: "Matricea nulă are toate elementele egale cu $0$.",
+    explanation: [
+      "Matricea nulă de ordinul $n$ are toate cele $n^2$ elemente egale cu $0$.",
+      "Pentru ordinul $2$, aceasta are $4$ elemente, toate $0$.",
+      "Rezultă $$O_2=\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s4-4",
@@ -451,7 +584,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & 5 \\\\ -1 & 3 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 1 al transpusei $A^T$.",
     correctAnswer: "5",
-    explanation: "$A^T$ inversează liniile cu coloanele, deci elementul $(2,1)$ al lui $A^T$ este elementul $(1,2)$ al lui $A$, adică $5$.",
+    explanation: [
+      "Transpusa $A^T$ se obține scriind liniile lui $A$ drept coloane, adică elementul $(i,j)$ al lui $A^T$ este elementul $(j,i)$ al lui $A$.",
+      "Elementul $(2,1)$ al lui $A^T$ corespunde elementului $(1,2)$ al lui $A$.",
+      "Elementul $(1,2)$ al lui $A$ este $5$, deci acesta este rezultatul.",
+    ],
   },
   {
     id: "mt-s4-5",
@@ -467,7 +604,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 1 & -3 \\\\ 2 & 4 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 2 \\\\ 4 & -3 \\end{pmatrix}$",
-    explanation: "Se schimbă liniile cu coloanele: $\\begin{pmatrix} 1 & 2 \\\\ 4 & -3 \\end{pmatrix}$.",
+    explanation: [
+      "Transpusa $A^T$ se obține scriind liniile lui $A$ drept coloane.",
+      "Coloana 1 a lui $A^T$ este linia 1 a lui $A$: $(1,4)$. Coloana 2 a lui $A^T$ este linia 2 a lui $A$: $(2,-3)$.",
+      "Rezultatul este $$A^T=\\begin{pmatrix} 1 & 2 \\\\ 4 & -3 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s4-6",
@@ -477,7 +618,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 0 & 6 \\\\ 6 & 0 \\end{pmatrix}$ (matrice simetrică). Determinați elementul de pe linia 1, coloana 2 al lui $A^T$.",
     correctAnswer: "6",
-    explanation: "Fiind simetrică, $A^T=A$, deci elementul $(1,2)$ este $6$.",
+    explanation: [
+      "O matrice este simetrică dacă $A^T=A$.",
+      "Fiind simetrică, elementul $(1,2)$ al lui $A^T$ este egal cu elementul $(1,2)$ al lui $A$.",
+      "Elementul $(1,2)$ al lui $A$ este $6$, deci acesta este rezultatul.",
+    ],
   },
   {
     id: "mt-s4-7",
@@ -488,7 +633,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "O matrice $A$ pentru care $A^T=A$ se numește:",
     options: ["matrice simetrică", "matrice antisimetrică", "matrice identitate", "matrice nulă"],
     correctAnswer: "matrice simetrică",
-    explanation: "Prin definiție, o matrice cu $A^T=A$ este simetrică.",
+    explanation: [
+      "O matrice $A$ cu proprietatea $A^T=A$ are aceleași elemente înainte și după transpunere.",
+      "Prin definiție, o astfel de matrice se numește matrice simetrică.",
+    ],
   },
   {
     id: "mt-s4-8",
@@ -498,7 +646,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $A+A^T$.",
     correctAnswer: "5",
-    explanation: "$A^T=\\begin{pmatrix} 1 & 3 \\\\ 2 & 4 \\end{pmatrix}$, deci elementul $(1,2)$ al sumei este $2+3=5$.",
+    explanation: [
+      "Calculăm transpusa: $A^T=\\begin{pmatrix} 1 & 3 \\\\ 2 & 4 \\end{pmatrix}$.",
+      "Elementul de pe linia 1, coloana 2 al lui $A$ este $2$, iar al lui $A^T$ este $3$.",
+      "Adunăm: $2+3=5$.",
+    ],
   },
   {
     id: "mt-s4-9",
@@ -514,7 +666,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$",
-    explanation: "$I_2+I_2=2I_2=\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}$.",
+    explanation: [
+      "Adunarea matricelor se face element cu element, deci $I_2+I_2=2I_2$.",
+      "Fiecare element al lui $I_2$ se dublează: $1+1=2$ pe diagonală, $0+0=0$ în rest.",
+      "Rezultatul este $$I_2+I_2=\\begin{pmatrix} 2 & 0 \\\\ 0 & 2 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s4-10",
@@ -524,7 +680,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 3 & -2 \\\\ 1 & 5 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al matricei $A-A^T$.",
     correctAnswer: "0",
-    explanation: "Elementele de pe diagonala principală ale lui $A-A^T$ sunt întotdeauna $0$.",
+    explanation: [
+      "Elementele de pe diagonala principală ale lui $A$ și ale lui $A^T$ sunt identice, deoarece transpunerea nu modifică poziția $(i,i)$.",
+      "Elementul $(1,1)$ al lui $A$ este $3$, iar al lui $A^T$ este tot $3$.",
+      "Scădem: $3-3=0$.",
+    ],
   },
 
   // Set 5 — Proprietăți ale operațiilor cu matrice
@@ -537,7 +697,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Adunarea matricelor de aceeași dimensiune este:",
     options: ["comutativă și asociativă", "doar comutativă", "doar asociativă", "nici comutativă, nici asociativă"],
     correctAnswer: "comutativă și asociativă",
-    explanation: "Adunarea matricelor satisface ambele proprietăți, moștenite din adunarea numerelor reale.",
+    explanation: [
+      "Adunarea matricelor se face element cu element, folosind adunarea numerelor reale.",
+      "Deoarece adunarea numerelor reale este comutativă și asociativă, aceleași proprietăți se moștenesc pentru adunarea matricelor.",
+    ],
   },
   {
     id: "mt-s5-2",
@@ -553,7 +716,11 @@ export const matriceSetExercises: Exercise[] = [
       "comutativă doar pentru matrice nule",
     ],
     correctAnswer: "necomutativă",
-    explanation: "În general $AB\\ne BA$, așa cum s-a observat și în Setul 3.",
+    explanation: [
+      "Înmulțirea matricelor se face linie cu coloană, iar ordinea factorilor schimbă elementele calculate.",
+      "În general $AB\\ne BA$, așa cum s-a observat și în Setul 3 (exercițiile cu $A\\cdot B$ și $B\\cdot A$).",
+      "Rezultă că înmulțirea matricelor este, în general, necomutativă.",
+    ],
   },
   {
     id: "mt-s5-3",
@@ -563,7 +730,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$ și $O$ matricea nulă de ordinul 2. Determinați elementul de pe linia 2, coloana 2 al matricei $A+O$.",
     correctAnswer: "4",
-    explanation: "Adunarea cu matricea nulă nu schimbă matricea, deci elementul $(2,2)$ rămâne $4$.",
+    explanation: [
+      "Matricea nulă $O$ are toate elementele $0$, deci adunarea cu $O$ nu modifică nicio valoare.",
+      "Elementul de pe linia 2, coloana 2 al lui $A$ este $4$.",
+      "Adunând $0$, elementul rămâne $4+0=4$.",
+    ],
   },
   {
     id: "mt-s5-4",
@@ -574,7 +745,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Înmulțirea matricelor este asociativă, adică pentru matrice compatibile:",
     options: ["$(AB)C=A(BC)$", "$(AB)C=C(AB)$", "$AB=BA$", "$(AB)C=ABC^T$"],
     correctAnswer: "$(AB)C=A(BC)$",
-    explanation: "Aceasta este definiția asociativității înmulțirii matricelor.",
+    explanation: [
+      "Asociativitatea înmulțirii matricelor spune că gruparea factorilor nu contează.",
+      "Prin definiție, aceasta se scrie $(AB)C=A(BC)$.",
+    ],
   },
   {
     id: "mt-s5-5",
@@ -584,7 +758,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & 1 \\\\ 0 & 3 \\end{pmatrix}$ și $I$ matricea identitate de ordinul 2. Determinați elementul de pe linia 1, coloana 1 al matricei $A\\cdot I$.",
     correctAnswer: "2",
-    explanation: "$A\\cdot I=A$, deci elementul $(1,1)$ este $2$.",
+    explanation: [
+      "Matricea identitate este element neutru la înmulțire, deci $A\\cdot I=A$.",
+      "Elementul de pe linia 1, coloana 1 al lui $A$ este $2$.",
+      "Rezultă că elementul $(1,1)$ al lui $A\\cdot I$ este tot $2$.",
+    ],
   },
   {
     id: "mt-s5-6",
@@ -595,7 +773,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Înmulțirea matricelor este distributivă față de adunare, adică:",
     options: ["$A(B+C)=AB+AC$", "$A(B+C)=A+BC$", "$A(BC)=(AB)C$ doar", "$A(B+C)=AB-AC$"],
     correctAnswer: "$A(B+C)=AB+AC$",
-    explanation: "Aceasta este proprietatea de distributivitate a înmulțirii față de adunare.",
+    explanation: [
+      "Distributivitatea înmulțirii față de adunare spune că înmulțirea se distribuie peste sumă.",
+      "Prin definiție, aceasta se scrie $A(B+C)=AB+AC$.",
+    ],
   },
   {
     id: "mt-s5-7",
@@ -605,7 +786,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 5 & 2 \\\\ 1 & 4 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 1 al matricei $A-A$.",
     correctAnswer: "0",
-    explanation: "Diferența unei matrice cu ea însăși este matricea nulă.",
+    explanation: [
+      "Scăderea unei matrice din ea însăși dă matricea nulă, deoarece fiecare element se scade din el însuși.",
+      "Elementul de pe linia 2, coloana 1 al lui $A$ este $1$.",
+      "Scădem: $1-1=0$.",
+    ],
   },
   {
     id: "mt-s5-8",
@@ -616,7 +801,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Transpusa unei sume de matrice satisface:",
     options: ["$(A+B)^T=A^T+B^T$", "$(A+B)^T=A^T-B^T$", "$(A+B)^T=(A+B)$", "$(A+B)^T=B^TA^T$"],
     correctAnswer: "$(A+B)^T=A^T+B^T$",
-    explanation: "Transpunerea distribuie peste adunare.",
+    explanation: [
+      "Transpunerea unei sume de matrice se distribuie peste fiecare termen.",
+      "Prin definiție, aceasta se scrie $(A+B)^T=A^T+B^T$.",
+    ],
   },
   {
     id: "mt-s5-9",
@@ -626,7 +814,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 3 \\\\ 2 & 5 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $(A^T)^T$.",
     correctAnswer: "3",
-    explanation: "$(A^T)^T=A$, deci elementul $(1,2)$ este $3$.",
+    explanation: [
+      "Transpusa transpusei unei matrice este matricea inițială: $(A^T)^T=A$.",
+      "Elementul de pe linia 1, coloana 2 al lui $A$ este $3$.",
+      "Rezultă că elementul $(1,2)$ al lui $(A^T)^T$ este tot $3$.",
+    ],
   },
   {
     id: "mt-s5-10",
@@ -637,7 +829,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Transpusa unui produs de matrice satisface:",
     options: ["$(AB)^T=B^TA^T$", "$(AB)^T=A^TB^T$", "$(AB)^T=AB$", "$(AB)^T=A^T+B^T$"],
     correctAnswer: "$(AB)^T=B^TA^T$",
-    explanation: "La transpunerea unui produs, ordinea factorilor se inversează.",
+    explanation: [
+      "Transpunerea unui produs de matrice inversează ordinea factorilor.",
+      "Prin definiție, aceasta se scrie $(AB)^T=B^TA^T$.",
+    ],
   },
 
   // Set 6 — Puterile unei matrice
@@ -649,7 +844,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
     correctAnswer: "4",
-    explanation: "$A^2=\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$, elementul $(1,2)$ este $4$.",
+    explanation: [
+      "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+      "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, adică $(1,2)$, cu coloana 2 din $A$, adică $(2,1)$.",
+      "Calculăm: $1\\cdot2+2\\cdot1=4$.",
+    ],
   },
   {
     id: "mt-s6-2",
@@ -665,7 +864,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-    explanation: "$A\\cdot A=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$, matricea identitate.",
+    explanation: [
+      "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+      "Linia 1: $0\\cdot0+1\\cdot1=1$, $0\\cdot1+1\\cdot0=0$. Linia 2: $1\\cdot0+0\\cdot1=0$, $1\\cdot1+0\\cdot0=1$.",
+      "Rezultatul este $$A^2=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix},$$ matricea identitate.",
+    ],
   },
   {
     id: "mt-s6-3",
@@ -675,7 +878,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & 0 \\\\ 0 & 3 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al matricei $A^2$.",
     correctAnswer: "4",
-    explanation: "Pentru o matrice diagonală, elementul $(1,1)$ al lui $A^2$ este $2^2=4$.",
+    explanation: [
+      "Pentru o matrice diagonală, ridicarea la putere se face ridicând fiecare element al diagonalei la acea putere.",
+      "Elementul de pe linia 1, coloana 1 al lui $A$ este $2$.",
+      "În $A^2$, acesta devine $2^2=4$.",
+    ],
   },
   {
     id: "mt-s6-4",
@@ -691,7 +898,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
-    explanation: "Orice putere a matricei identitate este tot matricea identitate.",
+    explanation: [
+      "Matricea identitate satisface $I\\cdot I=I$ la orice înmulțire cu ea însăși.",
+      "Rezultă că orice putere a matricei identitate este tot matricea identitate.",
+      "Deci $$A^3=\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s6-5",
@@ -701,7 +912,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 3 & 1 \\\\ 2 & 4 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 2 al matricei $A^2$.",
     correctAnswer: "18",
-    explanation: "Elementul $(2,2)$ este $2\\cdot1+4\\cdot4=18$.",
+    explanation: [
+      "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+      "Elementul $(2,2)$ se obține înmulțind linia 2 din $A$, adică $(2,4)$, cu coloana 2 din $A$, adică $(1,4)$.",
+      "Calculăm: $2\\cdot1+4\\cdot4=2+16=18$.",
+    ],
   },
   {
     id: "mt-s6-6",
@@ -712,7 +927,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Fie $A=\\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$, pentru care $A^2$ este matricea nulă. O astfel de matrice se numește:",
     options: ["matrice nilpotentă", "matrice identitate", "matrice inversabilă", "matrice simetrică"],
     correctAnswer: "matrice nilpotentă",
-    explanation: "O matrice nenulă a cărei putere devine matricea nulă se numește nilpotentă.",
+    explanation: [
+      "Se calculează $A^2$: linia 1 devine $(0\\cdot0+1\\cdot0,\\ 0\\cdot1+1\\cdot0)=(0,0)$, iar linia 2 rămâne $(0,0)$, deci $A^2$ este matricea nulă.",
+      "O matrice nenulă a cărei putere devine matricea nulă se numește matrice nilpotentă.",
+    ],
   },
   {
     id: "mt-s6-7",
@@ -722,7 +940,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 0 & 1 \\\\ 0 & 0 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al matricei $A^2$.",
     correctAnswer: "0",
-    explanation: "$A^2$ este matricea nulă, deci elementul $(1,1)$ este $0$.",
+    explanation: [
+      "$A^2=A\\cdot A$, deci înmulțim matricea cu ea însăși.",
+      "Elementul $(1,1)$ se obține înmulțind linia 1 din $A$, adică $(0,1)$, cu coloana 1 din $A$, adică $(0,0)$.",
+      "Calculăm: $0\\cdot0+1\\cdot0=0$.",
+    ],
   },
   {
     id: "mt-s6-8",
@@ -738,7 +960,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 4 & 4 \\\\ 4 & 4 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix}$",
-    explanation: "$A=2I$, deci $A^2=4I=\\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix}$.",
+    explanation: [
+      "Matricea $A=2I$, deci $A^2=(2I)^2=4I$.",
+      "Fiecare element al diagonalei devine $2^2=4$, iar restul rămân $0$.",
+      "Rezultatul este $$A^2=\\begin{pmatrix} 4 & 0 \\\\ 0 & 4 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s6-9",
@@ -748,7 +974,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 1 \\\\ 0 & 1 \\end{pmatrix}$, știind că $A^2=\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al matricei $A^3$.",
     correctAnswer: "3",
-    explanation: "$A^3=A^2\\cdot A$, elementul $(1,2)$ este $1\\cdot1+2\\cdot1=3$.",
+    explanation: [
+      "$A^3=A^2\\cdot A$, deci înmulțim matricea $A^2$ dată cu $A$.",
+      "Elementul $(1,2)$ se obține înmulțind linia 1 din $A^2$, adică $(1,2)$, cu coloana 2 din $A$, adică $(1,1)$.",
+      "Calculăm: $1\\cdot1+2\\cdot1=3$.",
+    ],
   },
   {
     id: "mt-s6-10",
@@ -759,7 +989,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Pentru orice matrice pătratică $A$, se definește $A^0$ ca fiind:",
     options: ["matricea identitate $I$", "matricea nulă $O$", "matricea $A$", "numărul $1$"],
     correctAnswer: "matricea identitate $I$",
-    explanation: "Prin convenție, orice matrice pătratică la puterea $0$ este matricea identitate.",
+    explanation: [
+      "Prin analogie cu numerele reale, unde $a^0=1$, se definește puterea $0$ a unei matrice pătratice.",
+      "Prin convenție, orice matrice pătratică $A$ la puterea $0$ este matricea identitate $I$.",
+    ],
   },
 
   // Set 7 — Urma matricei (trace) și proprietăți
@@ -771,7 +1004,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați urma matricei $A=\\begin{pmatrix} 5 & 2 \\\\ 1 & 8 \\end{pmatrix}$.",
     correctAnswer: "13",
-    explanation: "Urma este suma elementelor de pe diagonala principală: $5+8=13$.",
+    explanation: [
+      "Urma unei matrice pătratice este suma elementelor de pe diagonala principală.",
+      "Diagonala principală a lui $A$ este formată din elementele $5$ și $8$.",
+      "Adunăm: $5+8=13$.",
+    ],
   },
   {
     id: "mt-s7-2",
@@ -782,7 +1019,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Calculați urma matricei $A=\\begin{pmatrix} -3 & 4 \\\\ 0 & 7 \\end{pmatrix}$.",
     options: ["$4$", "$-3$", "$7$", "$1$"],
     correctAnswer: "$4$",
-    explanation: "Urma este $-3+7=4$.",
+    explanation: [
+      "Urma unei matrice pătratice este suma elementelor de pe diagonala principală.",
+      "Diagonala principală a lui $A$ este formată din elementele $-3$ și $7$.",
+      "Adunăm: $-3+7=4$.",
+    ],
   },
   {
     id: "mt-s7-3",
@@ -792,7 +1033,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & 1 \\\\ 0 & 3 \\end{pmatrix}$, $B=\\begin{pmatrix} 4 & 0 \\\\ 1 & 5 \\end{pmatrix}$. Calculați $\\mathrm{tr}(A+B)$.",
     correctAnswer: "14",
-    explanation: "$\\mathrm{tr}(A+B)=\\mathrm{tr}(A)+\\mathrm{tr}(B)=5+9=14$.",
+    explanation: [
+      "Urma este liniară în raport cu adunarea: $\\mathrm{tr}(A+B)=\\mathrm{tr}(A)+\\mathrm{tr}(B)$.",
+      "$\\mathrm{tr}(A)=2+3=5$, iar $\\mathrm{tr}(B)=4+5=9$.",
+      "Adunăm: $5+9=14$.",
+    ],
   },
   {
     id: "mt-s7-4",
@@ -803,7 +1048,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Calculați urma matricei identitate $I_4$.",
     options: ["$4$", "$1$", "$0$", "$16$"],
     correctAnswer: "$4$",
-    explanation: "$I_4$ are $4$ elemente egale cu $1$ pe diagonala principală, deci urma este $4$.",
+    explanation: [
+      "Urma este suma elementelor de pe diagonala principală.",
+      "Matricea identitate $I_4$ are $4$ elemente egale cu $1$ pe diagonala principală.",
+      "Suma acestora este $4$.",
+    ],
   },
   {
     id: "mt-s7-5",
@@ -813,7 +1062,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați urma matricei nule de ordinul 3.",
     correctAnswer: "0",
-    explanation: "Toate elementele fiind $0$, urma este $0$.",
+    explanation: [
+      "Urma este suma elementelor de pe diagonala principală.",
+      "Toate elementele matricei nule sunt $0$, inclusiv cele de pe diagonala principală.",
+      "Suma lor este $0$.",
+    ],
   },
   {
     id: "mt-s7-6",
@@ -829,7 +1082,11 @@ export const matriceSetExercises: Exercise[] = [
       "nicio pereche de matrice",
     ],
     correctAnswer: "orice două matrice pătratice de același ordin",
-    explanation: "Urma este liniară în raport cu adunarea matricelor.",
+    explanation: [
+      "Urma este suma elementelor diagonalei principale, iar adunarea matricelor se face element cu element.",
+      "Elementele diagonalei principale ale sumei sunt sumele elementelor corespunzătoare din cele două matrice.",
+      "Rezultă că proprietatea $\\mathrm{tr}(A+B)=\\mathrm{tr}(A)+\\mathrm{tr}(B)$ este adevărată pentru orice două matrice pătratice de același ordin.",
+    ],
   },
   {
     id: "mt-s7-7",
@@ -839,7 +1096,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 3 & 2 \\\\ 1 & 6 \\end{pmatrix}$. Calculați $\\mathrm{tr}(2A)$.",
     correctAnswer: "18",
-    explanation: "$\\mathrm{tr}(A)=9$, deci $\\mathrm{tr}(2A)=2\\cdot9=18$.",
+    explanation: [
+      "Urma este liniară în raport cu înmulțirea cu scalar: $\\mathrm{tr}(kA)=k\\cdot\\mathrm{tr}(A)$.",
+      "$\\mathrm{tr}(A)=3+6=9$.",
+      "Rezultă $\\mathrm{tr}(2A)=2\\cdot9=18$.",
+    ],
   },
   {
     id: "mt-s7-8",
@@ -850,7 +1111,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Calculați urma matricei $A=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 3 \\end{pmatrix}$.",
     options: ["$6$", "$3$", "$1$", "$0$"],
     correctAnswer: "$6$",
-    explanation: "Urma este $1+2+3=6$.",
+    explanation: [
+      "Urma este suma elementelor de pe diagonala principală.",
+      "Diagonala principală conține elementele $1$, $2$ și $3$.",
+      "Adunăm: $1+2+3=6$.",
+    ],
   },
   {
     id: "mt-s7-9",
@@ -860,7 +1125,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 5 & 9 \\\\ -2 & 7 \\end{pmatrix}$. Calculați $\\mathrm{tr}(A^T)$.",
     correctAnswer: "12",
-    explanation: "Transpunerea nu schimbă elementele de pe diagonala principală, deci $\\mathrm{tr}(A^T)=\\mathrm{tr}(A)=5+7=12$.",
+    explanation: [
+      "Transpunerea nu schimbă poziția elementelor de pe diagonala principală, deci $\\mathrm{tr}(A^T)=\\mathrm{tr}(A)$.",
+      "Diagonala principală a lui $A$ este formată din elementele $5$ și $7$.",
+      "Adunăm: $5+7=12$.",
+    ],
   },
   {
     id: "mt-s7-10",
@@ -871,7 +1140,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Fie $A=\\begin{pmatrix} 4 & 1 \\\\ 2 & 3 \\end{pmatrix}$. Calculați $\\mathrm{tr}(A^2)$.",
     options: ["$29$", "$49$", "$7$", "$14$"],
     correctAnswer: "$29$",
-    explanation: "$A^2=\\begin{pmatrix} 18 & 7 \\\\ 14 & 11 \\end{pmatrix}$, urma este $18+11=29$.",
+    explanation: [
+      "Calculăm întâi $A^2=A\\cdot A$.",
+      "Elementul $(1,1)$: $4\\cdot4+1\\cdot2=18$. Elementul $(2,2)$: $2\\cdot1+3\\cdot3=11$.",
+      "Rezultă $A^2=\\begin{pmatrix} 18 & 7 \\\\ 14 & 11 \\end{pmatrix}$, iar urma este $18+11=29$.",
+    ],
   },
 
   // Set 8 — Matrice 3×3, operații de bază
@@ -883,7 +1156,10 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}$. Determinați elementul de pe linia 2, coloana 3.",
     correctAnswer: "6",
-    explanation: "Elementul de pe linia 2, coloana 3 este $6$.",
+    explanation: [
+      "Elementul de pe linia 2, coloana 3 se citește direct din matrice, la intersecția liniei 2 cu coloana 3.",
+      "Linia 2 este $(4,5,6)$, iar al treilea element al acesteia este $6$.",
+    ],
   },
   {
     id: "mt-s8-2",
@@ -899,7 +1175,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 1 & 2 \\\\ 3 & 2 & 3 \\\\ 1 & 2 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & 1 & 2 \\\\ 3 & 2 & 3 \\\\ 1 & 2 & 3 \\end{pmatrix}$",
-    explanation: "Se adună elementele corespunzătoare, linie cu linie.",
+    explanation: [
+      "Adunăm elementele corespunzătoare, linie cu linie.",
+      "Linia 1: $1+2=3$, $0+1=1$, $2+0=2$. Linia 2: $3+0=3$, $1+1=2$, $0+3=3$. Linia 3: $0+1=1$, $2+0=2$, $1+2=3$.",
+      "Rezultatul este $$A+B=\\begin{pmatrix} 3 & 1 & 2 \\\\ 3 & 2 & 3 \\\\ 1 & 2 & 3 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s8-3",
@@ -909,7 +1189,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați urma matricei $A=\\begin{pmatrix} 2 & 0 & 1 \\\\ 1 & 5 & 0 \\\\ 3 & 2 & -1 \\end{pmatrix}$.",
     correctAnswer: "6",
-    explanation: "Urma este $2+5+(-1)=6$.",
+    explanation: [
+      "Urma este suma elementelor de pe diagonala principală.",
+      "Diagonala principală este formată din elementele $2$, $5$ și $-1$.",
+      "Adunăm: $2+5+(-1)=6$.",
+    ],
   },
   {
     id: "mt-s8-4",
@@ -925,7 +1209,10 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 0 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$",
-    explanation: "Matricea identitate de ordinul 3 are $1$ pe diagonala principală și $0$ în rest.",
+    explanation: [
+      "Matricea identitate de ordinul $3$ are $1$ pe fiecare poziție a diagonalei principale și $0$ în rest.",
+      "Rezultă $$I_3=\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s8-5",
@@ -935,7 +1222,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 3 \\\\ 2 & 0 & 1 \\end{pmatrix}$. Determinați elementul de pe linia 3, coloana 1 al transpusei $A^T$.",
     correctAnswer: "0",
-    explanation: "Elementul $(3,1)$ al lui $A^T$ este elementul $(1,3)$ al lui $A$, adică $0$.",
+    explanation: [
+      "Elementul $(3,1)$ al lui $A^T$ este egal cu elementul $(1,3)$ al lui $A$.",
+      "Elementul de pe linia 1, coloana 3 al lui $A$ este $0$.",
+      "Rezultă că elementul $(3,1)$ al lui $A^T$ este $0$.",
+    ],
   },
   {
     id: "mt-s8-6",
@@ -951,7 +1242,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 3 & 1 \\\\ 0 & 5 & 5 \\\\ 6 & 0 & 3 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 3 & 1 \\\\ 0 & 4 & 5 \\\\ 6 & 0 & 2 \\end{pmatrix}$",
-    explanation: "Înmulțirea cu matricea identitate lasă matricea $B$ neschimbată.",
+    explanation: [
+      "Matricea identitate este element neutru la înmulțire: $I\\cdot B=B$.",
+      "Rezultă că $A\\cdot B$ păstrează toate elementele lui $B$ neschimbate.",
+      "Deci $$A\\cdot B=\\begin{pmatrix} 2 & 3 & 1 \\\\ 0 & 4 & 5 \\\\ 6 & 0 & 2 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s8-7",
@@ -961,7 +1256,10 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 3 & 1 & 2 \\\\ 0 & 2 & 1 \\\\ 1 & 0 & 4 \\end{pmatrix}$. Calculați suma elementelor de pe prima linie.",
     correctAnswer: "6",
-    explanation: "$3+1+2=6$.",
+    explanation: [
+      "Prima linie a lui $A$ este formată din elementele $3$, $1$ și $2$.",
+      "Adunăm aceste elemente: $3+1+2=6$.",
+    ],
   },
   {
     id: "mt-s8-8",
@@ -977,7 +1275,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 2 & 0 & 4 \\\\ 6 & -1 & 0 \\\\ 0 & 4 & 2 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 0 & 4 \\\\ 6 & -2 & 0 \\\\ 0 & 4 & 2 \\end{pmatrix}$",
-    explanation: "Se înmulțește fiecare element cu $2$.",
+    explanation: [
+      "Înmulțirea cu scalarul $2$ înmulțește fiecare element al matricei cu $2$.",
+      "Linia 1: $2\\cdot1=2$, $2\\cdot0=0$, $2\\cdot2=4$. Linia 2: $2\\cdot3=6$, $2\\cdot(-1)=-2$, $2\\cdot0=0$. Linia 3: $2\\cdot0=0$, $2\\cdot2=4$, $2\\cdot1=2$.",
+      "Rezultatul este $$2A=\\begin{pmatrix} 2 & 0 & 4 \\\\ 6 & -2 & 0 \\\\ 0 & 4 & 2 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s8-9",
@@ -988,7 +1290,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 5 & 2 & 1 \\\\ 0 & 3 & 4 \\\\ 2 & 1 & 0 \\end{pmatrix}$, $B=\\begin{pmatrix} 1 & 1 & 1 \\\\ 2 & 0 & 1 \\\\ 0 & 2 & 3 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 1 al matricei $A-B$.",
     correctAnswer: "4",
-    explanation: "Elementul $(1,1)$ este $5-1=4$.",
+    explanation: [
+      "Scăderea matricelor se face element cu element.",
+      "Elementul de pe linia 1, coloana 1 al lui $A$ este $5$, iar al lui $B$ este $1$.",
+      "Scădem: $5-1=4$.",
+    ],
   },
   {
     id: "mt-s8-10",
@@ -1004,7 +1310,10 @@ export const matriceSetExercises: Exercise[] = [
       "3 linii și 9 coloane",
     ],
     correctAnswer: "3 linii și 3 coloane, deci 9 elemente",
-    explanation: "O matrice pătratică de ordinul $n$ are $n$ linii și $n$ coloane, deci $n^2$ elemente; pentru $n=3$ sunt $9$.",
+    explanation: [
+      "O matrice pătratică de ordinul $n$ are $n$ linii și $n$ coloane, deci $n^2$ elemente.",
+      "Pentru $n=3$, aceasta are $3$ linii și $3$ coloane, adică $9$ elemente.",
+    ],
   },
 
   // Set 9 — Ecuații matriceale simple
@@ -1016,7 +1325,10 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați elementul de pe linia 1, coloana 1 al matricei $X$ pentru care $X+\\begin{pmatrix} 2 & 1 \\\\ 0 & 3 \\end{pmatrix}=\\begin{pmatrix} 5 & 4 \\\\ 1 & 7 \\end{pmatrix}$.",
     correctAnswer: "3",
-    explanation: "Elementul $(1,1)$ al lui $X$ este $5-2=3$.",
+    explanation: [
+      "Din $X+\\begin{pmatrix} 2 & 1 \\\\ 0 & 3 \\end{pmatrix}=\\begin{pmatrix} 5 & 4 \\\\ 1 & 7 \\end{pmatrix}$ obținem $X$ scăzând matricea cunoscută din cea din dreapta.",
+      "Elementul de pe linia 1, coloana 1 al lui $X$ este $5-2=3$.",
+    ],
   },
   {
     id: "mt-s9-2",
@@ -1032,7 +1344,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 1 & 3 \\\\ 4 & 0 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 1 & 3 \\\\ 4 & 4 \\end{pmatrix}$",
-    explanation: "$X=\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}+\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}=\\begin{pmatrix} 1 & 3 \\\\ 4 & 4 \\end{pmatrix}$.",
+    explanation: [
+      "Din $X-\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}=\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$ obținem $X$ adunând cele două matrice din dreapta.",
+      "$X=\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}+\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$.",
+      "Adunăm elementele corespunzătoare: $\\begin{pmatrix} 0+1 & 1+2 \\\\ 1+3 & 0+4 \\end{pmatrix}=\\begin{pmatrix} 1 & 3 \\\\ 4 & 4 \\end{pmatrix}$.",
+    ],
   },
   {
     id: "mt-s9-3",
@@ -1042,7 +1358,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați elementul de pe linia 2, coloana 2 al matricei $X$ pentru care $2X=\\begin{pmatrix} 6 & 8 \\\\ 10 & 12 \\end{pmatrix}$.",
     correctAnswer: "6",
-    explanation: "Elementul $(2,2)$ al lui $X$ este $12/2=6$.",
+    explanation: [
+      "Din $2X=\\begin{pmatrix} 6 & 8 \\\\ 10 & 12 \\end{pmatrix}$ obținem $X$ împărțind fiecare element la $2$.",
+      "Elementul de pe linia 2, coloana 2 al lui $2X$ este $12$.",
+      "Rezultă că elementul $(2,2)$ al lui $X$ este $12/2=6$.",
+    ],
   },
   {
     id: "mt-s9-4",
@@ -1058,7 +1378,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 1 \\\\ 2 & 0 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & -1 \\\\ 2 & 0 \\end{pmatrix}$",
-    explanation: "$X$ se obține împărțind fiecare element la $3$: $\\begin{pmatrix} 3 & -1 \\\\ 2 & 0 \\end{pmatrix}$.",
+    explanation: [
+      "Din $3X=\\begin{pmatrix} 9 & -3 \\\\ 6 & 0 \\end{pmatrix}$ obținem $X$ împărțind fiecare element la $3$.",
+      "Linia 1: $9/3=3$, $-3/3=-1$. Linia 2: $6/3=2$, $0/3=0$.",
+      "Rezultatul este $$X=\\begin{pmatrix} 3 & -1 \\\\ 2 & 0 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s9-5",
@@ -1068,7 +1392,10 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați elementul de pe linia 1, coloana 2 al matricei $X$ pentru care $X+\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}=2\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$.",
     correctAnswer: "3",
-    explanation: "$2\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}=\\begin{pmatrix} 6 & 4 \\\\ 2 & 8 \\end{pmatrix}$, deci elementul $(1,2)$ al lui $X$ este $4-1=3$.",
+    explanation: [
+      "Calculăm întâi partea dreaptă: $2\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}=\\begin{pmatrix} 6 & 4 \\\\ 2 & 8 \\end{pmatrix}$.",
+      "Din $X+\\begin{pmatrix} 1 & 1 \\\\ 1 & 1 \\end{pmatrix}=\\begin{pmatrix} 6 & 4 \\\\ 2 & 8 \\end{pmatrix}$, obținem elementul $(1,2)$ al lui $X$ scăzând: $4-1=3$.",
+    ],
   },
   {
     id: "mt-s9-6",
@@ -1084,7 +1411,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 2 \\\\ 2 & 3 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & 2 \\\\ 0 & 3 \\end{pmatrix}$",
-    explanation: "$X=\\begin{pmatrix} 4 & 2 \\\\ 1 & 5 \\end{pmatrix}-\\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix}=\\begin{pmatrix} 3 & 2 \\\\ 0 & 3 \\end{pmatrix}$.",
+    explanation: [
+      "Din $\\begin{pmatrix} 4 & 2 \\\\ 1 & 5 \\end{pmatrix}-X=\\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix}$ obținem $X$ scăzând matricea din dreapta din cea din stânga.",
+      "$X=\\begin{pmatrix} 4 & 2 \\\\ 1 & 5 \\end{pmatrix}-\\begin{pmatrix} 1 & 0 \\\\ 1 & 2 \\end{pmatrix}$.",
+      "Scădem elementele corespunzătoare: $\\begin{pmatrix} 4-1 & 2-0 \\\\ 1-1 & 5-2 \\end{pmatrix}=\\begin{pmatrix} 3 & 2 \\\\ 0 & 3 \\end{pmatrix}$.",
+    ],
   },
   {
     id: "mt-s9-7",
@@ -1094,7 +1425,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați elementul de pe linia 1, coloana 1 al matricei $X$ pentru care $X+X=\\begin{pmatrix} 8 & 4 \\\\ 6 & 10 \\end{pmatrix}$.",
     correctAnswer: "4",
-    explanation: "$2X=\\begin{pmatrix} 8 & 4 \\\\ 6 & 10 \\end{pmatrix}$, deci elementul $(1,1)$ al lui $X$ este $8/2=4$.",
+    explanation: [
+      "$X+X=2X$, deci $2X=\\begin{pmatrix} 8 & 4 \\\\ 6 & 10 \\end{pmatrix}$.",
+      "Elementul de pe linia 1, coloana 1 al lui $2X$ este $8$.",
+      "Rezultă că elementul $(1,1)$ al lui $X$ este $8/2=4$.",
+    ],
   },
   {
     id: "mt-s9-8",
@@ -1110,7 +1445,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 4 & 2 \\\\ 0 & 3 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 4 & 2 \\\\ 0 & 6 \\end{pmatrix}$",
-    explanation: "$X=2A=\\begin{pmatrix} 4 & 2 \\\\ 0 & 6 \\end{pmatrix}$.",
+    explanation: [
+      "$X=A+A=2A$, deci înmulțim fiecare element al lui $A$ cu $2$.",
+      "Linia 1: $2\\cdot2=4$, $2\\cdot1=2$. Linia 2: $2\\cdot0=0$, $2\\cdot3=6$.",
+      "Rezultatul este $$X=\\begin{pmatrix} 4 & 2 \\\\ 0 & 6 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s9-9",
@@ -1120,7 +1459,10 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați elementul de pe linia 2, coloana 1 al matricei $X$ pentru care $X-\\begin{pmatrix} 3 & 0 \\\\ 2 & 1 \\end{pmatrix}=\\begin{pmatrix} 1 & 5 \\\\ -1 & 4 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "Elementul $(2,1)$ al lui $X$ este $-1+2=1$.",
+    explanation: [
+      "Din $X-\\begin{pmatrix} 3 & 0 \\\\ 2 & 1 \\end{pmatrix}=\\begin{pmatrix} 1 & 5 \\\\ -1 & 4 \\end{pmatrix}$ obținem $X$ adunând cele două matrice din dreapta.",
+      "Elementul de pe linia 2, coloana 1 al lui $X$ este $-1+2=1$.",
+    ],
   },
   {
     id: "mt-s9-10",
@@ -1136,7 +1478,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 3 \\\\ 2 & 10 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & 3 \\\\ 2 & 5 \\end{pmatrix}$",
-    explanation: "$2X=\\begin{pmatrix} 4 & 6 \\\\ 0 & 8 \\end{pmatrix}+\\begin{pmatrix} 2 & 0 \\\\ 4 & 2 \\end{pmatrix}=\\begin{pmatrix} 6 & 6 \\\\ 4 & 10 \\end{pmatrix}$, deci $X=\\begin{pmatrix} 3 & 3 \\\\ 2 & 5 \\end{pmatrix}$.",
+    explanation: [
+      "Din $2X-\\begin{pmatrix} 2 & 0 \\\\ 4 & 2 \\end{pmatrix}=\\begin{pmatrix} 4 & 6 \\\\ 0 & 8 \\end{pmatrix}$ obținem $2X$ adunând cele două matrice din dreapta.",
+      "$2X=\\begin{pmatrix} 4 & 6 \\\\ 0 & 8 \\end{pmatrix}+\\begin{pmatrix} 2 & 0 \\\\ 4 & 2 \\end{pmatrix}=\\begin{pmatrix} 6 & 6 \\\\ 4 & 10 \\end{pmatrix}$.",
+      "Împărțim fiecare element la $2$ pentru a obține $$X=\\begin{pmatrix} 3 & 3 \\\\ 2 & 5 \\end{pmatrix}.$$",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -1148,7 +1494,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați urma matricei $A=\\begin{pmatrix} 4 & 1 \\\\ 2 & 6 \\end{pmatrix}$.",
     correctAnswer: "10",
-    explanation: "Urma este $4+6=10$.",
+    explanation: [
+      "Urma unei matrice pătratice este suma elementelor de pe diagonala principală.",
+      "Diagonala principală a lui $A$ este formată din elementele $4$ și $6$.",
+      "Adunăm: $4+6=10$.",
+    ],
   },
   {
     id: "mt-s10-2",
@@ -1164,7 +1514,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 2 & 2 \\\\ 4 & 4 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\end{pmatrix}$",
-    explanation: "Se adună elementele corespunzătoare.",
+    explanation: [
+      "Adunăm elementele aflate pe aceeași poziție din cele două matrice.",
+      "Linia 1: $1+1=2$, $2+1=3$. Linia 2: $3+1=4$, $4+1=5$.",
+      "Rezultatul este $$A+B=\\begin{pmatrix} 2 & 3 \\\\ 4 & 5 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s10-3",
@@ -1175,7 +1529,11 @@ export const matriceSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 0 & 1 \\end{pmatrix}$, $B=\\begin{pmatrix} 3 & 1 \\\\ 0 & 2 \\end{pmatrix}$. Determinați elementul de pe linia 1, coloana 2 al produsului $A\\cdot B$.",
     correctAnswer: "5",
-    explanation: "Elementul $(1,2)$ este $1\\cdot1+2\\cdot2=5$.",
+    explanation: [
+      "Elementul $(1,2)$ al produsului $A\\cdot B$ se obține înmulțind linia 1 din $A$ cu coloana 2 din $B$.",
+      "Linia 1 din $A$ este $(1,2)$, iar coloana 2 din $B$ este $(1,2)$.",
+      "Calculăm: $1\\cdot1+2\\cdot2=1+4=5$.",
+    ],
   },
   {
     id: "mt-s10-4",
@@ -1191,7 +1549,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 2 & 1 \\\\ 5 & 1 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix}$",
-    explanation: "Se schimbă liniile cu coloanele.",
+    explanation: [
+      "Transpusa $A^T$ se obține scriind liniile lui $A$ drept coloane.",
+      "Linia 1 a lui $A$, $(2,5)$, devine coloana 1 a lui $A^T$; linia 2, $(1,3)$, devine coloana 2.",
+      "Rezultatul este $$A^T=\\begin{pmatrix} 2 & 1 \\\\ 5 & 3 \\end{pmatrix}.$$",
+    ],
   },
   {
     id: "mt-s10-5",
@@ -1201,7 +1563,10 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați elementul de pe linia 1, coloana 1 al matricei $X$ pentru care $X+\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}=\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$.",
     correctAnswer: "2",
-    explanation: "Elementul $(1,1)$ al lui $X$ este $3-1=2$.",
+    explanation: [
+      "Din $X+\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}=\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$ obținem $X$ scăzând matricea identitate din cea din dreapta.",
+      "Elementul de pe linia 1, coloana 1 al lui $X$ este $3-1=2$.",
+    ],
   },
   {
     id: "mt-s10-6",
@@ -1212,7 +1577,10 @@ export const matriceSetExercises: Exercise[] = [
     prompt: "Câte elemente are o matrice de ordinul 3?",
     options: ["$9$", "$3$", "$6$", "$12$"],
     correctAnswer: "$9$",
-    explanation: "O matrice pătratică de ordinul $n$ are $n^2$ elemente; pentru $n=3$ sunt $9$.",
+    explanation: [
+      "O matrice pătratică de ordinul $n$ are $n$ linii și $n$ coloane, deci $n^2$ elemente.",
+      "Pentru $n=3$, aceasta are $3^2=9$ elemente.",
+    ],
   },
   {
     id: "mt-s10-7",
@@ -1222,7 +1590,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 1 & 0 \\\\ 0 & 2 \\end{pmatrix}$. Calculați $\\mathrm{tr}(A^2)$.",
     correctAnswer: "5",
-    explanation: "$A^2=\\begin{pmatrix} 1 & 0 \\\\ 0 & 4 \\end{pmatrix}$, urma este $1+4=5$.",
+    explanation: [
+      "Pentru o matrice diagonală, ridicarea la putere se face ridicând fiecare element al diagonalei la acea putere.",
+      "$A^2=\\begin{pmatrix} 1 & 0 \\\\ 0 & 4 \\end{pmatrix}$.",
+      "Urma este $1+4=5$.",
+    ],
   },
   {
     id: "mt-s10-8",
@@ -1238,7 +1610,11 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 3 & 4 \\\\ -1 & 5 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 3 & 0 \\\\ -1 & 5 \\end{pmatrix}$",
-    explanation: "$2A=\\begin{pmatrix} 4 & 2 \\\\ 0 & 6 \\end{pmatrix}$, iar $2A-B=\\begin{pmatrix} 3 & 0 \\\\ -1 & 5 \\end{pmatrix}$.",
+    explanation: [
+      "Calculăm întâi $2A$, înmulțind fiecare element al lui $A$ cu $2$.",
+      "$2A=\\begin{pmatrix} 4 & 2 \\\\ 0 & 6 \\end{pmatrix}$.",
+      "Scădem $B$: $2A-B=\\begin{pmatrix} 4-1 & 2-2 \\\\ 0-1 & 6-1 \\end{pmatrix}=\\begin{pmatrix} 3 & 0 \\\\ -1 & 5 \\end{pmatrix}$.",
+    ],
   },
   {
     id: "mt-s10-9",
@@ -1248,7 +1624,11 @@ export const matriceSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 5 & 3 \\\\ 2 & 7 \\end{pmatrix}$ și $I_2$ matricea identitate. Determinați elementul de pe linia 2, coloana 2 al matricei $A\\cdot I_2$.",
     correctAnswer: "7",
-    explanation: "$A\\cdot I_2=A$, deci elementul $(2,2)$ este $7$.",
+    explanation: [
+      "Matricea identitate este element neutru la înmulțire: $A\\cdot I_2=A$.",
+      "Elementul de pe linia 2, coloana 2 al lui $A$ este $7$.",
+      "Rezultă că elementul $(2,2)$ al lui $A\\cdot I_2$ este tot $7$.",
+    ],
   },
   {
     id: "mt-s10-10",
@@ -1264,6 +1644,9 @@ export const matriceSetExercises: Exercise[] = [
       "$\\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix}$",
     ],
     correctAnswer: "$\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}$",
-    explanation: "Matricea nulă are toate elementele egale cu $0$.",
+    explanation: [
+      "Matricea nulă de ordinul $2$ are toate cele $4$ elemente egale cu $0$.",
+      "Rezultă $$O_2=\\begin{pmatrix} 0 & 0 \\\\ 0 & 0 \\end{pmatrix}.$$",
+    ],
   },
 ];
