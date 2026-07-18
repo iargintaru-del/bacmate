@@ -77,3 +77,26 @@ describe("exam variants", () => {
     expect(new Set(allIIIIds).size).toBe(allIIIIds.length);
   });
 });
+
+describe("explanation format", () => {
+  function isNonEmptyExplanation(explanation: string | string[]): boolean {
+    if (Array.isArray(explanation)) {
+      return explanation.length > 0 && explanation.every((step) => step.trim().length > 0);
+    }
+    return explanation.trim().length > 0;
+  }
+
+  it("every exercise explanation is non-empty", () => {
+    for (const exercise of ALL_EXERCISES) {
+      expect(isNonEmptyExplanation(exercise.explanation)).toBe(true);
+    }
+  });
+
+  it("every problem subpoint explanation is non-empty", () => {
+    for (const problem of ALL_PROBLEMS) {
+      for (const subpoint of problem.subpoints) {
+        expect(isNonEmptyExplanation(subpoint.explanation)).toBe(true);
+      }
+    }
+  });
+});

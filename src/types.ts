@@ -17,7 +17,7 @@ export interface GradableItem {
   options?: string[];
   correctAnswer: string;
   acceptedAnswers?: string[];
-  explanation: string;
+  explanation: string | string[];
   points: number;
 }
 
@@ -43,4 +43,21 @@ export interface ExamVariant {
   subiectIIds: [string, string, string, string, string];
   subiectIIIds: [string, string];
   subiectIIIIds: [string, string];
+}
+
+export interface TheoryConcept {
+  heading: string;
+  body: string[];
+}
+
+export interface TheoryExample {
+  statement: string;
+  steps: string[];
+}
+
+export interface TheorySection {
+  topic: Topic;
+  title: string;
+  concepts: TheoryConcept[];
+  examples: TheoryExample[];
 }

@@ -102,7 +102,14 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
 
       {showExplanation && (
         <div className="question-card__explanation">
-          <strong>Explicație:</strong> <MathText text={item.explanation} />
+          <strong>Explicație:</strong>
+          <ol className="question-card__explanation-steps">
+            {(Array.isArray(item.explanation) ? item.explanation : [item.explanation]).map((step, stepIndex) => (
+              <li key={stepIndex}>
+                <MathText text={step} />
+              </li>
+            ))}
+          </ol>
         </div>
       )}
     </div>
