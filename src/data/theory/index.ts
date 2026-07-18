@@ -19,6 +19,6 @@ export const THEORY: Record<Topic, TheorySection> = {
   integrale: integraleTheory,
 };
 
-export function theoryForTopic(topic: Topic): TheorySection {
+export function theoryForTopic(topic: Topic): TheorySection | undefined {
   return THEORY[topic];
 }

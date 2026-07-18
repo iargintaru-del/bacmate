@@ -7,7 +7,7 @@ describe("theory content integrity", () => {
     for (const topic of TOPICS) {
       const section = theoryForTopic(topic);
       expect(section).toBeDefined();
-      expect(section.topic).toBe(topic);
+      expect(section!.topic).toBe(topic);
     }
   });
 
