@@ -14,7 +14,12 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați modulul $|z|$.",
         correctAnswer: "2",
-        explanation: "$|z| = \\sqrt{1^2 + (\\sqrt{3})^2} = \\sqrt{1+3} = 2$.",
+        explanation: [
+          "Pentru $z=a+bi$, modulul este $|z|=\\sqrt{a^2+b^2}$.",
+          "Aici $a=1$, $b=\\sqrt{3}$, deci $|z|=\\sqrt{1^2+(\\sqrt3)^2}$.",
+          "Calculăm sub radical: $1+3=4$.",
+          "Rezultă $|z|=\\sqrt4=2$.",
+        ],
       },
       {
         id: "pb-a1-b",
@@ -24,8 +29,12 @@ export const algebraProblems: Problem[] = [
         prompt: "Calculați $z^2$.",
         options: ["$-2 + 2i\\sqrt{3}$", "$2 + 2i\\sqrt{3}$", "$-2 - 2i\\sqrt{3}$", "$4$"],
         correctAnswer: "$-2 + 2i\\sqrt{3}$",
-        explanation:
-          "$z^2 = (1+i\\sqrt{3})^2 = 1 + 2i\\sqrt{3} + i^2 \\cdot 3 = 1 + 2i\\sqrt{3} - 3 = -2 + 2i\\sqrt{3}$.",
+        explanation: [
+          "Ridicăm la pătrat folosind $(a+b)^2=a^2+2ab+b^2$ cu $a=1$, $b=i\\sqrt3$.",
+          "Calculăm: $z^2=1^2+2\\cdot1\\cdot i\\sqrt3+(i\\sqrt3)^2=1+2i\\sqrt3+i^2\\cdot3$.",
+          "Folosim $i^2=-1$: $1+2i\\sqrt3-3$.",
+          "Rezultă $z^2=-2+2i\\sqrt3$.",
+        ],
       },
       {
         id: "pb-a1-c",
@@ -34,7 +43,10 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați partea reală a lui $z^2$, adică $\\mathrm{Re}(z^2)$.",
         correctAnswer: "-2",
-        explanation: "Din $z^2 = -2 + 2i\\sqrt{3}$, partea reală este $-2$.",
+        explanation: [
+          "Din subpunctul anterior, $z^2=-2+2i\\sqrt3$.",
+          "Partea reală este coeficientul termenului fără $i$, adică $-2$.",
+        ],
       },
     ],
   },
@@ -51,7 +63,12 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați numărul de moduri în care poate fi formată echipa, dacă ordinea nu contează, adică $C_{20}^3$.",
         correctAnswer: "1140",
-        explanation: "$C_{20}^3 = \\dfrac{20!}{3! \\cdot 17!} = \\dfrac{20 \\cdot 19 \\cdot 18}{6} = 1140$.",
+        explanation: [
+          "Cum ordinea nu contează la formarea echipei, folosim combinări: $C_n^k=\\dfrac{n!}{k!(n-k)!}$.",
+          "Înlocuim $n=20$, $k=3$: $C_{20}^3=\\dfrac{20!}{3! \\cdot 17!}$.",
+          "Simplificăm: $\\dfrac{20!}{17!}=20\\cdot19\\cdot18$, deci $C_{20}^3=\\dfrac{20\\cdot19\\cdot18}{6}$.",
+          "Calculăm: $20\\cdot19\\cdot18=6840$, iar $6840/6=1140$.",
+        ],
       },
       {
         id: "pb-a2-b",
@@ -61,8 +78,11 @@ export const algebraProblems: Problem[] = [
         prompt: "Dacă se aleg 3 elevi cu roluri distincte (căpitan, secretar, membru), numărul de moduri este:",
         options: ["$A_{20}^3 = 6840$", "$C_{20}^3 = 1140$", "$20^3 = 8000$", "$3! = 6$"],
         correctAnswer: "$A_{20}^3 = 6840$",
-        explanation:
-          "Rolurile fiind distincte, ordinea contează, deci se folosesc aranjamente: $A_{20}^3 = 20 \\cdot 19 \\cdot 18 = 6840$.",
+        explanation: [
+          "Rolurile fiind distincte (căpitan, secretar, membru), ordinea contează, deci folosim aranjamente.",
+          "Aplicăm formula: $A_n^k=n(n-1)\\cdots(n-k+1)$, cu $n=20$, $k=3$.",
+          "Calculăm: $A_{20}^3=20\\cdot19\\cdot18=6840$.",
+        ],
       },
       {
         id: "pb-a2-c",
@@ -71,7 +91,10 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $A_{20}^3 - C_{20}^3$.",
         correctAnswer: "5700",
-        explanation: "$6840 - 1140 = 5700$.",
+        explanation: [
+          "Din subpunctele anterioare avem $A_{20}^3=6840$ și $C_{20}^3=1140$.",
+          "Scădem: $6840-1140=5700$.",
+        ],
       },
     ],
   },
@@ -88,7 +111,11 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați elementul de pe linia 1, coloana 2 al matricei $A^2$.",
         correctAnswer: "4",
-        explanation: "$A^2 = A \\cdot A = \\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$, deci elementul $(1,2)$ este $4$.",
+        explanation: [
+          "Calculăm $A^2=A\\cdot A$ înmulțind matricea cu ea însăși.",
+          "Elementul $(1,2)$ se obține înmulțind linia 1 din $A$, adică $(1,2)$, cu coloana 2 din $A$, adică $(2,1)$.",
+          "Calculăm: $1\\cdot2+2\\cdot1=2+2=4$.",
+        ],
       },
       {
         id: "pb-a3-b",
@@ -103,7 +130,12 @@ export const algebraProblems: Problem[] = [
           "$\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$",
         ],
         correctAnswer: "$\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$",
-        explanation: "Înmulțind $A$ cu ea însăși se obține $\\begin{pmatrix} 1 & 4 \\\\ 0 & 1 \\end{pmatrix}$.",
+        explanation: [
+          "Înmulțim matricea $A$ cu ea însăși, element cu element.",
+          "Elementele de pe diagonala principală rămân $1$.",
+          "Elementul $(1,2)$ calculat anterior este $4$, iar elementul $(2,1)$ rămâne $0$.",
+          "Rezultă $$A^2=\\begin{pmatrix}1&4\\\\0&1\\end{pmatrix}.$$",
+        ],
       },
       {
         id: "pb-a3-c",
@@ -112,7 +144,11 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați urma matricei $A^2$ (suma elementelor de pe diagonala principală).",
         correctAnswer: "2",
-        explanation: "Diagonala principală a lui $A^2$ este $1, 1$, deci urma este $1+1=2$.",
+        explanation: [
+          "Urma unei matrice este suma elementelor de pe diagonala principală.",
+          "Diagonala principală a lui $A^2$ este $1,1$.",
+          "Suma este $1+1=2$.",
+        ],
       },
     ],
   },
@@ -130,7 +166,11 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\det(A)$ pentru $m = 3$.",
         correctAnswer: "7",
-        explanation: "$\\det(A) = m^2 - 2$. Pentru $m=3$: $9 - 2 = 7$.",
+        explanation: [
+          "Determinantul unei matrice $2\\times2$ este $\\det=ad-bc$.",
+          "Aici $\\det(A)=m\\cdot m - 1\\cdot2=m^2-2$.",
+          "Înlocuim $m=3$: $3^2-2=9-2=7$.",
+        ],
       },
       {
         id: "pb-a4-b",
@@ -140,7 +180,11 @@ export const algebraProblems: Problem[] = [
         prompt: "Expresia $\\det(A)$ în funcție de $m$ este:",
         options: ["$m^2 - 2$", "$m^2 + 2$", "$2m - 1$", "$m - 2$"],
         correctAnswer: "$m^2 - 2$",
-        explanation: "$\\det(A) = m \\cdot m - 1 \\cdot 2 = m^2 - 2$.",
+        explanation: [
+          "Aplicăm formula determinantului pentru ordinul 2: $\\det=ad-bc$.",
+          "Cu $a=m$, $b=1$, $c=2$, $d=m$, obținem $\\det(A)=m\\cdot m-1\\cdot2$.",
+          "Simplificăm: $\\det(A)=m^2-2$.",
+        ],
       },
       {
         id: "pb-a4-c",
@@ -150,7 +194,11 @@ export const algebraProblems: Problem[] = [
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(2)",
         acceptedAnswers: ["√2", "radical(2)", "1.41"],
-        explanation: "$m^2 - 2 = 0 \\Rightarrow m = \\pm\\sqrt{2}$. Soluția pozitivă este $\\sqrt{2}$.",
+        explanation: [
+          "Din subpunctele anterioare, $\\det(A)=m^2-2$.",
+          "Punem condiția $\\det(A)=0$: $m^2-2=0 \\Rightarrow m^2=2$.",
+          "Soluțiile sunt $m=\\pm\\sqrt2$; soluția pozitivă este $\\sqrt2$.",
+        ],
       },
     ],
   },
@@ -170,7 +218,11 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "0",
-        explanation: "$f'(x) = 3x^2 - 3$, deci $f'(1) = 3 - 3 = 0$.",
+        explanation: [
+          "Derivăm folosind $(x^n)'=nx^{n-1}$: $f'(x)=3x^2-3$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1-3$.",
+          "Rezultă $f'(1)=0$.",
+        ],
       },
       {
         id: "pb-b1-b",
@@ -180,7 +232,11 @@ export const analysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -1$ și $x = 1$", "$x = 0$", "$x = 3$", "$x = -3$ și $x = 3$"],
         correctAnswer: "$x = -1$ și $x = 1$",
-        explanation: "$3x^2 - 3 = 0 \\Rightarrow x^2 = 1 \\Rightarrow x = \\pm 1$.",
+        explanation: [
+          "Punctele critice sunt soluțiile ecuației $f'(x)=0$.",
+          "Din subpunctul anterior, $f'(x)=3x^2-3$, deci rezolvăm $3x^2-3=0 \\Rightarrow x^2=1$.",
+          "Soluțiile sunt $x=-1$ și $x=1$.",
+        ],
       },
       {
         id: "pb-b1-c",
@@ -189,7 +245,10 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(1)$.",
         correctAnswer: "0",
-        explanation: "$f(1) = 1 - 3 + 2 = 0$.",
+        explanation: [
+          "Înlocuim $x=1$ direct în expresia funcției: $f(1)=1^3-3\\cdot1+2$.",
+          "Calculăm: $1-3+2=0$.",
+        ],
       },
     ],
   },
@@ -206,7 +265,12 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 1} f(x)$.",
         correctAnswer: "2",
-        explanation: "$f(x) = \\dfrac{(x-1)(x+1)}{x-1} = x+1 \\to 2$.",
+        explanation: [
+          "Înlocuirea directă $x=1$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-1=(x-1)(x+1)$.",
+          "Simplificăm factorul comun $x-1$: expresia devine $x+1$.",
+          "Limita este $1+1=2$.",
+        ],
       },
       {
         id: "pb-b2-b",
@@ -216,7 +280,11 @@ export const analysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=1$, valoarea $f(1)$ trebuie definită ca:",
         options: ["$2$", "$1$", "$0$", "nu poate fi continuă"],
         correctAnswer: "$2$",
-        explanation: "Limita în $x=1$ este $2$, deci prelungirea prin continuitate cere $f(1) = 2$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=1$, $f(1)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $2$.",
+          "Deci valoarea care asigură continuitatea este $f(1)=2$.",
+        ],
       },
       {
         id: "pb-b2-c",
@@ -225,7 +293,11 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} \\dfrac{f(x)}{x}$.",
         correctAnswer: "1",
-        explanation: "$\\dfrac{f(x)}{x} = \\dfrac{x+1}{x} \\to 1$.",
+        explanation: [
+          "Pentru $x\\neq1$, avem $f(x)=x+1$ (din simplificarea de mai sus).",
+          "Deci $\\dfrac{f(x)}{x}=\\dfrac{x+1}{x}=1+\\dfrac{1}{x}$.",
+          "Când $x\\to\\infty$, termenul $\\dfrac1x\\to0$, deci limita este $1$.",
+        ],
       },
     ],
   },
@@ -242,7 +314,11 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "0",
-        explanation: "$F(x) = x^3 - x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 1 = 0$.",
+        explanation: [
+          "Găsim o primitivă generală: $F(x)=x^3-x^2+C$ (verificăm că $F'(x)=3x^2-2x=f(x)$).",
+          "Condiția $F(0)=0$ dă $0-0+C=0 \\Rightarrow C=0$.",
+          "Deci $F(x)=x^3-x^2$, iar $F(1)=1-1=0$.",
+        ],
       },
       {
         id: "pb-b3-b",
@@ -252,7 +328,11 @@ export const analysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - x^2 + C$", "$3x^3 - 2x^2 + C$", "$x^3 + x^2 + C$", "$6x - 2 + C$"],
         correctAnswer: "$x^3 - x^2 + C$",
-        explanation: "$(x^3 - x^2)' = 3x^2 - 2x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-x^2)'=3x^2-2x$.",
+          "Cum aceasta coincide cu $f(x)=3x^2-2x$, primitiva generală este $x^3-x^2+C$.",
+        ],
       },
       {
         id: "pb-b3-c",
@@ -261,7 +341,12 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "4",
-        explanation: "$\\int_0^2 (3x^2-2x)\\,dx = \\left[x^3 - x^2\\right]_0^2 = (8-4) - 0 = 4$.",
+        explanation: [
+          "Folosim primitiva $F(x)=x^3-x^2$ găsită anterior.",
+          "Aplicăm Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm $F(2)=8-4=4$ și $F(0)=0$.",
+          "Rezultatul este $4$.",
+        ],
       },
     ],
   },
@@ -278,7 +363,11 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "0",
-        explanation: "$f'(x) = \\dfrac{1}{x} - 1$, deci $f'(1) = 1 - 1 = 0$.",
+        explanation: [
+          "Derivăm folosind $(\\ln x)'=\\dfrac1x$ și $(x)'=1$: $f'(x)=\\dfrac1x-1$.",
+          "Înlocuim $x=1$: $f'(1)=1-1$.",
+          "Rezultă $f'(1)=0$.",
+        ],
       },
       {
         id: "pb-b4-b",
@@ -293,7 +382,11 @@ export const analysisProblems: Problem[] = [
           "nu se poate determina",
         ],
         correctAnswer: "pozitiv, deci $f$ este crescătoare pe $(0,1)$",
-        explanation: "Pentru $x \\in (0,1)$ avem $\\dfrac{1}{x} > 1$, deci $f'(x) > 0$.",
+        explanation: [
+          "Din subpunctul anterior, $f'(x)=\\dfrac1x-1$.",
+          "Pentru $x\\in(0,1)$ avem $\\dfrac1x>1$, deci $f'(x)>0$.",
+          "Cum derivata este pozitivă pe $(0,1)$, funcția este crescătoare pe acest interval.",
+        ],
       },
       {
         id: "pb-b4-c",
@@ -302,7 +395,11 @@ export const analysisProblems: Problem[] = [
         points: 5,
         prompt: "Știind că $x=1$ este punct de maxim, calculați valoarea maximă $f(1)$.",
         correctAnswer: "-1",
-        explanation: "$f(1) = \\ln 1 - 1 = 0 - 1 = -1$.",
+        explanation: [
+          "Știind că $x=1$ este punct de maxim, calculăm valoarea maximă direct din expresia funcției.",
+          "Înlocuim $x=1$: $f(1)=\\ln1-1$.",
+          "Cum $\\ln1=0$, rezultă $f(1)=-1$.",
+        ],
       },
     ],
   },
