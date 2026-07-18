@@ -10,7 +10,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 2} (x^2 + 3x - 1).$$",
     correctAnswer: "9",
-    explanation: "$4 + 6 - 1 = 9$.",
+    explanation: [
+      "Funcția este polinomială, deci continuă pe $\\mathbb{R}$, iar limita se calculează prin înlocuirea directă $x=2$.",
+      "Calculăm: $2^2+3\\cdot2-1=4+6-1$.",
+      "Rezultă limita $9$.",
+    ],
   },
   {
     id: "lm-s1-2",
@@ -21,7 +25,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 1} (2x^3 - x + 5).$$",
     options: ["$6$", "$5$", "$7$", "$4$"],
     correctAnswer: "$6$",
-    explanation: "$2 - 1 + 5 = 6$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=1$.",
+      "Calculăm: $2\\cdot1^3-1+5=2-1+5$.",
+      "Rezultă limita $6$.",
+    ],
   },
   {
     id: "lm-s1-3",
@@ -31,7 +39,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} (x^2 - 4x + 7).$$",
     correctAnswer: "7",
-    explanation: "$0 - 0 + 7 = 7$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=0$.",
+      "Calculăm: $0^2-4\\cdot0+7=0-0+7$.",
+      "Rezultă limita $7$.",
+    ],
   },
   {
     id: "lm-s1-4",
@@ -42,7 +54,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to -1} (x^2 + 2x + 3).$$",
     options: ["$2$", "$0$", "$4$", "$-2$"],
     correctAnswer: "$2$",
-    explanation: "$1 - 2 + 3 = 2$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=-1$.",
+      "Calculăm: $(-1)^2+2\\cdot(-1)+3=1-2+3$.",
+      "Rezultă limita $2$.",
+    ],
   },
   {
     id: "lm-s1-5",
@@ -52,7 +68,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 3} (x^2 - 9).$$",
     correctAnswer: "0",
-    explanation: "$9 - 9 = 0$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=3$.",
+      "Calculăm: $3^2-9=9-9$.",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s1-6",
@@ -63,7 +83,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to -2} (x^3 + 1).$$",
     options: ["$-7$", "$7$", "$-9$", "$9$"],
     correctAnswer: "$-7$",
-    explanation: "$(-2)^3 + 1 = -8 + 1 = -7$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=-2$.",
+      "Calculăm: $(-2)^3+1=-8+1$.",
+      "Rezultă limita $-7$.",
+    ],
   },
   {
     id: "lm-s1-7",
@@ -73,7 +97,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 5} (2x - 3).$$",
     correctAnswer: "7",
-    explanation: "$10 - 3 = 7$.",
+    explanation: [
+      "Funcția este polinomială (liniară), deci limita se calculează prin înlocuirea directă $x=5$.",
+      "Calculăm: $2\\cdot5-3=10-3$.",
+      "Rezultă limita $7$.",
+    ],
   },
   {
     id: "lm-s1-8",
@@ -84,7 +112,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} 5.$$",
     options: ["$5$", "$0$", "$1$", "nu există"],
     correctAnswer: "$5$",
-    explanation: "Limita unei funcții constante este chiar constanta.",
+    explanation: [
+      "Funcția este constantă, egală cu $5$ pentru orice $x$.",
+      "Limita unei funcții constante este chiar constanta, indiferent de punctul spre care tinde $x$.",
+      "Rezultă limita $5$.",
+    ],
   },
   {
     id: "lm-s1-9",
@@ -94,7 +126,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 2} (x^2 - 3x + 2).$$",
     correctAnswer: "0",
-    explanation: "$4 - 6 + 2 = 0$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=2$.",
+      "Calculăm: $2^2-3\\cdot2+2=4-6+2$.",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s1-10",
@@ -105,7 +141,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 1} (x^4 - 2x^2 + 1).$$",
     options: ["$0$", "$1$", "$2$", "$-1$"],
     correctAnswer: "$0$",
-    explanation: "$1 - 2 + 1 = 0$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=1$.",
+      "Calculăm: $1^4-2\\cdot1^2+1=1-2+1$.",
+      "Rezultă limita $0$.",
+    ],
   },
 
   // Set 2 — Limite de tip 0/0, factorizare
@@ -117,7 +157,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 3} \\dfrac{x^2 - 9}{x - 3}.$$",
     correctAnswer: "6",
-    explanation: "$\\dfrac{(x-3)(x+3)}{x-3} = x+3 \\to 6$.",
+    explanation: [
+      "Înlocuirea directă $x=3$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-9=(x-3)(x+3)$.",
+      "Simplificăm factorul comun $x-3$: expresia devine $x+3$.",
+      "Calculăm limita expresiei simplificate: $3+3=6$.",
+    ],
   },
   {
     id: "lm-s2-2",
@@ -128,7 +173,12 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x - 1}.$$",
     options: ["$2$", "$0$", "$1$", "$-2$"],
     correctAnswer: "$2$",
-    explanation: "$\\dfrac{(x-1)(x+1)}{x-1} = x+1 \\to 2$.",
+    explanation: [
+      "Înlocuirea directă $x=1$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-1=(x-1)(x+1)$.",
+      "Simplificăm factorul comun $x-1$: expresia devine $x+1$.",
+      "Calculăm limita expresiei simplificate: $1+1=2$.",
+    ],
   },
   {
     id: "lm-s2-3",
@@ -138,7 +188,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 5} \\dfrac{x^2 - 25}{x - 5}.$$",
     correctAnswer: "10",
-    explanation: "$\\dfrac{(x-5)(x+5)}{x-5} = x+5 \\to 10$.",
+    explanation: [
+      "Înlocuirea directă $x=5$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-25=(x-5)(x+5)$.",
+      "Simplificăm factorul comun $x-5$: expresia devine $x+5$.",
+      "Calculăm limita expresiei simplificate: $5+5=10$.",
+    ],
   },
   {
     id: "lm-s2-4",
@@ -149,7 +204,12 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to -1} \\dfrac{x^2 - 1}{x + 1}.$$",
     options: ["$-2$", "$2$", "$0$", "$-1$"],
     correctAnswer: "$-2$",
-    explanation: "$\\dfrac{(x-1)(x+1)}{x+1} = x-1 \\to -2$.",
+    explanation: [
+      "Înlocuirea directă $x=-1$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-1=(x-1)(x+1)$.",
+      "Simplificăm factorul comun $x+1$: expresia devine $x-1$.",
+      "Calculăm limita expresiei simplificate: $-1-1=-2$.",
+    ],
   },
   {
     id: "lm-s2-5",
@@ -159,7 +219,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 2} \\dfrac{x^2 - 5x + 6}{x - 2}.$$",
     correctAnswer: "-1",
-    explanation: "$\\dfrac{(x-2)(x-3)}{x-2} = x-3 \\to -1$.",
+    explanation: [
+      "Înlocuirea directă $x=2$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-5x+6=(x-2)(x-3)$.",
+      "Simplificăm factorul comun $x-2$: expresia devine $x-3$.",
+      "Calculăm limita expresiei simplificate: $2-3=-1$.",
+    ],
   },
   {
     id: "lm-s2-6",
@@ -170,7 +235,12 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 3} \\dfrac{x^2 - 4x + 3}{x - 3}.$$",
     options: ["$2$", "$-2$", "$0$", "$1$"],
     correctAnswer: "$2$",
-    explanation: "$\\dfrac{(x-1)(x-3)}{x-3} = x-1 \\to 2$.",
+    explanation: [
+      "Înlocuirea directă $x=3$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-4x+3=(x-1)(x-3)$.",
+      "Simplificăm factorul comun $x-3$: expresia devine $x-1$.",
+      "Calculăm limita expresiei simplificate: $3-1=2$.",
+    ],
   },
   {
     id: "lm-s2-7",
@@ -180,7 +250,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 2} \\dfrac{x^3 - 8}{x - 2}.$$",
     correctAnswer: "12",
-    explanation: "$\\dfrac{x^3-8}{x-2} = x^2+2x+4 \\to 4+4+4 = 12$.",
+    explanation: [
+      "Înlocuirea directă $x=2$ dă forma nedeterminată $\\frac{0}{0}$.",
+      "Factorizăm numărătorul folosind $a^3-b^3=(a-b)(a^2+ab+b^2)$: $x^3-8=(x-2)(x^2+2x+4)$.",
+      "Simplificăm factorul comun $x-2$: expresia devine $x^2+2x+4$.",
+      "Calculăm limita: $2^2+2\\cdot2+4=4+4+4=12$.",
+    ],
   },
   {
     id: "lm-s2-8",
@@ -191,7 +266,12 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{x^2 + 3x}{x}.$$",
     options: ["$3$", "$0$", "$1$", "$-3$"],
     correctAnswer: "$3$",
-    explanation: "$\\dfrac{x(x+3)}{x} = x+3 \\to 3$.",
+    explanation: [
+      "Înlocuirea directă $x=0$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2+3x=x(x+3)$.",
+      "Simplificăm factorul comun $x$: expresia devine $x+3$.",
+      "Calculăm limita expresiei simplificate: $0+3=3$.",
+    ],
   },
   {
     id: "lm-s2-9",
@@ -201,7 +281,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 4} \\dfrac{x^2 - 16}{x - 4}.$$",
     correctAnswer: "8",
-    explanation: "$\\dfrac{(x-4)(x+4)}{x-4} = x+4 \\to 8$.",
+    explanation: [
+      "Înlocuirea directă $x=4$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-16=(x-4)(x+4)$.",
+      "Simplificăm factorul comun $x-4$: expresia devine $x+4$.",
+      "Calculăm limita expresiei simplificate: $4+4=8$.",
+    ],
   },
   {
     id: "lm-s2-10",
@@ -212,7 +297,12 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to -3} \\dfrac{x^2 - 9}{x + 3}.$$",
     options: ["$-6$", "$6$", "$0$", "$-3$"],
     correctAnswer: "$-6$",
-    explanation: "$\\dfrac{(x-3)(x+3)}{x+3} = x-3 \\to -6$.",
+    explanation: [
+      "Înlocuirea directă $x=-3$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-9=(x-3)(x+3)$.",
+      "Simplificăm factorul comun $x+3$: expresia devine $x-3$.",
+      "Calculăm limita expresiei simplificate: $-3-3=-6$.",
+    ],
   },
 
   // Set 3 — Limite la infinit ale funcțiilor raționale
@@ -225,7 +315,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{3x^2 + 2x - 1}{2x^2 + 5}.$$",
     correctAnswer: "3/2",
     acceptedAnswers: ["1.5", "1,5"],
-    explanation: "Raportul coeficienților dominanți (grade egale): $\\dfrac{3}{2}$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (2), deci limita la infinit este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x^2$ la numărător este $3$, la numitor este $2$.",
+      "Limita este $\\dfrac{3}{2}$.",
+    ],
   },
   {
     id: "lm-s3-2",
@@ -236,7 +330,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{x + 1}{x^2 + 3}.$$",
     options: ["$0$", "$1$", "$+\\infty$", "$1/3$"],
     correctAnswer: "$0$",
-    explanation: "Gradul numărătorului este mai mic decât gradul numitorului, deci limita este $0$.",
+    explanation: [
+      "Gradul numărătorului (1) este mai mic decât gradul numitorului (2).",
+      "Când gradul numărătorului este mai mic, limita la infinit a funcției raționale este $0$.",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s3-3",
@@ -247,7 +345,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{2x^3 - x}{x^2 + 1}.$$",
     options: ["$+\\infty$", "$0$", "$2$", "$-\\infty$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Gradul numărătorului este mai mare, iar coeficientul dominant este pozitiv, deci limita este $+\\infty$.",
+    explanation: [
+      "Gradul numărătorului (3) este mai mare decât gradul numitorului (2).",
+      "Coeficientul dominant al numărătorului ($2$) este pozitiv, deci limita la infinit este infinită.",
+      "Rezultă limita $+\\infty$.",
+    ],
   },
   {
     id: "lm-s3-4",
@@ -257,7 +359,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{5x + 2}{5x - 3}.$$",
     correctAnswer: "1",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac{5}{5} = 1$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (1), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x$ la numărător și la numitor este $5$.",
+      "Limita este $\\dfrac{5}{5}=1$.",
+    ],
   },
   {
     id: "lm-s3-5",
@@ -268,7 +374,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{x^2 + 1}{3x^2 + 2x}.$$",
     options: ["$1/3$", "$3$", "$0$", "$1$"],
     correctAnswer: "$1/3$",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac{1}{3}$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (2), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x^2$ la numărător este $1$, la numitor este $3$.",
+      "Limita este $\\dfrac{1}{3}$.",
+    ],
   },
   {
     id: "lm-s3-6",
@@ -278,7 +388,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to -\\infty} \\dfrac{4x^2 - x}{2x^2 + 1}.$$",
     correctAnswer: "2",
-    explanation: "Raportul coeficienților dominanți (grad par la numărător și numitor): $\\dfrac{4}{2} = 2$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (2), deci limita este raportul coeficienților termenilor de grad maxim, indiferent dacă $x\\to+\\infty$ sau $x\\to-\\infty$.",
+      "Coeficientul lui $x^2$ la numărător este $4$, la numitor este $2$.",
+      "Limita este $\\dfrac{4}{2}=2$.",
+    ],
   },
   {
     id: "lm-s3-7",
@@ -289,7 +403,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{x^2}{x^3 + 1}.$$",
     options: ["$0$", "$1$", "$+\\infty$", "$-1$"],
     correctAnswer: "$0$",
-    explanation: "Gradul numărătorului este mai mic decât gradul numitorului, deci limita este $0$.",
+    explanation: [
+      "Gradul numărătorului (2) este mai mic decât gradul numitorului (3).",
+      "Când gradul numărătorului este mai mic, limita la infinit a funcției raționale este $0$.",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s3-8",
@@ -299,7 +417,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{7x^4 - 2}{x^4 + 3x}.$$",
     correctAnswer: "7",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac{7}{1} = 7$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (4), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x^4$ la numărător este $7$, la numitor este $1$.",
+      "Limita este $\\dfrac{7}{1}=7$.",
+    ],
   },
   {
     id: "lm-s3-9",
@@ -310,7 +432,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Dacă gradul numărătorului este mai mare decât gradul numitorului, atunci $\\lim_{x \\to \\infty}$ a funcției raționale este:",
     options: ["$\\pm\\infty$ (infinit)", "întotdeauna $0$", "întotdeauna $1$", "nu există niciodată"],
     correctAnswer: "$\\pm\\infty$ (infinit)",
-    explanation: "În acest caz limita este întotdeauna infinită (semnul depinde de coeficienții dominanți).",
+    explanation: [
+      "Când gradul numărătorului depășește gradul numitorului, funcția rațională nu este mărginită la infinit.",
+      "Limita este întotdeauna infinită, semnul fiind dat de semnul coeficienților dominanți ai numărătorului și numitorului.",
+      "Rezultă că limita este $\\pm\\infty$.",
+    ],
   },
   {
     id: "lm-s3-10",
@@ -320,7 +446,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{6x^3 - x^2}{2x^3 + 5}.$$",
     correctAnswer: "3",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac{6}{2} = 3$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (3), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x^3$ la numărător este $6$, la numitor este $2$.",
+      "Limita este $\\dfrac{6}{2}=3$.",
+    ],
   },
 
   // Set 4 — Limite laterale
@@ -333,7 +463,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Pentru $f(x) = \\dfrac1x$, calculați $\\lim_{x \\to 0, x>0} f(x)$ (limita la dreapta).",
     options: ["$+\\infty$", "$-\\infty$", "$0$", "$1$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Pentru $x \\to 0$ cu $x>0$, $1/x$ crește nemărginit.",
+    explanation: [
+      "Analizăm limita la dreapta: $x\\to0$ cu $x>0$.",
+      "Pentru $x>0$ mic, $1/x$ ia valori tot mai mari.",
+      "Rezultă limita $+\\infty$.",
+    ],
   },
   {
     id: "lm-s4-2",
@@ -344,7 +478,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Pentru $f(x) = \\dfrac1x$, calculați $\\lim_{x \\to 0, x<0} f(x)$ (limita la stânga).",
     options: ["$-\\infty$", "$+\\infty$", "$0$", "$-1$"],
     correctAnswer: "$-\\infty$",
-    explanation: "Pentru $x \\to 0$ cu $x<0$, $1/x$ scade nemărginit.",
+    explanation: [
+      "Analizăm limita la stânga: $x\\to0$ cu $x<0$.",
+      "Pentru $x<0$ apropiat de $0$, $1/x$ ia valori tot mai negative.",
+      "Rezultă limita $-\\infty$.",
+    ],
   },
   {
     id: "lm-s4-3",
@@ -360,7 +498,11 @@ export const limiteSetExercises: Exercise[] = [
       "funcția este continuă în $0$",
     ],
     correctAnswer: "limita globală în $x=0$ nu există",
-    explanation: "O limită globală există doar dacă limitele laterale sunt egale.",
+    explanation: [
+      "Limitele laterale calculate anterior sunt $+\\infty$ (la dreapta) și $-\\infty$ (la stânga), deci diferite.",
+      "O limită globală într-un punct există doar dacă limitele laterale sunt egale între ele.",
+      "Rezultă că limita globală în $x=0$ nu există.",
+    ],
   },
   {
     id: "lm-s4-4",
@@ -370,7 +512,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru $f(x) = |x|/x$ ($x \\ne 0$), calculați $\\lim_{x \\to 0, x>0} f(x)$.",
     correctAnswer: "1",
-    explanation: "Pentru $x>0$, $|x|=x$, deci $f(x)=x/x=1$.",
+    explanation: [
+      "Analizăm limita la dreapta: $x\\to0$ cu $x>0$.",
+      "Pentru $x>0$ avem $|x|=x$, deci $f(x)=\\dfrac{x}{x}=1$.",
+      "Rezultă limita $1$.",
+    ],
   },
   {
     id: "lm-s4-5",
@@ -381,7 +527,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Pentru $f(x) = |x|/x$, calculați $\\lim_{x \\to 0, x<0} f(x)$.",
     options: ["$-1$", "$1$", "$0$", "nu există"],
     correctAnswer: "$-1$",
-    explanation: "Pentru $x<0$, $|x|=-x$, deci $f(x)=-x/x=-1$.",
+    explanation: [
+      "Analizăm limita la stânga: $x\\to0$ cu $x<0$.",
+      "Pentru $x<0$ avem $|x|=-x$, deci $f(x)=\\dfrac{-x}{x}=-1$.",
+      "Rezultă limita $-1$.",
+    ],
   },
   {
     id: "lm-s4-6",
@@ -397,7 +547,11 @@ export const limiteSetExercises: Exercise[] = [
       "funcția este definită în acel punct",
     ],
     correctAnswer: "limitele laterale există și sunt egale",
-    explanation: "Aceasta este definiția existenței limitei unei funcții într-un punct.",
+    explanation: [
+      "Prin definiție, o funcție are limită într-un punct dacă limitele laterale (la stânga și la dreapta) există și sunt egale.",
+      "Această condiție este echivalentă cu existența limitei globale în acel punct.",
+      "Rezultă răspunsul: limitele laterale există și sunt egale.",
+    ],
   },
   {
     id: "lm-s4-7",
@@ -407,7 +561,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x)=x+2$ pentru $x\\le1$ și $f(x)=3x$ pentru $x>1$. Calculați $\\lim_{x \\to 1, x\\le1} f(x)$.",
     correctAnswer: "3",
-    explanation: "$f(1) = 1+2 = 3$, folosind ramura $x\\le1$.",
+    explanation: [
+      "Analizăm limita la stânga (inclusiv $x=1$): folosim ramura $f(x)=x+2$ valabilă pentru $x\\le1$.",
+      "Înlocuim $x=1$: $1+2=3$.",
+      "Rezultă limita $3$.",
+    ],
   },
   {
     id: "lm-s4-8",
@@ -418,7 +576,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, calculați $\\lim_{x \\to 1, x>1} f(x)$.",
     options: ["$3$", "$1$", "$4$", "$0$"],
     correctAnswer: "$3$",
-    explanation: "Folosind ramura $x>1$: $3\\cdot1=3$.",
+    explanation: [
+      "Analizăm limita la dreapta: folosim ramura $f(x)=3x$ valabilă pentru $x>1$.",
+      "Înlocuim $x=1$: $3\\cdot1=3$.",
+      "Rezultă limita $3$.",
+    ],
   },
   {
     id: "lm-s4-9",
@@ -428,7 +590,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Deoarece cele două limite laterale de mai sus sunt egale, determinați valoarea limitei globale $\\lim_{x \\to 1} f(x)$.",
     correctAnswer: "3",
-    explanation: "Cele două limite laterale coincid (ambele $3$), deci limita globală este $3$.",
+    explanation: [
+      "Limitele laterale calculate anterior sunt egale: ambele valorează $3$.",
+      "Deoarece limitele laterale există și coincid, limita globală există și este egală cu această valoare comună.",
+      "Rezultă limita globală $3$.",
+    ],
   },
   {
     id: "lm-s4-10",
@@ -439,7 +605,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $\\lim_{x \\to 2, x>2} \\dfrac1{x-2}$ (limita la dreapta).",
     options: ["$+\\infty$", "$-\\infty$", "$0$", "$1$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Pentru $x \\to 2$ cu $x>2$, $x-2 \\to 0^+$, deci $1/(x-2) \\to +\\infty$.",
+    explanation: [
+      "Analizăm limita la dreapta: $x\\to2$ cu $x>2$.",
+      "Pentru $x>2$ apropiat de $2$, avem $x-2\\to0^+$ (valori pozitive mici).",
+      "Rezultă $\\dfrac1{x-2}\\to+\\infty$.",
+    ],
   },
 
   // Set 5 — Limite fundamentale
@@ -451,7 +621,10 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sin x}{x}.$$",
     correctAnswer: "1",
-    explanation: "Limita fundamentală $\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$.",
+    explanation: [
+      "Aceasta este una dintre limitele fundamentale ale analizei matematice.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$.",
+    ],
   },
   {
     id: "lm-s5-2",
@@ -462,7 +635,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\tan x}{x}.$$",
     options: ["$1$", "$0$", "$\\infty$", "$-1$"],
     correctAnswer: "$1$",
-    explanation: "Limită fundamentală: $\\lim_{x\\to0}\\dfrac{\\tan x}{x}=1$.",
+    explanation: [
+      "Aceasta este una dintre limitele fundamentale ale analizei matematice.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to0}\\dfrac{\\tan x}{x}=1$.",
+    ],
   },
   {
     id: "lm-s5-3",
@@ -472,7 +648,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sin(3x)}{3x}.$$",
     correctAnswer: "1",
-    explanation: "Cu $u=3x\\to0$, se obține limita fundamentală $\\lim_{u\\to0}\\dfrac{\\sin u}{u}=1$.",
+    explanation: [
+      "Notăm $u=3x$; când $x\\to0$, avem $u\\to0$.",
+      "Expresia devine $\\dfrac{\\sin u}{u}$, care este limita fundamentală.",
+      "Rezultă $\\lim_{u\\to0}\\dfrac{\\sin u}{u}=1$.",
+    ],
   },
   {
     id: "lm-s5-4",
@@ -483,7 +663,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sin(2x)}{x}.$$",
     options: ["$2$", "$1$", "$0$", "$1/2$"],
     correctAnswer: "$2$",
-    explanation: "$\\dfrac{\\sin(2x)}{x}=2\\cdot\\dfrac{\\sin(2x)}{2x}\\to2\\cdot1=2$.",
+    explanation: [
+      "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{\\sin(2x)}{x}=2\\cdot\\dfrac{\\sin(2x)}{2x}$.",
+      "Cum $2x\\to0$ când $x\\to0$, avem $\\lim_{x\\to0}\\dfrac{\\sin(2x)}{2x}=1$ (limita fundamentală).",
+      "Rezultă limita cerută: $2\\cdot1=2$.",
+    ],
   },
   {
     id: "lm-s5-5",
@@ -493,7 +677,10 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{1-\\cos x}{x}.$$",
     correctAnswer: "0",
-    explanation: "Limită fundamentală: $\\lim_{x\\to0}\\dfrac{1-\\cos x}{x}=0$.",
+    explanation: [
+      "Aceasta este una dintre limitele fundamentale ale analizei matematice.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to0}\\dfrac{1-\\cos x}{x}=0$.",
+    ],
   },
   {
     id: "lm-s5-6",
@@ -504,7 +691,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\left(1+\\dfrac1x\\right)^x.$$",
     options: ["$e$", "$1$", "$\\infty$", "$0$"],
     correctAnswer: "$e$",
-    explanation: "Aceasta este limita fundamentală care definește numărul $e$.",
+    explanation: [
+      "Aceasta este limita fundamentală care definește numărul $e$.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to\\infty}\\left(1+\\dfrac1x\\right)^x=e$.",
+    ],
   },
   {
     id: "lm-s5-7",
@@ -514,7 +704,10 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{e^x-1}{x}.$$",
     correctAnswer: "1",
-    explanation: "Limită fundamentală: $\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1$.",
+    explanation: [
+      "Aceasta este una dintre limitele fundamentale ale analizei matematice.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1$.",
+    ],
   },
   {
     id: "lm-s5-8",
@@ -525,7 +718,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\ln(1+x)}{x}.$$",
     options: ["$1$", "$0$", "$e$", "$\\infty$"],
     correctAnswer: "$1$",
-    explanation: "Limită fundamentală: $\\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x}=1$.",
+    explanation: [
+      "Aceasta este una dintre limitele fundamentale ale analizei matematice.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to0}\\dfrac{\\ln(1+x)}{x}=1$.",
+    ],
   },
   {
     id: "lm-s5-9",
@@ -536,7 +732,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sin x}{2x}.$$",
     correctAnswer: "1/2",
     acceptedAnswers: ["0.5", "0,5"],
-    explanation: "$\\dfrac{\\sin x}{2x}=\\dfrac12\\cdot\\dfrac{\\sin x}{x}\\to\\dfrac12$.",
+    explanation: [
+      "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{\\sin x}{2x}=\\dfrac12\\cdot\\dfrac{\\sin x}{x}$.",
+      "Cum $\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$ (limita fundamentală), rezultă limita cerută: $\\dfrac12\\cdot1=\\dfrac12$.",
+    ],
   },
   {
     id: "lm-s5-10",
@@ -547,7 +746,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\left(1+\\dfrac2x\\right)^x.$$",
     options: ["$e^2$", "$e$", "$2e$", "$1$"],
     correctAnswer: "$e^2$",
-    explanation: "$\\left(1+\\dfrac2x\\right)^x=\\left[\\left(1+\\dfrac2x\\right)^{x/2}\\right]^2\\to e^2$.",
+    explanation: [
+      "Scriem exponentul astfel încât să apară limita fundamentală: $\\left(1+\\dfrac2x\\right)^x=\\left[\\left(1+\\dfrac2x\\right)^{x/2}\\right]^2$.",
+      "Cum $\\lim_{x\\to\\infty}\\left(1+\\dfrac2x\\right)^{x/2}=e$ (limita fundamentală care definește $e$), rezultă limita cerută: $e^2$.",
+    ],
   },
 
   // Set 6 — Limite cu radicali (raționalizare)
@@ -560,7 +762,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+1}-1}{x}.$$",
     correctAnswer: "1/2",
     acceptedAnswers: ["0.5", "0,5"],
-    explanation: "Amplificăm cu conjugata: $\\dfrac{x}{x(\\sqrt{x+1}+1)}=\\dfrac1{\\sqrt{x+1}+1}\\to\\dfrac12$.",
+    explanation: [
+      "Înlocuirea directă $x=0$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt{x+1}+1$.",
+      "Numărătorul devine $(\\sqrt{x+1}-1)(\\sqrt{x+1}+1)=x$, deci expresia devine $\\dfrac{x}{x(\\sqrt{x+1}+1)}=\\dfrac1{\\sqrt{x+1}+1}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac1{\\sqrt{0+1}+1}=\\dfrac12$.",
+    ],
   },
   {
     id: "lm-s6-2",
@@ -571,7 +777,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+4}-2}{x}.$$",
     options: ["$1/4$", "$1/2$", "$4$", "$0$"],
     correctAnswer: "$1/4$",
-    explanation: "Amplificăm cu conjugata: $\\dfrac1{\\sqrt{x+4}+2}\\to\\dfrac14$.",
+    explanation: [
+      "Înlocuirea directă $x=0$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt{x+4}+2$.",
+      "Numărătorul devine $x$, deci expresia devine $\\dfrac1{\\sqrt{x+4}+2}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac1{\\sqrt{4}+2}=\\dfrac1{2+2}=\\dfrac14$.",
+    ],
   },
   {
     id: "lm-s6-3",
@@ -582,7 +792,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 4} \\dfrac{\\sqrt x - 2}{x-4}.$$",
     correctAnswer: "1/4",
     acceptedAnswers: ["0.25", "0,25"],
-    explanation: "Amplificăm cu conjugata: $\\dfrac{x-4}{(x-4)(\\sqrt x+2)}=\\dfrac1{\\sqrt x+2}\\to\\dfrac14$.",
+    explanation: [
+      "Înlocuirea directă $x=4$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt x+2$.",
+      "Numărătorul devine $(\\sqrt x-2)(\\sqrt x+2)=x-4$, deci expresia devine $\\dfrac{x-4}{(x-4)(\\sqrt x+2)}=\\dfrac1{\\sqrt x+2}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac1{\\sqrt4+2}=\\dfrac1{2+2}=\\dfrac14$.",
+    ],
   },
   {
     id: "lm-s6-4",
@@ -593,7 +807,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 9} \\dfrac{\\sqrt x - 3}{x-9}.$$",
     options: ["$1/6$", "$1/3$", "$6$", "$0$"],
     correctAnswer: "$1/6$",
-    explanation: "$\\dfrac1{\\sqrt x+3}\\to\\dfrac1{3+3}=\\dfrac16$.",
+    explanation: [
+      "Înlocuirea directă $x=9$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt x+3$.",
+      "Numărătorul devine $x-9$, deci expresia devine $\\dfrac1{\\sqrt x+3}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac1{\\sqrt9+3}=\\dfrac1{3+3}=\\dfrac16$.",
+    ],
   },
   {
     id: "lm-s6-5",
@@ -603,7 +821,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\left(\\sqrt{x^2+1}-x\\right).$$",
     correctAnswer: "0",
-    explanation: "Amplificăm cu conjugata: $\\dfrac{1}{\\sqrt{x^2+1}+x}\\to0$.",
+    explanation: [
+      "Amplificăm cu conjugata $\\sqrt{x^2+1}+x$ pentru a elimina diferența de radicali.",
+      "Numărătorul devine $(x^2+1)-x^2=1$, deci expresia devine $\\dfrac1{\\sqrt{x^2+1}+x}$.",
+      "Cum numitorul tinde la $\\infty$, limita expresiei este $0$.",
+    ],
   },
   {
     id: "lm-s6-6",
@@ -614,7 +836,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\left(\\sqrt{x^2+4x}-x\\right).$$",
     options: ["$2$", "$0$", "$4$", "$\\infty$"],
     correctAnswer: "$2$",
-    explanation: "Amplificăm cu conjugata: $\\dfrac{4x}{\\sqrt{x^2+4x}+x}\\to\\dfrac{4x}{2x}=2$.",
+    explanation: [
+      "Amplificăm cu conjugata $\\sqrt{x^2+4x}+x$ pentru a elimina diferența de radicali.",
+      "Numărătorul devine $(x^2+4x)-x^2=4x$, deci expresia devine $\\dfrac{4x}{\\sqrt{x^2+4x}+x}$.",
+      "Pentru $x\\to\\infty$, $\\sqrt{x^2+4x}\\approx x$, deci expresia se comportă ca $\\dfrac{4x}{2x}=2$.",
+    ],
   },
   {
     id: "lm-s6-7",
@@ -625,7 +851,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 1} \\dfrac{\\sqrt x - 1}{x-1}.$$",
     correctAnswer: "1/2",
     acceptedAnswers: ["0.5", "0,5"],
-    explanation: "Amplificăm cu conjugata: $\\dfrac1{\\sqrt x+1}\\to\\dfrac12$.",
+    explanation: [
+      "Înlocuirea directă $x=1$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt x+1$.",
+      "Numărătorul devine $x-1$, deci expresia devine $\\dfrac1{\\sqrt x+1}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac1{\\sqrt1+1}=\\dfrac12$.",
+    ],
   },
   {
     id: "lm-s6-8",
@@ -636,7 +866,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sqrt{1+x}-\\sqrt{1-x}}{x}.$$",
     options: ["$1$", "$2$", "$0$", "$1/2$"],
     correctAnswer: "$1$",
-    explanation: "Amplificăm cu conjugata $\\sqrt{1+x}+\\sqrt{1-x}$: numărătorul devine $2x$, deci limita este $\\dfrac{2}{\\sqrt{1+x}+\\sqrt{1-x}}\\to\\dfrac22=1$.",
+    explanation: [
+      "Înlocuirea directă $x=0$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt{1+x}+\\sqrt{1-x}$.",
+      "Numărătorul devine $(1+x)-(1-x)=2x$, deci expresia devine $\\dfrac{2x}{x(\\sqrt{1+x}+\\sqrt{1-x})}=\\dfrac2{\\sqrt{1+x}+\\sqrt{1-x}}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac2{\\sqrt1+\\sqrt1}=\\dfrac22=1$.",
+    ],
   },
   {
     id: "lm-s6-9",
@@ -647,7 +881,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+1}-1}{2x}.$$",
     correctAnswer: "1/4",
     acceptedAnswers: ["0.25", "0,25"],
-    explanation: "Folosind rezultatul $\\lim_{x\\to0}\\dfrac{\\sqrt{x+1}-1}{x}=\\dfrac12$, împărțim la $2$: $\\dfrac14$.",
+    explanation: [
+      "Folosim rezultatul cunoscut $\\lim_{x\\to0}\\dfrac{\\sqrt{x+1}-1}{x}=\\dfrac12$ (calculat prin amplificare cu conjugata).",
+      "Expresia dată este de $2$ ori mai mică: $\\dfrac{\\sqrt{x+1}-1}{2x}=\\dfrac12\\cdot\\dfrac{\\sqrt{x+1}-1}{x}$.",
+      "Rezultă limita: $\\dfrac12\\cdot\\dfrac12=\\dfrac14$.",
+    ],
   },
   {
     id: "lm-s6-10",
@@ -658,7 +896,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\left(\\sqrt{x^2+x}-x\\right).$$",
     options: ["$1/2$", "$1$", "$0$", "$\\infty$"],
     correctAnswer: "$1/2$",
-    explanation: "Amplificăm cu conjugata: $\\dfrac{x}{\\sqrt{x^2+x}+x}\\to\\dfrac{x}{2x}=\\dfrac12$.",
+    explanation: [
+      "Amplificăm cu conjugata $\\sqrt{x^2+x}+x$ pentru a elimina diferența de radicali.",
+      "Numărătorul devine $(x^2+x)-x^2=x$, deci expresia devine $\\dfrac{x}{\\sqrt{x^2+x}+x}$.",
+      "Pentru $x\\to\\infty$, $\\sqrt{x^2+x}\\approx x$, deci expresia se comportă ca $\\dfrac{x}{2x}=\\dfrac12$.",
+    ],
   },
 
   // Set 7 — Asimptote (verticale, orizontale)
@@ -671,7 +913,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Funcția $f(x)=\\dfrac1{x-2}$ are o asimptotă verticală în:",
     options: ["$x=2$", "$x=0$", "$x=-2$", "nu are asimptotă verticală"],
     correctAnswer: "$x=2$",
-    explanation: "Numitorul se anulează în $x=2$, iar numărătorul este nenul acolo.",
+    explanation: [
+      "O asimptotă verticală apare acolo unde numitorul se anulează, iar numărătorul rămâne nenul.",
+      "Numitorul $x-2$ se anulează pentru $x=2$, iar numărătorul (constant, $1$) este nenul acolo.",
+      "Rezultă asimptota verticală $x=2$.",
+    ],
   },
   {
     id: "lm-s7-2",
@@ -682,7 +928,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $\\lim_{x \\to 2, x>2} \\dfrac1{x-2}$.",
     options: ["$+\\infty$", "$-\\infty$", "$0$", "$2$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Pentru $x\\to2^+$, $x-2\\to0^+$, deci raportul tinde la $+\\infty$.",
+    explanation: [
+      "Analizăm limita la dreapta: $x\\to2$ cu $x>2$.",
+      "Pentru $x>2$ apropiat de $2$, avem $x-2\\to0^+$.",
+      "Rezultă $\\dfrac1{x-2}\\to+\\infty$.",
+    ],
   },
   {
     id: "lm-s7-3",
@@ -693,7 +943,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Funcția $f(x)=\\dfrac{2x+1}{x+3}$ are o asimptotă orizontală:",
     options: ["$y=2$", "$y=1$", "$y=3$", "nu are asimptotă orizontală"],
     correctAnswer: "$y=2$",
-    explanation: "$\\lim_{x\\to\\infty}f(x)=\\dfrac{2}{1}=2$.",
+    explanation: [
+      "O asimptotă orizontală se determină prin limita funcției la $\\infty$.",
+      "Numărătorul și numitorul au același grad (1), deci limita este raportul coeficienților dominanți: $\\dfrac21=2$.",
+      "Rezultă asimptota orizontală $y=2$.",
+    ],
   },
   {
     id: "lm-s7-4",
@@ -703,7 +957,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{2x+1}{x+3},$$ pentru a determina ecuația asimptotei orizontale $y=a$. Determinați $a$.",
     correctAnswer: "2",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac21=2$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (1), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x$ la numărător este $2$, la numitor este $1$.",
+      "Limita este $\\dfrac21=2$, deci $a=2$.",
+    ],
   },
   {
     id: "lm-s7-5",
@@ -714,7 +972,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Funcția $f(x)=\\dfrac{3x^2}{x^2+1}$ are asimptotă orizontală:",
     options: ["$y=3$", "$y=1$", "$y=0$", "nu are"],
     correctAnswer: "$y=3$",
-    explanation: "$\\lim_{x\\to\\infty}f(x)=\\dfrac31=3$.",
+    explanation: [
+      "O asimptotă orizontală se determină prin limita funcției la $\\infty$.",
+      "Numărătorul și numitorul au același grad (2), deci limita este raportul coeficienților dominanți: $\\dfrac31=3$.",
+      "Rezultă asimptota orizontală $y=3$.",
+    ],
   },
   {
     id: "lm-s7-6",
@@ -730,7 +992,11 @@ export const limiteSetExercises: Exercise[] = [
       "funcția este continuă în $x_0$",
     ],
     correctAnswer: "$Q(x_0)=0$ și $P(x_0)\\ne0$",
-    explanation: "Aceasta este condiția pentru ca funcția să \"explodeze\" în $x_0$.",
+    explanation: [
+      "O asimptotă verticală în $x_0$ apare atunci când funcția devine nemărginită în acel punct.",
+      "Aceasta se întâmplă atunci când numitorul se anulează ($Q(x_0)=0$), iar numărătorul rămâne nenul ($P(x_0)\\ne0$).",
+      "Rezultă condiția: $Q(x_0)=0$ și $P(x_0)\\ne0$.",
+    ],
   },
   {
     id: "lm-s7-7",
@@ -740,7 +1006,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Funcția $f(x)=\\dfrac{5x}{x-1}$ are o asimptotă verticală în $x=a$. Determinați $a$.",
     correctAnswer: "1",
-    explanation: "Numitorul se anulează pentru $x=1$.",
+    explanation: [
+      "O asimptotă verticală apare acolo unde numitorul se anulează, iar numărătorul rămâne nenul.",
+      "Numitorul $x-1$ se anulează pentru $x=1$, iar numărătorul ($5x=5$) este nenul acolo.",
+      "Rezultă $a=1$.",
+    ],
   },
   {
     id: "lm-s7-8",
@@ -751,7 +1021,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Funcția $f(x)=\\dfrac{x^2+1}{x^2+2}$ are asimptotă orizontală:",
     options: ["$y=1$", "$y=0$", "$y=2$", "nu are"],
     correctAnswer: "$y=1$",
-    explanation: "$\\lim_{x\\to\\infty}f(x)=\\dfrac11=1$.",
+    explanation: [
+      "O asimptotă orizontală se determină prin limita funcției la $\\infty$.",
+      "Numărătorul și numitorul au același grad (2), deci limita este raportul coeficienților dominanți: $\\dfrac11=1$.",
+      "Rezultă asimptota orizontală $y=1$.",
+    ],
   },
   {
     id: "lm-s7-9",
@@ -761,7 +1035,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{x^2+1}{x^2+2},$$ pentru a confirma asimptota orizontală $y=a$. Determinați $a$.",
     correctAnswer: "1",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac11=1$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (2), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x^2$ la numărător și la numitor este $1$.",
+      "Limita este $\\dfrac11=1$, deci $a=1$.",
+    ],
   },
   {
     id: "lm-s7-10",
@@ -777,7 +1055,11 @@ export const limiteSetExercises: Exercise[] = [
       "o infinitate de asimptote",
     ],
     correctAnswer: "nicio asimptotă orizontală",
-    explanation: "Limita unui polinom de grad $\\ge1$ la $\\pm\\infty$ este întotdeauna infinită.",
+    explanation: [
+      "O asimptotă orizontală ar necesita ca limita funcției la $\\pm\\infty$ să fie finită.",
+      "Pentru un polinom de grad $\\ge1$, limita la $\\pm\\infty$ este întotdeauna infinită (nu finită).",
+      "Rezultă că o funcție polinomială de grad $\\ge1$ nu are asimptotă orizontală.",
+    ],
   },
 
   // Set 8 — Continuitate folosind limite
@@ -795,7 +1077,11 @@ export const limiteSetExercises: Exercise[] = [
       "$f$ este derivabilă în $x_0$",
     ],
     correctAnswer: "$\\lim_{x \\to x_0} f(x) = f(x_0)$",
-    explanation: "Aceasta este definiția continuității unei funcții într-un punct.",
+    explanation: [
+      "Continuitatea într-un punct $x_0$ cere ca limita funcției în acel punct să existe și să fie finită.",
+      "În plus, această limită trebuie să coincidă cu valoarea funcției în punct, $f(x_0)$.",
+      "Rezultă condiția: $\\lim_{x \\to x_0} f(x) = f(x_0)$.",
+    ],
   },
   {
     id: "lm-s8-2",
@@ -805,7 +1091,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x)=\\dfrac{x^2-1}{x-1}$ pentru $x\\ne1$. Pentru ca $f$ să fie continuă în $x=1$, valoarea $f(1)$ trebuie definită ca $\\lim_{x\\to1}f(x)$. Calculați această limită.",
     correctAnswer: "2",
-    explanation: "$\\dfrac{(x-1)(x+1)}{x-1}=x+1\\to2$.",
+    explanation: [
+      "Înlocuirea directă $x=1$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-1=(x-1)(x+1)$.",
+      "Simplificăm factorul comun $x-1$: expresia devine $x+1$.",
+      "Calculăm limita expresiei simplificate: $1+1=2$.",
+    ],
   },
   {
     id: "lm-s8-3",
@@ -816,7 +1107,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Fie $f(x)=x+1$ pentru $x\\le2$ și $f(x)=3$ pentru $x>2$. Calculați $\\lim_{x \\to 2, x\\le2} f(x)$.",
     options: ["$3$", "$2$", "$1$", "$0$"],
     correctAnswer: "$3$",
-    explanation: "$f(2)=2+1=3$, folosind ramura $x\\le2$.",
+    explanation: [
+      "Analizăm limita la stânga (inclusiv $x=2$): folosim ramura $f(x)=x+1$ valabilă pentru $x\\le2$.",
+      "Înlocuim $x=2$: $2+1=3$.",
+      "Rezultă limita $3$.",
+    ],
   },
   {
     id: "lm-s8-4",
@@ -826,7 +1121,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru funcția de mai sus, calculați $\\lim_{x \\to 2, x>2} f(x)$.",
     correctAnswer: "3",
-    explanation: "Ramura $x>2$ este constantă egală cu $3$.",
+    explanation: [
+      "Analizăm limita la dreapta: folosim ramura $f(x)=3$ valabilă pentru $x>2$.",
+      "Ramura este constantă, egală cu $3$, indiferent cât de aproape este $x$ de $2$.",
+      "Rezultă limita $3$.",
+    ],
   },
   {
     id: "lm-s8-5",
@@ -837,7 +1136,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Deoarece cele două limite laterale de mai sus coincid (ambele $3$) și $f(2)=2+1=3$, funcția $f$ este:",
     options: ["continuă în $x=2$", "discontinuă în $x=2$", "nedefinită în $x=2$", "nu se poate preciza"],
     correctAnswer: "continuă în $x=2$",
-    explanation: "Limitele laterale sunt egale între ele și egale cu $f(2)$.",
+    explanation: [
+      "Limitele laterale calculate anterior sunt egale (ambele $3$), deci limita globală $\\lim_{x\\to2}f(x)$ există și este $3$.",
+      "În plus, $f(2)=2+1=3$, deci limita coincide cu valoarea funcției în punct.",
+      "Rezultă că $f$ este continuă în $x=2$.",
+    ],
   },
   {
     id: "lm-s8-6",
@@ -847,7 +1150,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x)=2x$ pentru $x<1$ și $f(x)=5$ pentru $x\\ge1$. Calculați $\\lim_{x \\to 1, x<1} f(x)$.",
     correctAnswer: "2",
-    explanation: "Folosind ramura $x<1$: $2\\cdot1=2$.",
+    explanation: [
+      "Analizăm limita la stânga: folosim ramura $f(x)=2x$ valabilă pentru $x<1$.",
+      "Înlocuim $x=1$: $2\\cdot1=2$.",
+      "Rezultă limita $2$.",
+    ],
   },
   {
     id: "lm-s8-7",
@@ -858,7 +1165,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, calculați $\\lim_{x \\to 1, x\\ge1} f(x)=f(1)$.",
     options: ["$5$", "$2$", "$3$", "$1$"],
     correctAnswer: "$5$",
-    explanation: "Ramura $x\\ge1$ este constantă egală cu $5$.",
+    explanation: [
+      "Analizăm limita la dreapta (inclusiv $x=1$): folosim ramura $f(x)=5$ valabilă pentru $x\\ge1$.",
+      "Ramura este constantă, egală cu $5$.",
+      "Rezultă limita (și valoarea $f(1)$) egală cu $5$.",
+    ],
   },
   {
     id: "lm-s8-8",
@@ -869,7 +1180,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Deoarece limitele laterale de mai sus sunt diferite ($2\\ne5$), funcția $f$ este:",
     options: ["discontinuă în $x=1$", "continuă în $x=1$", "nedefinită peste tot", "derivabilă în $x=1$"],
     correctAnswer: "discontinuă în $x=1$",
-    explanation: "Limita globală nu există, deoarece limitele laterale diferă.",
+    explanation: [
+      "Limitele laterale calculate anterior sunt diferite: $2$ (la stânga) și $5$ (la dreapta).",
+      "Deoarece limitele laterale nu coincid, limita globală $\\lim_{x\\to1}f(x)$ nu există.",
+      "Rezultă că $f$ este discontinuă în $x=1$.",
+    ],
   },
   {
     id: "lm-s8-9",
@@ -879,7 +1194,10 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x)=\\dfrac{\\sin x}{x}$ pentru $x\\ne0$ și $f(0)=1$. Calculați $\\lim_{x \\to 0} f(x)$.",
     correctAnswer: "1",
-    explanation: "Limita fundamentală $\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$.",
+    explanation: [
+      "Aceasta este una dintre limitele fundamentale ale analizei matematice.",
+      "Prin rezultat cunoscut, $\\lim_{x\\to0}\\dfrac{\\sin x}{x}=1$.",
+    ],
   },
   {
     id: "lm-s8-10",
@@ -890,7 +1208,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Deoarece $\\lim_{x \\to 0} f(x)=1=f(0)$ pentru funcția de mai sus, rezultă că $f$ este:",
     options: ["continuă în $x=0$", "discontinuă în $x=0$", "nedefinită în $x=0$", "nu se poate determina"],
     correctAnswer: "continuă în $x=0$",
-    explanation: "Limita este egală cu valoarea funcției în punctul respectiv.",
+    explanation: [
+      "Limita calculată anterior este $\\lim_{x\\to0}f(x)=1$.",
+      "Această valoare coincide cu $f(0)=1$, dat prin definiția funcției.",
+      "Rezultă că $f$ este continuă în $x=0$.",
+    ],
   },
 
   // Set 9 — Limite de funcții exponențiale și logaritmice
@@ -903,7 +1225,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} e^x.$$",
     options: ["$+\\infty$", "$0$", "$1$", "$e$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Funcția exponențială crește nemărginit la $+\\infty$.",
+    explanation: [
+      "Funcția exponențială $e^x$ este strict crescătoare și nemărginită.",
+      "Pentru $x\\to\\infty$, valorile $e^x$ cresc nemărginit.",
+      "Rezultă limita $+\\infty$.",
+    ],
   },
   {
     id: "lm-s9-2",
@@ -914,7 +1240,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to -\\infty} e^x.$$",
     options: ["$0$", "$+\\infty$", "$-\\infty$", "$1$"],
     correctAnswer: "$0$",
-    explanation: "Funcția exponențială tinde la $0$ la $-\\infty$.",
+    explanation: [
+      "Funcția exponențială $e^x$ este strict crescătoare și pozitivă pe tot domeniul.",
+      "Pentru $x\\to-\\infty$, valorile $e^x$ se apropie tot mai mult de $0$ (rămânând pozitive).",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s9-3",
@@ -924,7 +1254,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} e^x.$$",
     correctAnswer: "1",
-    explanation: "$e^0=1$, iar funcția exponențială este continuă.",
+    explanation: [
+      "Funcția exponențială este continuă pe $\\mathbb{R}$, deci limita se calculează prin înlocuire directă $x=0$.",
+      "Calculăm: $e^0=1$.",
+      "Rezultă limita $1$.",
+    ],
   },
   {
     id: "lm-s9-4",
@@ -935,7 +1269,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\ln x.$$",
     options: ["$+\\infty$", "$0$", "$1$", "$-\\infty$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Funcția logaritmică crește nemărginit, deși lent.",
+    explanation: [
+      "Funcția logaritmică $\\ln x$ este strict crescătoare pe $(0,\\infty)$.",
+      "Pentru $x\\to\\infty$, valorile $\\ln x$ cresc nemărginit, deși mai lent decât $x$.",
+      "Rezultă limita $+\\infty$.",
+    ],
   },
   {
     id: "lm-s9-5",
@@ -946,7 +1284,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $\\lim_{x \\to 0, x>0} \\ln x$.",
     options: ["$-\\infty$", "$+\\infty$", "$0$", "$1$"],
     correctAnswer: "$-\\infty$",
-    explanation: "Funcția logaritmică tinde la $-\\infty$ când argumentul tinde la $0$ prin valori pozitive.",
+    explanation: [
+      "Analizăm limita la dreapta: $x\\to0$ cu $x>0$ (domeniul logaritmului).",
+      "Pentru $x>0$ apropiat de $0$, valorile $\\ln x$ scad nemărginit.",
+      "Rezultă limita $-\\infty$.",
+    ],
   },
   {
     id: "lm-s9-6",
@@ -956,7 +1298,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 1} \\ln x.$$",
     correctAnswer: "0",
-    explanation: "$\\ln 1 = 0$, iar funcția logaritmică este continuă.",
+    explanation: [
+      "Funcția logaritmică este continuă pe $(0,\\infty)$, deci limita se calculează prin înlocuire directă $x=1$.",
+      "Calculăm: $\\ln 1=0$.",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s9-7",
@@ -966,7 +1312,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{e^{2x}-1}{x}.$$",
     correctAnswer: "2",
-    explanation: "$\\dfrac{e^{2x}-1}{x}=2\\cdot\\dfrac{e^{2x}-1}{2x}\\to2\\cdot1=2$.",
+    explanation: [
+      "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{e^{2x}-1}{x}=2\\cdot\\dfrac{e^{2x}-1}{2x}$.",
+      "Cum $2x\\to0$ când $x\\to0$, avem $\\lim_{x\\to0}\\dfrac{e^{2x}-1}{2x}=1$ (limita fundamentală).",
+      "Rezultă limita cerută: $2\\cdot1=2$.",
+    ],
   },
   {
     id: "lm-s9-8",
@@ -977,7 +1327,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\ln(1+3x)}{x}.$$",
     options: ["$3$", "$1$", "$0$", "$1/3$"],
     correctAnswer: "$3$",
-    explanation: "$\\dfrac{\\ln(1+3x)}{x}=3\\cdot\\dfrac{\\ln(1+3x)}{3x}\\to3\\cdot1=3$.",
+    explanation: [
+      "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{\\ln(1+3x)}{x}=3\\cdot\\dfrac{\\ln(1+3x)}{3x}$.",
+      "Cum $3x\\to0$ când $x\\to0$, avem $\\lim_{x\\to0}\\dfrac{\\ln(1+3x)}{3x}=1$ (limita fundamentală).",
+      "Rezultă limita cerută: $3\\cdot1=3$.",
+    ],
   },
   {
     id: "lm-s9-9",
@@ -987,7 +1341,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{\\ln x}{x}.$$",
     correctAnswer: "0",
-    explanation: "Logaritmul crește mult mai lent decât $x$, deci raportul tinde la $0$.",
+    explanation: [
+      "Funcția logaritmică $\\ln x$ crește mult mai lent decât $x$ atunci când $x\\to\\infty$.",
+      "Prin urmare, raportul $\\dfrac{\\ln x}{x}$ tinde la $0$.",
+      "Rezultă limita $0$.",
+    ],
   },
   {
     id: "lm-s9-10",
@@ -998,7 +1356,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{e^x}{x}.$$",
     options: ["$+\\infty$", "$0$", "$1$", "$e$"],
     correctAnswer: "$+\\infty$",
-    explanation: "Funcția exponențială crește mai repede decât orice putere a lui $x$.",
+    explanation: [
+      "Funcția exponențială $e^x$ crește mult mai repede decât orice putere a lui $x$ (deci și decât $x$ însuși) atunci când $x\\to\\infty$.",
+      "Prin urmare, raportul $\\dfrac{e^x}{x}$ crește nemărginit.",
+      "Rezultă limita $+\\infty$.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -1010,7 +1372,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 3} (x^2 - 2x + 1).$$",
     correctAnswer: "4",
-    explanation: "$9 - 6 + 1 = 4$.",
+    explanation: [
+      "Funcția este polinomială, deci limita se calculează prin înlocuirea directă $x=3$.",
+      "Calculăm: $3^2-2\\cdot3+1=9-6+1$.",
+      "Rezultă limita $4$.",
+    ],
   },
   {
     id: "lm-s10-2",
@@ -1021,7 +1387,12 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 1} \\dfrac{x^2 - 1}{x - 1}.$$",
     options: ["$2$", "$0$", "$1$", "$\\infty$"],
     correctAnswer: "$2$",
-    explanation: "$\\dfrac{(x-1)(x+1)}{x-1}=x+1\\to2$.",
+    explanation: [
+      "Înlocuirea directă $x=1$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-1=(x-1)(x+1)$.",
+      "Simplificăm factorul comun $x-1$: expresia devine $x+1$.",
+      "Calculăm limita expresiei simplificate: $1+1=2$.",
+    ],
   },
   {
     id: "lm-s10-3",
@@ -1031,7 +1402,11 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{4x^2 + 1}{2x^2 + 3}.$$",
     correctAnswer: "2",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac42=2$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (2), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x^2$ la numărător este $4$, la numitor este $2$.",
+      "Limita este $\\dfrac42=2$.",
+    ],
   },
   {
     id: "lm-s10-4",
@@ -1042,7 +1417,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sin(5x)}{x}.$$",
     options: ["$5$", "$1$", "$0$", "$1/5$"],
     correctAnswer: "$5$",
-    explanation: "$\\dfrac{\\sin(5x)}{x}=5\\cdot\\dfrac{\\sin(5x)}{5x}\\to5$.",
+    explanation: [
+      "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{\\sin(5x)}{x}=5\\cdot\\dfrac{\\sin(5x)}{5x}$.",
+      "Cum $5x\\to0$ când $x\\to0$, avem $\\lim_{x\\to0}\\dfrac{\\sin(5x)}{5x}=1$ (limita fundamentală).",
+      "Rezultă limita cerută: $5\\cdot1=5$.",
+    ],
   },
   {
     id: "lm-s10-5",
@@ -1053,7 +1432,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{\\sqrt{x+9}-3}{x}.$$",
     correctAnswer: "1/6",
     acceptedAnswers: ["0.17", "0,17", "0.167", "0,167"],
-    explanation: "Amplificăm cu conjugata: $\\dfrac1{\\sqrt{x+9}+3}\\to\\dfrac1{3+3}=\\dfrac16$.",
+    explanation: [
+      "Înlocuirea directă $x=0$ dă forma nedeterminată $\\frac{0}{0}$, deci amplificăm cu conjugata $\\sqrt{x+9}+3$.",
+      "Numărătorul devine $x$, deci expresia devine $\\dfrac1{\\sqrt{x+9}+3}$.",
+      "Calculăm limita expresiei simplificate: $\\dfrac1{\\sqrt9+3}=\\dfrac1{3+3}=\\dfrac16$.",
+    ],
   },
   {
     id: "lm-s10-6",
@@ -1064,7 +1447,11 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Funcția $f(x)=\\dfrac1{x+5}$ are asimptotă verticală în:",
     options: ["$x=-5$", "$x=5$", "$x=0$", "nu are"],
     correctAnswer: "$x=-5$",
-    explanation: "Numitorul se anulează pentru $x=-5$.",
+    explanation: [
+      "O asimptotă verticală apare acolo unde numitorul se anulează, iar numărătorul rămâne nenul.",
+      "Numitorul $x+5$ se anulează pentru $x=-5$, iar numărătorul (constant, $1$) este nenul acolo.",
+      "Rezultă asimptota verticală $x=-5$.",
+    ],
   },
   {
     id: "lm-s10-7",
@@ -1074,7 +1461,12 @@ export const limiteSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $$\\lim_{x \\to 2} \\dfrac{x^2 - 4}{x - 2}.$$",
     correctAnswer: "4",
-    explanation: "$\\dfrac{(x-2)(x+2)}{x-2}=x+2\\to4$.",
+    explanation: [
+      "Înlocuirea directă $x=2$ dă forma nedeterminată $\\frac{0}{0}$, deci factorizăm.",
+      "Numărătorul se factorizează: $x^2-4=(x-2)(x+2)$.",
+      "Simplificăm factorul comun $x-2$: expresia devine $x+2$.",
+      "Calculăm limita expresiei simplificate: $2+2=4$.",
+    ],
   },
   {
     id: "lm-s10-8",
@@ -1085,7 +1477,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\left(1+\\dfrac1x\\right)^{2x}.$$",
     options: ["$e^2$", "$e$", "$2e$", "$1$"],
     correctAnswer: "$e^2$",
-    explanation: "Ridicăm la pătrat limita fundamentală: $\\left[\\left(1+\\dfrac1x\\right)^x\\right]^2\\to e^2$.",
+    explanation: [
+      "Scriem exponentul astfel încât să apară limita fundamentală: $\\left(1+\\dfrac1x\\right)^{2x}=\\left[\\left(1+\\dfrac1x\\right)^x\\right]^2$.",
+      "Cum $\\lim_{x\\to\\infty}\\left(1+\\dfrac1x\\right)^x=e$ (limita fundamentală care definește $e$), rezultă limita cerută: $e^2$.",
+    ],
   },
   {
     id: "lm-s10-9",
@@ -1096,7 +1491,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to 0} \\dfrac{e^x-1}{2x}.$$",
     correctAnswer: "1/2",
     acceptedAnswers: ["0.5", "0,5"],
-    explanation: "$\\dfrac{e^x-1}{2x}=\\dfrac12\\cdot\\dfrac{e^x-1}{x}\\to\\dfrac12$.",
+    explanation: [
+      "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{e^x-1}{2x}=\\dfrac12\\cdot\\dfrac{e^x-1}{x}$.",
+      "Cum $\\lim_{x\\to0}\\dfrac{e^x-1}{x}=1$ (limita fundamentală), rezultă limita cerută: $\\dfrac12\\cdot1=\\dfrac12$.",
+    ],
   },
   {
     id: "lm-s10-10",
@@ -1107,6 +1505,10 @@ export const limiteSetExercises: Exercise[] = [
     prompt: "Calculați $$\\lim_{x \\to \\infty} \\dfrac{3x + 2}{x - 1}.$$",
     options: ["$3$", "$1$", "$2$", "$\\infty$"],
     correctAnswer: "$3$",
-    explanation: "Raportul coeficienților dominanți: $\\dfrac31=3$.",
+    explanation: [
+      "Numărătorul și numitorul au același grad (1), deci limita este raportul coeficienților termenilor de grad maxim.",
+      "Coeficientul lui $x$ la numărător este $3$, la numitor este $1$.",
+      "Limita este $\\dfrac31=3$.",
+    ],
   },
 ];
