@@ -14,7 +14,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 2} f(x)$.",
         correctAnswer: "4",
-        explanation: "$f(x) = \\dfrac{(x-2)(x+2)}{x-2} = x + 2 \\to 4$.",
+        explanation: [
+          "Înlocuirea directă $x=2$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-4=(x-2)(x+2)$.",
+          "Simplificăm factorul comun $x-2$: expresia devine $x+2$, iar limita este $2+2=4$.",
+        ],
       },
       {
         id: "ea-lm-1-b",
@@ -24,7 +28,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=2$, valoarea $f(2)$ trebuie definită ca:",
         options: ["$4$", "$2$", "$6$", "$0$"],
         correctAnswer: "$4$",
-        explanation: "Limita în $x=2$ este $4$, deci prelungirea prin continuitate cere $f(2) = 4$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=2$, $f(2)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $4$.",
+          "Deci valoarea care asigură continuitatea este $f(2)=4$.",
+        ],
       },
       {
         id: "ea-lm-1-c",
@@ -33,7 +41,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "2",
-        explanation: "Pentru $x\\ne2$, $f(x) = x + 2$, deci $f(x) - x = 2$ pentru orice $x$, iar limita este $2$.",
+        explanation: [
+          "Pentru $x\\ne2$, $f(x)=x+2$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+2)-x = 2$ pentru orice $x\\ne2$.",
+          "Limita unei funcții constante este chiar acea constantă: $2$.",
+        ],
       },
     ],
   },
@@ -50,7 +62,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 3} f(x)$.",
         correctAnswer: "6",
-        explanation: "$f(x) = \\dfrac{(x-3)(x+3)}{x-3} = x + 3 \\to 6$.",
+        explanation: [
+          "Înlocuirea directă $x=3$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-9=(x-3)(x+3)$.",
+          "Simplificăm factorul comun $x-3$: expresia devine $x+3$, iar limita este $3+3=6$.",
+        ],
       },
       {
         id: "ea-lm-2-b",
@@ -60,7 +76,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=3$, valoarea $f(3)$ trebuie definită ca:",
         options: ["$6$", "$3$", "$9$", "$0$"],
         correctAnswer: "$6$",
-        explanation: "Limita în $x=3$ este $6$, deci prelungirea prin continuitate cere $f(3) = 6$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=3$, $f(3)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $6$.",
+          "Deci valoarea care asigură continuitatea este $f(3)=6$.",
+        ],
       },
       {
         id: "ea-lm-2-c",
@@ -69,7 +89,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "3",
-        explanation: "Pentru $x\\ne3$, $f(x) = x + 3$, deci $f(x) - x = 3$ pentru orice $x$, iar limita este $3$.",
+        explanation: [
+          "Pentru $x\\ne3$, $f(x)=x+3$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+3)-x = 3$ pentru orice $x\\ne3$.",
+          "Limita unei funcții constante este chiar acea constantă: $3$.",
+        ],
       },
     ],
   },
@@ -86,7 +110,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 4} f(x)$.",
         correctAnswer: "8",
-        explanation: "$f(x) = \\dfrac{(x-4)(x+4)}{x-4} = x + 4 \\to 8$.",
+        explanation: [
+          "Înlocuirea directă $x=4$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-16=(x-4)(x+4)$.",
+          "Simplificăm factorul comun $x-4$: expresia devine $x+4$, iar limita este $4+4=8$.",
+        ],
       },
       {
         id: "ea-lm-3-b",
@@ -96,7 +124,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=4$, valoarea $f(4)$ trebuie definită ca:",
         options: ["$8$", "$4$", "$12$", "$0$"],
         correctAnswer: "$8$",
-        explanation: "Limita în $x=4$ este $8$, deci prelungirea prin continuitate cere $f(4) = 8$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=4$, $f(4)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $8$.",
+          "Deci valoarea care asigură continuitatea este $f(4)=8$.",
+        ],
       },
       {
         id: "ea-lm-3-c",
@@ -105,7 +137,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "4",
-        explanation: "Pentru $x\\ne4$, $f(x) = x + 4$, deci $f(x) - x = 4$ pentru orice $x$, iar limita este $4$.",
+        explanation: [
+          "Pentru $x\\ne4$, $f(x)=x+4$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+4)-x = 4$ pentru orice $x\\ne4$.",
+          "Limita unei funcții constante este chiar acea constantă: $4$.",
+        ],
       },
     ],
   },
@@ -122,7 +158,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 5} f(x)$.",
         correctAnswer: "10",
-        explanation: "$f(x) = \\dfrac{(x-5)(x+5)}{x-5} = x + 5 \\to 10$.",
+        explanation: [
+          "Înlocuirea directă $x=5$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-25=(x-5)(x+5)$.",
+          "Simplificăm factorul comun $x-5$: expresia devine $x+5$, iar limita este $5+5=10$.",
+        ],
       },
       {
         id: "ea-lm-4-b",
@@ -132,7 +172,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=5$, valoarea $f(5)$ trebuie definită ca:",
         options: ["$10$", "$5$", "$15$", "$0$"],
         correctAnswer: "$10$",
-        explanation: "Limita în $x=5$ este $10$, deci prelungirea prin continuitate cere $f(5) = 10$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=5$, $f(5)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $10$.",
+          "Deci valoarea care asigură continuitatea este $f(5)=10$.",
+        ],
       },
       {
         id: "ea-lm-4-c",
@@ -141,7 +185,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "5",
-        explanation: "Pentru $x\\ne5$, $f(x) = x + 5$, deci $f(x) - x = 5$ pentru orice $x$, iar limita este $5$.",
+        explanation: [
+          "Pentru $x\\ne5$, $f(x)=x+5$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+5)-x = 5$ pentru orice $x\\ne5$.",
+          "Limita unei funcții constante este chiar acea constantă: $5$.",
+        ],
       },
     ],
   },
@@ -158,7 +206,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 6} f(x)$.",
         correctAnswer: "12",
-        explanation: "$f(x) = \\dfrac{(x-6)(x+6)}{x-6} = x + 6 \\to 12$.",
+        explanation: [
+          "Înlocuirea directă $x=6$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-36=(x-6)(x+6)$.",
+          "Simplificăm factorul comun $x-6$: expresia devine $x+6$, iar limita este $6+6=12$.",
+        ],
       },
       {
         id: "ea-lm-5-b",
@@ -168,7 +220,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=6$, valoarea $f(6)$ trebuie definită ca:",
         options: ["$12$", "$6$", "$18$", "$0$"],
         correctAnswer: "$12$",
-        explanation: "Limita în $x=6$ este $12$, deci prelungirea prin continuitate cere $f(6) = 12$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=6$, $f(6)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $12$.",
+          "Deci valoarea care asigură continuitatea este $f(6)=12$.",
+        ],
       },
       {
         id: "ea-lm-5-c",
@@ -177,7 +233,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "6",
-        explanation: "Pentru $x\\ne6$, $f(x) = x + 6$, deci $f(x) - x = 6$ pentru orice $x$, iar limita este $6$.",
+        explanation: [
+          "Pentru $x\\ne6$, $f(x)=x+6$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+6)-x = 6$ pentru orice $x\\ne6$.",
+          "Limita unei funcții constante este chiar acea constantă: $6$.",
+        ],
       },
     ],
   },
@@ -194,7 +254,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 7} f(x)$.",
         correctAnswer: "14",
-        explanation: "$f(x) = \\dfrac{(x-7)(x+7)}{x-7} = x + 7 \\to 14$.",
+        explanation: [
+          "Înlocuirea directă $x=7$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-49=(x-7)(x+7)$.",
+          "Simplificăm factorul comun $x-7$: expresia devine $x+7$, iar limita este $7+7=14$.",
+        ],
       },
       {
         id: "ea-lm-6-b",
@@ -204,7 +268,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=7$, valoarea $f(7)$ trebuie definită ca:",
         options: ["$14$", "$7$", "$21$", "$0$"],
         correctAnswer: "$14$",
-        explanation: "Limita în $x=7$ este $14$, deci prelungirea prin continuitate cere $f(7) = 14$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=7$, $f(7)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $14$.",
+          "Deci valoarea care asigură continuitatea este $f(7)=14$.",
+        ],
       },
       {
         id: "ea-lm-6-c",
@@ -213,7 +281,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "7",
-        explanation: "Pentru $x\\ne7$, $f(x) = x + 7$, deci $f(x) - x = 7$ pentru orice $x$, iar limita este $7$.",
+        explanation: [
+          "Pentru $x\\ne7$, $f(x)=x+7$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+7)-x = 7$ pentru orice $x\\ne7$.",
+          "Limita unei funcții constante este chiar acea constantă: $7$.",
+        ],
       },
     ],
   },
@@ -230,7 +302,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 8} f(x)$.",
         correctAnswer: "16",
-        explanation: "$f(x) = \\dfrac{(x-8)(x+8)}{x-8} = x + 8 \\to 16$.",
+        explanation: [
+          "Înlocuirea directă $x=8$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-64=(x-8)(x+8)$.",
+          "Simplificăm factorul comun $x-8$: expresia devine $x+8$, iar limita este $8+8=16$.",
+        ],
       },
       {
         id: "ea-lm-7-b",
@@ -240,7 +316,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=8$, valoarea $f(8)$ trebuie definită ca:",
         options: ["$16$", "$8$", "$24$", "$0$"],
         correctAnswer: "$16$",
-        explanation: "Limita în $x=8$ este $16$, deci prelungirea prin continuitate cere $f(8) = 16$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=8$, $f(8)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $16$.",
+          "Deci valoarea care asigură continuitatea este $f(8)=16$.",
+        ],
       },
       {
         id: "ea-lm-7-c",
@@ -249,7 +329,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "8",
-        explanation: "Pentru $x\\ne8$, $f(x) = x + 8$, deci $f(x) - x = 8$ pentru orice $x$, iar limita este $8$.",
+        explanation: [
+          "Pentru $x\\ne8$, $f(x)=x+8$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+8)-x = 8$ pentru orice $x\\ne8$.",
+          "Limita unei funcții constante este chiar acea constantă: $8$.",
+        ],
       },
     ],
   },
@@ -266,7 +350,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 9} f(x)$.",
         correctAnswer: "18",
-        explanation: "$f(x) = \\dfrac{(x-9)(x+9)}{x-9} = x + 9 \\to 18$.",
+        explanation: [
+          "Înlocuirea directă $x=9$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-81=(x-9)(x+9)$.",
+          "Simplificăm factorul comun $x-9$: expresia devine $x+9$, iar limita este $9+9=18$.",
+        ],
       },
       {
         id: "ea-lm-8-b",
@@ -276,7 +364,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=9$, valoarea $f(9)$ trebuie definită ca:",
         options: ["$18$", "$9$", "$27$", "$0$"],
         correctAnswer: "$18$",
-        explanation: "Limita în $x=9$ este $18$, deci prelungirea prin continuitate cere $f(9) = 18$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=9$, $f(9)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $18$.",
+          "Deci valoarea care asigură continuitatea este $f(9)=18$.",
+        ],
       },
       {
         id: "ea-lm-8-c",
@@ -285,7 +377,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "9",
-        explanation: "Pentru $x\\ne9$, $f(x) = x + 9$, deci $f(x) - x = 9$ pentru orice $x$, iar limita este $9$.",
+        explanation: [
+          "Pentru $x\\ne9$, $f(x)=x+9$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+9)-x = 9$ pentru orice $x\\ne9$.",
+          "Limita unei funcții constante este chiar acea constantă: $9$.",
+        ],
       },
     ],
   },
@@ -302,7 +398,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 10} f(x)$.",
         correctAnswer: "20",
-        explanation: "$f(x) = \\dfrac{(x-10)(x+10)}{x-10} = x + 10 \\to 20$.",
+        explanation: [
+          "Înlocuirea directă $x=10$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-100=(x-10)(x+10)$.",
+          "Simplificăm factorul comun $x-10$: expresia devine $x+10$, iar limita este $10+10=20$.",
+        ],
       },
       {
         id: "ea-lm-9-b",
@@ -312,7 +412,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=10$, valoarea $f(10)$ trebuie definită ca:",
         options: ["$20$", "$10$", "$30$", "$0$"],
         correctAnswer: "$20$",
-        explanation: "Limita în $x=10$ este $20$, deci prelungirea prin continuitate cere $f(10) = 20$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=10$, $f(10)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $20$.",
+          "Deci valoarea care asigură continuitatea este $f(10)=20$.",
+        ],
       },
       {
         id: "ea-lm-9-c",
@@ -321,7 +425,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "10",
-        explanation: "Pentru $x\\ne10$, $f(x) = x + 10$, deci $f(x) - x = 10$ pentru orice $x$, iar limita este $10$.",
+        explanation: [
+          "Pentru $x\\ne10$, $f(x)=x+10$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+10)-x = 10$ pentru orice $x\\ne10$.",
+          "Limita unei funcții constante este chiar acea constantă: $10$.",
+        ],
       },
     ],
   },
@@ -338,7 +446,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 11} f(x)$.",
         correctAnswer: "22",
-        explanation: "$f(x) = \\dfrac{(x-11)(x+11)}{x-11} = x + 11 \\to 22$.",
+        explanation: [
+          "Înlocuirea directă $x=11$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-121=(x-11)(x+11)$.",
+          "Simplificăm factorul comun $x-11$: expresia devine $x+11$, iar limita este $11+11=22$.",
+        ],
       },
       {
         id: "ea-lm-10-b",
@@ -348,7 +460,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=11$, valoarea $f(11)$ trebuie definită ca:",
         options: ["$22$", "$11$", "$33$", "$0$"],
         correctAnswer: "$22$",
-        explanation: "Limita în $x=11$ este $22$, deci prelungirea prin continuitate cere $f(11) = 22$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=11$, $f(11)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $22$.",
+          "Deci valoarea care asigură continuitatea este $f(11)=22$.",
+        ],
       },
       {
         id: "ea-lm-10-c",
@@ -357,7 +473,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "11",
-        explanation: "Pentru $x\\ne11$, $f(x) = x + 11$, deci $f(x) - x = 11$ pentru orice $x$, iar limita este $11$.",
+        explanation: [
+          "Pentru $x\\ne11$, $f(x)=x+11$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+11)-x = 11$ pentru orice $x\\ne11$.",
+          "Limita unei funcții constante este chiar acea constantă: $11$.",
+        ],
       },
     ],
   },
@@ -374,7 +494,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 12} f(x)$.",
         correctAnswer: "24",
-        explanation: "$f(x) = \\dfrac{(x-12)(x+12)}{x-12} = x + 12 \\to 24$.",
+        explanation: [
+          "Înlocuirea directă $x=12$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-144=(x-12)(x+12)$.",
+          "Simplificăm factorul comun $x-12$: expresia devine $x+12$, iar limita este $12+12=24$.",
+        ],
       },
       {
         id: "ea-lm-11-b",
@@ -384,7 +508,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=12$, valoarea $f(12)$ trebuie definită ca:",
         options: ["$24$", "$12$", "$36$", "$0$"],
         correctAnswer: "$24$",
-        explanation: "Limita în $x=12$ este $24$, deci prelungirea prin continuitate cere $f(12) = 24$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=12$, $f(12)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $24$.",
+          "Deci valoarea care asigură continuitatea este $f(12)=24$.",
+        ],
       },
       {
         id: "ea-lm-11-c",
@@ -393,7 +521,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "12",
-        explanation: "Pentru $x\\ne12$, $f(x) = x + 12$, deci $f(x) - x = 12$ pentru orice $x$, iar limita este $12$.",
+        explanation: [
+          "Pentru $x\\ne12$, $f(x)=x+12$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+12)-x = 12$ pentru orice $x\\ne12$.",
+          "Limita unei funcții constante este chiar acea constantă: $12$.",
+        ],
       },
     ],
   },
@@ -410,7 +542,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 13} f(x)$.",
         correctAnswer: "26",
-        explanation: "$f(x) = \\dfrac{(x-13)(x+13)}{x-13} = x + 13 \\to 26$.",
+        explanation: [
+          "Înlocuirea directă $x=13$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-169=(x-13)(x+13)$.",
+          "Simplificăm factorul comun $x-13$: expresia devine $x+13$, iar limita este $13+13=26$.",
+        ],
       },
       {
         id: "ea-lm-12-b",
@@ -420,7 +556,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=13$, valoarea $f(13)$ trebuie definită ca:",
         options: ["$26$", "$13$", "$39$", "$0$"],
         correctAnswer: "$26$",
-        explanation: "Limita în $x=13$ este $26$, deci prelungirea prin continuitate cere $f(13) = 26$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=13$, $f(13)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $26$.",
+          "Deci valoarea care asigură continuitatea este $f(13)=26$.",
+        ],
       },
       {
         id: "ea-lm-12-c",
@@ -429,7 +569,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "13",
-        explanation: "Pentru $x\\ne13$, $f(x) = x + 13$, deci $f(x) - x = 13$ pentru orice $x$, iar limita este $13$.",
+        explanation: [
+          "Pentru $x\\ne13$, $f(x)=x+13$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+13)-x = 13$ pentru orice $x\\ne13$.",
+          "Limita unei funcții constante este chiar acea constantă: $13$.",
+        ],
       },
     ],
   },
@@ -446,7 +590,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 14} f(x)$.",
         correctAnswer: "28",
-        explanation: "$f(x) = \\dfrac{(x-14)(x+14)}{x-14} = x + 14 \\to 28$.",
+        explanation: [
+          "Înlocuirea directă $x=14$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-196=(x-14)(x+14)$.",
+          "Simplificăm factorul comun $x-14$: expresia devine $x+14$, iar limita este $14+14=28$.",
+        ],
       },
       {
         id: "ea-lm-13-b",
@@ -456,7 +604,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=14$, valoarea $f(14)$ trebuie definită ca:",
         options: ["$28$", "$14$", "$42$", "$0$"],
         correctAnswer: "$28$",
-        explanation: "Limita în $x=14$ este $28$, deci prelungirea prin continuitate cere $f(14) = 28$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=14$, $f(14)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $28$.",
+          "Deci valoarea care asigură continuitatea este $f(14)=28$.",
+        ],
       },
       {
         id: "ea-lm-13-c",
@@ -465,7 +617,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "14",
-        explanation: "Pentru $x\\ne14$, $f(x) = x + 14$, deci $f(x) - x = 14$ pentru orice $x$, iar limita este $14$.",
+        explanation: [
+          "Pentru $x\\ne14$, $f(x)=x+14$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+14)-x = 14$ pentru orice $x\\ne14$.",
+          "Limita unei funcții constante este chiar acea constantă: $14$.",
+        ],
       },
     ],
   },
@@ -482,7 +638,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 15} f(x)$.",
         correctAnswer: "30",
-        explanation: "$f(x) = \\dfrac{(x-15)(x+15)}{x-15} = x + 15 \\to 30$.",
+        explanation: [
+          "Înlocuirea directă $x=15$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-225=(x-15)(x+15)$.",
+          "Simplificăm factorul comun $x-15$: expresia devine $x+15$, iar limita este $15+15=30$.",
+        ],
       },
       {
         id: "ea-lm-14-b",
@@ -492,7 +652,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=15$, valoarea $f(15)$ trebuie definită ca:",
         options: ["$30$", "$15$", "$45$", "$0$"],
         correctAnswer: "$30$",
-        explanation: "Limita în $x=15$ este $30$, deci prelungirea prin continuitate cere $f(15) = 30$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=15$, $f(15)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $30$.",
+          "Deci valoarea care asigură continuitatea este $f(15)=30$.",
+        ],
       },
       {
         id: "ea-lm-14-c",
@@ -501,7 +665,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "15",
-        explanation: "Pentru $x\\ne15$, $f(x) = x + 15$, deci $f(x) - x = 15$ pentru orice $x$, iar limita este $15$.",
+        explanation: [
+          "Pentru $x\\ne15$, $f(x)=x+15$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+15)-x = 15$ pentru orice $x\\ne15$.",
+          "Limita unei funcții constante este chiar acea constantă: $15$.",
+        ],
       },
     ],
   },
@@ -518,7 +686,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 16} f(x)$.",
         correctAnswer: "32",
-        explanation: "$f(x) = \\dfrac{(x-16)(x+16)}{x-16} = x + 16 \\to 32$.",
+        explanation: [
+          "Înlocuirea directă $x=16$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-256=(x-16)(x+16)$.",
+          "Simplificăm factorul comun $x-16$: expresia devine $x+16$, iar limita este $16+16=32$.",
+        ],
       },
       {
         id: "ea-lm-15-b",
@@ -528,7 +700,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=16$, valoarea $f(16)$ trebuie definită ca:",
         options: ["$32$", "$16$", "$48$", "$0$"],
         correctAnswer: "$32$",
-        explanation: "Limita în $x=16$ este $32$, deci prelungirea prin continuitate cere $f(16) = 32$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=16$, $f(16)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $32$.",
+          "Deci valoarea care asigură continuitatea este $f(16)=32$.",
+        ],
       },
       {
         id: "ea-lm-15-c",
@@ -537,7 +713,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "16",
-        explanation: "Pentru $x\\ne16$, $f(x) = x + 16$, deci $f(x) - x = 16$ pentru orice $x$, iar limita este $16$.",
+        explanation: [
+          "Pentru $x\\ne16$, $f(x)=x+16$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+16)-x = 16$ pentru orice $x\\ne16$.",
+          "Limita unei funcții constante este chiar acea constantă: $16$.",
+        ],
       },
     ],
   },
@@ -554,7 +734,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 17} f(x)$.",
         correctAnswer: "34",
-        explanation: "$f(x) = \\dfrac{(x-17)(x+17)}{x-17} = x + 17 \\to 34$.",
+        explanation: [
+          "Înlocuirea directă $x=17$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-289=(x-17)(x+17)$.",
+          "Simplificăm factorul comun $x-17$: expresia devine $x+17$, iar limita este $17+17=34$.",
+        ],
       },
       {
         id: "ea-lm-16-b",
@@ -564,7 +748,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=17$, valoarea $f(17)$ trebuie definită ca:",
         options: ["$34$", "$17$", "$51$", "$0$"],
         correctAnswer: "$34$",
-        explanation: "Limita în $x=17$ este $34$, deci prelungirea prin continuitate cere $f(17) = 34$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=17$, $f(17)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $34$.",
+          "Deci valoarea care asigură continuitatea este $f(17)=34$.",
+        ],
       },
       {
         id: "ea-lm-16-c",
@@ -573,7 +761,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "17",
-        explanation: "Pentru $x\\ne17$, $f(x) = x + 17$, deci $f(x) - x = 17$ pentru orice $x$, iar limita este $17$.",
+        explanation: [
+          "Pentru $x\\ne17$, $f(x)=x+17$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+17)-x = 17$ pentru orice $x\\ne17$.",
+          "Limita unei funcții constante este chiar acea constantă: $17$.",
+        ],
       },
     ],
   },
@@ -590,7 +782,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to 18} f(x)$.",
         correctAnswer: "36",
-        explanation: "$f(x) = \\dfrac{(x-18)(x+18)}{x-18} = x + 18 \\to 36$.",
+        explanation: [
+          "Înlocuirea directă $x=18$ dă forma nedeterminată $\\frac00$, deci factorizăm.",
+          "Numărătorul se factorizează: $x^2-324=(x-18)(x+18)$.",
+          "Simplificăm factorul comun $x-18$: expresia devine $x+18$, iar limita este $18+18=36$.",
+        ],
       },
       {
         id: "ea-lm-17-b",
@@ -600,7 +796,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Pentru ca $f$ să poată fi prelungită prin continuitate în $x=18$, valoarea $f(18)$ trebuie definită ca:",
         options: ["$36$", "$18$", "$54$", "$0$"],
         correctAnswer: "$36$",
-        explanation: "Limita în $x=18$ este $36$, deci prelungirea prin continuitate cere $f(18) = 36$.",
+        explanation: [
+          "Pentru ca $f$ să fie prelungită prin continuitate în $x=18$, $f(18)$ trebuie definită ca limita funcției în acel punct.",
+          "Din subpunctul anterior, limita este $36$.",
+          "Deci valoarea care asigură continuitatea este $f(18)=36$.",
+        ],
       },
       {
         id: "ea-lm-17-c",
@@ -609,7 +809,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $\\lim_{x \\to \\infty} [f(x) - x]$.",
         correctAnswer: "18",
-        explanation: "Pentru $x\\ne18$, $f(x) = x + 18$, deci $f(x) - x = 18$ pentru orice $x$, iar limita este $18$.",
+        explanation: [
+          "Pentru $x\\ne18$, $f(x)=x+18$ (din simplificarea anterioară).",
+          "Atunci $f(x)-x = (x+18)-x = 18$ pentru orice $x\\ne18$.",
+          "Limita unei funcții constante este chiar acea constantă: $18$.",
+        ],
       },
     ],
   },
@@ -626,7 +830,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "0",
-        explanation: "$f'(x) = 3x^2 - 3$, deci $f'(1) = 3 - 3 = 0$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-3$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-3=3-3$.",
+          "Rezultă $f'(1)=0$.",
+        ],
       },
       {
         id: "ea-dv-1-b",
@@ -636,7 +844,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -1$ și $x = 1$", "$x = 0$", "$x = -3$ și $x = 3$", "$x = 1$ (unică)"],
         correctAnswer: "$x = -1$ și $x = 1$",
-        explanation: "$3x^2 - 3 = 0 \\Rightarrow x^2 = 1 \\Rightarrow x = \\pm 1$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-3=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=3/3=1$.",
+          "Rezultă $x=\\pm1$, adică $x=-1$ și $x=1$.",
+        ],
       },
       {
         id: "ea-dv-1-c",
@@ -645,7 +857,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(1)$.",
         correctAnswer: "-2",
-        explanation: "$f(1) = 1^3 - 3 \\cdot 1 = 1 - 3 = -2$.",
+        explanation: [
+          "Înlocuim $x=1$ în expresia lui $f$: $f(1)=1^3-3\\cdot1$.",
+          "Calculăm puterile: $1^3=1$, iar $3\\cdot1=3$.",
+          "Rezultă $f(1)=1-3=-2$.",
+        ],
       },
     ],
   },
@@ -662,7 +878,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-9",
-        explanation: "$f'(x) = 3x^2 - 12$, deci $f'(1) = 3 - 12 = -9$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-12$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-12=3-12$.",
+          "Rezultă $f'(1)=-9$.",
+        ],
       },
       {
         id: "ea-dv-2-b",
@@ -672,7 +892,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -2$ și $x = 2$", "$x = 0$", "$x = -6$ și $x = 6$", "$x = 2$ (unică)"],
         correctAnswer: "$x = -2$ și $x = 2$",
-        explanation: "$3x^2 - 12 = 0 \\Rightarrow x^2 = 4 \\Rightarrow x = \\pm 2$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-12=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=12/3=4$.",
+          "Rezultă $x=\\pm2$, adică $x=-2$ și $x=2$.",
+        ],
       },
       {
         id: "ea-dv-2-c",
@@ -681,7 +905,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(2)$.",
         correctAnswer: "-16",
-        explanation: "$f(2) = 2^3 - 12 \\cdot 2 = 8 - 24 = -16$.",
+        explanation: [
+          "Înlocuim $x=2$ în expresia lui $f$: $f(2)=2^3-12\\cdot2$.",
+          "Calculăm puterile: $2^3=8$, iar $12\\cdot2=24$.",
+          "Rezultă $f(2)=8-24=-16$.",
+        ],
       },
     ],
   },
@@ -698,7 +926,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-24",
-        explanation: "$f'(x) = 3x^2 - 27$, deci $f'(1) = 3 - 27 = -24$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-27$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-27=3-27$.",
+          "Rezultă $f'(1)=-24$.",
+        ],
       },
       {
         id: "ea-dv-3-b",
@@ -708,7 +940,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -3$ și $x = 3$", "$x = 0$", "$x = -9$ și $x = 9$", "$x = 3$ (unică)"],
         correctAnswer: "$x = -3$ și $x = 3$",
-        explanation: "$3x^2 - 27 = 0 \\Rightarrow x^2 = 9 \\Rightarrow x = \\pm 3$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-27=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=27/3=9$.",
+          "Rezultă $x=\\pm3$, adică $x=-3$ și $x=3$.",
+        ],
       },
       {
         id: "ea-dv-3-c",
@@ -717,7 +953,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(3)$.",
         correctAnswer: "-54",
-        explanation: "$f(3) = 3^3 - 27 \\cdot 3 = 27 - 81 = -54$.",
+        explanation: [
+          "Înlocuim $x=3$ în expresia lui $f$: $f(3)=3^3-27\\cdot3$.",
+          "Calculăm puterile: $3^3=27$, iar $27\\cdot3=81$.",
+          "Rezultă $f(3)=27-81=-54$.",
+        ],
       },
     ],
   },
@@ -734,7 +974,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-45",
-        explanation: "$f'(x) = 3x^2 - 48$, deci $f'(1) = 3 - 48 = -45$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-48$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-48=3-48$.",
+          "Rezultă $f'(1)=-45$.",
+        ],
       },
       {
         id: "ea-dv-4-b",
@@ -744,7 +988,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -4$ și $x = 4$", "$x = 0$", "$x = -12$ și $x = 12$", "$x = 4$ (unică)"],
         correctAnswer: "$x = -4$ și $x = 4$",
-        explanation: "$3x^2 - 48 = 0 \\Rightarrow x^2 = 16 \\Rightarrow x = \\pm 4$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-48=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=48/3=16$.",
+          "Rezultă $x=\\pm4$, adică $x=-4$ și $x=4$.",
+        ],
       },
       {
         id: "ea-dv-4-c",
@@ -753,7 +1001,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(4)$.",
         correctAnswer: "-128",
-        explanation: "$f(4) = 4^3 - 48 \\cdot 4 = 64 - 192 = -128$.",
+        explanation: [
+          "Înlocuim $x=4$ în expresia lui $f$: $f(4)=4^3-48\\cdot4$.",
+          "Calculăm puterile: $4^3=64$, iar $48\\cdot4=192$.",
+          "Rezultă $f(4)=64-192=-128$.",
+        ],
       },
     ],
   },
@@ -770,7 +1022,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-72",
-        explanation: "$f'(x) = 3x^2 - 75$, deci $f'(1) = 3 - 75 = -72$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-75$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-75=3-75$.",
+          "Rezultă $f'(1)=-72$.",
+        ],
       },
       {
         id: "ea-dv-5-b",
@@ -780,7 +1036,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -5$ și $x = 5$", "$x = 0$", "$x = -15$ și $x = 15$", "$x = 5$ (unică)"],
         correctAnswer: "$x = -5$ și $x = 5$",
-        explanation: "$3x^2 - 75 = 0 \\Rightarrow x^2 = 25 \\Rightarrow x = \\pm 5$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-75=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=75/3=25$.",
+          "Rezultă $x=\\pm5$, adică $x=-5$ și $x=5$.",
+        ],
       },
       {
         id: "ea-dv-5-c",
@@ -789,7 +1049,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(5)$.",
         correctAnswer: "-250",
-        explanation: "$f(5) = 5^3 - 75 \\cdot 5 = 125 - 375 = -250$.",
+        explanation: [
+          "Înlocuim $x=5$ în expresia lui $f$: $f(5)=5^3-75\\cdot5$.",
+          "Calculăm puterile: $5^3=125$, iar $75\\cdot5=375$.",
+          "Rezultă $f(5)=125-375=-250$.",
+        ],
       },
     ],
   },
@@ -806,7 +1070,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-105",
-        explanation: "$f'(x) = 3x^2 - 108$, deci $f'(1) = 3 - 108 = -105$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-108$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-108=3-108$.",
+          "Rezultă $f'(1)=-105$.",
+        ],
       },
       {
         id: "ea-dv-6-b",
@@ -816,7 +1084,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -6$ și $x = 6$", "$x = 0$", "$x = -18$ și $x = 18$", "$x = 6$ (unică)"],
         correctAnswer: "$x = -6$ și $x = 6$",
-        explanation: "$3x^2 - 108 = 0 \\Rightarrow x^2 = 36 \\Rightarrow x = \\pm 6$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-108=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=108/3=36$.",
+          "Rezultă $x=\\pm6$, adică $x=-6$ și $x=6$.",
+        ],
       },
       {
         id: "ea-dv-6-c",
@@ -825,7 +1097,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(6)$.",
         correctAnswer: "-432",
-        explanation: "$f(6) = 6^3 - 108 \\cdot 6 = 216 - 648 = -432$.",
+        explanation: [
+          "Înlocuim $x=6$ în expresia lui $f$: $f(6)=6^3-108\\cdot6$.",
+          "Calculăm puterile: $6^3=216$, iar $108\\cdot6=648$.",
+          "Rezultă $f(6)=216-648=-432$.",
+        ],
       },
     ],
   },
@@ -842,7 +1118,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-144",
-        explanation: "$f'(x) = 3x^2 - 147$, deci $f'(1) = 3 - 147 = -144$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-147$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-147=3-147$.",
+          "Rezultă $f'(1)=-144$.",
+        ],
       },
       {
         id: "ea-dv-7-b",
@@ -852,7 +1132,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -7$ și $x = 7$", "$x = 0$", "$x = -21$ și $x = 21$", "$x = 7$ (unică)"],
         correctAnswer: "$x = -7$ și $x = 7$",
-        explanation: "$3x^2 - 147 = 0 \\Rightarrow x^2 = 49 \\Rightarrow x = \\pm 7$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-147=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=147/3=49$.",
+          "Rezultă $x=\\pm7$, adică $x=-7$ și $x=7$.",
+        ],
       },
       {
         id: "ea-dv-7-c",
@@ -861,7 +1145,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(7)$.",
         correctAnswer: "-686",
-        explanation: "$f(7) = 7^3 - 147 \\cdot 7 = 343 - 1029 = -686$.",
+        explanation: [
+          "Înlocuim $x=7$ în expresia lui $f$: $f(7)=7^3-147\\cdot7$.",
+          "Calculăm puterile: $7^3=343$, iar $147\\cdot7=1029$.",
+          "Rezultă $f(7)=343-1029=-686$.",
+        ],
       },
     ],
   },
@@ -878,7 +1166,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-189",
-        explanation: "$f'(x) = 3x^2 - 192$, deci $f'(1) = 3 - 192 = -189$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-192$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-192=3-192$.",
+          "Rezultă $f'(1)=-189$.",
+        ],
       },
       {
         id: "ea-dv-8-b",
@@ -888,7 +1180,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -8$ și $x = 8$", "$x = 0$", "$x = -24$ și $x = 24$", "$x = 8$ (unică)"],
         correctAnswer: "$x = -8$ și $x = 8$",
-        explanation: "$3x^2 - 192 = 0 \\Rightarrow x^2 = 64 \\Rightarrow x = \\pm 8$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-192=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=192/3=64$.",
+          "Rezultă $x=\\pm8$, adică $x=-8$ și $x=8$.",
+        ],
       },
       {
         id: "ea-dv-8-c",
@@ -897,7 +1193,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(8)$.",
         correctAnswer: "-1024",
-        explanation: "$f(8) = 8^3 - 192 \\cdot 8 = 512 - 1536 = -1024$.",
+        explanation: [
+          "Înlocuim $x=8$ în expresia lui $f$: $f(8)=8^3-192\\cdot8$.",
+          "Calculăm puterile: $8^3=512$, iar $192\\cdot8=1536$.",
+          "Rezultă $f(8)=512-1536=-1024$.",
+        ],
       },
     ],
   },
@@ -914,7 +1214,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-240",
-        explanation: "$f'(x) = 3x^2 - 243$, deci $f'(1) = 3 - 243 = -240$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-243$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-243=3-243$.",
+          "Rezultă $f'(1)=-240$.",
+        ],
       },
       {
         id: "ea-dv-9-b",
@@ -924,7 +1228,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -9$ și $x = 9$", "$x = 0$", "$x = -27$ și $x = 27$", "$x = 9$ (unică)"],
         correctAnswer: "$x = -9$ și $x = 9$",
-        explanation: "$3x^2 - 243 = 0 \\Rightarrow x^2 = 81 \\Rightarrow x = \\pm 9$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-243=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=243/3=81$.",
+          "Rezultă $x=\\pm9$, adică $x=-9$ și $x=9$.",
+        ],
       },
       {
         id: "ea-dv-9-c",
@@ -933,7 +1241,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(9)$.",
         correctAnswer: "-1458",
-        explanation: "$f(9) = 9^3 - 243 \\cdot 9 = 729 - 2187 = -1458$.",
+        explanation: [
+          "Înlocuim $x=9$ în expresia lui $f$: $f(9)=9^3-243\\cdot9$.",
+          "Calculăm puterile: $9^3=729$, iar $243\\cdot9=2187$.",
+          "Rezultă $f(9)=729-2187=-1458$.",
+        ],
       },
     ],
   },
@@ -950,7 +1262,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-297",
-        explanation: "$f'(x) = 3x^2 - 300$, deci $f'(1) = 3 - 300 = -297$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-300$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-300=3-300$.",
+          "Rezultă $f'(1)=-297$.",
+        ],
       },
       {
         id: "ea-dv-10-b",
@@ -960,7 +1276,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -10$ și $x = 10$", "$x = 0$", "$x = -30$ și $x = 30$", "$x = 10$ (unică)"],
         correctAnswer: "$x = -10$ și $x = 10$",
-        explanation: "$3x^2 - 300 = 0 \\Rightarrow x^2 = 100 \\Rightarrow x = \\pm 10$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-300=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=300/3=100$.",
+          "Rezultă $x=\\pm10$, adică $x=-10$ și $x=10$.",
+        ],
       },
       {
         id: "ea-dv-10-c",
@@ -969,7 +1289,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(10)$.",
         correctAnswer: "-2000",
-        explanation: "$f(10) = 10^3 - 300 \\cdot 10 = 1000 - 3000 = -2000$.",
+        explanation: [
+          "Înlocuim $x=10$ în expresia lui $f$: $f(10)=10^3-300\\cdot10$.",
+          "Calculăm puterile: $10^3=1000$, iar $300\\cdot10=3000$.",
+          "Rezultă $f(10)=1000-3000=-2000$.",
+        ],
       },
     ],
   },
@@ -986,7 +1310,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-360",
-        explanation: "$f'(x) = 3x^2 - 363$, deci $f'(1) = 3 - 363 = -360$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-363$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-363=3-363$.",
+          "Rezultă $f'(1)=-360$.",
+        ],
       },
       {
         id: "ea-dv-11-b",
@@ -996,7 +1324,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -11$ și $x = 11$", "$x = 0$", "$x = -33$ și $x = 33$", "$x = 11$ (unică)"],
         correctAnswer: "$x = -11$ și $x = 11$",
-        explanation: "$3x^2 - 363 = 0 \\Rightarrow x^2 = 121 \\Rightarrow x = \\pm 11$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-363=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=363/3=121$.",
+          "Rezultă $x=\\pm11$, adică $x=-11$ și $x=11$.",
+        ],
       },
       {
         id: "ea-dv-11-c",
@@ -1005,7 +1337,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(11)$.",
         correctAnswer: "-2662",
-        explanation: "$f(11) = 11^3 - 363 \\cdot 11 = 1331 - 3993 = -2662$.",
+        explanation: [
+          "Înlocuim $x=11$ în expresia lui $f$: $f(11)=11^3-363\\cdot11$.",
+          "Calculăm puterile: $11^3=1331$, iar $363\\cdot11=3993$.",
+          "Rezultă $f(11)=1331-3993=-2662$.",
+        ],
       },
     ],
   },
@@ -1022,7 +1358,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-429",
-        explanation: "$f'(x) = 3x^2 - 432$, deci $f'(1) = 3 - 432 = -429$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-432$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-432=3-432$.",
+          "Rezultă $f'(1)=-429$.",
+        ],
       },
       {
         id: "ea-dv-12-b",
@@ -1032,7 +1372,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -12$ și $x = 12$", "$x = 0$", "$x = -36$ și $x = 36$", "$x = 12$ (unică)"],
         correctAnswer: "$x = -12$ și $x = 12$",
-        explanation: "$3x^2 - 432 = 0 \\Rightarrow x^2 = 144 \\Rightarrow x = \\pm 12$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-432=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=432/3=144$.",
+          "Rezultă $x=\\pm12$, adică $x=-12$ și $x=12$.",
+        ],
       },
       {
         id: "ea-dv-12-c",
@@ -1041,7 +1385,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(12)$.",
         correctAnswer: "-3456",
-        explanation: "$f(12) = 12^3 - 432 \\cdot 12 = 1728 - 5184 = -3456$.",
+        explanation: [
+          "Înlocuim $x=12$ în expresia lui $f$: $f(12)=12^3-432\\cdot12$.",
+          "Calculăm puterile: $12^3=1728$, iar $432\\cdot12=5184$.",
+          "Rezultă $f(12)=1728-5184=-3456$.",
+        ],
       },
     ],
   },
@@ -1058,7 +1406,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-504",
-        explanation: "$f'(x) = 3x^2 - 507$, deci $f'(1) = 3 - 507 = -504$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-507$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-507=3-507$.",
+          "Rezultă $f'(1)=-504$.",
+        ],
       },
       {
         id: "ea-dv-13-b",
@@ -1068,7 +1420,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -13$ și $x = 13$", "$x = 0$", "$x = -39$ și $x = 39$", "$x = 13$ (unică)"],
         correctAnswer: "$x = -13$ și $x = 13$",
-        explanation: "$3x^2 - 507 = 0 \\Rightarrow x^2 = 169 \\Rightarrow x = \\pm 13$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-507=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=507/3=169$.",
+          "Rezultă $x=\\pm13$, adică $x=-13$ și $x=13$.",
+        ],
       },
       {
         id: "ea-dv-13-c",
@@ -1077,7 +1433,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(13)$.",
         correctAnswer: "-4394",
-        explanation: "$f(13) = 13^3 - 507 \\cdot 13 = 2197 - 6591 = -4394$.",
+        explanation: [
+          "Înlocuim $x=13$ în expresia lui $f$: $f(13)=13^3-507\\cdot13$.",
+          "Calculăm puterile: $13^3=2197$, iar $507\\cdot13=6591$.",
+          "Rezultă $f(13)=2197-6591=-4394$.",
+        ],
       },
     ],
   },
@@ -1094,7 +1454,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-585",
-        explanation: "$f'(x) = 3x^2 - 588$, deci $f'(1) = 3 - 588 = -585$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-588$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-588=3-588$.",
+          "Rezultă $f'(1)=-585$.",
+        ],
       },
       {
         id: "ea-dv-14-b",
@@ -1104,7 +1468,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -14$ și $x = 14$", "$x = 0$", "$x = -42$ și $x = 42$", "$x = 14$ (unică)"],
         correctAnswer: "$x = -14$ și $x = 14$",
-        explanation: "$3x^2 - 588 = 0 \\Rightarrow x^2 = 196 \\Rightarrow x = \\pm 14$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-588=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=588/3=196$.",
+          "Rezultă $x=\\pm14$, adică $x=-14$ și $x=14$.",
+        ],
       },
       {
         id: "ea-dv-14-c",
@@ -1113,7 +1481,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(14)$.",
         correctAnswer: "-5488",
-        explanation: "$f(14) = 14^3 - 588 \\cdot 14 = 2744 - 8232 = -5488$.",
+        explanation: [
+          "Înlocuim $x=14$ în expresia lui $f$: $f(14)=14^3-588\\cdot14$.",
+          "Calculăm puterile: $14^3=2744$, iar $588\\cdot14=8232$.",
+          "Rezultă $f(14)=2744-8232=-5488$.",
+        ],
       },
     ],
   },
@@ -1130,7 +1502,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-672",
-        explanation: "$f'(x) = 3x^2 - 675$, deci $f'(1) = 3 - 675 = -672$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-675$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-675=3-675$.",
+          "Rezultă $f'(1)=-672$.",
+        ],
       },
       {
         id: "ea-dv-15-b",
@@ -1140,7 +1516,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -15$ și $x = 15$", "$x = 0$", "$x = -45$ și $x = 45$", "$x = 15$ (unică)"],
         correctAnswer: "$x = -15$ și $x = 15$",
-        explanation: "$3x^2 - 675 = 0 \\Rightarrow x^2 = 225 \\Rightarrow x = \\pm 15$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-675=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=675/3=225$.",
+          "Rezultă $x=\\pm15$, adică $x=-15$ și $x=15$.",
+        ],
       },
       {
         id: "ea-dv-15-c",
@@ -1149,7 +1529,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(15)$.",
         correctAnswer: "-6750",
-        explanation: "$f(15) = 15^3 - 675 \\cdot 15 = 3375 - 10125 = -6750$.",
+        explanation: [
+          "Înlocuim $x=15$ în expresia lui $f$: $f(15)=15^3-675\\cdot15$.",
+          "Calculăm puterile: $15^3=3375$, iar $675\\cdot15=10125$.",
+          "Rezultă $f(15)=3375-10125=-6750$.",
+        ],
       },
     ],
   },
@@ -1166,7 +1550,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-765",
-        explanation: "$f'(x) = 3x^2 - 768$, deci $f'(1) = 3 - 768 = -765$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-768$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-768=3-768$.",
+          "Rezultă $f'(1)=-765$.",
+        ],
       },
       {
         id: "ea-dv-16-b",
@@ -1176,7 +1564,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -16$ și $x = 16$", "$x = 0$", "$x = -48$ și $x = 48$", "$x = 16$ (unică)"],
         correctAnswer: "$x = -16$ și $x = 16$",
-        explanation: "$3x^2 - 768 = 0 \\Rightarrow x^2 = 256 \\Rightarrow x = \\pm 16$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-768=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=768/3=256$.",
+          "Rezultă $x=\\pm16$, adică $x=-16$ și $x=16$.",
+        ],
       },
       {
         id: "ea-dv-16-c",
@@ -1185,7 +1577,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(16)$.",
         correctAnswer: "-8192",
-        explanation: "$f(16) = 16^3 - 768 \\cdot 16 = 4096 - 12288 = -8192$.",
+        explanation: [
+          "Înlocuim $x=16$ în expresia lui $f$: $f(16)=16^3-768\\cdot16$.",
+          "Calculăm puterile: $16^3=4096$, iar $768\\cdot16=12288$.",
+          "Rezultă $f(16)=4096-12288=-8192$.",
+        ],
       },
     ],
   },
@@ -1202,7 +1598,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f'(x)$ și evaluați $f'(1)$.",
         correctAnswer: "-864",
-        explanation: "$f'(x) = 3x^2 - 867$, deci $f'(1) = 3 - 867 = -864$.",
+        explanation: [
+          "Aplicăm regulile de derivare $(x^n)'=nx^{n-1}$ termen cu termen: $f'(x)=3x^2-867$.",
+          "Înlocuim $x=1$: $f'(1)=3\\cdot1^2-867=3-867$.",
+          "Rezultă $f'(1)=-864$.",
+        ],
       },
       {
         id: "ea-dv-17-b",
@@ -1212,7 +1612,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "Punctele critice ale funcției (soluțiile ecuației $f'(x) = 0$) sunt:",
         options: ["$x = -17$ și $x = 17$", "$x = 0$", "$x = -51$ și $x = 51$", "$x = 17$ (unică)"],
         correctAnswer: "$x = -17$ și $x = 17$",
-        explanation: "$3x^2 - 867 = 0 \\Rightarrow x^2 = 289 \\Rightarrow x = \\pm 17$.",
+        explanation: [
+          "Condiția de punct critic este $f'(x)=0$, adică $3x^2-867=0$.",
+          "Împărțim prin $3$ și izolăm $x^2$: $x^2=867/3=289$.",
+          "Rezultă $x=\\pm17$, adică $x=-17$ și $x=17$.",
+        ],
       },
       {
         id: "ea-dv-17-c",
@@ -1221,7 +1625,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $f(17)$.",
         correctAnswer: "-9826",
-        explanation: "$f(17) = 17^3 - 867 \\cdot 17 = 4913 - 14739 = -9826$.",
+        explanation: [
+          "Înlocuim $x=17$ în expresia lui $f$: $f(17)=17^3-867\\cdot17$.",
+          "Calculăm puterile: $17^3=4913$, iar $867\\cdot17=14739$.",
+          "Rezultă $f(17)=4913-14739=-9826$.",
+        ],
       },
     ],
   },
@@ -1238,7 +1646,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "0",
-        explanation: "$F(x) = x^3 - x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 1 = 0$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-1=0$.",
+        ],
       },
       {
         id: "ea-in-1-b",
@@ -1248,7 +1660,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - x^2 + C$", "$3x^3 - 2x^2 + C$", "$x^3 + x^2 + C$", "$6x - 2 + C$"],
         correctAnswer: "$x^3 - x^2 + C$",
-        explanation: "$(x^3 - x^2)' = 3x^2 - 2x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-x^2)'=3x^2-2x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-2x$, rezultă că $x^3-x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-1-c",
@@ -1257,7 +1673,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "4",
-        explanation: "$\\int_0^2 (3x^2-2x)\\,dx = \\left[x^3 - x^2\\right]_0^2 = (8-4) - 0 = 4$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-4$ și $F(0)=0$, deci integrala este $4$.",
+        ],
       },
     ],
   },
@@ -1274,7 +1694,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-1",
-        explanation: "$F(x) = x^3 - 2x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 2 = -1$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-2x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-2=-1$.",
+        ],
       },
       {
         id: "ea-in-2-b",
@@ -1284,7 +1708,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 2x^2 + C$", "$3x^3 - 4x^2 + C$", "$x^3 + 2x^2 + C$", "$6x - 4 + C$"],
         correctAnswer: "$x^3 - 2x^2 + C$",
-        explanation: "$(x^3 - 2x^2)' = 3x^2 - 4x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-2x^2)'=3x^2-4x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-4x$, rezultă că $x^3-2x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-2-c",
@@ -1293,7 +1721,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "0",
-        explanation: "$\\int_0^2 (3x^2-4x)\\,dx = \\left[x^3 - 2x^2\\right]_0^2 = (8-8) - 0 = 0$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-2x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-8$ și $F(0)=0$, deci integrala este $0$.",
+        ],
       },
     ],
   },
@@ -1310,7 +1742,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-2",
-        explanation: "$F(x) = x^3 - 3x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 3 = -2$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-3x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-3=-2$.",
+        ],
       },
       {
         id: "ea-in-3-b",
@@ -1320,7 +1756,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 3x^2 + C$", "$3x^3 - 6x^2 + C$", "$x^3 + 3x^2 + C$", "$6x - 6 + C$"],
         correctAnswer: "$x^3 - 3x^2 + C$",
-        explanation: "$(x^3 - 3x^2)' = 3x^2 - 6x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-3x^2)'=3x^2-6x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-6x$, rezultă că $x^3-3x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-3-c",
@@ -1329,7 +1769,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-4",
-        explanation: "$\\int_0^2 (3x^2-6x)\\,dx = \\left[x^3 - 3x^2\\right]_0^2 = (8-12) - 0 = -4$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-3x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-12$ și $F(0)=0$, deci integrala este $-4$.",
+        ],
       },
     ],
   },
@@ -1346,7 +1790,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-3",
-        explanation: "$F(x) = x^3 - 4x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 4 = -3$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-4x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-4=-3$.",
+        ],
       },
       {
         id: "ea-in-4-b",
@@ -1356,7 +1804,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 4x^2 + C$", "$3x^3 - 8x^2 + C$", "$x^3 + 4x^2 + C$", "$6x - 8 + C$"],
         correctAnswer: "$x^3 - 4x^2 + C$",
-        explanation: "$(x^3 - 4x^2)' = 3x^2 - 8x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-4x^2)'=3x^2-8x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-8x$, rezultă că $x^3-4x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-4-c",
@@ -1365,7 +1817,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-8",
-        explanation: "$\\int_0^2 (3x^2-8x)\\,dx = \\left[x^3 - 4x^2\\right]_0^2 = (8-16) - 0 = -8$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-4x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-16$ și $F(0)=0$, deci integrala este $-8$.",
+        ],
       },
     ],
   },
@@ -1382,7 +1838,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-4",
-        explanation: "$F(x) = x^3 - 5x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 5 = -4$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-5x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-5=-4$.",
+        ],
       },
       {
         id: "ea-in-5-b",
@@ -1392,7 +1852,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 5x^2 + C$", "$3x^3 - 10x^2 + C$", "$x^3 + 5x^2 + C$", "$6x - 10 + C$"],
         correctAnswer: "$x^3 - 5x^2 + C$",
-        explanation: "$(x^3 - 5x^2)' = 3x^2 - 10x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-5x^2)'=3x^2-10x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-10x$, rezultă că $x^3-5x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-5-c",
@@ -1401,7 +1865,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-12",
-        explanation: "$\\int_0^2 (3x^2-10x)\\,dx = \\left[x^3 - 5x^2\\right]_0^2 = (8-20) - 0 = -12$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-5x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-20$ și $F(0)=0$, deci integrala este $-12$.",
+        ],
       },
     ],
   },
@@ -1418,7 +1886,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-5",
-        explanation: "$F(x) = x^3 - 6x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 6 = -5$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-6x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-6=-5$.",
+        ],
       },
       {
         id: "ea-in-6-b",
@@ -1428,7 +1900,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 6x^2 + C$", "$3x^3 - 12x^2 + C$", "$x^3 + 6x^2 + C$", "$6x - 12 + C$"],
         correctAnswer: "$x^3 - 6x^2 + C$",
-        explanation: "$(x^3 - 6x^2)' = 3x^2 - 12x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-6x^2)'=3x^2-12x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-12x$, rezultă că $x^3-6x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-6-c",
@@ -1437,7 +1913,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-16",
-        explanation: "$\\int_0^2 (3x^2-12x)\\,dx = \\left[x^3 - 6x^2\\right]_0^2 = (8-24) - 0 = -16$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-6x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-24$ și $F(0)=0$, deci integrala este $-16$.",
+        ],
       },
     ],
   },
@@ -1454,7 +1934,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-6",
-        explanation: "$F(x) = x^3 - 7x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 7 = -6$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-7x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-7=-6$.",
+        ],
       },
       {
         id: "ea-in-7-b",
@@ -1464,7 +1948,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 7x^2 + C$", "$3x^3 - 14x^2 + C$", "$x^3 + 7x^2 + C$", "$6x - 14 + C$"],
         correctAnswer: "$x^3 - 7x^2 + C$",
-        explanation: "$(x^3 - 7x^2)' = 3x^2 - 14x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-7x^2)'=3x^2-14x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-14x$, rezultă că $x^3-7x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-7-c",
@@ -1473,7 +1961,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-20",
-        explanation: "$\\int_0^2 (3x^2-14x)\\,dx = \\left[x^3 - 7x^2\\right]_0^2 = (8-28) - 0 = -20$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-7x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-28$ și $F(0)=0$, deci integrala este $-20$.",
+        ],
       },
     ],
   },
@@ -1490,7 +1982,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-7",
-        explanation: "$F(x) = x^3 - 8x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 8 = -7$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-8x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-8=-7$.",
+        ],
       },
       {
         id: "ea-in-8-b",
@@ -1500,7 +1996,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 8x^2 + C$", "$3x^3 - 16x^2 + C$", "$x^3 + 8x^2 + C$", "$6x - 16 + C$"],
         correctAnswer: "$x^3 - 8x^2 + C$",
-        explanation: "$(x^3 - 8x^2)' = 3x^2 - 16x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-8x^2)'=3x^2-16x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-16x$, rezultă că $x^3-8x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-8-c",
@@ -1509,7 +2009,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-24",
-        explanation: "$\\int_0^2 (3x^2-16x)\\,dx = \\left[x^3 - 8x^2\\right]_0^2 = (8-32) - 0 = -24$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-8x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-32$ și $F(0)=0$, deci integrala este $-24$.",
+        ],
       },
     ],
   },
@@ -1526,7 +2030,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-8",
-        explanation: "$F(x) = x^3 - 9x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 9 = -8$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-9x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-9=-8$.",
+        ],
       },
       {
         id: "ea-in-9-b",
@@ -1536,7 +2044,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 9x^2 + C$", "$3x^3 - 18x^2 + C$", "$x^3 + 9x^2 + C$", "$6x - 18 + C$"],
         correctAnswer: "$x^3 - 9x^2 + C$",
-        explanation: "$(x^3 - 9x^2)' = 3x^2 - 18x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-9x^2)'=3x^2-18x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-18x$, rezultă că $x^3-9x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-9-c",
@@ -1545,7 +2057,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-28",
-        explanation: "$\\int_0^2 (3x^2-18x)\\,dx = \\left[x^3 - 9x^2\\right]_0^2 = (8-36) - 0 = -28$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-9x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-36$ și $F(0)=0$, deci integrala este $-28$.",
+        ],
       },
     ],
   },
@@ -1562,7 +2078,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-9",
-        explanation: "$F(x) = x^3 - 10x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 10 = -9$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-10x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-10=-9$.",
+        ],
       },
       {
         id: "ea-in-10-b",
@@ -1572,7 +2092,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 10x^2 + C$", "$3x^3 - 20x^2 + C$", "$x^3 + 10x^2 + C$", "$6x - 20 + C$"],
         correctAnswer: "$x^3 - 10x^2 + C$",
-        explanation: "$(x^3 - 10x^2)' = 3x^2 - 20x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-10x^2)'=3x^2-20x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-20x$, rezultă că $x^3-10x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-10-c",
@@ -1581,7 +2105,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-32",
-        explanation: "$\\int_0^2 (3x^2-20x)\\,dx = \\left[x^3 - 10x^2\\right]_0^2 = (8-40) - 0 = -32$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-10x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-40$ și $F(0)=0$, deci integrala este $-32$.",
+        ],
       },
     ],
   },
@@ -1598,7 +2126,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-10",
-        explanation: "$F(x) = x^3 - 11x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 11 = -10$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-11x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-11=-10$.",
+        ],
       },
       {
         id: "ea-in-11-b",
@@ -1608,7 +2140,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 11x^2 + C$", "$3x^3 - 22x^2 + C$", "$x^3 + 11x^2 + C$", "$6x - 22 + C$"],
         correctAnswer: "$x^3 - 11x^2 + C$",
-        explanation: "$(x^3 - 11x^2)' = 3x^2 - 22x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-11x^2)'=3x^2-22x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-22x$, rezultă că $x^3-11x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-11-c",
@@ -1617,7 +2153,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-36",
-        explanation: "$\\int_0^2 (3x^2-22x)\\,dx = \\left[x^3 - 11x^2\\right]_0^2 = (8-44) - 0 = -36$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-11x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-44$ și $F(0)=0$, deci integrala este $-36$.",
+        ],
       },
     ],
   },
@@ -1634,7 +2174,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-11",
-        explanation: "$F(x) = x^3 - 12x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 12 = -11$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-12x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-12=-11$.",
+        ],
       },
       {
         id: "ea-in-12-b",
@@ -1644,7 +2188,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 12x^2 + C$", "$3x^3 - 24x^2 + C$", "$x^3 + 12x^2 + C$", "$6x - 24 + C$"],
         correctAnswer: "$x^3 - 12x^2 + C$",
-        explanation: "$(x^3 - 12x^2)' = 3x^2 - 24x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-12x^2)'=3x^2-24x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-24x$, rezultă că $x^3-12x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-12-c",
@@ -1653,7 +2201,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-40",
-        explanation: "$\\int_0^2 (3x^2-24x)\\,dx = \\left[x^3 - 12x^2\\right]_0^2 = (8-48) - 0 = -40$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-12x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-48$ și $F(0)=0$, deci integrala este $-40$.",
+        ],
       },
     ],
   },
@@ -1670,7 +2222,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-12",
-        explanation: "$F(x) = x^3 - 13x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 13 = -12$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-13x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-13=-12$.",
+        ],
       },
       {
         id: "ea-in-13-b",
@@ -1680,7 +2236,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 13x^2 + C$", "$3x^3 - 26x^2 + C$", "$x^3 + 13x^2 + C$", "$6x - 26 + C$"],
         correctAnswer: "$x^3 - 13x^2 + C$",
-        explanation: "$(x^3 - 13x^2)' = 3x^2 - 26x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-13x^2)'=3x^2-26x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-26x$, rezultă că $x^3-13x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-13-c",
@@ -1689,7 +2249,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-44",
-        explanation: "$\\int_0^2 (3x^2-26x)\\,dx = \\left[x^3 - 13x^2\\right]_0^2 = (8-52) - 0 = -44$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-13x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-52$ și $F(0)=0$, deci integrala este $-44$.",
+        ],
       },
     ],
   },
@@ -1706,7 +2270,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-13",
-        explanation: "$F(x) = x^3 - 14x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 14 = -13$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-14x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-14=-13$.",
+        ],
       },
       {
         id: "ea-in-14-b",
@@ -1716,7 +2284,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 14x^2 + C$", "$3x^3 - 28x^2 + C$", "$x^3 + 14x^2 + C$", "$6x - 28 + C$"],
         correctAnswer: "$x^3 - 14x^2 + C$",
-        explanation: "$(x^3 - 14x^2)' = 3x^2 - 28x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-14x^2)'=3x^2-28x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-28x$, rezultă că $x^3-14x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-14-c",
@@ -1725,7 +2297,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-48",
-        explanation: "$\\int_0^2 (3x^2-28x)\\,dx = \\left[x^3 - 14x^2\\right]_0^2 = (8-56) - 0 = -48$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-14x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-56$ și $F(0)=0$, deci integrala este $-48$.",
+        ],
       },
     ],
   },
@@ -1742,7 +2318,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-14",
-        explanation: "$F(x) = x^3 - 15x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 15 = -14$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-15x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-15=-14$.",
+        ],
       },
       {
         id: "ea-in-15-b",
@@ -1752,7 +2332,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 15x^2 + C$", "$3x^3 - 30x^2 + C$", "$x^3 + 15x^2 + C$", "$6x - 30 + C$"],
         correctAnswer: "$x^3 - 15x^2 + C$",
-        explanation: "$(x^3 - 15x^2)' = 3x^2 - 30x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-15x^2)'=3x^2-30x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-30x$, rezultă că $x^3-15x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-15-c",
@@ -1761,7 +2345,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-52",
-        explanation: "$\\int_0^2 (3x^2-30x)\\,dx = \\left[x^3 - 15x^2\\right]_0^2 = (8-60) - 0 = -52$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-15x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-60$ și $F(0)=0$, deci integrala este $-52$.",
+        ],
       },
     ],
   },
@@ -1778,7 +2366,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Determinați primitiva $F$ a lui $f$ cu $F(0) = 0$ și calculați $F(1)$.",
         correctAnswer: "-15",
-        explanation: "$F(x) = x^3 - 16x^2 + C$, iar $F(0)=0 \\Rightarrow C=0$. Deci $F(1) = 1 - 16 = -15$.",
+        explanation: [
+          "Găsim o primitivă termen cu termen, folosind $\\int x^n\\,dx=\\dfrac{x^{n+1}}{n+1}+C$: $F(x)=x^3-16x^2+C$.",
+          "Punem condiția $F(0)=0$: cum $F(0)=C$, rezultă $C=0$.",
+          "Calculăm $F(1)=1-16=-15$.",
+        ],
       },
       {
         id: "ea-in-16-b",
@@ -1788,7 +2380,11 @@ export const examAnalysisProblems: Problem[] = [
         prompt: "O primitivă generală a funcției $f$ este:",
         options: ["$x^3 - 16x^2 + C$", "$3x^3 - 32x^2 + C$", "$x^3 + 16x^2 + C$", "$6x - 32 + C$"],
         correctAnswer: "$x^3 - 16x^2 + C$",
-        explanation: "$(x^3 - 16x^2)' = 3x^2 - 32x = f(x)$.",
+        explanation: [
+          "O primitivă $F$ a lui $f$ verifică $F'=f$.",
+          "Derivăm funcția propusă: $(x^3-16x^2)'=3x^2-32x$.",
+          "Cum derivata coincide cu $f(x)=3x^2-32x$, rezultă că $x^3-16x^2+C$ este o primitivă a lui $f$.",
+        ],
       },
       {
         id: "ea-in-16-c",
@@ -1797,7 +2393,11 @@ export const examAnalysisProblems: Problem[] = [
         points: 5,
         prompt: "Calculați $$\\int_0^2 f(x)\\, dx.$$",
         correctAnswer: "-56",
-        explanation: "$\\int_0^2 (3x^2-32x)\\,dx = \\left[x^3 - 16x^2\\right]_0^2 = (8-64) - 0 = -56$.",
+        explanation: [
+          "Folosim primitiva de la punctul a): $F(x)=x^3-16x^2$.",
+          "Aplicăm formula Leibniz-Newton: $\\int_0^2 f(x)\\,dx=F(2)-F(0)$.",
+          "Calculăm: $F(2)=8-64$ și $F(0)=0$, deci integrala este $-56$.",
+        ],
       },
     ],
   },
