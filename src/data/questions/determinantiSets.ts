@@ -10,7 +10,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 2 & 3 \\\\ 1 & 4 \\end{pmatrix}$.",
     correctAnswer: "5",
-    explanation: "$\\det = 2\\cdot4 - 3\\cdot1 = 8-3=5$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = 2\\cdot4 - 3\\cdot1$.",
+      "Calculăm: $8-3=5$.",
+    ],
   },
   {
     id: "dt-s1-2",
@@ -21,7 +25,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 5 & 1 \\\\ 2 & 3 \\end{pmatrix}$.",
     options: ["$13$", "$17$", "$15$", "$11$"],
     correctAnswer: "$13$",
-    explanation: "$\\det = 5\\cdot3 - 1\\cdot2 = 15-2=13$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = 5\\cdot3 - 1\\cdot2$.",
+      "Calculăm: $15-2=13$.",
+    ],
   },
   {
     id: "dt-s1-3",
@@ -31,7 +39,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 7 & 2 \\\\ 3 & 1 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "$\\det = 7\\cdot1 - 2\\cdot3 = 7-6=1$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = 7\\cdot1 - 2\\cdot3$.",
+      "Calculăm: $7-6=1$.",
+    ],
   },
   {
     id: "dt-s1-4",
@@ -42,7 +54,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 4 & -1 \\\\ 2 & 3 \\end{pmatrix}$.",
     options: ["$14$", "$10$", "$12$", "$-14$"],
     correctAnswer: "$14$",
-    explanation: "$\\det = 4\\cdot3 - (-1)\\cdot2 = 12+2=14$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = 4\\cdot3 - (-1)\\cdot2$.",
+      "Calculăm: $12+2=14$.",
+    ],
   },
   {
     id: "dt-s1-5",
@@ -52,7 +68,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 0 & 5 \\\\ 5 & 0 \\end{pmatrix}$.",
     correctAnswer: "-25",
-    explanation: "$\\det = 0\\cdot0 - 5\\cdot5 = -25$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = 0\\cdot0 - 5\\cdot5$.",
+      "Calculăm: $0-25=-25$.",
+    ],
   },
   {
     id: "dt-s1-6",
@@ -63,7 +83,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} -2 & 3 \\\\ 1 & -4 \\end{pmatrix}$.",
     options: ["$5$", "$11$", "$-5$", "$-11$"],
     correctAnswer: "$5$",
-    explanation: "$\\det = (-2)(-4) - 3\\cdot1 = 8-3=5$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = (-2)(-4) - 3\\cdot1$.",
+      "Calculăm: $8-3=5$.",
+    ],
   },
   {
     id: "dt-s1-7",
@@ -73,7 +97,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 6 & 2 \\\\ 3 & 1 \\end{pmatrix}$.",
     correctAnswer: "0",
-    explanation: "Liniile sunt proporționale ($L_1=2L_2$), deci $\\det=6\\cdot1-2\\cdot3=0$.",
+    explanation: [
+      "Observăm că prima linie este de $2$ ori a doua linie: $(6,2)=2\\cdot(3,1)$.",
+      "Când două linii sunt proporționale, determinantul este $0$.",
+      "Verificăm direct: $\\det=6\\cdot1-2\\cdot3=6-6=0$.",
+    ],
   },
   {
     id: "dt-s1-8",
@@ -83,7 +111,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 0 \\\\ 0 & 1 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "Determinantul matricei identitate este $1$.",
+    explanation: [
+      "Matricea dată este matricea identitate $I_2$, cu $1$ pe diagonala principală și $0$ în rest.",
+      "Determinantul matricei identitate este întotdeauna $1$.",
+    ],
   },
   {
     id: "dt-s1-9",
@@ -94,7 +125,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 3 & 3 \\\\ 3 & 3 \\end{pmatrix}$.",
     options: ["$0$", "$9$", "$18$", "$6$"],
     correctAnswer: "$0$",
-    explanation: "Liniile sunt identice, deci $\\det=3\\cdot3-3\\cdot3=0$.",
+    explanation: [
+      "Observăm că cele două linii sunt identice: $(3,3)=(3,3)$.",
+      "Când două linii sunt identice, determinantul este $0$.",
+      "Verificăm direct: $\\det=3\\cdot3-3\\cdot3=9-9=0$.",
+    ],
   },
   {
     id: "dt-s1-10",
@@ -104,7 +139,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} -1 & -2 \\\\ -3 & -4 \\end{pmatrix}$.",
     correctAnswer: "-2",
-    explanation: "$\\det = (-1)(-4) - (-2)(-3) = 4-6=-2$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det = (-1)(-4) - (-2)(-3)$.",
+      "Calculăm: $4-6=-2$.",
+    ],
   },
 
   // Set 2 — Determinanți de ordinul 3, regula lui Sarrus
@@ -116,7 +155,12 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 3 \\\\ 2 & 0 & 1 \\end{pmatrix}$.",
     correctAnswer: "13",
-    explanation: "Prin regula lui Sarrus: $1(1\\cdot1-3\\cdot0)-2(0\\cdot1-3\\cdot2)+0=1-2(-6)=13$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus: rescriem primele două coloane după matrice.",
+      "Diagonalele descendente: $1\\cdot1\\cdot1 + 2\\cdot3\\cdot2 + 0\\cdot0\\cdot0 = 1+12+0=13$.",
+      "Diagonalele ascendente: $2\\cdot1\\cdot0 + 0\\cdot3\\cdot1 + 1\\cdot0\\cdot2 = 0+0+0=0$.",
+      "Determinantul este diferența: $13-0=13$.",
+    ],
   },
   {
     id: "dt-s2-2",
@@ -127,7 +171,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 2 & 0 & 1 \\\\ 1 & 3 & 0 \\\\ 0 & 1 & 2 \\end{pmatrix}$.",
     options: ["$13$", "$11$", "$15$", "$9$"],
     correctAnswer: "$13$",
-    explanation: "Prin regula lui Sarrus: $2(3\\cdot2-0\\cdot1)-0+1(1\\cdot1-3\\cdot0)=12+1=13$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus.",
+      "Diagonalele descendente: $2\\cdot3\\cdot2 + 0\\cdot0\\cdot0 + 1\\cdot1\\cdot1 = 12+0+1=13$.",
+      "Diagonalele ascendente: $1\\cdot3\\cdot0 + 2\\cdot0\\cdot1 + 0\\cdot1\\cdot2 = 0+0+0=0$.",
+      "Determinantul este diferența: $13-0=13$.",
+    ],
   },
   {
     id: "dt-s2-3",
@@ -137,7 +186,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 1 & 1 \\\\ 0 & 1 & 2 \\\\ 0 & 0 & 1 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "Matrice triunghiulară: $\\det=1\\cdot1\\cdot1=1$.",
+    explanation: [
+      "Matricea este superior triunghiulară (toate elementele de sub diagonala principală sunt $0$).",
+      "Pentru o matrice triunghiulară, determinantul este produsul elementelor de pe diagonala principală: $1\\cdot1\\cdot1=1$.",
+    ],
   },
   {
     id: "dt-s2-4",
@@ -148,7 +200,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 3 & 0 & 0 \\\\ 0 & 2 & 0 \\\\ 0 & 0 & 5 \\end{pmatrix}$.",
     options: ["$30$", "$10$", "$15$", "$60$"],
     correctAnswer: "$30$",
-    explanation: "Matrice diagonală: $\\det=3\\cdot2\\cdot5=30$.",
+    explanation: [
+      "Matricea este diagonală (toate elementele din afara diagonalei principale sunt $0$).",
+      "Determinantul unei matrice diagonale este produsul elementelor diagonale: $3\\cdot2\\cdot5=30$.",
+    ],
   },
   {
     id: "dt-s2-5",
@@ -158,7 +213,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}$.",
     correctAnswer: "0",
-    explanation: "Linia a treia este $2L_2-L_1$ (linii dependente), deci $\\det=0$.",
+    explanation: [
+      "Observăm relația dintre linii: $L_3 = 2L_2-L_1$ (linia a treia se obține din celelalte două).",
+      "Când liniile unei matrice sunt dependente (una este combinație liniară a celorlalte), determinantul este $0$.",
+      "Concluzie: $\\det=0$.",
+    ],
   },
   {
     id: "dt-s2-6",
@@ -169,7 +228,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 2 & 1 & 0 \\\\ 1 & 2 & 1 \\\\ 0 & 1 & 2 \\end{pmatrix}$.",
     options: ["$4$", "$8$", "$2$", "$0$"],
     correctAnswer: "$4$",
-    explanation: "Prin regula lui Sarrus: $2(4-1)-1(2-0)+0=6-2=4$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus.",
+      "Diagonalele descendente: $2\\cdot2\\cdot2 + 1\\cdot1\\cdot0 + 0\\cdot1\\cdot1 = 8+0+0=8$.",
+      "Diagonalele ascendente: $0\\cdot2\\cdot0 + 2\\cdot1\\cdot1 + 1\\cdot1\\cdot2 = 0+2+2=4$.",
+      "Determinantul este diferența: $8-4=4$.",
+    ],
   },
   {
     id: "dt-s2-7",
@@ -179,7 +243,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "Determinantul matricei identitate $I_3$ este $1$.",
+    explanation: [
+      "Matricea dată este matricea identitate $I_3$.",
+      "Determinantul matricei identitate de orice ordin este întotdeauna $1$.",
+    ],
   },
   {
     id: "dt-s2-8",
@@ -190,7 +257,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 1 & 0 \\\\ 1 & 1 & 1 \\end{pmatrix}$.",
     options: ["$-2$", "$2$", "$-4$", "$0$"],
     correctAnswer: "$-2$",
-    explanation: "Prin regula lui Sarrus: $1(1-0)-2(2-0)+1(2-1)=1-4+1=-2$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus.",
+      "Diagonalele descendente: $1\\cdot1\\cdot1 + 2\\cdot0\\cdot1 + 1\\cdot2\\cdot1 = 1+0+2=3$.",
+      "Diagonalele ascendente: $1\\cdot1\\cdot1 + 1\\cdot0\\cdot1 + 2\\cdot2\\cdot1 = 1+0+4=5$.",
+      "Determinantul este diferența: $3-5=-2$.",
+    ],
   },
   {
     id: "dt-s2-9",
@@ -200,7 +272,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 2 & 3 & 1 \\\\ 0 & 1 & 4 \\\\ 0 & 0 & 2 \\end{pmatrix}$.",
     correctAnswer: "4",
-    explanation: "Matrice triunghiulară: $\\det=2\\cdot1\\cdot2=4$.",
+    explanation: [
+      "Matricea este superior triunghiulară.",
+      "Determinantul este produsul elementelor de pe diagonala principală: $2\\cdot1\\cdot2=4$.",
+    ],
   },
   {
     id: "dt-s2-10",
@@ -211,8 +286,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & -1 & 2 \\\\ 2 & 0 & 1 \\\\ 3 & 1 & -1 \\end{pmatrix}$.",
     options: ["$-2$", "$2$", "$-6$", "$6$"],
     correctAnswer: "$-2$",
-    explanation:
-      "Prin dezvoltare: $1(0\\cdot(-1)-1\\cdot1)-(-1)(2\\cdot(-1)-1\\cdot3)+2(2\\cdot1-0\\cdot3)=-1-5+4=-2$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus.",
+      "Diagonalele descendente: $1\\cdot0\\cdot(-1) + (-1)\\cdot1\\cdot3 + 2\\cdot2\\cdot1 = 0-3+4=1$.",
+      "Diagonalele ascendente: $2\\cdot0\\cdot3 + 1\\cdot1\\cdot1 + (-1)\\cdot2\\cdot(-1) = 0+1+2=3$.",
+      "Determinantul este diferența: $1-3=-2$.",
+    ],
   },
 
   // Set 3 — Proprietăți ale determinanților
@@ -225,7 +304,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Dacă o matrice are două linii identice, determinantul ei este:",
     options: ["$0$", "$1$", "depinde de matrice", "niciodată $0$"],
     correctAnswer: "$0$",
-    explanation: "Două linii identice fac determinantul nul.",
+    explanation: [
+      "Proprietate: dacă o matrice are două linii identice, determinantul ei este $0$.",
+      "Prin urmare, răspunsul corect este $0$.",
+    ],
   },
   {
     id: "dt-s3-2",
@@ -236,7 +318,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Dacă schimbăm două linii ale unei matrice între ele, determinantul:",
     options: ["își schimbă semnul", "rămâne neschimbat", "devine $0$", "se dublează"],
     correctAnswer: "își schimbă semnul",
-    explanation: "Schimbarea a două linii schimbă semnul determinantului.",
+    explanation: [
+      "Proprietate: schimbarea a două linii (sau coloane) între ele schimbă semnul determinantului.",
+      "Prin urmare, răspunsul corect este „își schimbă semnul”.",
+    ],
   },
   {
     id: "dt-s3-3",
@@ -246,7 +331,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & 3 \\\\ 4 & 6 \\end{pmatrix}$ (linia 2 este de 2 ori linia 1). Calculați $\\det(A)$.",
     correctAnswer: "0",
-    explanation: "Liniile proporționale fac determinantul nul.",
+    explanation: [
+      "Observăm că linia 2 este de $2$ ori linia 1: $(4,6)=2\\cdot(2,3)$.",
+      "Proprietate: când două linii sunt proporționale, determinantul este $0$.",
+      "Concluzie: $\\det(A)=0$.",
+    ],
   },
   {
     id: "dt-s3-4",
@@ -257,7 +346,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Dacă înmulțim o linie a unei matrice cu un scalar $k$, determinantul rezultat este:",
     options: ["$k\\cdot\\det(A)$", "$\\det(A)$", "$k^2\\cdot\\det(A)$", "$\\det(A)+k$"],
     correctAnswer: "$k\\cdot\\det(A)$",
-    explanation: "Înmulțirea unei linii cu $k$ înmulțește determinantul cu $k$.",
+    explanation: [
+      "Proprietate: dacă înmulțim o linie a unei matrice cu un scalar $k$, determinantul se înmulțește cu $k$.",
+      "Prin urmare, răspunsul corect este $k\\cdot\\det(A)$.",
+    ],
   },
   {
     id: "dt-s3-5",
@@ -268,7 +360,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \\end{pmatrix}$, cu $\\det(A)=-2$. Calculați $\\det(B)$, unde $B$ se obține din $A$ prin înmulțirea primei linii cu $3$.",
     correctAnswer: "-6",
-    explanation: "$\\det(B)=3\\cdot\\det(A)=3\\cdot(-2)=-6$.",
+    explanation: [
+      "Proprietate: dacă înmulțim o linie a matricei cu un scalar $k$, noul determinant este $k\\cdot\\det(A)$.",
+      "Aici $k=3$ și $\\det(A)=-2$.",
+      "Calculăm: $\\det(B)=3\\cdot(-2)=-6$.",
+    ],
   },
   {
     id: "dt-s3-6",
@@ -279,7 +375,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Determinantul matricei transpuse satisface:",
     options: ["$\\det(A^T)=\\det(A)$", "$\\det(A^T)=-\\det(A)$", "$\\det(A^T)=0$", "$\\det(A^T)=\\det(A)^2$"],
     correctAnswer: "$\\det(A^T)=\\det(A)$",
-    explanation: "Transpunerea unei matrice nu schimbă determinantul.",
+    explanation: [
+      "Proprietate: transpunerea unei matrice nu schimbă valoarea determinantului.",
+      "Prin urmare, răspunsul corect este $\\det(A^T)=\\det(A)$.",
+    ],
   },
   {
     id: "dt-s3-7",
@@ -289,7 +388,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A$ o matrice $2\\times2$ cu $\\det(A)=7$. Calculați $\\det(A^T)$.",
     correctAnswer: "7",
-    explanation: "$\\det(A^T)=\\det(A)=7$.",
+    explanation: [
+      "Proprietate: $\\det(A^T)=\\det(A)$.",
+      "Înlocuim: $\\det(A^T)=7$.",
+    ],
   },
   {
     id: "dt-s3-8",
@@ -305,7 +407,10 @@ export const determinantiSetExercises: Exercise[] = [
       "$\\det(AB)=\\det(A)/\\det(B)$",
     ],
     correctAnswer: "$\\det(AB)=\\det(A)\\cdot\\det(B)$",
-    explanation: "Determinantul produsului este produsul determinanților.",
+    explanation: [
+      "Proprietate: determinantul produsului a două matrice pătratice este produsul determinanților: $\\det(AB)=\\det(A)\\cdot\\det(B)$.",
+      "Prin urmare, aceasta este relația corectă.",
+    ],
   },
   {
     id: "dt-s3-9",
@@ -315,7 +420,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A,B$ matrice $2\\times2$ cu $\\det(A)=3$, $\\det(B)=5$. Calculați $\\det(AB)$.",
     correctAnswer: "15",
-    explanation: "$\\det(AB)=\\det(A)\\cdot\\det(B)=3\\cdot5=15$.",
+    explanation: [
+      "Proprietate: $\\det(AB)=\\det(A)\\cdot\\det(B)$.",
+      "Înlocuim: $\\det(AB)=3\\cdot5$.",
+      "Calculăm: $\\det(AB)=15$.",
+    ],
   },
   {
     id: "dt-s3-10",
@@ -326,7 +435,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Dacă $A$ are o linie formată numai din zerouri, atunci $\\det(A)$ este:",
     options: ["$0$", "$1$", "nedefinit", "depinde de celelalte linii"],
     correctAnswer: "$0$",
-    explanation: "O linie nulă face determinantul nul.",
+    explanation: [
+      "Proprietate: dacă o matrice are o linie formată numai din zerouri, determinantul ei este $0$.",
+      "Prin urmare, răspunsul corect este $0$.",
+    ],
   },
 
   // Set 4 — Determinantul produsului, transpusei, puterilor
@@ -338,7 +450,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A$ o matrice $2\\times2$ cu $\\det(A)=4$. Calculați $\\det(A^2)$.",
     correctAnswer: "16",
-    explanation: "$\\det(A^2)=\\det(A)^2=16$.",
+    explanation: [
+      "Proprietate: $\\det(A^2)=\\det(A)^2$.",
+      "Înlocuim: $\\det(A^2)=4^2$.",
+      "Calculăm: $\\det(A^2)=16$.",
+    ],
   },
   {
     id: "dt-s4-2",
@@ -349,7 +465,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A$ o matrice $2\\times2$ cu $\\det(A)=2$. Calculați $\\det(A^3)$.",
     options: ["$8$", "$6$", "$4$", "$2$"],
     correctAnswer: "$8$",
-    explanation: "$\\det(A^3)=\\det(A)^3=2^3=8$.",
+    explanation: [
+      "Proprietate: $\\det(A^n)=\\det(A)^n$.",
+      "Înlocuim: $\\det(A^3)=2^3$.",
+      "Calculăm: $\\det(A^3)=8$.",
+    ],
   },
   {
     id: "dt-s4-3",
@@ -359,7 +479,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A,B$ matrice $2\\times2$ cu $\\det(A)=6$, $\\det(B)=2$. Calculați $\\det(A)\\cdot\\det(B^T)$.",
     correctAnswer: "12",
-    explanation: "$\\det(B^T)=\\det(B)=2$, deci produsul este $6\\cdot2=12$.",
+    explanation: [
+      "Proprietate: transpunerea nu schimbă determinantul, deci $\\det(B^T)=\\det(B)=2$.",
+      "Calculăm produsul: $\\det(A)\\cdot\\det(B^T)=6\\cdot2$.",
+      "Rezultă $12$.",
+    ],
   },
   {
     id: "dt-s4-4",
@@ -370,7 +494,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A$ o matrice $2\\times2$ cu $\\det(A)=-3$. Calculați $\\det(2A)$.",
     options: ["$-12$", "$-6$", "$-3$", "$12$"],
     correctAnswer: "$-12$",
-    explanation: "$\\det(2A)=2^2\\det(A)=4\\cdot(-3)=-12$.",
+    explanation: [
+      "Proprietate: pentru o matrice de ordin $n$, $\\det(kA)=k^n\\det(A)$.",
+      "Aici $k=2$, $n=2$: $\\det(2A)=2^2\\cdot(-3)$.",
+      "Calculăm: $\\det(2A)=4\\cdot(-3)=-12$.",
+    ],
   },
   {
     id: "dt-s4-5",
@@ -380,7 +508,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A$ o matrice $3\\times3$ cu $\\det(A)=2$. Calculați $\\det(2A)$.",
     correctAnswer: "16",
-    explanation: "$\\det(2A)=2^3\\det(A)=8\\cdot2=16$.",
+    explanation: [
+      "Proprietate: $\\det(kA)=k^n\\det(A)$, unde $n$ este ordinul matricei.",
+      "Aici $k=2$, $n=3$: $\\det(2A)=2^3\\cdot2$.",
+      "Calculăm: $\\det(2A)=8\\cdot2=16$.",
+    ],
   },
   {
     id: "dt-s4-6",
@@ -391,7 +523,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A$ o matrice $2\\times2$ inversabilă cu $\\det(A)=5$. Calculați $\\det(A^{-1})$.",
     options: ["$1/5$", "$5$", "$-5$", "$0$"],
     correctAnswer: "$1/5$",
-    explanation: "$\\det(A^{-1})=1/\\det(A)=1/5$.",
+    explanation: [
+      "Proprietate: pentru o matrice inversabilă, $\\det(A^{-1})=\\dfrac{1}{\\det(A)}$.",
+      "Înlocuim: $\\det(A^{-1})=\\dfrac{1}{5}$.",
+    ],
   },
   {
     id: "dt-s4-7",
@@ -401,7 +536,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A$ o matrice $2\\times2$ cu $\\det(A)=1$. Calculați $\\det(A^{10})$.",
     correctAnswer: "1",
-    explanation: "$\\det(A^{10})=\\det(A)^{10}=1^{10}=1$.",
+    explanation: [
+      "Proprietate: $\\det(A^n)=\\det(A)^n$.",
+      "Înlocuim: $\\det(A^{10})=1^{10}$.",
+      "Calculăm: $\\det(A^{10})=1$.",
+    ],
   },
   {
     id: "dt-s4-8",
@@ -412,7 +551,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A,B,C$ matrice $2\\times2$ cu $\\det(A)=2$, $\\det(B)=3$, $\\det(C)=1$. Calculați $\\det(ABC)$.",
     options: ["$6$", "$5$", "$7$", "$0$"],
     correctAnswer: "$6$",
-    explanation: "$\\det(ABC)=\\det(A)\\det(B)\\det(C)=2\\cdot3\\cdot1=6$.",
+    explanation: [
+      "Proprietate: $\\det(ABC)=\\det(A)\\cdot\\det(B)\\cdot\\det(C)$.",
+      "Înlocuim: $\\det(ABC)=2\\cdot3\\cdot1$.",
+      "Calculăm: $\\det(ABC)=6$.",
+    ],
   },
   {
     id: "dt-s4-9",
@@ -422,7 +565,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: 'Fie $A$ o matrice $2\\times2$ cu $\\det(A)=0$. Este $A$ inversabilă? (răspundeți cu "da" sau "nu")',
     correctAnswer: "nu",
-    explanation: "O matrice este inversabilă doar dacă determinantul ei este nenul.",
+    explanation: [
+      "Proprietate: o matrice este inversabilă dacă și numai dacă determinantul ei este nenul.",
+      "Aici $\\det(A)=0$, deci $A$ nu este inversabilă.",
+    ],
   },
   {
     id: "dt-s4-10",
@@ -433,7 +579,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "O matrice pătratică $A$ este inversabilă dacă și numai dacă:",
     options: ["$\\det(A)\\ne0$", "$\\det(A)=0$", "$\\det(A)=1$", "$A$ este simetrică"],
     correctAnswer: "$\\det(A)\\ne0$",
-    explanation: "Inversabilitatea este echivalentă cu determinant nenul.",
+    explanation: [
+      "Proprietate: o matrice pătratică $A$ este inversabilă dacă și numai dacă $\\det(A)\\ne0$.",
+      "Prin urmare, răspunsul corect este $\\det(A)\\ne0$.",
+    ],
   },
 
   // Set 5 — Determinanți cu parametru
@@ -445,7 +594,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} m & 2 \\\\ 1 & m \\end{pmatrix}$. Calculați $\\det(A)$ pentru $m=3$.",
     correctAnswer: "7",
-    explanation: "$\\det(A)=m^2-2$, pentru $m=3$: $9-2=7$.",
+    explanation: [
+      "Calculăm determinantul general: $\\det(A)=m\\cdot m-2\\cdot1=m^2-2$.",
+      "Înlocuim $m=3$: $\\det(A)=3^2-2$.",
+      "Calculăm: $9-2=7$.",
+    ],
   },
   {
     id: "dt-s5-2",
@@ -456,7 +609,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Expresia $\\det(A)$ pentru $A=\\begin{pmatrix} m & 2 \\\\ 1 & m \\end{pmatrix}$ în funcție de $m$ este:",
     options: ["$m^2-2$", "$m^2+2$", "$2m-1$", "$m-2$"],
     correctAnswer: "$m^2-2$",
-    explanation: "$\\det(A)=m\\cdot m-2\\cdot1=m^2-2$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det(A)=m\\cdot m-2\\cdot1=m^2-2$.",
+    ],
   },
   {
     id: "dt-s5-3",
@@ -467,7 +623,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Determinați valoarea pozitivă a lui $m$ pentru care $\\det\\begin{pmatrix} m & 2 \\\\ 1 & m \\end{pmatrix}=0$.",
     correctAnswer: "sqrt(2)",
     acceptedAnswers: ["√2", "1.41", "1,41"],
-    explanation: "$m^2-2=0\\Rightarrow m=\\pm\\sqrt2$, soluția pozitivă este $\\sqrt2$.",
+    explanation: [
+      "Punem condiția $\\det(A)=0$: $m^2-2=0$.",
+      "Rezolvăm: $m^2=2\\Rightarrow m=\\pm\\sqrt2$.",
+      "Reținem soluția pozitivă: $m=\\sqrt2$.",
+    ],
   },
   {
     id: "dt-s5-4",
@@ -478,7 +638,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A=\\begin{pmatrix} 1 & m \\\\ m & 1 \\end{pmatrix}$. Expresia $\\det(A)$ este:",
     options: ["$1-m^2$", "$1+m^2$", "$m^2-1$", "$2m$"],
     correctAnswer: "$1-m^2$",
-    explanation: "$\\det(A)=1\\cdot1-m\\cdot m=1-m^2$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det(A)=1\\cdot1-m\\cdot m=1-m^2$.",
+    ],
   },
   {
     id: "dt-s5-5",
@@ -488,7 +651,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați valoarea pozitivă a lui $m$ pentru care $\\det\\begin{pmatrix} 1 & m \\\\ m & 1 \\end{pmatrix}=0$.",
     correctAnswer: "1",
-    explanation: "$1-m^2=0\\Rightarrow m=\\pm1$, soluția pozitivă este $1$.",
+    explanation: [
+      "Punem condiția $\\det(A)=0$: $1-m^2=0$.",
+      "Rezolvăm: $m^2=1\\Rightarrow m=\\pm1$.",
+      "Reținem soluția pozitivă: $m=1$.",
+    ],
   },
   {
     id: "dt-s5-6",
@@ -499,7 +666,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A=\\begin{pmatrix} m & 1 \\\\ 3 & 2 \\end{pmatrix}$. Determinați $m$ pentru care $\\det(A)=1$.",
     options: ["$2$", "$1$", "$3$", "$0$"],
     correctAnswer: "$2$",
-    explanation: "$2m-3=1\\Rightarrow m=2$.",
+    explanation: [
+      "Calculăm determinantul: $\\det(A)=2m-1\\cdot3=2m-3$.",
+      "Punem condiția $\\det(A)=1$: $2m-3=1$.",
+      "Rezolvăm: $m=2$.",
+    ],
   },
   {
     id: "dt-s5-7",
@@ -509,7 +680,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A=\\begin{pmatrix} 2 & m \\\\ m & 8 \\end{pmatrix}$. Determinați valoarea pozitivă a lui $m$ pentru care $\\det(A)=0$.",
     correctAnswer: "4",
-    explanation: "$16-m^2=0\\Rightarrow m=\\pm4$, soluția pozitivă este $4$.",
+    explanation: [
+      "Calculăm determinantul: $\\det(A)=2\\cdot8-m\\cdot m=16-m^2$.",
+      "Punem condiția $\\det(A)=0$: $16-m^2=0$.",
+      "Rezolvăm: $m^2=16\\Rightarrow m=\\pm4$, reținem soluția pozitivă $m=4$.",
+    ],
   },
   {
     id: "dt-s5-8",
@@ -520,7 +695,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A=\\begin{pmatrix} m & 3 \\\\ -1 & m \\end{pmatrix}$. Pentru ce valori ale lui $m$ este $\\det(A)>0$?",
     options: ["pentru orice $m\\in\\mathbb{R}$", "doar pentru $m>0$", "doar pentru $m<0$", "niciodată"],
     correctAnswer: "pentru orice $m\\in\\mathbb{R}$",
-    explanation: "$\\det(A)=m^2+3$, care este strict pozitiv pentru orice $m$ real.",
+    explanation: [
+      "Calculăm determinantul: $\\det(A)=m\\cdot m-3\\cdot(-1)=m^2+3$.",
+      "Cum $m^2\\ge0$, rezultă $\\det(A)=m^2+3\\ge3>0$ pentru orice $m$ real.",
+      "Prin urmare, răspunsul corect este „pentru orice $m\\in\\mathbb{R}$”.",
+    ],
   },
   {
     id: "dt-s5-9",
@@ -531,7 +710,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Fie $A=\\begin{pmatrix} m & 4 \\\\ 1 & m \\end{pmatrix}$. Determinați cea mai mică valoare întreagă a lui $m>0$ pentru care $\\det(A)>0$.",
     correctAnswer: "3",
-    explanation: "$\\det(A)=m^2-4>0\\Rightarrow m>2$ (pentru $m>0$), cel mai mic întreg este $3$.",
+    explanation: [
+      "Calculăm determinantul: $\\det(A)=m\\cdot m-4\\cdot1=m^2-4$.",
+      "Punem condiția $\\det(A)>0$: $m^2-4>0\\Rightarrow m>2$ (pentru $m>0$).",
+      "Cel mai mic număr întreg $m>2$ este $m=3$.",
+    ],
   },
   {
     id: "dt-s5-10",
@@ -542,7 +725,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A=\\begin{pmatrix} m+1 & 2 \\\\ 1 & m \\end{pmatrix}$. Expresia $\\det(A)$ este:",
     options: ["$m^2+m-2$", "$m^2-m-2$", "$m^2+2m$", "$m^2-2$"],
     correctAnswer: "$m^2+m-2$",
-    explanation: "$\\det(A)=(m+1)m-2=m^2+m-2$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det(A)=(m+1)\\cdot m-2\\cdot1=m^2+m-2$.",
+    ],
   },
 
   // Set 6 — Ecuații cu determinanți
@@ -555,7 +741,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 2 \\\\ 3 & x \\end{pmatrix}=0$ și determinați soluția pozitivă.",
     correctAnswer: "sqrt(6)",
     acceptedAnswers: ["√6", "2.45", "2,45", "2.44", "2,44"],
-    explanation: "$x^2-6=0\\Rightarrow x=\\pm\\sqrt6$, soluția pozitivă este $\\sqrt6$.",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-2\\cdot3=x^2-6$.",
+      "Punem condiția $\\det=0$: $x^2-6=0$.",
+      "Rezolvăm: $x^2=6\\Rightarrow x=\\pm\\sqrt6$, reținem soluția pozitivă $x=\\sqrt6$.",
+    ],
   },
   {
     id: "dt-s6-2",
@@ -566,7 +756,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 1 \\\\ 1 & x \\end{pmatrix}=3$ și determinați soluția pozitivă.",
     options: ["$2$", "$4$", "$-2$", "$\\sqrt3$"],
     correctAnswer: "$2$",
-    explanation: "$x^2-1=3\\Rightarrow x^2=4\\Rightarrow x=2$ (soluția pozitivă).",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-1\\cdot1=x^2-1$.",
+      "Punem condiția $\\det=3$: $x^2-1=3\\Rightarrow x^2=4$.",
+      "Rezolvăm: $x=\\pm2$, reținem soluția pozitivă $x=2$.",
+    ],
   },
   {
     id: "dt-s6-3",
@@ -577,7 +771,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 3 \\\\ 2 & x \\end{pmatrix}=1$ și determinați soluția pozitivă.",
     correctAnswer: "sqrt(7)",
     acceptedAnswers: ["√7", "2.65", "2,65"],
-    explanation: "$x^2-6=1\\Rightarrow x^2=7\\Rightarrow x=\\sqrt7$ (soluția pozitivă).",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-3\\cdot2=x^2-6$.",
+      "Punem condiția $\\det=1$: $x^2-6=1\\Rightarrow x^2=7$.",
+      "Rezolvăm: $x=\\sqrt7$ (soluția pozitivă).",
+    ],
   },
   {
     id: "dt-s6-4",
@@ -588,7 +786,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} 2 & x \\\\ x & 2 \\end{pmatrix}=0$ și determinați soluția pozitivă.",
     options: ["$2$", "$4$", "$-2$", "$0$"],
     correctAnswer: "$2$",
-    explanation: "$4-x^2=0\\Rightarrow x=\\pm2$, soluția pozitivă este $2$.",
+    explanation: [
+      "Calculăm determinantul: $\\det=2\\cdot2-x\\cdot x=4-x^2$.",
+      "Punem condiția $\\det=0$: $4-x^2=0$.",
+      "Rezolvăm: $x=\\pm2$, reținem soluția pozitivă $x=2$.",
+    ],
   },
   {
     id: "dt-s6-5",
@@ -598,7 +800,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați numărul de soluții reale ale ecuației $\\det\\begin{pmatrix} x & 1 \\\\ 1 & x \\end{pmatrix}=-5$.",
     correctAnswer: "0",
-    explanation: "$x^2-1=-5\\Rightarrow x^2=-4$, ecuație fără soluții reale.",
+    explanation: [
+      "Calculăm determinantul: $\\det=x^2-1$.",
+      "Punem condiția $\\det=-5$: $x^2-1=-5\\Rightarrow x^2=-4$.",
+      "Cum $x^2\\ge0$ pentru orice $x$ real, ecuația nu are soluții reale: răspunsul este $0$.",
+    ],
   },
   {
     id: "dt-s6-6",
@@ -609,7 +815,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 0 \\\\ 0 & x \\end{pmatrix}=9$ și determinați soluția pozitivă.",
     options: ["$3$", "$9$", "$-3$", "$81$"],
     correctAnswer: "$3$",
-    explanation: "$x^2=9\\Rightarrow x=\\pm3$, soluția pozitivă este $3$.",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-0\\cdot0=x^2$.",
+      "Punem condiția $\\det=9$: $x^2=9$.",
+      "Rezolvăm: $x=\\pm3$, reținem soluția pozitivă $x=3$.",
+    ],
   },
   {
     id: "dt-s6-7",
@@ -619,7 +829,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x+1 & 2 \\\\ 1 & x \\end{pmatrix}=0$ și determinați soluția pozitivă.",
     correctAnswer: "1",
-    explanation: "$(x+1)x-2=0\\Rightarrow x^2+x-2=0\\Rightarrow(x+2)(x-1)=0$, soluția pozitivă este $1$.",
+    explanation: [
+      "Calculăm determinantul: $\\det=(x+1)x-2\\cdot1=x^2+x-2$.",
+      "Punem condiția $\\det=0$: $x^2+x-2=0$.",
+      "Factorizăm: $(x+2)(x-1)=0$, soluțiile sunt $x=-2$ și $x=1$; reținem soluția pozitivă $x=1$.",
+    ],
   },
   {
     id: "dt-s6-8",
@@ -630,7 +844,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & -1 \\\\ 1 & x \\end{pmatrix}=5$ și determinați soluția pozitivă.",
     options: ["$2$", "$4$", "$5$", "$-2$"],
     correctAnswer: "$2$",
-    explanation: "$x^2+1=5\\Rightarrow x^2=4\\Rightarrow x=2$ (soluția pozitivă).",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-(-1)\\cdot1=x^2+1$.",
+      "Punem condiția $\\det=5$: $x^2+1=5\\Rightarrow x^2=4$.",
+      "Rezolvăm: $x=\\pm2$, reținem soluția pozitivă $x=2$.",
+    ],
   },
   {
     id: "dt-s6-9",
@@ -640,7 +858,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} 3 & x \\\\ x & 3 \\end{pmatrix}=5$ și determinați soluția pozitivă.",
     correctAnswer: "2",
-    explanation: "$9-x^2=5\\Rightarrow x^2=4\\Rightarrow x=2$ (soluția pozitivă).",
+    explanation: [
+      "Calculăm determinantul: $\\det=3\\cdot3-x\\cdot x=9-x^2$.",
+      "Punem condiția $\\det=5$: $9-x^2=5\\Rightarrow x^2=4$.",
+      "Rezolvăm: $x=\\pm2$, reținem soluția pozitivă $x=2$.",
+    ],
   },
   {
     id: "dt-s6-10",
@@ -652,7 +874,11 @@ export const determinantiSetExercises: Exercise[] = [
       "Rezolvați ecuația $\\det\\begin{pmatrix} x & 2 \\\\ 2 & x \\end{pmatrix}=0$ și precizați câte soluții reale distincte are.",
     options: ["$2$", "$1$", "$0$", "$\\infty$"],
     correctAnswer: "$2$",
-    explanation: "$x^2-4=0\\Rightarrow x=\\pm2$, două soluții reale distincte.",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-2\\cdot2=x^2-4$.",
+      "Punem condiția $\\det=0$: $x^2-4=0$.",
+      "Rezolvăm: $x=\\pm2$, deci ecuația are două soluții reale distincte.",
+    ],
   },
 
   // Set 7 — Aplicații: aria triunghiului, coliniaritate
@@ -664,7 +890,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului cu vârfurile $A(0,0)$, $B(4,0)$, $C(0,3)$, folosind formula cu determinant.",
     correctAnswer: "6",
-    explanation: "Triunghi dreptunghic cu catetele $4$ și $3$: aria $=\\dfrac{4\\cdot3}{2}=6$.",
+    explanation: [
+      "Triunghiul are un unghi drept în $A$, cu catetele $AB$ și $AC$ situate pe axe.",
+      "Lungimile catetelor sunt $AB=4$ și $AC=3$.",
+      "Aria este $\\dfrac{AB\\cdot AC}{2}=\\dfrac{4\\cdot3}{2}=6$.",
+    ],
   },
   {
     id: "dt-s7-2",
@@ -681,7 +911,10 @@ export const determinantiSetExercises: Exercise[] = [
     ],
     correctAnswer:
       "$\\dfrac12\\left|\\det\\begin{pmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{pmatrix}\\right|$",
-    explanation: "Aria triunghiului este jumătate din modulul acestui determinant.",
+    explanation: [
+      "Formula ariei triunghiului cu vârfurile $(x_1,y_1),(x_2,y_2),(x_3,y_3)$ folosește determinantul acestor coordonate (cu coloana de $1$ adăugată).",
+      "Aria este jumătate din modulul acestui determinant, deci răspunsul corect este $\\dfrac12\\left|\\det\\begin{pmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{pmatrix}\\right|$.",
+    ],
   },
   {
     id: "dt-s7-3",
@@ -691,7 +924,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului cu vârfurile $A(1,1)$, $B(5,1)$, $C(1,4)$.",
     correctAnswer: "6",
-    explanation: "Triunghi dreptunghic cu catetele $4$ și $3$ (laturile $AB$, $AC$): aria $=\\dfrac{4\\cdot3}{2}=6$.",
+    explanation: [
+      "Triunghiul are un unghi drept în $A$, cu $AB$ orizontală și $AC$ verticală.",
+      "Lungimile catetelor sunt $AB=5-1=4$ și $AC=4-1=3$.",
+      "Aria este $\\dfrac{4\\cdot3}{2}=6$.",
+    ],
   },
   {
     id: "dt-s7-4",
@@ -708,7 +945,10 @@ export const determinantiSetExercises: Exercise[] = [
     ],
     correctAnswer:
       "$\\det\\begin{pmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{pmatrix}=0$",
-    explanation: "Coliniaritatea este echivalentă cu anularea acestui determinant.",
+    explanation: [
+      "Proprietate: trei puncte $(x_1,y_1),(x_2,y_2),(x_3,y_3)$ sunt coliniare dacă și numai dacă determinantul asociat coordonatelor lor (cu coloana de $1$) este nul.",
+      "Prin urmare, condiția corectă este $\\det\\begin{pmatrix} x_1 & y_1 & 1 \\\\ x_2 & y_2 & 1 \\\\ x_3 & y_3 & 1 \\end{pmatrix}=0$.",
+    ],
   },
   {
     id: "dt-s7-5",
@@ -719,7 +959,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Verificați dacă punctele $A(1,2)$, $B(2,4)$, $C(3,6)$ sunt coliniare, calculând $\\det\\begin{pmatrix} 1 & 2 & 1 \\\\ 2 & 4 & 1 \\\\ 3 & 6 & 1 \\end{pmatrix}$.",
     correctAnswer: "0",
-    explanation: "Punctele verifică $y=2x$, deci sunt coliniare și determinantul este $0$.",
+    explanation: [
+      "Observăm că punctele verifică $y=2x$: $2=2\\cdot1$, $4=2\\cdot2$, $6=2\\cdot3$.",
+      "Fiind coliniare, determinantul asociat este $0$.",
+    ],
   },
   {
     id: "dt-s7-6",
@@ -730,7 +973,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați aria triunghiului cu vârfurile $A(0,0)$, $B(6,0)$, $C(0,5)$.",
     options: ["$15$", "$30$", "$11$", "$6$"],
     correctAnswer: "$15$",
-    explanation: "Triunghi dreptunghic cu catetele $6$ și $5$: aria $=\\dfrac{6\\cdot5}{2}=15$.",
+    explanation: [
+      "Triunghiul are un unghi drept în $A$, cu catetele pe axe.",
+      "Lungimile catetelor sunt $AB=6$ și $AC=5$.",
+      "Aria este $\\dfrac{6\\cdot5}{2}=15$.",
+    ],
   },
   {
     id: "dt-s7-7",
@@ -740,7 +987,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului cu vârfurile $A(2,3)$, $B(6,3)$, $C(2,7)$.",
     correctAnswer: "8",
-    explanation: "Triunghi dreptunghic cu catetele $4$ și $4$: aria $=\\dfrac{4\\cdot4}{2}=8$.",
+    explanation: [
+      "Triunghiul are un unghi drept în $A$, cu $AB$ orizontală și $AC$ verticală.",
+      "Lungimile catetelor sunt $AB=6-2=4$ și $AC=7-3=4$.",
+      "Aria este $\\dfrac{4\\cdot4}{2}=8$.",
+    ],
   },
   {
     id: "dt-s7-8",
@@ -757,7 +1008,10 @@ export const determinantiSetExercises: Exercise[] = [
       "punctele sunt simetrice",
     ],
     correctAnswer: "punctele sunt coliniare",
-    explanation: "Determinantul nul este echivalent cu coliniaritatea celor trei puncte.",
+    explanation: [
+      "Proprietate: determinantul asociat coordonatelor a trei puncte (cu coloana de $1$) este $0$ exact atunci când punctele sunt coliniare.",
+      "Prin urmare, răspunsul corect este „punctele sunt coliniare”.",
+    ],
   },
   {
     id: "dt-s7-9",
@@ -767,7 +1021,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului cu vârfurile $A(0,0)$, $B(8,0)$, $C(0,1)$.",
     correctAnswer: "4",
-    explanation: "Triunghi dreptunghic cu catetele $8$ și $1$: aria $=\\dfrac{8\\cdot1}{2}=4$.",
+    explanation: [
+      "Triunghiul are un unghi drept în $A$, cu catetele pe axe.",
+      "Lungimile catetelor sunt $AB=8$ și $AC=1$.",
+      "Aria este $\\dfrac{8\\cdot1}{2}=4$.",
+    ],
   },
   {
     id: "dt-s7-10",
@@ -783,7 +1041,11 @@ export const determinantiSetExercises: Exercise[] = [
       "Sunt coliniare (determinantul este $1$)",
     ],
     correctAnswer: "Nu sunt coliniare (determinantul este $1\\ne0$)",
-    explanation: "Determinantul asociat este $1\\ne0$, deci punctele nu sunt coliniare.",
+    explanation: [
+      "Calculăm determinantul asociat: $\\det\\begin{pmatrix} 0 & 0 & 1 \\\\ 1 & 1 & 1 \\\\ 2 & 3 & 1 \\end{pmatrix}$.",
+      "Dezvoltând, obținem valoarea $1$.",
+      "Cum determinantul este $1\\ne0$, punctele nu sunt coliniare.",
+    ],
   },
 
   // Set 8 — Matrice identitate, scalară, triunghiulară
@@ -795,7 +1057,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det(I_2)$.",
     correctAnswer: "1",
-    explanation: "Determinantul matricei identitate este întotdeauna $1$.",
+    explanation: [
+      "Matricea $I_2$ este matricea identitate, cu $1$ pe diagonala principală și $0$ în rest.",
+      "Determinantul matricei identitate este întotdeauna $1$.",
+    ],
   },
   {
     id: "dt-s8-2",
@@ -806,7 +1071,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det(I_3)$.",
     options: ["$1$", "$0$", "$3$", "$-1$"],
     correctAnswer: "$1$",
-    explanation: "Determinantul matricei identitate este întotdeauna $1$.",
+    explanation: [
+      "Matricea $I_3$ este matricea identitate, cu $1$ pe diagonala principală și $0$ în rest.",
+      "Determinantul matricei identitate este întotdeauna $1$.",
+    ],
   },
   {
     id: "dt-s8-3",
@@ -816,7 +1084,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 5 & 0 \\\\ 0 & 5 \\end{pmatrix}$.",
     correctAnswer: "25",
-    explanation: "Matrice scalară: $\\det=5\\cdot5=25$.",
+    explanation: [
+      "Matricea este scalară (multiplu al identității), cu $5$ pe diagonala principală.",
+      "Determinantul unei matrice scalare de ordin $2$ este $5\\cdot5=25$.",
+    ],
   },
   {
     id: "dt-s8-4",
@@ -832,7 +1103,10 @@ export const determinantiSetExercises: Exercise[] = [
       "întotdeauna $1$",
     ],
     correctAnswer: "produsul elementelor de pe diagonala principală",
-    explanation: "Pentru matrice triunghiulare, determinantul este produsul elementelor diagonale.",
+    explanation: [
+      "Proprietate: determinantul unei matrice triunghiulare (superior sau inferior) este produsul elementelor de pe diagonala principală.",
+      "Prin urmare, răspunsul corect este „produsul elementelor de pe diagonala principală”.",
+    ],
   },
   {
     id: "dt-s8-5",
@@ -842,7 +1116,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 2 & 5 & 1 \\\\ 0 & 3 & 4 \\\\ 0 & 0 & 7 \\end{pmatrix}$.",
     correctAnswer: "42",
-    explanation: "Matrice superior triunghiulară: $\\det=2\\cdot3\\cdot7=42$.",
+    explanation: [
+      "Matricea este superior triunghiulară (elementele de sub diagonala principală sunt $0$).",
+      "Determinantul este produsul elementelor diagonale: $2\\cdot3\\cdot7=42$.",
+    ],
   },
   {
     id: "dt-s8-6",
@@ -853,7 +1130,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 4 & 0 & 0 \\\\ 1 & 2 & 0 \\\\ 3 & 5 & 6 \\end{pmatrix}$.",
     options: ["$48$", "$24$", "$12$", "$36$"],
     correctAnswer: "$48$",
-    explanation: "Matrice inferior triunghiulară: $\\det=4\\cdot2\\cdot6=48$.",
+    explanation: [
+      "Matricea este inferior triunghiulară (elementele de deasupra diagonalei principale sunt $0$).",
+      "Determinantul este produsul elementelor diagonale: $4\\cdot2\\cdot6=48$.",
+    ],
   },
   {
     id: "dt-s8-7",
@@ -863,7 +1143,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} -1 & 0 \\\\ 0 & -1 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "$\\det=(-1)(-1)-0=1$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det=(-1)(-1)-0\\cdot0$.",
+      "Calculăm: $1-0=1$.",
+    ],
   },
   {
     id: "dt-s8-8",
@@ -874,7 +1158,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det(O_2)$ (matricea nulă de ordinul 2).",
     options: ["$0$", "$1$", "nedefinit", "$-1$"],
     correctAnswer: "$0$",
-    explanation: "Determinantul matricei nule este întotdeauna $0$.",
+    explanation: [
+      "Matricea $O_2$ este matricea nulă, cu toate elementele egale cu $0$.",
+      "Determinantul matricei nule este întotdeauna $0$.",
+    ],
   },
   {
     id: "dt-s8-9",
@@ -884,7 +1171,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 0 & 0 \\\\ 0 & 1 & 0 \\\\ 0 & 0 & 1 \\end{pmatrix}$.",
     correctAnswer: "1",
-    explanation: "Determinantul matricei identitate $I_3$ este $1$.",
+    explanation: [
+      "Matricea dată este matricea identitate $I_3$.",
+      "Determinantul matricei identitate de orice ordin este întotdeauna $1$.",
+    ],
   },
   {
     id: "dt-s8-10",
@@ -895,7 +1185,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 3 & 7 & 2 \\\\ 0 & -2 & 5 \\\\ 0 & 0 & 4 \\end{pmatrix}$.",
     options: ["$-24$", "$24$", "$-8$", "$8$"],
     correctAnswer: "$-24$",
-    explanation: "Matrice superior triunghiulară: $\\det=3\\cdot(-2)\\cdot4=-24$.",
+    explanation: [
+      "Matricea este superior triunghiulară.",
+      "Determinantul este produsul elementelor diagonale: $3\\cdot(-2)\\cdot4=-24$.",
+    ],
   },
 
   // Set 9 — Dezvoltarea Laplace (după linie/coloană)
@@ -908,7 +1201,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Dezvoltând după prima coloană, calculați $\\det\\begin{pmatrix} 2 & 1 & 3 \\\\ 0 & 4 & 1 \\\\ 0 & 2 & 5 \\end{pmatrix}$.",
     correctAnswer: "36",
-    explanation: "Doar primul element al coloanei este nenul: $2\\cdot\\det\\begin{pmatrix}4&1\\\\2&5\\end{pmatrix}=2\\cdot18=36$.",
+    explanation: [
+      "Dezvoltăm după prima coloană; doar primul element, $2$, este nenul (ceilalți sunt $0$).",
+      "Contribuția este $2\\cdot\\det\\begin{pmatrix}4&1\\\\2&5\\end{pmatrix}$.",
+      "Calculăm minorul: $\\det\\begin{pmatrix}4&1\\\\2&5\\end{pmatrix}=4\\cdot5-1\\cdot2=18$.",
+      "Rezultă $2\\cdot18=36$.",
+    ],
   },
   {
     id: "dt-s9-2",
@@ -919,8 +1217,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Dezvoltând după a doua linie, calculați $\\det\\begin{pmatrix} 1 & 2 & 3 \\\\ 0 & 5 & 0 \\\\ 2 & 1 & 4 \\end{pmatrix}$.",
     options: ["$-10$", "$10$", "$5$", "$-5$"],
     correctAnswer: "$-10$",
-    explanation:
-      "Doar elementul central este nenul: semn $(-1)^{2+2}=+1$, minor $\\det\\begin{pmatrix}1&3\\\\2&4\\end{pmatrix}=-2$, contribuție $5\\cdot(-2)=-10$.",
+    explanation: [
+      "Dezvoltăm după a doua linie; doar elementul central, $5$, este nenul.",
+      "Semnul cofactorului pentru poziția $(2,2)$ este $(-1)^{2+2}=+1$.",
+      "Minorul obținut prin eliminarea liniei 2 și coloanei 2 este $\\det\\begin{pmatrix}1&3\\\\2&4\\end{pmatrix}=1\\cdot4-3\\cdot2=-2$.",
+      "Contribuția este $5\\cdot(-2)=-10$.",
+    ],
   },
   {
     id: "dt-s9-3",
@@ -931,8 +1233,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Dezvoltând după a treia linie, calculați $\\det\\begin{pmatrix} 1 & 2 & 0 \\\\ 3 & 1 & 0 \\\\ 0 & 0 & 5 \\end{pmatrix}$.",
     correctAnswer: "-25",
-    explanation:
-      "Doar ultimul element al liniei este nenul: semn $(-1)^{3+3}=+1$, minor $\\det\\begin{pmatrix}1&2\\\\3&1\\end{pmatrix}=-5$, contribuție $5\\cdot(-5)=-25$.",
+    explanation: [
+      "Dezvoltăm după a treia linie; doar ultimul element, $5$, este nenul.",
+      "Semnul cofactorului pentru poziția $(3,3)$ este $(-1)^{3+3}=+1$.",
+      "Minorul obținut prin eliminarea liniei 3 și coloanei 3 este $\\det\\begin{pmatrix}1&2\\\\3&1\\end{pmatrix}=1\\cdot1-2\\cdot3=-5$.",
+      "Contribuția este $5\\cdot(-5)=-25$.",
+    ],
   },
   {
     id: "dt-s9-4",
@@ -943,7 +1249,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Metoda dezvoltării unui determinant de ordinul 3 după o linie sau coloană este cunoscută sub numele de:",
     options: ["dezvoltarea Laplace", "regula lui Sarrus", "metoda Gauss", "regula lui Cramer"],
     correctAnswer: "dezvoltarea Laplace",
-    explanation: "Dezvoltarea după o linie/coloană folosind minori și cofactori se numește dezvoltarea Laplace.",
+    explanation: [
+      "Metoda descrisă (dezvoltarea unui determinant de ordinul 3 după o linie sau coloană, folosind minori și cofactori) se numește dezvoltarea Laplace.",
+      "Prin urmare, răspunsul corect este „dezvoltarea Laplace”.",
+    ],
   },
   {
     id: "dt-s9-5",
@@ -954,8 +1263,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Dezvoltând după prima linie, calculați $\\det\\begin{pmatrix} 0 & 0 & 3 \\\\ 1 & 2 & 1 \\\\ 4 & 5 & 0 \\end{pmatrix}$.",
     correctAnswer: "-9",
-    explanation:
-      "Doar ultimul element al liniei este nenul: semn $(-1)^{1+3}=+1$, minor $\\det\\begin{pmatrix}1&2\\\\4&5\\end{pmatrix}=-3$, contribuție $3\\cdot(-3)=-9$.",
+    explanation: [
+      "Dezvoltăm după prima linie; doar ultimul element, $3$, este nenul.",
+      "Semnul cofactorului pentru poziția $(1,3)$ este $(-1)^{1+3}=+1$.",
+      "Minorul obținut prin eliminarea liniei 1 și coloanei 3 este $\\det\\begin{pmatrix}1&2\\\\4&5\\end{pmatrix}=1\\cdot5-2\\cdot4=-3$.",
+      "Contribuția este $3\\cdot(-3)=-9$.",
+    ],
   },
   {
     id: "dt-s9-6",
@@ -966,7 +1279,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Semnul cofactorului elementului de pe linia 2, coloana 3 (adică semnul $(-1)^{2+3}$) este:",
     options: ["negativ ($-$)", "pozitiv ($+$)", "depinde de matrice", "întotdeauna zero"],
     correctAnswer: "negativ ($-$)",
-    explanation: "$(-1)^{2+3}=(-1)^5=-1$, deci semnul este negativ.",
+    explanation: [
+      "Semnul cofactorului pentru poziția $(i,j)$ este $(-1)^{i+j}$.",
+      "Aici $(-1)^{2+3}=(-1)^5=-1$, deci semnul este negativ.",
+    ],
   },
   {
     id: "dt-s9-7",
@@ -977,7 +1293,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Calculați minorul obținut prin eliminarea liniei 1 și coloanei 1 din $\\begin{pmatrix} 2 & 1 & 0 \\\\ 3 & 5 & 2 \\\\ 1 & 0 & 4 \\end{pmatrix}$.",
     correctAnswer: "20",
-    explanation: "Rămâne $\\det\\begin{pmatrix}5&2\\\\0&4\\end{pmatrix}=20-0=20$.",
+    explanation: [
+      "Eliminăm linia 1 și coloana 1; rămâne $\\det\\begin{pmatrix}5&2\\\\0&4\\end{pmatrix}$.",
+      "Calculăm: $5\\cdot4-2\\cdot0=20$.",
+    ],
   },
   {
     id: "dt-s9-8",
@@ -988,7 +1307,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Semnul cofactorului elementului de pe linia 1, coloana 1 (adică semnul $(-1)^{1+1}$) este:",
     options: ["pozitiv ($+$)", "negativ ($-$)", "depinde de matrice", "întotdeauna zero"],
     correctAnswer: "pozitiv ($+$)",
-    explanation: "$(-1)^{1+1}=(-1)^2=1$, deci semnul este pozitiv.",
+    explanation: [
+      "Semnul cofactorului pentru poziția $(i,j)$ este $(-1)^{i+j}$.",
+      "Aici $(-1)^{1+1}=(-1)^2=1$, deci semnul este pozitiv.",
+    ],
   },
   {
     id: "dt-s9-9",
@@ -999,7 +1321,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt:
       "Calculați minorul obținut prin eliminarea liniei 2 și coloanei 3 din $\\begin{pmatrix} 1 & 2 & 3 \\\\ 4 & 5 & 6 \\\\ 7 & 8 & 9 \\end{pmatrix}$.",
     correctAnswer: "-6",
-    explanation: "Rămâne $\\det\\begin{pmatrix}1&2\\\\7&8\\end{pmatrix}=8-14=-6$.",
+    explanation: [
+      "Eliminăm linia 2 și coloana 3; rămâne $\\det\\begin{pmatrix}1&2\\\\7&8\\end{pmatrix}$.",
+      "Calculăm: $1\\cdot8-2\\cdot7=8-14=-6$.",
+    ],
   },
   {
     id: "dt-s9-10",
@@ -1010,7 +1335,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Numărul de termeni din formula de calcul (regula lui Sarrus) a unui determinant de ordinul 3 este:",
     options: ["$6$", "$3$", "$9$", "$2$"],
     correctAnswer: "$6$",
-    explanation: "Regula lui Sarrus produce $6$ termeni (3 cu semn $+$, 3 cu semn $-$).",
+    explanation: [
+      "Regula lui Sarrus pentru un determinant de ordinul 3 produce $3$ termeni cu semn $+$ (diagonalele descendente) și $3$ termeni cu semn $-$ (diagonalele ascendente).",
+      "În total sunt $6$ termeni.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -1022,7 +1350,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 3 & 2 \\\\ 1 & 4 \\end{pmatrix}$.",
     correctAnswer: "10",
-    explanation: "$\\det=3\\cdot4-2\\cdot1=12-2=10$.",
+    explanation: [
+      "Pentru o matrice de ordinul $2$, $\\det=ad-bc$.",
+      "Înlocuim: $\\det=3\\cdot4-2\\cdot1$.",
+      "Calculăm: $12-2=10$.",
+    ],
   },
   {
     id: "dt-s10-2",
@@ -1033,7 +1365,12 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det\\begin{pmatrix} 1 & 2 & 0 \\\\ 0 & 1 & 1 \\\\ 2 & 0 & 1 \\end{pmatrix}$.",
     options: ["$5$", "$1$", "$-3$", "$3$"],
     correctAnswer: "$5$",
-    explanation: "Prin regula lui Sarrus: $1(1-0)-2(0-2)+0=1+4=5$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus.",
+      "Diagonalele descendente: $1\\cdot1\\cdot1 + 2\\cdot1\\cdot2 + 0\\cdot0\\cdot0 = 1+4+0=5$.",
+      "Diagonalele ascendente: $0\\cdot1\\cdot2 + 1\\cdot1\\cdot0 + 2\\cdot0\\cdot1 = 0+0+0=0$.",
+      "Determinantul este diferența: $5-0=5$.",
+    ],
   },
   {
     id: "dt-s10-3",
@@ -1043,7 +1380,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $A$ o matrice $2\\times2$ cu $\\det(A)=3$. Calculați $\\det(A^2)$.",
     correctAnswer: "9",
-    explanation: "$\\det(A^2)=\\det(A)^2=9$.",
+    explanation: [
+      "Proprietate: $\\det(A^2)=\\det(A)^2$.",
+      "Înlocuim: $\\det(A^2)=3^2=9$.",
+    ],
   },
   {
     id: "dt-s10-4",
@@ -1054,7 +1394,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Determinantul unei matrice cu două linii proporționale este:",
     options: ["$0$", "$1$", "suma elementelor", "produsul elementelor"],
     correctAnswer: "$0$",
-    explanation: "Linii proporționale (deci dependente) fac determinantul nul.",
+    explanation: [
+      "Proprietate: o matrice cu două linii proporționale (deci dependente) are determinantul $0$.",
+      "Prin urmare, răspunsul corect este $0$.",
+    ],
   },
   {
     id: "dt-s10-5",
@@ -1064,7 +1407,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați valoarea pozitivă a lui $m$ pentru care $\\det\\begin{pmatrix} m & 3 \\\\ 3 & m \\end{pmatrix}=16$.",
     correctAnswer: "5",
-    explanation: "$m^2-9=16\\Rightarrow m^2=25\\Rightarrow m=5$ (soluția pozitivă).",
+    explanation: [
+      "Calculăm determinantul: $\\det=m\\cdot m-3\\cdot3=m^2-9$.",
+      "Punem condiția $\\det=16$: $m^2-9=16\\Rightarrow m^2=25$.",
+      "Rezolvăm: $m=\\pm5$, reținem soluția pozitivă $m=5$.",
+    ],
   },
   {
     id: "dt-s10-6",
@@ -1075,7 +1422,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Calculați $\\det(I_4)$.",
     options: ["$1$", "$4$", "$0$", "$16$"],
     correctAnswer: "$1$",
-    explanation: "Determinantul matricei identitate este întotdeauna $1$.",
+    explanation: [
+      "Matricea $I_4$ este matricea identitate de ordinul $4$.",
+      "Determinantul matricei identitate de orice ordin este întotdeauna $1$.",
+    ],
   },
   {
     id: "dt-s10-7",
@@ -1085,7 +1435,11 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați aria triunghiului cu vârfurile $A(0,0)$, $B(5,0)$, $C(0,4)$.",
     correctAnswer: "10",
-    explanation: "Triunghi dreptunghic cu catetele $5$ și $4$: aria $=\\dfrac{5\\cdot4}{2}=10$.",
+    explanation: [
+      "Triunghiul are un unghi drept în $A$, cu catetele pe axe.",
+      "Lungimile catetelor sunt $AB=5$ și $AC=4$.",
+      "Aria este $\\dfrac{5\\cdot4}{2}=10$.",
+    ],
   },
   {
     id: "dt-s10-8",
@@ -1096,7 +1450,11 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 1 \\\\ 4 & x \\end{pmatrix}=0$ și determinați soluția pozitivă.",
     options: ["$2$", "$4$", "$-2$", "$16$"],
     correctAnswer: "$2$",
-    explanation: "$x^2-4=0\\Rightarrow x=\\pm2$, soluția pozitivă este $2$.",
+    explanation: [
+      "Calculăm determinantul: $\\det=x\\cdot x-1\\cdot4=x^2-4$.",
+      "Punem condiția $\\det=0$: $x^2-4=0$.",
+      "Rezolvăm: $x=\\pm2$, reținem soluția pozitivă $x=2$.",
+    ],
   },
   {
     id: "dt-s10-9",
@@ -1106,7 +1464,10 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați $\\det\\begin{pmatrix} 2 & 0 & 0 \\\\ 1 & 3 & 0 \\\\ 4 & 5 & 6 \\end{pmatrix}$.",
     correctAnswer: "36",
-    explanation: "Matrice inferior triunghiulară: $\\det=2\\cdot3\\cdot6=36$.",
+    explanation: [
+      "Matricea este inferior triunghiulară (elementele de deasupra diagonalei principale sunt $0$).",
+      "Determinantul este produsul elementelor diagonale: $2\\cdot3\\cdot6=36$.",
+    ],
   },
   {
     id: "dt-s10-10",
@@ -1117,6 +1478,10 @@ export const determinantiSetExercises: Exercise[] = [
     prompt: "Fie $A,B$ matrice $2\\times2$ cu $\\det(A)=4$, $\\det(B)=0$. Calculați $\\det(AB)$.",
     options: ["$0$", "$4$", "$-4$", "$16$"],
     correctAnswer: "$0$",
-    explanation: "$\\det(AB)=\\det(A)\\cdot\\det(B)=4\\cdot0=0$.",
+    explanation: [
+      "Proprietate: $\\det(AB)=\\det(A)\\cdot\\det(B)$.",
+      "Înlocuim: $\\det(AB)=4\\cdot0$.",
+      "Calculăm: $\\det(AB)=0$.",
+    ],
   },
 ];
