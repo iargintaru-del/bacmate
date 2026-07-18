@@ -8,7 +8,11 @@ export const derivateExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^3$. Calculați $f'(2)$.",
     correctAnswer: "12",
-    explanation: "$f'(x) = 3x^2$, deci $f'(2) = 3 \\cdot 4 = 12$.",
+    explanation: [
+      "Aplicăm regula de derivare $(x^n)'=nx^{n-1}$: $f'(x)=3x^2$.",
+      "Înlocuim $x=2$: $f'(2)=3\\cdot2^2=3\\cdot4$.",
+      "Rezultă $f'(2)=12$.",
+    ],
   },
   {
     id: "dv-2",
@@ -18,7 +22,10 @@ export const derivateExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x) = \\sin x$ este:",
     options: ["$\\cos x$", "$-\\cos x$", "$-\\sin x$", "$\\tan x$"],
     correctAnswer: "$\\cos x$",
-    explanation: "$(\\sin x)' = \\cos x$.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "$(\\sin x)'=\\cos x$.",
+    ],
   },
   {
     id: "dv-3",
@@ -27,7 +34,11 @@ export const derivateExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2 - 4x + 3$. Determinați abscisa punctului de minim (soluția ecuației $f'(x) = 0$).",
     correctAnswer: "2",
-    explanation: "$f'(x) = 2x - 4 = 0 \\Rightarrow x = 2$.",
+    explanation: [
+      "Calculăm derivata: $f'(x)=2x-4$.",
+      "Punem condiția de punct critic: $f'(x)=0 \\Rightarrow 2x-4=0$.",
+      "Rezolvăm: $x=2$.",
+    ],
   },
   {
     id: "dv-4",
@@ -42,6 +53,9 @@ export const derivateExercises: Exercise[] = [
       "$f(x) = 0$ pe acel interval",
     ],
     correctAnswer: "$f'(x) \\geq 0$ pe acel interval",
-    explanation: "Semnul pozitiv al derivatei pe un interval arată că funcția este crescătoare acolo.",
+    explanation: [
+      "Legătura dintre semnul derivatei și monotonie este un rezultat fundamental de analiză.",
+      "Dacă $f'(x)\\geq0$ pe un interval, atunci $f$ este crescătoare pe acel interval.",
+    ],
   },
 ];

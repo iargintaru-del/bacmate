@@ -10,7 +10,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^5$. Calculați $f'(1)$.",
     correctAnswer: "5",
-    explanation: "$f'(x) = 5x^4$, deci $f'(1) = 5$.",
+    explanation: [
+      "Aplicăm regula de derivare a puterii $(x^n)'=nx^{n-1}$: $f'(x) = 5x^4$.",
+      "Înlocuim $x=1$: $f'(1) = 5\\cdot1^4$.",
+      "Rezultă $f'(1) = 5$.",
+    ],
   },
   {
     id: "dv-s1-2",
@@ -21,7 +25,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = x^3 - 2x^2 + x$. Calculați $f'(2)$.",
     options: ["$5$", "$4$", "$6$", "$3$"],
     correctAnswer: "$5$",
-    explanation: "$f'(x) = 3x^2 - 4x + 1$, deci $f'(2) = 12 - 8 + 1 = 5$.",
+    explanation: [
+      "Derivăm termen cu termen folosind regula puterii: $f'(x) = 3x^2 - 4x + 1$.",
+      "Înlocuim $x=2$: $f'(2) = 3\\cdot4 - 4\\cdot2 + 1 = 12 - 8 + 1$.",
+      "Rezultă $f'(2) = 5$.",
+    ],
   },
   {
     id: "dv-s1-3",
@@ -31,7 +39,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = 7$ (funcție constantă). Calculați $f'(3)$.",
     correctAnswer: "0",
-    explanation: "Derivata unei funcții constante este $0$.",
+    explanation: [
+      "Funcția $f(x)=7$ este constantă.",
+      "Derivata unei funcții constante este $0$ în orice punct, deci $f'(3)=0$.",
+    ],
   },
   {
     id: "dv-s1-4",
@@ -42,7 +53,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = 4x$. Calculați $f'(x)$ pentru orice $x$.",
     options: ["$4$", "$0$", "$x$", "$4x$"],
     correctAnswer: "$4$",
-    explanation: "$(4x)' = 4$, constant pentru orice $x$.",
+    explanation: [
+      "Aplicăm regula de derivare a funcției liniare: $(4x)' = 4$.",
+      "Rezultă $f'(x)=4$, constant pentru orice $x$.",
+    ],
   },
   {
     id: "dv-s1-5",
@@ -52,7 +66,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2 + 3x - 5$. Calculați $f'(0)$.",
     correctAnswer: "3",
-    explanation: "$f'(x) = 2x + 3$, deci $f'(0) = 3$.",
+    explanation: [
+      "Derivăm termen cu termen folosind regula puterii: $f'(x) = 2x + 3$.",
+      "Înlocuim $x=0$: $f'(0) = 2\\cdot0 + 3$.",
+      "Rezultă $f'(0) = 3$.",
+    ],
   },
   {
     id: "dv-s1-6",
@@ -63,7 +81,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = x^4 - x$. Calculați $f'(1)$.",
     options: ["$3$", "$4$", "$0$", "$-3$"],
     correctAnswer: "$3$",
-    explanation: "$f'(x) = 4x^3 - 1$, deci $f'(1) = 4 - 1 = 3$.",
+    explanation: [
+      "Derivăm termen cu termen folosind regula puterii: $f'(x) = 4x^3 - 1$.",
+      "Înlocuim $x=1$: $f'(1) = 4\\cdot1^3 - 1 = 4 - 1$.",
+      "Rezultă $f'(1) = 3$.",
+    ],
   },
   {
     id: "dv-s1-7",
@@ -74,7 +96,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\sqrt{x}$. Calculați $f'(4)$.",
     correctAnswer: "1/4",
     acceptedAnswers: ["0.25", "0,25"],
-    explanation: "$f'(x) = \\dfrac{1}{2\\sqrt{x}}$, deci $f'(4) = \\dfrac{1}{2 \\cdot 2} = \\dfrac14$.",
+    explanation: [
+      "Aplicăm formula de derivare a radicalului: $f'(x) = \\dfrac{1}{2\\sqrt{x}}$.",
+      "Înlocuim $x=4$: $f'(4) = \\dfrac{1}{2\\sqrt{4}} = \\dfrac{1}{2 \\cdot 2}$.",
+      "Rezultă $f'(4) = \\dfrac14$.",
+    ],
   },
   {
     id: "dv-s1-8",
@@ -85,7 +111,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\dfrac{1}{x}$. Calculați $f'(2)$.",
     options: ["$-1/4$", "$1/4$", "$-1/2$", "$1/2$"],
     correctAnswer: "$-1/4$",
-    explanation: "$f'(x) = -\\dfrac{1}{x^2}$, deci $f'(2) = -\\dfrac14$.",
+    explanation: [
+      "Aplicăm formula de derivare a funcției $\\dfrac1x$: $f'(x) = -\\dfrac{1}{x^2}$.",
+      "Înlocuim $x=2$: $f'(2) = -\\dfrac{1}{2^2}$.",
+      "Rezultă $f'(2) = -\\dfrac14$.",
+    ],
   },
   {
     id: "dv-s1-9",
@@ -95,7 +125,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^{10}$. Calculați $f'(0)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = 10x^9$, deci $f'(0) = 0$.",
+    explanation: [
+      "Aplicăm regula de derivare a puterii: $f'(x) = 10x^9$.",
+      "Înlocuim $x=0$: $f'(0) = 10\\cdot0^9$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
   {
     id: "dv-s1-10",
@@ -106,7 +140,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = 3x^2 - x + 2$. Calculați $f'(-1)$.",
     options: ["$-7$", "$7$", "$-5$", "$5$"],
     correctAnswer: "$-7$",
-    explanation: "$f'(x) = 6x - 1$, deci $f'(-1) = -6 - 1 = -7$.",
+    explanation: [
+      "Derivăm termen cu termen folosind regula puterii: $f'(x) = 6x - 1$.",
+      "Înlocuim $x=-1$: $f'(-1) = 6\\cdot(-1) - 1 = -6 - 1$.",
+      "Rezultă $f'(-1) = -7$.",
+    ],
   },
 
   // Set 2 — Reguli de derivare (produs, cât)
@@ -118,7 +156,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2(x+1)$. Calculați $f'(1)$.",
     correctAnswer: "5",
-    explanation: "$f'(x) = 2x(x+1) + x^2 = 3x^2 + 2x$, deci $f'(1) = 3 + 2 = 5$.",
+    explanation: [
+      "Aplicăm regula produsului $(uv)'=u'v+uv'$, cu $u=x^2$, $v=x+1$: $f'(x) = 2x(x+1) + x^2 = 3x^2 + 2x$.",
+      "Înlocuim $x=1$: $f'(1) = 3\\cdot1 + 2\\cdot1 = 3 + 2$.",
+      "Rezultă $f'(1) = 5$.",
+    ],
   },
   {
     id: "dv-s2-2",
@@ -129,7 +171,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = (x+2)(x-3)$. Calculați $f'(0)$.",
     options: ["$-1$", "$1$", "$0$", "$-5$"],
     correctAnswer: "$-1$",
-    explanation: "$f'(x) = (x-3) + (x+2) = 2x - 1$, deci $f'(0) = -1$.",
+    explanation: [
+      "Aplicăm regula produsului $(uv)'=u'v+uv'$, cu $u=x+2$, $v=x-3$: $f'(x) = (x-3) + (x+2) = 2x - 1$.",
+      "Înlocuim $x=0$: $f'(0) = 2\\cdot0 - 1$.",
+      "Rezultă $f'(0) = -1$.",
+    ],
   },
   {
     id: "dv-s2-3",
@@ -139,7 +185,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x\\sin x$. Calculați $f'(0)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = \\sin x + x\\cos x$, deci $f'(0) = 0 + 0 = 0$.",
+    explanation: [
+      "Aplicăm regula produsului $(uv)'=u'v+uv'$, cu $u=x$, $v=\\sin x$: $f'(x) = \\sin x + x\\cos x$.",
+      "Înlocuim $x=0$: $f'(0) = \\sin 0 + 0\\cdot\\cos 0 = 0 + 0$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
   {
     id: "dv-s2-4",
@@ -150,7 +200,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\dfrac{x}{x+1}$. Calculați $f'(0)$.",
     options: ["$1$", "$0$", "$-1$", "$1/2$"],
     correctAnswer: "$1$",
-    explanation: "$f'(x) = \\dfrac{(x+1) - x}{(x+1)^2} = \\dfrac{1}{(x+1)^2}$, deci $f'(0) = 1$.",
+    explanation: [
+      "Aplicăm regula câtului $\\left(\\dfrac{u}{v}\\right)'=\\dfrac{u'v-uv'}{v^2}$, cu $u=x$, $v=x+1$: $f'(x) = \\dfrac{(x+1) - x}{(x+1)^2} = \\dfrac{1}{(x+1)^2}$.",
+      "Înlocuim $x=0$: $f'(0) = \\dfrac{1}{1^2}$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s2-5",
@@ -160,7 +214,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\dfrac{x^2}{x-1}$. Calculați $f'(2)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = \\dfrac{2x(x-1) - x^2}{(x-1)^2} = \\dfrac{x^2 - 2x}{(x-1)^2}$, deci $f'(2) = \\dfrac{0}{1} = 0$.",
+    explanation: [
+      "Aplicăm regula câtului, cu $u=x^2$, $v=x-1$: $f'(x) = \\dfrac{2x(x-1) - x^2}{(x-1)^2} = \\dfrac{x^2 - 2x}{(x-1)^2}$.",
+      "Înlocuim $x=2$: $f'(2) = \\dfrac{4 - 4}{1^2} = \\dfrac{0}{1}$.",
+      "Rezultă $f'(2) = 0$.",
+    ],
   },
   {
     id: "dv-s2-6",
@@ -171,7 +229,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = x^2(x-1)$. Calculați $f'(2)$.",
     options: ["$8$", "$4$", "$12$", "$6$"],
     correctAnswer: "$8$",
-    explanation: "$f'(x) = 2x(x-1) + x^2 = 3x^2 - 2x$, deci $f'(2) = 12 - 4 = 8$.",
+    explanation: [
+      "Aplicăm regula produsului, cu $u=x^2$, $v=x-1$: $f'(x) = 2x(x-1) + x^2 = 3x^2 - 2x$.",
+      "Înlocuim $x=2$: $f'(2) = 3\\cdot4 - 2\\cdot2 = 12 - 4$.",
+      "Rezultă $f'(2) = 8$.",
+    ],
   },
   {
     id: "dv-s2-7",
@@ -181,7 +243,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\dfrac{2x+1}{x}$. Calculați $f'(1)$.",
     correctAnswer: "-1",
-    explanation: "$f'(x) = \\dfrac{2x - (2x+1)}{x^2} = -\\dfrac{1}{x^2}$, deci $f'(1) = -1$.",
+    explanation: [
+      "Aplicăm regula câtului, cu $u=2x+1$, $v=x$: $f'(x) = \\dfrac{2x - (2x+1)}{x^2} = -\\dfrac{1}{x^2}$.",
+      "Înlocuim $x=1$: $f'(1) = -\\dfrac{1}{1^2}$.",
+      "Rezultă $f'(1) = -1$.",
+    ],
   },
   {
     id: "dv-s2-8",
@@ -192,7 +258,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = (2x-1)(x+3)$. Calculați $f'(0)$.",
     options: ["$5$", "$4$", "$6$", "$-5$"],
     correctAnswer: "$5$",
-    explanation: "$f'(x) = 2(x+3) + (2x-1) = 4x + 5$, deci $f'(0) = 5$.",
+    explanation: [
+      "Aplicăm regula produsului, cu $u=2x-1$, $v=x+3$: $f'(x) = 2(x+3) + (2x-1) = 4x + 5$.",
+      "Înlocuim $x=0$: $f'(0) = 4\\cdot0 + 5$.",
+      "Rezultă $f'(0) = 5$.",
+    ],
   },
   {
     id: "dv-s2-9",
@@ -203,7 +273,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\dfrac{x-1}{x+1}$. Calculați $f'(1)$.",
     correctAnswer: "1/2",
     acceptedAnswers: ["0.5", "0,5"],
-    explanation: "$f'(x) = \\dfrac{(x+1) - (x-1)}{(x+1)^2} = \\dfrac{2}{(x+1)^2}$, deci $f'(1) = \\dfrac{2}{4} = \\dfrac12$.",
+    explanation: [
+      "Aplicăm regula câtului, cu $u=x-1$, $v=x+1$: $f'(x) = \\dfrac{(x+1) - (x-1)}{(x+1)^2} = \\dfrac{2}{(x+1)^2}$.",
+      "Înlocuim $x=1$: $f'(1) = \\dfrac{2}{2^2} = \\dfrac{2}{4}$.",
+      "Rezultă $f'(1) = \\dfrac12$.",
+    ],
   },
   {
     id: "dv-s2-10",
@@ -214,7 +288,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Formula de derivare a produsului $f(x)=u(x)\\cdot v(x)$ este:",
     options: ["$f'=u'v+uv'$", "$f'=u'v'$", "$f'=u'v-uv'$", "$f'=uv$"],
     correctAnswer: "$f'=u'v+uv'$",
-    explanation: "Regula produsului: derivata unui produs este derivata primului factor înmulțită cu al doilea, plus primul factor înmulțit cu derivata celui de-al doilea.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "Regula produsului: derivata unui produs este derivata primului factor înmulțită cu al doilea, plus primul factor înmulțit cu derivata celui de-al doilea, adică $f'=u'v+uv'$.",
+    ],
   },
 
   // Set 3 — Derivarea funcțiilor compuse (regula lanțului)
@@ -226,7 +303,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = (x^2+1)^3$. Calculați $f'(0)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = 3(x^2+1)^2 \\cdot 2x = 6x(x^2+1)^2$, deci $f'(0) = 0$.",
+    explanation: [
+      "Aplicăm regula lanțului pentru funcția compusă $(x^2+1)^3$: $f'(x) = 3(x^2+1)^2 \\cdot 2x = 6x(x^2+1)^2$.",
+      "Înlocuim $x=0$: $f'(0) = 6\\cdot0\\cdot(0^2+1)^2$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
   {
     id: "dv-s3-2",
@@ -237,7 +318,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = (2x+1)^4$. Calculați $f'(0)$.",
     options: ["$8$", "$4$", "$16$", "$2$"],
     correctAnswer: "$8$",
-    explanation: "$f'(x) = 4(2x+1)^3 \\cdot 2 = 8(2x+1)^3$, deci $f'(0) = 8$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 4(2x+1)^3 \\cdot 2 = 8(2x+1)^3$.",
+      "Înlocuim $x=0$: $f'(0) = 8(2\\cdot0+1)^3 = 8\\cdot1^3$.",
+      "Rezultă $f'(0) = 8$.",
+    ],
   },
   {
     id: "dv-s3-3",
@@ -247,7 +332,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\sqrt{x^2+1}$. Calculați $f'(0)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = \\dfrac{x}{\\sqrt{x^2+1}}$, deci $f'(0) = 0$.",
+    explanation: [
+      "Aplicăm regula lanțului pentru radical: $f'(x) = \\dfrac{x}{\\sqrt{x^2+1}}$.",
+      "Înlocuim $x=0$: $f'(0) = \\dfrac{0}{\\sqrt{0^2+1}}$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
   {
     id: "dv-s3-4",
@@ -258,7 +347,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = (3x-2)^2$. Calculați $f'(1)$.",
     options: ["$6$", "$3$", "$-6$", "$2$"],
     correctAnswer: "$6$",
-    explanation: "$f'(x) = 2(3x-2) \\cdot 3 = 6(3x-2)$, deci $f'(1) = 6$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 2(3x-2) \\cdot 3 = 6(3x-2)$.",
+      "Înlocuim $x=1$: $f'(1) = 6(3\\cdot1-2) = 6\\cdot1$.",
+      "Rezultă $f'(1) = 6$.",
+    ],
   },
   {
     id: "dv-s3-5",
@@ -269,7 +362,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\sqrt{4x+1}$. Calculați $f'(2)$.",
     correctAnswer: "2/3",
     acceptedAnswers: ["0.67", "0,67"],
-    explanation: "$f'(x) = \\dfrac{4}{2\\sqrt{4x+1}} = \\dfrac{2}{\\sqrt{4x+1}}$, deci $f'(2) = \\dfrac{2}{3}$.",
+    explanation: [
+      "Aplicăm regula lanțului pentru radical: $f'(x) = \\dfrac{4}{2\\sqrt{4x+1}} = \\dfrac{2}{\\sqrt{4x+1}}$.",
+      "Înlocuim $x=2$: $f'(2) = \\dfrac{2}{\\sqrt{4\\cdot2+1}} = \\dfrac{2}{\\sqrt9}$.",
+      "Rezultă $f'(2) = \\dfrac{2}{3}$.",
+    ],
   },
   {
     id: "dv-s3-6",
@@ -280,7 +377,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = (x^3-1)^2$. Calculați $f'(1)$.",
     options: ["$0$", "$6$", "$2$", "$-6$"],
     correctAnswer: "$0$",
-    explanation: "$f'(x) = 2(x^3-1) \\cdot 3x^2 = 6x^2(x^3-1)$, deci $f'(1) = 6 \\cdot 1 \\cdot 0 = 0$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 2(x^3-1) \\cdot 3x^2 = 6x^2(x^3-1)$.",
+      "Înlocuim $x=1$: $f'(1) = 6\\cdot1^2\\cdot(1^3-1) = 6\\cdot1\\cdot0$.",
+      "Rezultă $f'(1) = 0$.",
+    ],
   },
   {
     id: "dv-s3-7",
@@ -290,7 +391,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = (1-x)^5$. Calculați $f'(0)$.",
     correctAnswer: "-5",
-    explanation: "$f'(x) = 5(1-x)^4 \\cdot (-1) = -5(1-x)^4$, deci $f'(0) = -5$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 5(1-x)^4 \\cdot (-1) = -5(1-x)^4$.",
+      "Înlocuim $x=0$: $f'(0) = -5(1-0)^4 = -5\\cdot1$.",
+      "Rezultă $f'(0) = -5$.",
+    ],
   },
   {
     id: "dv-s3-8",
@@ -301,7 +406,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Regula lanțului pentru $f(x)=g(h(x))$ afirmă că $f'(x)=$:",
     options: ["$g'(h(x))\\cdot h'(x)$", "$g'(x)\\cdot h'(x)$", "$g(h'(x))$", "$g'(h(x))+h'(x)$"],
     correctAnswer: "$g'(h(x))\\cdot h'(x)$",
-    explanation: "Regula lanțului: derivata funcției compuse este derivata funcției exterioare (evaluată în funcția interioară) înmulțită cu derivata funcției interioare.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "Regula lanțului: derivata funcției compuse este derivata funcției exterioare (evaluată în funcția interioară) înmulțită cu derivata funcției interioare, adică $f'(x)=g'(h(x))\\cdot h'(x)$.",
+    ],
   },
   {
     id: "dv-s3-9",
@@ -311,7 +419,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = (2-x)^3$. Calculați $f'(2)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = 3(2-x)^2 \\cdot (-1) = -3(2-x)^2$, deci $f'(2) = 0$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 3(2-x)^2 \\cdot (-1) = -3(2-x)^2$.",
+      "Înlocuim $x=2$: $f'(2) = -3(2-2)^2 = -3\\cdot0$.",
+      "Rezultă $f'(2) = 0$.",
+    ],
   },
   {
     id: "dv-s3-10",
@@ -322,7 +434,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = (x^2-4)^2$. Calculați $f'(3)$.",
     options: ["$60$", "$30$", "$120$", "$20$"],
     correctAnswer: "$60$",
-    explanation: "$f'(x) = 2(x^2-4) \\cdot 2x = 4x(x^2-4)$, deci $f'(3) = 12 \\cdot 5 = 60$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 2(x^2-4) \\cdot 2x = 4x(x^2-4)$.",
+      "Înlocuim $x=3$: $f'(3) = 4\\cdot3\\cdot(3^2-4) = 12\\cdot5$.",
+      "Rezultă $f'(3) = 60$.",
+    ],
   },
 
   // Set 4 — Derivate ale funcțiilor trigonometrice
@@ -334,7 +450,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\sin x$. Calculați $f'(0)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = \\cos x$, deci $f'(0) = 1$.",
+    explanation: [
+      "Aplicăm regula de derivare a funcțiilor uzuale: $(\\sin x)' = \\cos x$.",
+      "Înlocuim $x=0$: $f'(0) = \\cos 0$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s4-2",
@@ -344,7 +464,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\cos x$. Calculați $f'(0)$.",
     correctAnswer: "0",
-    explanation: "$f'(x) = -\\sin x$, deci $f'(0) = 0$.",
+    explanation: [
+      "Aplicăm regula de derivare a funcțiilor uzuale: $(\\cos x)' = -\\sin x$.",
+      "Înlocuim $x=0$: $f'(0) = -\\sin 0$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
   {
     id: "dv-s4-3",
@@ -355,7 +479,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x)=\\tan x$ este:",
     options: ["$\\dfrac{1}{\\cos^2x}$", "$-\\dfrac{1}{\\sin^2x}$", "$\\cos x$", "$-\\tan x$"],
     correctAnswer: "$\\dfrac{1}{\\cos^2x}$",
-    explanation: "$(\\tan x)' = \\dfrac{1}{\\cos^2 x}$.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "$(\\tan x)' = \\dfrac{1}{\\cos^2 x}$.",
+    ],
   },
   {
     id: "dv-s4-4",
@@ -365,7 +492,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = 2\\sin x$. Calculați $f'(0)$.",
     correctAnswer: "2",
-    explanation: "$f'(x) = 2\\cos x$, deci $f'(0) = 2$.",
+    explanation: [
+      "Aplicăm regula de derivare a funcțiilor uzuale: $f'(x) = 2\\cos x$.",
+      "Înlocuim $x=0$: $f'(0) = 2\\cos 0$.",
+      "Rezultă $f'(0) = 2$.",
+    ],
   },
   {
     id: "dv-s4-5",
@@ -376,7 +507,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\sin x + \\cos x$. Calculați $f'(0)$.",
     options: ["$1$", "$0$", "$-1$", "$2$"],
     correctAnswer: "$1$",
-    explanation: "$f'(x) = \\cos x - \\sin x$, deci $f'(0) = 1 - 0 = 1$.",
+    explanation: [
+      "Aplicăm regulile de derivare a funcțiilor uzuale: $f'(x) = \\cos x - \\sin x$.",
+      "Înlocuim $x=0$: $f'(0) = \\cos 0 - \\sin 0 = 1 - 0$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s4-6",
@@ -386,7 +521,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x\\cos x$. Calculați $f'(0)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = \\cos x - x\\sin x$, deci $f'(0) = 1 - 0 = 1$.",
+    explanation: [
+      "Aplicăm regula produsului $(uv)'=u'v+uv'$, cu $u=x$, $v=\\cos x$: $f'(x) = \\cos x - x\\sin x$.",
+      "Înlocuim $x=0$: $f'(0) = \\cos 0 - 0\\cdot\\sin 0 = 1 - 0$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s4-7",
@@ -397,7 +536,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\cos(2x)$. Calculați $f'(0)$.",
     options: ["$0$", "$2$", "$-2$", "$1$"],
     correctAnswer: "$0$",
-    explanation: "$f'(x) = -2\\sin(2x)$, deci $f'(0) = 0$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = -2\\sin(2x)$.",
+      "Înlocuim $x=0$: $f'(0) = -2\\sin(0)$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
   {
     id: "dv-s4-8",
@@ -407,7 +550,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\sin(3x)$. Calculați $f'(0)$.",
     correctAnswer: "3",
-    explanation: "$f'(x) = 3\\cos(3x)$, deci $f'(0) = 3$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 3\\cos(3x)$.",
+      "Înlocuim $x=0$: $f'(0) = 3\\cos(0)$.",
+      "Rezultă $f'(0) = 3$.",
+    ],
   },
   {
     id: "dv-s4-9",
@@ -418,7 +565,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x)=\\cos x$ este:",
     options: ["$-\\sin x$", "$\\sin x$", "$-\\cos x$", "$\\tan x$"],
     correctAnswer: "$-\\sin x$",
-    explanation: "$(\\cos x)' = -\\sin x$.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "$(\\cos x)' = -\\sin x$.",
+    ],
   },
   {
     id: "dv-s4-10",
@@ -429,7 +579,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\sin^2 x$. Calculați $f'(0)$.",
     options: ["$0$", "$1$", "$2$", "$-1$"],
     correctAnswer: "$0$",
-    explanation: "$f'(x) = 2\\sin x \\cos x$ (regula lanțului), deci $f'(0) = 0$.",
+    explanation: [
+      "Aplicăm regula lanțului pentru $\\sin^2 x$: $f'(x) = 2\\sin x \\cos x$.",
+      "Înlocuim $x=0$: $f'(0) = 2\\sin 0 \\cos 0$.",
+      "Rezultă $f'(0) = 0$.",
+    ],
   },
 
   // Set 5 — Derivate ale funcțiilor exponențiale și logaritmice
@@ -441,7 +595,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = e^x$. Calculați $f'(0)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = e^x$, deci $f'(0) = e^0 = 1$.",
+    explanation: [
+      "Aplicăm regula de derivare a funcțiilor uzuale: $(e^x)' = e^x$.",
+      "Înlocuim $x=0$: $f'(0) = e^0$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s5-2",
@@ -452,7 +610,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x)=\\ln x$ este:",
     options: ["$\\dfrac1x$", "$x$", "$\\dfrac{1}{x^2}$", "$e^x$"],
     correctAnswer: "$\\dfrac1x$",
-    explanation: "$(\\ln x)' = \\dfrac1x$.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "$(\\ln x)' = \\dfrac1x$.",
+    ],
   },
   {
     id: "dv-s5-3",
@@ -462,7 +623,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\ln x$. Calculați $f'(1)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = \\dfrac1x$, deci $f'(1) = 1$.",
+    explanation: [
+      "Aplicăm regula de derivare a funcțiilor uzuale: $f'(x) = \\dfrac1x$.",
+      "Înlocuim $x=1$: $f'(1) = \\dfrac11$.",
+      "Rezultă $f'(1) = 1$.",
+    ],
   },
   {
     id: "dv-s5-4",
@@ -473,7 +638,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = e^{2x}$. Calculați $f'(0)$.",
     options: ["$2$", "$1$", "$4$", "$0$"],
     correctAnswer: "$2$",
-    explanation: "$f'(x) = 2e^{2x}$, deci $f'(0) = 2$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 2e^{2x}$.",
+      "Înlocuim $x=0$: $f'(0) = 2e^{0}$.",
+      "Rezultă $f'(0) = 2$.",
+    ],
   },
   {
     id: "dv-s5-5",
@@ -483,7 +652,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x e^x$. Calculați $f'(0)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = e^x + xe^x$, deci $f'(0) = 1 + 0 = 1$.",
+    explanation: [
+      "Aplicăm regula produsului, cu $u=x$, $v=e^x$: $f'(x) = e^x + xe^x$.",
+      "Înlocuim $x=0$: $f'(0) = e^0 + 0\\cdot e^0 = 1 + 0$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s5-6",
@@ -494,7 +667,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\ln(2x)$. Calculați $f'(1)$.",
     options: ["$1$", "$2$", "$1/2$", "$0$"],
     correctAnswer: "$1$",
-    explanation: "$f'(x) = \\dfrac{2}{2x} = \\dfrac1x$, deci $f'(1) = 1$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = \\dfrac{2}{2x} = \\dfrac1x$.",
+      "Înlocuim $x=1$: $f'(1) = \\dfrac11$.",
+      "Rezultă $f'(1) = 1$.",
+    ],
   },
   {
     id: "dv-s5-7",
@@ -504,7 +681,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = e^{-x}$. Calculați $f'(0)$.",
     correctAnswer: "-1",
-    explanation: "$f'(x) = -e^{-x}$, deci $f'(0) = -1$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = -e^{-x}$.",
+      "Înlocuim $x=0$: $f'(0) = -e^{0}$.",
+      "Rezultă $f'(0) = -1$.",
+    ],
   },
   {
     id: "dv-s5-8",
@@ -515,7 +696,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = x^2\\ln x$ (pentru $x>0$). Calculați $f'(1)$.",
     options: ["$1$", "$0$", "$2$", "$-1$"],
     correctAnswer: "$1$",
-    explanation: "$f'(x) = 2x\\ln x + x$, deci $f'(1) = 0 + 1 = 1$.",
+    explanation: [
+      "Aplicăm regula produsului, cu $u=x^2$, $v=\\ln x$: $f'(x) = 2x\\ln x + x$.",
+      "Înlocuim $x=1$: $f'(1) = 2\\cdot1\\cdot\\ln1 + 1 = 0 + 1$.",
+      "Rezultă $f'(1) = 1$.",
+    ],
   },
   {
     id: "dv-s5-9",
@@ -525,7 +710,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\ln(x+1)$. Calculați $f'(0)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = \\dfrac{1}{x+1}$, deci $f'(0) = 1$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = \\dfrac{1}{x+1}$.",
+      "Înlocuim $x=0$: $f'(0) = \\dfrac{1}{0+1}$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s5-10",
@@ -536,7 +725,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x)=e^x$ este:",
     options: ["$e^x$", "$xe^{x-1}$", "$e^{x-1}$", "$1$"],
     correctAnswer: "$e^x$",
-    explanation: "Funcția exponențială $e^x$ este propria sa derivată.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "Funcția exponențială $e^x$ este propria sa derivată: $(e^x)'=e^x$.",
+    ],
   },
 
   // Set 6 — Ecuația tangentei la un grafic într-un punct
@@ -548,7 +740,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2$. Determinați panta tangentei la grafic în punctul $x_0=1$.",
     correctAnswer: "2",
-    explanation: "$f'(x) = 2x$, deci panta este $f'(1) = 2$.",
+    explanation: [
+      "Aplicăm regula puterii: $f'(x) = 2x$.",
+      "Panta tangentei este $f'(1) = 2\\cdot1$.",
+      "Rezultă panta $2$.",
+    ],
   },
   {
     id: "dv-s6-2",
@@ -559,7 +755,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, ecuația tangentei la grafic în $x_0=1$ este:",
     options: ["$y=2x-1$", "$y=2x+1$", "$y=x-1$", "$y=2x$"],
     correctAnswer: "$y=2x-1$",
-    explanation: "$y = f(1) + f'(1)(x-1) = 1 + 2(x-1) = 2x - 1$.",
+    explanation: [
+      "Folosim ecuația tangentei $y=f(x_0)+f'(x_0)(x-x_0)$, cu $x_0=1$: $f(1)=1$ și $f'(1)=2$.",
+      "Înlocuim: $y = 1 + 2(x-1)$.",
+      "Rezultă $y=2x-1$.",
+    ],
   },
   {
     id: "dv-s6-3",
@@ -569,7 +769,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^3$. Determinați panta tangentei la grafic în punctul $x_0=1$.",
     correctAnswer: "3",
-    explanation: "$f'(x) = 3x^2$, deci panta este $f'(1) = 3$.",
+    explanation: [
+      "Aplicăm regula puterii: $f'(x) = 3x^2$.",
+      "Panta tangentei este $f'(1) = 3\\cdot1^2$.",
+      "Rezultă panta $3$.",
+    ],
   },
   {
     id: "dv-s6-4",
@@ -580,7 +784,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția $f(x)=x^3$, ecuația tangentei la grafic în $x_0=1$ este:",
     options: ["$y=3x-2$", "$y=3x-1$", "$y=3x+1$", "$y=x-2$"],
     correctAnswer: "$y=3x-2$",
-    explanation: "$y = f(1) + f'(1)(x-1) = 1 + 3(x-1) = 3x - 2$.",
+    explanation: [
+      "Folosim ecuația tangentei $y=f(x_0)+f'(x_0)(x-x_0)$, cu $x_0=1$: $f(1)=1$ și $f'(1)=3$.",
+      "Înlocuim: $y = 1 + 3(x-1)$.",
+      "Rezultă $y=3x-2$.",
+    ],
   },
   {
     id: "dv-s6-5",
@@ -590,7 +798,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2-2x$. Determinați panta tangentei la grafic în punctul $x_0=0$.",
     correctAnswer: "-2",
-    explanation: "$f'(x) = 2x-2$, deci panta este $f'(0) = -2$.",
+    explanation: [
+      "Derivăm termen cu termen: $f'(x) = 2x-2$.",
+      "Panta tangentei este $f'(0) = 2\\cdot0-2$.",
+      "Rezultă panta $-2$.",
+    ],
   },
   {
     id: "dv-s6-6",
@@ -601,7 +813,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, ecuația tangentei la grafic în $x_0=0$ este:",
     options: ["$y=-2x$", "$y=-2x+2$", "$y=2x$", "$y=-2x-2$"],
     correctAnswer: "$y=-2x$",
-    explanation: "$y = f(0) + f'(0)(x-0) = 0 + (-2)x = -2x$.",
+    explanation: [
+      "Folosim ecuația tangentei $y=f(x_0)+f'(x_0)(x-x_0)$, cu $x_0=0$: $f(0)=0$ și $f'(0)=-2$.",
+      "Înlocuim: $y = 0 + (-2)(x-0)$.",
+      "Rezultă $y=-2x$.",
+    ],
   },
   {
     id: "dv-s6-7",
@@ -612,7 +828,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = \\sqrt{x}$. Determinați panta tangentei la grafic în punctul $x_0=4$.",
     correctAnswer: "1/4",
     acceptedAnswers: ["0.25", "0,25"],
-    explanation: "$f'(x) = \\dfrac{1}{2\\sqrt{x}}$, deci panta este $f'(4) = \\dfrac14$.",
+    explanation: [
+      "Aplicăm formula de derivare a radicalului: $f'(x) = \\dfrac{1}{2\\sqrt{x}}$.",
+      "Panta tangentei este $f'(4) = \\dfrac{1}{2\\sqrt4} = \\dfrac{1}{2\\cdot2}$.",
+      "Rezultă panta $\\dfrac14$.",
+    ],
   },
   {
     id: "dv-s6-8",
@@ -623,7 +843,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "O tangentă la graficul unei funcții $f$ în punctul $(x_0,f(x_0))$ are panta egală cu:",
     options: ["$f'(x_0)$", "$f(x_0)$", "$x_0$", "$f''(x_0)$"],
     correctAnswer: "$f'(x_0)$",
-    explanation: "Panta tangentei la grafic într-un punct este valoarea derivatei în acel punct.",
+    explanation: [
+      "Aceasta este o proprietate fundamentală legată de interpretarea geometrică a derivatei.",
+      "Panta tangentei la grafic într-un punct este valoarea derivatei în acel punct: $f'(x_0)$.",
+    ],
   },
   {
     id: "dv-s6-9",
@@ -633,7 +856,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = e^x$. Ecuația tangentei la grafic în $x_0=0$ este de forma $y=ax+b$. Determinați $b$.",
     correctAnswer: "1",
-    explanation: "$y = f(0) + f'(0)(x-0) = 1 + 1 \\cdot x = x + 1$, deci $b = 1$.",
+    explanation: [
+      "Folosim ecuația tangentei $y=f(x_0)+f'(x_0)(x-x_0)$, cu $x_0=0$: $f(0)=1$ și $f'(0)=1$.",
+      "Înlocuim: $y = 1 + 1 \\cdot x = x + 1$.",
+      "Rezultă $b = 1$.",
+    ],
   },
   {
     id: "dv-s6-10",
@@ -644,7 +871,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru $f(x)=e^x$, ecuația tangentei la grafic în $x_0=0$ este:",
     options: ["$y=x+1$", "$y=x$", "$y=x-1$", "$y=e\\cdot x$"],
     correctAnswer: "$y=x+1$",
-    explanation: "$y = f(0) + f'(0)(x-0) = 1 + 1 \\cdot x = x + 1$.",
+    explanation: [
+      "Folosim ecuația tangentei $y=f(x_0)+f'(x_0)(x-x_0)$, cu $x_0=0$: $f(0)=1$ și $f'(0)=1$.",
+      "Înlocuim: $y = 1 + 1 \\cdot x$.",
+      "Rezultă $y = x + 1$.",
+    ],
   },
 
   // Set 7 — Monotonia funcțiilor (semnul derivatei)
@@ -657,7 +888,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "O funcție derivabilă $f$ este crescătoare pe un interval $I$ dacă și numai dacă:",
     options: ["$f'(x)\\ge0$ pentru orice $x\\in I$", "$f'(x)\\le0$ pentru orice $x\\in I$", "$f(x)\\ge0$ pe $I$", "$f''(x)\\ge0$ pe $I$"],
     correctAnswer: "$f'(x)\\ge0$ pentru orice $x\\in I$",
-    explanation: "Semnul pozitiv al derivatei pe un interval arată că funcția este crescătoare acolo.",
+    explanation: [
+      "Aceasta este o proprietate fundamentală de analiză ce leagă semnul derivatei de monotonie.",
+      "Dacă $f'(x)\\ge0$ pentru orice $x\\in I$, atunci $f$ este crescătoare pe $I$.",
+    ],
   },
   {
     id: "dv-s7-2",
@@ -667,7 +901,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2-4x+3$. Determinați valoarea $x_0$ de la care funcția devine crescătoare (soluția ecuației $f'(x)=0$).",
     correctAnswer: "2",
-    explanation: "$f'(x) = 2x-4 = 0 \\Rightarrow x = 2$.",
+    explanation: [
+      "Calculăm derivata: $f'(x) = 2x-4$.",
+      "Punem condiția de punct critic: $f'(x)=0 \\Rightarrow 2x-4=0$.",
+      "Rezolvăm: $x=2$.",
+    ],
   },
   {
     id: "dv-s7-3",
@@ -678,7 +916,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, pe intervalul $(-\\infty,2)$ funcția este:",
     options: ["descrescătoare", "crescătoare", "constantă", "nu se poate preciza"],
     correctAnswer: "descrescătoare",
-    explanation: "Pentru $x<2$, $f'(x)=2x-4<0$, deci funcția este descrescătoare.",
+    explanation: [
+      "Studiem semnul derivatei $f'(x)=2x-4$ pe intervalul $(-\\infty,2)$.",
+      "Pentru $x<2$, avem $f'(x)<0$.",
+      "Rezultă că funcția este descrescătoare pe acest interval.",
+    ],
   },
   {
     id: "dv-s7-4",
@@ -688,7 +930,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = -x^2+6x-5$. Determinați valoarea $x_0$ pentru care $f'(x_0)=0$.",
     correctAnswer: "3",
-    explanation: "$f'(x) = -2x+6 = 0 \\Rightarrow x = 3$.",
+    explanation: [
+      "Calculăm derivata: $f'(x) = -2x+6$.",
+      "Punem condiția de punct critic: $f'(x)=0 \\Rightarrow -2x+6=0$.",
+      "Rezolvăm: $x=3$.",
+    ],
   },
   {
     id: "dv-s7-5",
@@ -699,7 +945,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, pe intervalul $(3,\\infty)$ funcția este:",
     options: ["descrescătoare", "crescătoare", "constantă", "nu se poate preciza"],
     correctAnswer: "descrescătoare",
-    explanation: "Pentru $x>3$, $f'(x)=-2x+6<0$, deci funcția este descrescătoare.",
+    explanation: [
+      "Studiem semnul derivatei $f'(x)=-2x+6$ pe intervalul $(3,\\infty)$.",
+      "Pentru $x>3$, avem $f'(x)<0$.",
+      "Rezultă că funcția este descrescătoare pe acest interval.",
+    ],
   },
   {
     id: "dv-s7-6",
@@ -709,7 +959,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^3-3x$. Determinați soluția pozitivă a ecuației $f'(x)=0$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = 3x^2-3 = 0 \\Rightarrow x^2=1 \\Rightarrow x=\\pm1$, soluția pozitivă este $1$.",
+    explanation: [
+      "Calculăm derivata: $f'(x) = 3x^2-3$.",
+      "Punem condiția de punct critic: $f'(x)=0 \\Rightarrow 3x^2-3=0 \\Rightarrow x^2=1$.",
+      "Rezolvăm: $x=\\pm1$, iar soluția pozitivă este $x=1$.",
+    ],
   },
   {
     id: "dv-s7-7",
@@ -720,7 +974,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția $f(x)=x^3-3x$, pe intervalul $(-1,1)$ semnul derivatei $f'(x)=3(x^2-1)$ este:",
     options: ["negativ, deci $f$ este descrescătoare", "pozitiv, deci $f$ este crescătoare", "nul pe tot intervalul", "nu se poate preciza"],
     correctAnswer: "negativ, deci $f$ este descrescătoare",
-    explanation: "Pentru $x\\in(-1,1)$, $x^2<1$, deci $f'(x)=3(x^2-1)<0$.",
+    explanation: [
+      "Studiem semnul derivatei $f'(x)=3(x^2-1)$ pe intervalul $(-1,1)$.",
+      "Pentru $x\\in(-1,1)$, avem $x^2<1$, deci $f'(x)<0$.",
+      "Rezultă că funcția este descrescătoare pe acest interval.",
+    ],
   },
   {
     id: "dv-s7-8",
@@ -730,7 +988,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2+2x+1$. Calculați $f'(-1)$ (punct critic).",
     correctAnswer: "0",
-    explanation: "$f'(x) = 2x+2$, deci $f'(-1) = -2+2 = 0$.",
+    explanation: [
+      "Calculăm derivata: $f'(x) = 2x+2$.",
+      "Înlocuim $x=-1$: $f'(-1) = 2\\cdot(-1)+2 = -2+2$.",
+      "Rezultă $f'(-1) = 0$.",
+    ],
   },
   {
     id: "dv-s7-9",
@@ -741,7 +1003,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Dacă $f'(x)>0$ pe un interval $I$, atunci funcția $f$ este pe $I$:",
     options: ["strict crescătoare", "strict descrescătoare", "constantă", "nu se poate preciza"],
     correctAnswer: "strict crescătoare",
-    explanation: "Derivata strict pozitivă pe un interval implică monotonie strict crescătoare pe acel interval.",
+    explanation: [
+      "Aceasta este o proprietate fundamentală de analiză ce leagă semnul derivatei de monotonie.",
+      "Dacă $f'(x)>0$ pe un interval $I$, atunci $f$ este strict crescătoare pe $I$.",
+    ],
   },
   {
     id: "dv-s7-10",
@@ -751,7 +1016,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = 2x^3-3x^2$. Determinați soluția pozitivă nenulă a ecuației $f'(x)=0$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = 6x^2-6x = 6x(x-1) = 0 \\Rightarrow x=0$ sau $x=1$; soluția pozitivă nenulă este $1$.",
+    explanation: [
+      "Calculăm derivata: $f'(x) = 6x^2-6x = 6x(x-1)$.",
+      "Punem condiția de punct critic: $f'(x)=0 \\Rightarrow 6x(x-1)=0 \\Rightarrow x=0$ sau $x=1$.",
+      "Soluția pozitivă nenulă este $x=1$.",
+    ],
   },
 
   // Set 8 — Puncte de extrem (maxim/minim local)
@@ -764,7 +1033,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x)=x^2-4x+3$, cu punctul critic $x=2$. Deoarece coeficientul dominant al lui $f$ este pozitiv, $x=2$ este punct de:",
     options: ["minim", "maxim", "inflexiune", "nu este punct de extrem"],
     correctAnswer: "minim",
-    explanation: "Parabola cu coeficient dominant pozitiv are un minim în vârf, adică în punctul critic.",
+    explanation: [
+      "Studiem natura punctului critic $x=2$ folosind semnul coeficientului dominant al parabolei.",
+      "Deoarece coeficientul dominant al lui $f$ este pozitiv, parabola are un minim în vârf.",
+      "Rezultă că $x=2$ este punct de minim.",
+    ],
   },
   {
     id: "dv-s8-2",
@@ -774,7 +1047,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru funcția de mai sus, calculați valoarea minimă $f(2)$.",
     correctAnswer: "-1",
-    explanation: "$f(2) = 4 - 8 + 3 = -1$.",
+    explanation: [
+      "Calculăm valoarea funcției în punctul de minim: $f(2) = 2^2 - 4\\cdot2 + 3 = 4 - 8 + 3$.",
+      "Rezultă $f(2) = -1$.",
+    ],
   },
   {
     id: "dv-s8-3",
@@ -785,7 +1061,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x)=-x^2+6x-5$, cu punctul critic $x=3$. Deoarece coeficientul dominant este negativ, $x=3$ este punct de:",
     options: ["maxim", "minim", "inflexiune", "nu este punct de extrem"],
     correctAnswer: "maxim",
-    explanation: "Parabola cu coeficient dominant negativ are un maxim în vârf, adică în punctul critic.",
+    explanation: [
+      "Studiem natura punctului critic $x=3$ folosind semnul coeficientului dominant al parabolei.",
+      "Deoarece coeficientul dominant al lui $f$ este negativ, parabola are un maxim în vârf.",
+      "Rezultă că $x=3$ este punct de maxim.",
+    ],
   },
   {
     id: "dv-s8-4",
@@ -795,7 +1075,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru funcția de mai sus, calculați valoarea maximă $f(3)$.",
     correctAnswer: "4",
-    explanation: "$f(3) = -9 + 18 - 5 = 4$.",
+    explanation: [
+      "Calculăm valoarea funcției în punctul de maxim: $f(3) = -3^2 + 6\\cdot3 - 5 = -9 + 18 - 5$.",
+      "Rezultă $f(3) = 4$.",
+    ],
   },
   {
     id: "dv-s8-5",
@@ -805,7 +1088,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x)=x^3-3x$, cu punctele critice $x=-1$ și $x=1$. Calculați $f(1)$.",
     correctAnswer: "-2",
-    explanation: "$f(1) = 1 - 3 = -2$.",
+    explanation: [
+      "Calculăm valoarea funcției în punctul critic $x=1$: $f(1) = 1^3 - 3\\cdot1 = 1 - 3$.",
+      "Rezultă $f(1) = -2$.",
+    ],
   },
   {
     id: "dv-s8-6",
@@ -816,7 +1102,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, $x=1$ este punct de:",
     options: ["minim local", "maxim local", "inflexiune", "nu este punct de extrem"],
     correctAnswer: "minim local",
-    explanation: "Derivata $f'(x)=3(x^2-1)$ trece din negativ (pe $(-1,1)$) în pozitiv (pentru $x>1$), deci $x=1$ este punct de minim local.",
+    explanation: [
+      "Studiem semnul derivatei $f'(x)=3(x^2-1)$ în jurul punctului critic $x=1$.",
+      "Pentru $x\\in(-1,1)$, $f'(x)<0$, iar pentru $x>1$, $f'(x)>0$.",
+      "Deoarece derivata trece din negativ în pozitiv, $x=1$ este punct de minim local.",
+    ],
   },
   {
     id: "dv-s8-7",
@@ -826,7 +1116,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru funcția $f(x)=x^3-3x$, calculați $f(-1)$.",
     correctAnswer: "2",
-    explanation: "$f(-1) = -1 + 3 = 2$.",
+    explanation: [
+      "Calculăm valoarea funcției în punctul critic $x=-1$: $f(-1) = (-1)^3 - 3\\cdot(-1) = -1 + 3$.",
+      "Rezultă $f(-1) = 2$.",
+    ],
   },
   {
     id: "dv-s8-8",
@@ -837,7 +1130,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, $x=-1$ este punct de:",
     options: ["maxim local", "minim local", "inflexiune", "nu este punct de extrem"],
     correctAnswer: "maxim local",
-    explanation: "Derivata $f'(x)=3(x^2-1)$ trece din pozitiv (pentru $x<-1$) în negativ (pe $(-1,1)$), deci $x=-1$ este punct de maxim local.",
+    explanation: [
+      "Studiem semnul derivatei $f'(x)=3(x^2-1)$ în jurul punctului critic $x=-1$.",
+      "Pentru $x<-1$, $f'(x)>0$, iar pentru $x\\in(-1,1)$, $f'(x)<0$.",
+      "Deoarece derivata trece din pozitiv în negativ, $x=-1$ este punct de maxim local.",
+    ],
   },
   {
     id: "dv-s8-9",
@@ -848,7 +1145,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Un punct critic $x_0$ (unde $f'(x_0)=0$) este punct de extrem dacă:",
     options: ["derivata își schimbă semnul în jurul lui $x_0$", "derivata este $0$ pe un interval întreg", "funcția este continuă", "funcția este pozitivă"],
     correctAnswer: "derivata își schimbă semnul în jurul lui $x_0$",
-    explanation: "Un punct critic este punct de extrem doar dacă derivata schimbă semn la trecerea prin acel punct.",
+    explanation: [
+      "Aceasta este o proprietate fundamentală privind identificarea punctelor de extrem.",
+      "Un punct critic $x_0$ (unde $f'(x_0)=0$) este punct de extrem doar dacă derivata își schimbă semnul în jurul lui $x_0$.",
+    ],
   },
   {
     id: "dv-s8-10",
@@ -858,7 +1158,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x)=x^2-2x+5$, cu punctul critic $x=1$. Calculați valoarea minimă $f(1)$.",
     correctAnswer: "4",
-    explanation: "$f(1) = 1 - 2 + 5 = 4$.",
+    explanation: [
+      "Calculăm valoarea funcției în punctul critic $x=1$: $f(1) = 1^2 - 2\\cdot1 + 5 = 1 - 2 + 5$.",
+      "Rezultă $f(1) = 4$.",
+    ],
   },
 
   // Set 9 — Derivate de ordinul doi, concavitate
@@ -870,7 +1173,12 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^3$. Calculați $f''(1)$.",
     correctAnswer: "6",
-    explanation: "$f'(x)=3x^2$, $f''(x)=6x$, deci $f''(1)=6$.",
+    explanation: [
+      "Calculăm derivata întâi folosind regula puterii: $f'(x)=3x^2$.",
+      "Derivăm din nou pentru a obține derivata a doua: $f''(x)=6x$.",
+      "Înlocuim $x=1$: $f''(1)=6\\cdot1$.",
+      "Rezultă $f''(1)=6$.",
+    ],
   },
   {
     id: "dv-s9-2",
@@ -881,7 +1189,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Fie $f(x) = x^4$. Calculați $f''(x)$.",
     options: ["$12x^2$", "$4x^3$", "$12x$", "$3x^2$"],
     correctAnswer: "$12x^2$",
-    explanation: "$f'(x)=4x^3$, $f''(x)=12x^2$.",
+    explanation: [
+      "Calculăm derivata întâi folosind regula puterii: $f'(x)=4x^3$.",
+      "Derivăm din nou: $f''(x)=12x^2$.",
+    ],
   },
   {
     id: "dv-s9-3",
@@ -891,7 +1202,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2-4x+3$. Calculați $f''(5)$.",
     correctAnswer: "2",
-    explanation: "$f'(x)=2x-4$, $f''(x)=2$ (constantă), deci $f''(5)=2$.",
+    explanation: [
+      "Calculăm derivata întâi: $f'(x)=2x-4$.",
+      "Derivăm din nou: $f''(x)=2$ (constantă pentru orice $x$).",
+      "Rezultă $f''(5)=2$.",
+    ],
   },
   {
     id: "dv-s9-4",
@@ -902,7 +1217,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Dacă $f''(x)>0$ pe un interval $I$, graficul funcției $f$ este pe $I$:",
     options: ["convex (concav în sus)", "concav (concav în jos)", "liniar", "nu se poate preciza"],
     correctAnswer: "convex (concav în sus)",
-    explanation: "A doua derivată pozitivă indică un grafic convex (concav în sus).",
+    explanation: [
+      "Aceasta este o proprietate fundamentală legată de concavitatea graficului.",
+      "Dacă $f''(x)>0$ pe un interval $I$, atunci graficul lui $f$ este convex (concav în sus) pe $I$.",
+    ],
   },
   {
     id: "dv-s9-5",
@@ -912,7 +1230,12 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\sin x$. Calculați $f''(0)$.",
     correctAnswer: "0",
-    explanation: "$f'(x)=\\cos x$, $f''(x)=-\\sin x$, deci $f''(0)=0$.",
+    explanation: [
+      "Calculăm derivata întâi: $f'(x)=\\cos x$.",
+      "Derivăm din nou: $f''(x)=-\\sin x$.",
+      "Înlocuim $x=0$: $f''(0)=-\\sin 0$.",
+      "Rezultă $f''(0)=0$.",
+    ],
   },
   {
     id: "dv-s9-6",
@@ -923,7 +1246,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Dacă $f''(x_0)=0$ și $f''$ își schimbă semnul în jurul lui $x_0$, atunci $x_0$ se numește:",
     options: ["punct de inflexiune", "punct de maxim", "punct de minim", "punct critic simplu"],
     correctAnswer: "punct de inflexiune",
-    explanation: "Un punct unde a doua derivată se anulează și își schimbă semnul este punct de inflexiune.",
+    explanation: [
+      "Aceasta este o proprietate fundamentală privind punctele de inflexiune.",
+      "Dacă $f''(x_0)=0$ și $f''$ își schimbă semnul în jurul lui $x_0$, atunci $x_0$ se numește punct de inflexiune.",
+    ],
   },
   {
     id: "dv-s9-7",
@@ -933,7 +1259,12 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^3-3x$. Determinați $x_0$ pentru care $f''(x_0)=0$.",
     correctAnswer: "0",
-    explanation: "$f'(x)=3x^2-3$, $f''(x)=6x=0 \\Rightarrow x=0$.",
+    explanation: [
+      "Calculăm derivata întâi: $f'(x)=3x^2-3$.",
+      "Derivăm din nou: $f''(x)=6x$.",
+      "Punem condiția $f''(x)=0 \\Rightarrow 6x=0$.",
+      "Rezolvăm: $x=0$.",
+    ],
   },
   {
     id: "dv-s9-8",
@@ -944,7 +1275,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru $f(x)=e^x$, calculați $f''(x)$.",
     options: ["$e^x$", "$xe^{x-1}$", "$1$", "$0$"],
     correctAnswer: "$e^x$",
-    explanation: "$f'(x)=e^x$, deci $f''(x)=e^x$.",
+    explanation: [
+      "Calculăm derivata întâi: $f'(x)=e^x$.",
+      "Derivăm din nou: $f''(x)=e^x$.",
+    ],
   },
   {
     id: "dv-s9-9",
@@ -954,7 +1288,12 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = \\ln x$. Calculați $f''(1)$.",
     correctAnswer: "-1",
-    explanation: "$f'(x)=\\dfrac1x$, $f''(x)=-\\dfrac{1}{x^2}$, deci $f''(1)=-1$.",
+    explanation: [
+      "Calculăm derivata întâi: $f'(x)=\\dfrac1x$.",
+      "Derivăm din nou: $f''(x)=-\\dfrac{1}{x^2}$.",
+      "Înlocuim $x=1$: $f''(1)=-\\dfrac{1}{1^2}$.",
+      "Rezultă $f''(1)=-1$.",
+    ],
   },
   {
     id: "dv-s9-10",
@@ -965,7 +1304,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Dacă $f''(x)<0$ pe un interval $I$, graficul funcției $f$ este pe $I$:",
     options: ["concav (concav în jos)", "convex (concav în sus)", "liniar", "nu se poate preciza"],
     correctAnswer: "concav (concav în jos)",
-    explanation: "A doua derivată negativă indică un grafic concav (concav în jos).",
+    explanation: [
+      "Aceasta este o proprietate fundamentală legată de concavitatea graficului.",
+      "Dacă $f''(x)<0$ pe un interval $I$, atunci graficul lui $f$ este concav (concav în jos) pe $I$.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -977,7 +1319,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^3-2x$. Calculați $f'(1)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = 3x^2-2$, deci $f'(1) = 3-2 = 1$.",
+    explanation: [
+      "Derivăm termen cu termen folosind regula puterii: $f'(x) = 3x^2-2$.",
+      "Înlocuim $x=1$: $f'(1) = 3\\cdot1^2-2 = 3-2$.",
+      "Rezultă $f'(1) = 1$.",
+    ],
   },
   {
     id: "dv-s10-2",
@@ -988,7 +1334,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x)=\\sin x$ este:",
     options: ["$\\cos x$", "$-\\cos x$", "$-\\sin x$", "$\\tan x$"],
     correctAnswer: "$\\cos x$",
-    explanation: "$(\\sin x)' = \\cos x$.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "$(\\sin x)' = \\cos x$.",
+    ],
   },
   {
     id: "dv-s10-3",
@@ -998,7 +1347,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = (x+1)^2$. Calculați $f'(0)$.",
     correctAnswer: "2",
-    explanation: "$f'(x) = 2(x+1)$ (regula lanțului), deci $f'(0) = 2$.",
+    explanation: [
+      "Aplicăm regula lanțului: $f'(x) = 2(x+1)$.",
+      "Înlocuim $x=0$: $f'(0) = 2(0+1)$.",
+      "Rezultă $f'(0) = 2$.",
+    ],
   },
   {
     id: "dv-s10-4",
@@ -1009,7 +1362,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Ecuația tangentei la graficul funcției $f(x)=x^2$ în punctul $x_0=2$ este:",
     options: ["$y=4x-4$", "$y=4x+4$", "$y=2x-4$", "$y=4x$"],
     correctAnswer: "$y=4x-4$",
-    explanation: "$f(2)=4$, $f'(2)=4$, deci $y = 4 + 4(x-2) = 4x-4$.",
+    explanation: [
+      "Calculăm $f(2)=2^2=4$ și derivata $f'(x)=2x$, deci $f'(2)=4$.",
+      "Folosim ecuația tangentei $y=f(x_0)+f'(x_0)(x-x_0)$: $y = 4 + 4(x-2)$.",
+      "Rezultă $y=4x-4$.",
+    ],
   },
   {
     id: "dv-s10-5",
@@ -1019,7 +1376,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2-6x+8$. Calculați valoarea lui $x$ pentru care $f'(x)=0$.",
     correctAnswer: "3",
-    explanation: "$f'(x) = 2x-6 = 0 \\Rightarrow x=3$.",
+    explanation: [
+      "Calculăm derivata: $f'(x) = 2x-6$.",
+      "Punem condiția de punct critic: $f'(x)=0 \\Rightarrow 2x-6=0$.",
+      "Rezolvăm: $x=3$.",
+    ],
   },
   {
     id: "dv-s10-6",
@@ -1030,7 +1391,11 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Pentru funcția de mai sus, punctul $x=3$ este punct de:",
     options: ["minim", "maxim", "inflexiune", "nu este extrem"],
     correctAnswer: "minim",
-    explanation: "Parabola cu coeficient dominant pozitiv are minim în punctul critic.",
+    explanation: [
+      "Studiem natura punctului critic $x=3$ folosind semnul coeficientului dominant al parabolei.",
+      "Deoarece coeficientul dominant al lui $f$ este pozitiv, parabola are minim în punctul critic.",
+      "Rezultă că $x=3$ este punct de minim.",
+    ],
   },
   {
     id: "dv-s10-7",
@@ -1040,7 +1405,10 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = x^2$. Calculați $f''(x)$ (constantă pentru orice $x$).",
     correctAnswer: "2",
-    explanation: "$f'(x)=2x$, deci $f''(x)=2$.",
+    explanation: [
+      "Calculăm derivata întâi: $f'(x)=2x$.",
+      "Derivăm din nou: $f''(x)=2$.",
+    ],
   },
   {
     id: "dv-s10-8",
@@ -1051,7 +1419,10 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "Derivata funcției $f(x)=\\dfrac1x$ este:",
     options: ["$-\\dfrac{1}{x^2}$", "$\\dfrac{1}{x^2}$", "$-\\dfrac1x$", "$\\ln x$"],
     correctAnswer: "$-\\dfrac{1}{x^2}$",
-    explanation: "$\\left(\\dfrac1x\\right)' = -\\dfrac{1}{x^2}$.",
+    explanation: [
+      "Aceasta este una dintre regulile uzuale de derivare.",
+      "$\\left(\\dfrac1x\\right)' = -\\dfrac{1}{x^2}$.",
+    ],
   },
   {
     id: "dv-s10-9",
@@ -1061,7 +1432,11 @@ export const derivateSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie $f(x) = xe^x$. Calculați $f'(0)$.",
     correctAnswer: "1",
-    explanation: "$f'(x) = e^x + xe^x$, deci $f'(0) = 1 + 0 = 1$.",
+    explanation: [
+      "Aplicăm regula produsului, cu $u=x$, $v=e^x$: $f'(x) = e^x + xe^x$.",
+      "Înlocuim $x=0$: $f'(0) = e^0 + 0\\cdot e^0 = 1 + 0$.",
+      "Rezultă $f'(0) = 1$.",
+    ],
   },
   {
     id: "dv-s10-10",
@@ -1072,6 +1447,9 @@ export const derivateSetExercises: Exercise[] = [
     prompt: "O funcție $f$ este descrescătoare pe un interval $I$ dacă și numai dacă:",
     options: ["$f'(x)\\le0$ pentru orice $x\\in I$", "$f'(x)\\ge0$ pentru orice $x\\in I$", "$f(x)\\le0$ pe $I$", "$f''(x)\\le0$ pe $I$"],
     correctAnswer: "$f'(x)\\le0$ pentru orice $x\\in I$",
-    explanation: "Semnul negativ al derivatei pe un interval arată că funcția este descrescătoare acolo.",
+    explanation: [
+      "Aceasta este o proprietate fundamentală de analiză ce leagă semnul derivatei de monotonie.",
+      "Dacă $f'(x)\\le0$ pentru orice $x\\in I$, atunci $f$ este descrescătoare pe $I$.",
+    ],
   },
 ];
