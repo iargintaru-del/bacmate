@@ -9,7 +9,11 @@ export const sistemeExercises: Exercise[] = [
     prompt:
       "Rezolvați sistemul $$\\begin{cases} x + y = 5 \\\\ x - y = 1 \\end{cases}$$ și determinați valoarea lui $x$.",
     correctAnswer: "3",
-    explanation: "Adunând cele două ecuații: $2x = 6 \\Rightarrow x = 3$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=5+1$.",
+      "Simplificăm: $2x=6$.",
+      "Împărțim la $2$: $x=3$.",
+    ],
   },
   {
     id: "sy-2",
@@ -19,8 +23,11 @@ export const sistemeExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} x + y = 3 \\\\ 2x + 2y = 6 \\end{cases}$$ are:",
     options: ["o infinitate de soluții", "soluție unică", "nicio soluție", "exact două soluții"],
     correctAnswer: "o infinitate de soluții",
-    explanation:
-      "A doua ecuație este de $2$ ori prima, deci cele două drepte coincid și sistemul este compatibil nedeterminat.",
+    explanation: [
+      "Observăm că a doua ecuație este exact prima ecuație înmulțită cu $2$: $2(x+y)=2\\cdot3=6$.",
+      "Cele două ecuații reprezintă aceeași dreaptă, deci au aceleași soluții.",
+      "Sistemul este compatibil nedeterminat, adică are o infinitate de soluții.",
+    ],
   },
   {
     id: "sy-3",
@@ -29,8 +36,12 @@ export const sistemeExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru sistemul $$\\begin{cases} x + 2y = 4 \\\\ 3x - y = 5 \\end{cases}$$ determinați valoarea lui $y$.",
     correctAnswer: "1",
-    explanation:
-      "Din prima ecuație $x = 4 - 2y$. Înlocuind în a doua: $3(4-2y) - y = 5 \\Rightarrow 12 - 7y = 5 \\Rightarrow y = 1$.",
+    explanation: [
+      "Din prima ecuație exprimăm $x$ în funcție de $y$: $x=4-2y$.",
+      "Înlocuim în a doua ecuație: $3(4-2y)-y=5$.",
+      "Desfacem paranteza: $12-6y-y=5 \\Rightarrow 12-7y=5$.",
+      "Rezolvăm: $-7y=-7 \\Rightarrow y=1$.",
+    ],
   },
   {
     id: "sy-4",
@@ -45,6 +56,10 @@ export const sistemeExercises: Exercise[] = [
       "coeficienții necunoscutelor sunt toți nuli",
     ],
     correctAnswer: "dreptele reprezentate sunt paralele și distincte",
-    explanation: "Două drepte paralele și distincte nu au niciun punct comun, deci sistemul nu are soluție.",
+    explanation: [
+      "Grafic, fiecare ecuație liniară cu 2 necunoscute reprezintă o dreaptă.",
+      "Sistemul nu are soluții exact atunci când cele două drepte nu se intersectează, adică sunt paralele și distincte.",
+      "În acest caz nu există niciun punct comun celor două drepte.",
+    ],
   },
 ];

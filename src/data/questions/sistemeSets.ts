@@ -10,7 +10,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} x + y = 7 \\\\ x - y = 1 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "4",
-    explanation: "Adunând cele două ecuații: $2x = 8 \\Rightarrow x = 4$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=7+1$.",
+      "Simplificăm: $2x=8$.",
+      "Împărțim la $2$: $x=4$.",
+    ],
   },
   {
     id: "sy-s1-2",
@@ -21,7 +25,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați sistemul $$\\begin{cases} x + 2y = 8 \\\\ x = 2y \\end{cases}$$ și determinați $y$.",
     options: ["$2$", "$4$", "$1$", "$3$"],
     correctAnswer: "$2$",
-    explanation: "Înlocuind $x=2y$ în prima ecuație: $2y+2y=8 \\Rightarrow 4y=8 \\Rightarrow y=2$.",
+    explanation: [
+      "Din a doua ecuație avem $x=2y$.",
+      "Înlocuim în prima ecuație: $2y+2y=8$.",
+      "Simplificăm: $4y=8 \\Rightarrow y=2$.",
+    ],
   },
   {
     id: "sy-s1-3",
@@ -31,7 +39,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} 2x + y = 5 \\\\ y = x - 1 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "2",
-    explanation: "Înlocuind $y=x-1$: $2x+x-1=5 \\Rightarrow 3x=6 \\Rightarrow x=2$.",
+    explanation: [
+      "Din a doua ecuație avem $y=x-1$.",
+      "Înlocuim în prima ecuație: $2x+(x-1)=5$.",
+      "Simplificăm: $3x-1=5 \\Rightarrow 3x=6 \\Rightarrow x=2$.",
+    ],
   },
   {
     id: "sy-s1-4",
@@ -42,7 +54,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați sistemul $$\\begin{cases} y = 2x - 1 \\\\ 3x + y = 9 \\end{cases}$$ și determinați $x$.",
     options: ["$2$", "$3$", "$1$", "$4$"],
     correctAnswer: "$2$",
-    explanation: "Înlocuind $y=2x-1$: $3x+2x-1=9 \\Rightarrow 5x=10 \\Rightarrow x=2$.",
+    explanation: [
+      "Din prima ecuație avem $y=2x-1$.",
+      "Înlocuim în a doua ecuație: $3x+(2x-1)=9$.",
+      "Simplificăm: $5x-1=9 \\Rightarrow 5x=10 \\Rightarrow x=2$.",
+    ],
   },
   {
     id: "sy-s1-5",
@@ -52,7 +68,12 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} x = y + 3 \\\\ 2x - y = 8 \\end{cases}$$ și determinați $y$.",
     correctAnswer: "2",
-    explanation: "Înlocuind $x=y+3$: $2(y+3)-y=8 \\Rightarrow y+6=8 \\Rightarrow y=2$.",
+    explanation: [
+      "Din prima ecuație avem $x=y+3$.",
+      "Înlocuim în a doua ecuație: $2(y+3)-y=8$.",
+      "Desfacem paranteza: $2y+6-y=8 \\Rightarrow y+6=8$.",
+      "Rezolvăm: $y=2$.",
+    ],
   },
   {
     id: "sy-s1-6",
@@ -63,7 +84,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați sistemul $$\\begin{cases} x + y = 12 \\\\ x = 3y \\end{cases}$$ și determinați $y$.",
     options: ["$3$", "$4$", "$2$", "$9$"],
     correctAnswer: "$3$",
-    explanation: "Înlocuind $x=3y$: $3y+y=12 \\Rightarrow 4y=12 \\Rightarrow y=3$.",
+    explanation: [
+      "Din a doua ecuație avem $x=3y$.",
+      "Înlocuim în prima ecuație: $3y+y=12$.",
+      "Simplificăm: $4y=12 \\Rightarrow y=3$.",
+    ],
   },
   {
     id: "sy-s1-7",
@@ -73,7 +98,12 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} 2x - y = 3 \\\\ y = x + 1 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "4",
-    explanation: "Înlocuind $y=x+1$: $2x-(x+1)=3 \\Rightarrow x-1=3 \\Rightarrow x=4$.",
+    explanation: [
+      "Din a doua ecuație avem $y=x+1$.",
+      "Înlocuim în prima ecuație: $2x-(x+1)=3$.",
+      "Desfacem paranteza: $2x-x-1=3 \\Rightarrow x-1=3$.",
+      "Rezolvăm: $x=4$.",
+    ],
   },
   {
     id: "sy-s1-8",
@@ -84,7 +114,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} x + y = 5 \\\\ 2x + 2y = 10 \\end{cases}$$ este:",
     options: ["compatibil nedeterminat", "compatibil determinat", "incompatibil", "nu are sens"],
     correctAnswer: "compatibil nedeterminat",
-    explanation: "A doua ecuație este de $2$ ori prima, deci cele două drepte coincid.",
+    explanation: [
+      "Observăm că a doua ecuație este exact prima înmulțită cu $2$: $2(x+y)=2\\cdot5=10$.",
+      "Cele două ecuații reprezintă aceeași dreaptă, deci au aceleași soluții.",
+      "Sistemul este compatibil nedeterminat.",
+    ],
   },
   {
     id: "sy-s1-9",
@@ -94,7 +128,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} y = 3x \\\\ x + y = 16 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "4",
-    explanation: "Înlocuind $y=3x$: $x+3x=16 \\Rightarrow 4x=16 \\Rightarrow x=4$.",
+    explanation: [
+      "Din prima ecuație avem $y=3x$.",
+      "Înlocuim în a doua ecuație: $x+3x=16$.",
+      "Simplificăm: $4x=16 \\Rightarrow x=4$.",
+    ],
   },
   {
     id: "sy-s1-10",
@@ -105,7 +143,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați sistemul $$\\begin{cases} x - 2y = 0 \\\\ 3x + y = 7 \\end{cases}$$ și determinați $y$.",
     options: ["$1$", "$2$", "$0$", "$3$"],
     correctAnswer: "$1$",
-    explanation: "Din prima ecuație $x=2y$. Înlocuind: $6y+y=7 \\Rightarrow 7y=7 \\Rightarrow y=1$.",
+    explanation: [
+      "Din prima ecuație exprimăm $x$ în funcție de $y$: $x=2y$.",
+      "Înlocuim în a doua ecuație: $3(2y)+y=7 \\Rightarrow 6y+y=7$.",
+      "Simplificăm: $7y=7 \\Rightarrow y=1$.",
+    ],
   },
 
   // Set 2 — Metoda reducerii (eliminării)
@@ -117,7 +159,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați prin adunare sistemul $$\\begin{cases} x + y = 9 \\\\ x - y = 3 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "6",
-    explanation: "Adunând: $2x=12 \\Rightarrow x=6$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=9+3$.",
+      "Simplificăm: $2x=12$.",
+      "Împărțim la $2$: $x=6$.",
+    ],
   },
   {
     id: "sy-s2-2",
@@ -128,7 +174,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați prin adunare sistemul $$\\begin{cases} 2x + y = 11 \\\\ x - y = 1 \\end{cases}$$ și determinați $x$.",
     options: ["$4$", "$5$", "$3$", "$6$"],
     correctAnswer: "$4$",
-    explanation: "Adunând: $3x=12 \\Rightarrow x=4$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(2x+y)+(x-y)=11+1$.",
+      "Simplificăm: $3x=12$.",
+      "Împărțim la $3$: $x=4$.",
+    ],
   },
   {
     id: "sy-s2-3",
@@ -139,7 +189,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Rezolvați prin adunare sistemul $$\\begin{cases} 3x + 2y = 16 \\\\ x - 2y = 0 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "4",
-    explanation: "Adunând: $4x=16 \\Rightarrow x=4$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(3x+2y)+(x-2y)=16+0$.",
+      "Simplificăm: $4x=16$.",
+      "Împărțim la $4$: $x=4$.",
+    ],
   },
   {
     id: "sy-s2-4",
@@ -150,7 +204,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați prin scădere sistemul $$\\begin{cases} x + 3y = 10 \\\\ x - y = 2 \\end{cases}$$ și determinați $y$.",
     options: ["$2$", "$4$", "$1$", "$3$"],
     correctAnswer: "$2$",
-    explanation: "Scăzând: $4y=8 \\Rightarrow y=2$.",
+    explanation: [
+      "Scădem a doua ecuație din prima pentru a elimina $x$: $(x+3y)-(x-y)=10-2$.",
+      "Simplificăm: $4y=8$.",
+      "Împărțim la $4$: $y=2$.",
+    ],
   },
   {
     id: "sy-s2-5",
@@ -161,7 +219,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Rezolvați prin scădere sistemul $$\\begin{cases} 2x + 3y = 13 \\\\ 2x - y = 1 \\end{cases}$$ și determinați $y$.",
     correctAnswer: "3",
-    explanation: "Scăzând: $4y=12 \\Rightarrow y=3$.",
+    explanation: [
+      "Scădem a doua ecuație din prima pentru a elimina $x$: $(2x+3y)-(2x-y)=13-1$.",
+      "Simplificăm: $4y=12$.",
+      "Împărțim la $4$: $y=3$.",
+    ],
   },
   {
     id: "sy-s2-6",
@@ -172,7 +234,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați prin scădere sistemul $$\\begin{cases} x + 2y = 7 \\\\ 3x + 2y = 15 \\end{cases}$$ și determinați $x$.",
     options: ["$4$", "$2$", "$8$", "$3$"],
     correctAnswer: "$4$",
-    explanation: "Scăzând: $2x=8 \\Rightarrow x=4$.",
+    explanation: [
+      "Scădem prima ecuație din a doua pentru a elimina $y$: $(3x+2y)-(x+2y)=15-7$.",
+      "Simplificăm: $2x=8$.",
+      "Împărțim la $2$: $x=4$.",
+    ],
   },
   {
     id: "sy-s2-7",
@@ -182,7 +248,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați prin scădere sistemul $$\\begin{cases} 4x + y = 14 \\\\ 2x + y = 8 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "3",
-    explanation: "Scăzând: $2x=6 \\Rightarrow x=3$.",
+    explanation: [
+      "Scădem a doua ecuație din prima pentru a elimina $y$: $(4x+y)-(2x+y)=14-8$.",
+      "Simplificăm: $2x=6$.",
+      "Împărțim la $2$: $x=3$.",
+    ],
   },
   {
     id: "sy-s2-8",
@@ -194,7 +264,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Rezolvați prin metoda reducerii sistemul $$\\begin{cases} x + y = 6 \\\\ 2x + 3y = 16 \\end{cases}$$ și determinați $y$.",
     options: ["$4$", "$2$", "$6$", "$3$"],
     correctAnswer: "$4$",
-    explanation: "Înmulțind prima ecuație cu $2$ și scăzând: $y=4$.",
+    explanation: [
+      "Înmulțim prima ecuație cu $2$: $2x+2y=12$.",
+      "Scădem această ecuație din a doua: $(2x+3y)-(2x+2y)=16-12$.",
+      "Simplificăm: $y=4$.",
+    ],
   },
   {
     id: "sy-s2-9",
@@ -204,7 +278,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați prin adunare sistemul $$\\begin{cases} 3x - 2y = 4 \\\\ x + 2y = 8 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "3",
-    explanation: "Adunând: $4x=12 \\Rightarrow x=3$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(3x-2y)+(x+2y)=4+8$.",
+      "Simplificăm: $4x=12$.",
+      "Împărțim la $4$: $x=3$.",
+    ],
   },
   {
     id: "sy-s2-10",
@@ -215,7 +293,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Rezolvați prin adunare sistemul $$\\begin{cases} 5x + y = 17 \\\\ 3x - y = 7 \\end{cases}$$ și determinați $x$.",
     options: ["$3$", "$4$", "$2$", "$5$"],
     correctAnswer: "$3$",
-    explanation: "Adunând: $8x=24 \\Rightarrow x=3$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(5x+y)+(3x-y)=17+7$.",
+      "Simplificăm: $8x=24$.",
+      "Împărțim la $8$: $x=3$.",
+    ],
   },
 
   // Set 3 — Clasificarea sistemelor
@@ -228,7 +310,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} x + y = 4 \\\\ 2x + 2y = 8 \\end{cases}$$ este:",
     options: ["compatibil nedeterminat", "compatibil determinat", "incompatibil", "nu se poate preciza"],
     correctAnswer: "compatibil nedeterminat",
-    explanation: "A doua ecuație este de $2$ ori prima, deci sistemul are o infinitate de soluții.",
+    explanation: [
+      "Observăm că a doua ecuație este exact prima înmulțită cu $2$: $2(x+y)=2\\cdot4=8$.",
+      "Cele două ecuații reprezintă aceeași dreaptă.",
+      "Sistemul este compatibil nedeterminat, cu o infinitate de soluții.",
+    ],
   },
   {
     id: "sy-s3-2",
@@ -239,7 +325,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} x + y = 3 \\\\ x + y = 5 \\end{cases}$$ este:",
     options: ["incompatibil", "compatibil determinat", "compatibil nedeterminat", "are exact 2 soluții"],
     correctAnswer: "incompatibil",
-    explanation: "Cele două ecuații cer ca $x+y$ să fie simultan $3$ și $5$, contradicție.",
+    explanation: [
+      "Prima ecuație impune $x+y=3$, iar a doua impune $x+y=5$.",
+      "Cele două condiții sunt contradictorii, deoarece $3\\ne5$.",
+      "Sistemul este incompatibil (nu are soluții).",
+    ],
   },
   {
     id: "sy-s3-3",
@@ -250,7 +340,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} x + 2y = 5 \\\\ 3x - y = 1 \\end{cases}$$ este:",
     options: ["compatibil determinat", "compatibil nedeterminat", "incompatibil", "nu are sens"],
     correctAnswer: "compatibil determinat",
-    explanation: "Determinantul sistemului este nenul, deci soluția este unică.",
+    explanation: [
+      "Calculăm determinantul sistemului: $\\Delta=\\begin{vmatrix}1&2\\\\3&-1\\end{vmatrix}=1\\cdot(-1)-2\\cdot3=-7$.",
+      "Deoarece $\\Delta\\ne0$, sistemul are soluție unică.",
+      "Sistemul este compatibil determinat.",
+    ],
   },
   {
     id: "sy-s3-4",
@@ -261,7 +355,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Calculați determinantul sistemului $$\\begin{cases} x + 2y = 5 \\\\ 3x - y = 1 \\end{cases}$$, adică $\\det\\begin{pmatrix} 1 & 2 \\\\ 3 & -1 \\end{pmatrix}$.",
     correctAnswer: "-7",
-    explanation: "$\\det = 1\\cdot(-1) - 2\\cdot3 = -1-6=-7$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=1\\cdot(-1)-2\\cdot3$.",
+      "Calculăm: $-1-6=-7$.",
+    ],
   },
   {
     id: "sy-s3-5",
@@ -272,7 +370,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} 2x - 4y = 6 \\\\ x - 2y = 3 \\end{cases}$$ este:",
     options: ["compatibil nedeterminat", "compatibil determinat", "incompatibil", "nu se poate preciza"],
     correctAnswer: "compatibil nedeterminat",
-    explanation: "A doua ecuație este prima împărțită la $2$, deci coincid.",
+    explanation: [
+      "Observăm că a doua ecuație este prima împărțită la $2$: $(2x-4y)/2=x-2y$ și $6/2=3$.",
+      "Cele două ecuații reprezintă aceeași dreaptă.",
+      "Sistemul este compatibil nedeterminat.",
+    ],
   },
   {
     id: "sy-s3-6",
@@ -283,7 +385,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} 2x - 4y = 6 \\\\ x - 2y = 1 \\end{cases}$$ este:",
     options: ["incompatibil", "compatibil determinat", "compatibil nedeterminat", "are infinit de multe soluții"],
     correctAnswer: "incompatibil",
-    explanation: "Membrul stâng al primei ecuații este de $2$ ori membrul stâng al celei de-a doua, dar $6\\ne2\\cdot1$.",
+    explanation: [
+      "Observăm că membrul stâng al primei ecuații este de $2$ ori membrul stâng al celei de-a doua: $2x-4y=2(x-2y)$.",
+      "Termenii liberi însă nu respectă aceeași proporție: $6\\ne2\\cdot1$.",
+      "Sistemul este incompatibil (dreptele sunt paralele și distincte).",
+    ],
   },
   {
     id: "sy-s3-7",
@@ -294,7 +400,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Calculați determinantul sistemului $$\\begin{cases} x + y = 2 \\\\ 2x + 2y = 4 \\end{cases}$$, adică $\\det\\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\end{pmatrix}$.",
     correctAnswer: "0",
-    explanation: "$\\det = 1\\cdot2 - 1\\cdot2 = 0$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=1\\cdot2-1\\cdot2$.",
+      "Calculăm: $2-2=0$.",
+    ],
   },
   {
     id: "sy-s3-8",
@@ -306,7 +416,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Dacă determinantul matricei coeficienților unui sistem $2\\times2$ este $0$ și sistemul este compatibil, sistemul este:",
     options: ["compatibil nedeterminat", "compatibil determinat", "incompatibil", "nu se poate întâmpla"],
     correctAnswer: "compatibil nedeterminat",
-    explanation: "Determinant nul și compatibilitate implică o infinitate de soluții.",
+    explanation: [
+      "Determinantul $0$ arată că sistemul nu are soluție unică (nu se poate aplica regula lui Cramer).",
+      "Fiind compatibil (are cel puțin o soluție) și fără soluție unică, trebuie să aibă mai multe soluții.",
+      "Sistemul este compatibil nedeterminat, cu o infinitate de soluții.",
+    ],
   },
   {
     id: "sy-s3-9",
@@ -317,7 +431,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Calculați determinantul sistemului $$\\begin{cases} 3x + y = 5 \\\\ x - 2y = 1 \\end{cases}$$, adică $\\det\\begin{pmatrix} 3 & 1 \\\\ 1 & -2 \\end{pmatrix}$.",
     correctAnswer: "-7",
-    explanation: "$\\det = 3\\cdot(-2) - 1\\cdot1 = -6-1=-7$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=3\\cdot(-2)-1\\cdot1$.",
+      "Calculăm: $-6-1=-7$.",
+    ],
   },
   {
     id: "sy-s3-10",
@@ -328,7 +446,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Un sistem liniar $2\\times2$ omogen (cu termeni liberi nuli) are întotdeauna:",
     options: ["cel puțin soluția banală $(0,0)$", "doar soluții nenule", "nicio soluție", "exact două soluții"],
     correctAnswer: "cel puțin soluția banală $(0,0)$",
-    explanation: "$(0,0)$ verifică orice sistem liniar omogen.",
+    explanation: [
+      "Un sistem omogen are toți termenii liberi egali cu $0$.",
+      "Înlocuind $x=0,y=0$ în orice ecuație de forma $ax+by=0$, egalitatea este verificată.",
+      "Deci $(0,0)$ este întotdeauna soluție a sistemului.",
+    ],
   },
 
   // Set 4 — Metoda lui Cramer (2×2)
@@ -341,7 +463,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Pentru sistemul $$\\begin{cases} 2x + y = 5 \\\\ x - y = 1 \\end{cases}$$, calculați $\\Delta=\\det\\begin{pmatrix} 2 & 1 \\\\ 1 & -1 \\end{pmatrix}$.",
     correctAnswer: "-3",
-    explanation: "$\\Delta = 2\\cdot(-1) - 1\\cdot1 = -2-1=-3$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\Delta=ad-bc$.",
+      "Înlocuim: $\\Delta=2\\cdot(-1)-1\\cdot1$.",
+      "Calculăm: $-2-1=-3$.",
+    ],
   },
   {
     id: "sy-s4-2",
@@ -352,7 +478,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru același sistem, calculați $\\Delta_x=\\det\\begin{pmatrix} 5 & 1 \\\\ 1 & -1 \\end{pmatrix}$.",
     options: ["$-6$", "$6$", "$-4$", "$4$"],
     correctAnswer: "$-6$",
-    explanation: "$\\Delta_x = 5\\cdot(-1) - 1\\cdot1 = -5-1=-6$.",
+    explanation: [
+      "Formăm $\\Delta_x$ înlocuind coloana lui $x$ cu termenii liberi: $\\Delta_x=\\begin{vmatrix}5&1\\\\1&-1\\end{vmatrix}$.",
+      "Calculăm: $\\Delta_x=5\\cdot(-1)-1\\cdot1$.",
+      "Obținem: $-5-1=-6$.",
+    ],
   },
   {
     id: "sy-s4-3",
@@ -362,7 +492,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind $\\Delta=-3$ și $\\Delta_x=-6$, calculați $x=\\Delta_x/\\Delta$.",
     correctAnswer: "2",
-    explanation: "$x = -6/-3 = 2$.",
+    explanation: [
+      "Aplicăm formula lui Cramer: $x=\\dfrac{\\Delta_x}{\\Delta}$.",
+      "Înlocuim: $x=\\dfrac{-6}{-3}$.",
+      "Calculăm: $x=2$.",
+    ],
   },
   {
     id: "sy-s4-4",
@@ -374,7 +508,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Pentru sistemul $$\\begin{cases} 3x + 2y = 7 \\\\ x - y = -1 \\end{cases}$$, calculați $\\Delta=\\det\\begin{pmatrix} 3 & 2 \\\\ 1 & -1 \\end{pmatrix}$.",
     options: ["$-5$", "$5$", "$-1$", "$1$"],
     correctAnswer: "$-5$",
-    explanation: "$\\Delta = 3\\cdot(-1) - 2\\cdot1 = -3-2=-5$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\Delta=ad-bc$.",
+      "Înlocuim: $\\Delta=3\\cdot(-1)-2\\cdot1$.",
+      "Calculăm: $-3-2=-5$.",
+    ],
   },
   {
     id: "sy-s4-5",
@@ -384,7 +522,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru sistemul de mai sus, calculați $\\Delta_y=\\det\\begin{pmatrix} 3 & 7 \\\\ 1 & -1 \\end{pmatrix}$.",
     correctAnswer: "-10",
-    explanation: "$\\Delta_y = 3\\cdot(-1) - 7\\cdot1 = -3-7=-10$.",
+    explanation: [
+      "Formăm $\\Delta_y$ înlocuind coloana lui $y$ cu termenii liberi: $\\Delta_y=\\begin{vmatrix}3&7\\\\1&-1\\end{vmatrix}$.",
+      "Calculăm: $\\Delta_y=3\\cdot(-1)-7\\cdot1$.",
+      "Obținem: $-3-7=-10$.",
+    ],
   },
   {
     id: "sy-s4-6",
@@ -395,7 +537,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Folosind $\\Delta=-5$ și $\\Delta_y=-10$, calculați $y=\\Delta_y/\\Delta$.",
     options: ["$2$", "$-2$", "$0.5$", "$-0.5$"],
     correctAnswer: "$2$",
-    explanation: "$y = -10/-5 = 2$.",
+    explanation: [
+      "Aplicăm formula lui Cramer: $y=\\dfrac{\\Delta_y}{\\Delta}$.",
+      "Înlocuim: $y=\\dfrac{-10}{-5}$.",
+      "Calculăm: $y=2$.",
+    ],
   },
   {
     id: "sy-s4-7",
@@ -406,7 +552,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Pentru sistemul $$\\begin{cases} x + 4y = 6 \\\\ 2x - y = 3 \\end{cases}$$, calculați $\\Delta=\\det\\begin{pmatrix} 1 & 4 \\\\ 2 & -1 \\end{pmatrix}$.",
     correctAnswer: "-9",
-    explanation: "$\\Delta = 1\\cdot(-1) - 4\\cdot2 = -1-8=-9$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\Delta=ad-bc$.",
+      "Înlocuim: $\\Delta=1\\cdot(-1)-4\\cdot2$.",
+      "Calculăm: $-1-8=-9$.",
+    ],
   },
   {
     id: "sy-s4-8",
@@ -417,7 +567,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru sistemul de mai sus, calculați $\\Delta_x=\\det\\begin{pmatrix} 6 & 4 \\\\ 3 & -1 \\end{pmatrix}$.",
     options: ["$-18$", "$18$", "$-6$", "$6$"],
     correctAnswer: "$-18$",
-    explanation: "$\\Delta_x = 6\\cdot(-1) - 4\\cdot3 = -6-12=-18$.",
+    explanation: [
+      "Formăm $\\Delta_x$ înlocuind coloana lui $x$ cu termenii liberi: $\\Delta_x=\\begin{vmatrix}6&4\\\\3&-1\\end{vmatrix}$.",
+      "Calculăm: $\\Delta_x=6\\cdot(-1)-4\\cdot3$.",
+      "Obținem: $-6-12=-18$.",
+    ],
   },
   {
     id: "sy-s4-9",
@@ -427,7 +581,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind $\\Delta=-9$ și $\\Delta_x=-18$, calculați $x=\\Delta_x/\\Delta$.",
     correctAnswer: "2",
-    explanation: "$x = -18/-9 = 2$.",
+    explanation: [
+      "Aplicăm formula lui Cramer: $x=\\dfrac{\\Delta_x}{\\Delta}$.",
+      "Înlocuim: $x=\\dfrac{-18}{-9}$.",
+      "Calculăm: $x=2$.",
+    ],
   },
   {
     id: "sy-s4-10",
@@ -438,7 +596,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Regula lui Cramer se aplică unui sistem liniar $2\\times2$ atunci când:",
     options: ["$\\Delta\\ne0$", "$\\Delta=0$", "întotdeauna, indiferent de $\\Delta$", "doar dacă sistemul este omogen"],
     correctAnswer: "$\\Delta\\ne0$",
-    explanation: "Formulele lui Cramer necesită împărțirea la $\\Delta$, deci $\\Delta$ trebuie să fie nenul.",
+    explanation: [
+      "Formulele lui Cramer sunt $x=\\dfrac{\\Delta_x}{\\Delta}$ și $y=\\dfrac{\\Delta_y}{\\Delta}$.",
+      "Aceste formule presupun o împărțire la $\\Delta$, care nu este definită dacă $\\Delta=0$.",
+      "Prin urmare, regula lui Cramer se aplică doar atunci când $\\Delta\\ne0$.",
+    ],
   },
 
   // Set 5 — Sisteme cu parametru
@@ -450,7 +612,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie sistemul $$\\begin{cases} x + y = 3 \\\\ mx + y = 5 \\end{cases}$$. Pentru $m=2$, determinați $x$.",
     correctAnswer: "2",
-    explanation: "Pentru $m=2$: scăzând ecuațiile, $x=2$, apoi $y=1$.",
+    explanation: [
+      "Înlocuim $m=2$: sistemul devine $\\begin{cases}x+y=3\\\\2x+y=5\\end{cases}$.",
+      "Scădem prima ecuație din a doua pentru a elimina $y$: $(2x+y)-(x+y)=5-3 \\Rightarrow x=2$.",
+      "Din prima ecuație rezultă $y=3-x=1$.",
+    ],
   },
   {
     id: "sy-s5-2",
@@ -462,7 +628,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Determinați valoarea lui $m$ pentru care sistemul $$\\begin{cases} x + y = 3 \\\\ mx + y = 5 \\end{cases}$$ nu are soluție unică.",
     options: ["$1$", "$0$", "$-1$", "$2$"],
     correctAnswer: "$1$",
-    explanation: "Determinantul $\\det\\begin{pmatrix}1&1\\\\m&1\\end{pmatrix}=1-m$ se anulează pentru $m=1$.",
+    explanation: [
+      "Calculăm determinantul sistemului: $\\Delta=\\det\\begin{pmatrix}1&1\\\\m&1\\end{pmatrix}=1\\cdot1-1\\cdot m=1-m$.",
+      "Sistemul nu are soluție unică atunci când $\\Delta=0$.",
+      "Rezolvăm $1-m=0 \\Rightarrow m=1$.",
+    ],
   },
   {
     id: "sy-s5-3",
@@ -473,7 +643,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Fie sistemul $$\\begin{cases} 2x + my = 4 \\\\ x + y = 3 \\end{cases}$$. Calculați determinantul sistemului $\\det\\begin{pmatrix} 2 & m \\\\ 1 & 1 \\end{pmatrix}$ pentru $m=3$.",
     correctAnswer: "-1",
-    explanation: "$\\det = 2-3=-1$.",
+    explanation: [
+      "Calculăm determinantul general: $\\det\\begin{pmatrix}2&m\\\\1&1\\end{pmatrix}=2\\cdot1-m\\cdot1=2-m$.",
+      "Înlocuim $m=3$: $\\det=2-3$.",
+      "Calculăm: $\\det=-1$.",
+    ],
   },
   {
     id: "sy-s5-4",
@@ -484,7 +658,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Expresia determinantului sistemului $$\\begin{cases} 2x + my = 4 \\\\ x + y = 3 \\end{cases}$$ în funcție de $m$ este:",
     options: ["$2-m$", "$2+m$", "$m-2$", "$2m$"],
     correctAnswer: "$2-m$",
-    explanation: "$\\det\\begin{pmatrix}2&m\\\\1&1\\end{pmatrix}=2\\cdot1-m\\cdot1=2-m$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=2\\cdot1-m\\cdot1$.",
+      "Obținem expresia $\\det=2-m$.",
+    ],
   },
   {
     id: "sy-s5-5",
@@ -495,7 +673,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Determinați valoarea lui $m$ pentru care sistemul $$\\begin{cases} 2x + my = 4 \\\\ x + y = 3 \\end{cases}$$ nu are soluție unică.",
     correctAnswer: "2",
-    explanation: "$2-m=0 \\Rightarrow m=2$.",
+    explanation: [
+      "Din exercițiul anterior, determinantul sistemului este $\\Delta=2-m$.",
+      "Sistemul nu are soluție unică atunci când $\\Delta=0$.",
+      "Rezolvăm $2-m=0 \\Rightarrow m=2$.",
+    ],
   },
   {
     id: "sy-s5-6",
@@ -507,7 +689,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Fie sistemul $$\\begin{cases} mx + 2y = 6 \\\\ x + y = 4 \\end{cases}$$. Determinați $m$ pentru care sistemul NU are soluție unică.",
     options: ["$2$", "$-2$", "$0$", "$1$"],
     correctAnswer: "$2$",
-    explanation: "$\\det\\begin{pmatrix}m&2\\\\1&1\\end{pmatrix}=m-2=0 \\Rightarrow m=2$.",
+    explanation: [
+      "Calculăm determinantul sistemului: $\\Delta=\\det\\begin{pmatrix}m&2\\\\1&1\\end{pmatrix}=m\\cdot1-2\\cdot1=m-2$.",
+      "Sistemul nu are soluție unică atunci când $\\Delta=0$.",
+      "Rezolvăm $m-2=0 \\Rightarrow m=2$.",
+    ],
   },
   {
     id: "sy-s5-7",
@@ -517,7 +703,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie sistemul $$\\begin{cases} x - y = 1 \\\\ 2x + my = 5 \\end{cases}$$. Pentru $m=1$, determinați $x$.",
     correctAnswer: "2",
-    explanation: "Pentru $m=1$: $y=x-1$, înlocuind $2x+x-1=5 \\Rightarrow 3x=6 \\Rightarrow x=2$.",
+    explanation: [
+      "Înlocuim $m=1$: sistemul devine $\\begin{cases}x-y=1\\\\2x+y=5\\end{cases}$.",
+      "Din prima ecuație exprimăm $y=x-1$ și înlocuim în a doua: $2x+(x-1)=5$.",
+      "Simplificăm: $3x-1=5 \\Rightarrow 3x=6 \\Rightarrow x=2$.",
+    ],
   },
   {
     id: "sy-s5-8",
@@ -528,7 +718,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Fie sistemul $$\\begin{cases} x + my = 2 \\\\ 2x + y = 3 \\end{cases}$$. Pentru $m=0$, determinați $y$.",
     options: ["$-1$", "$1$", "$0$", "$-2$"],
     correctAnswer: "$-1$",
-    explanation: "Pentru $m=0$: $x=2$, apoi $4+y=3 \\Rightarrow y=-1$.",
+    explanation: [
+      "Înlocuim $m=0$: sistemul devine $\\begin{cases}x=2\\\\2x+y=3\\end{cases}$.",
+      "Din prima ecuație obținem direct $x=2$.",
+      "Înlocuim în a doua ecuație: $2\\cdot2+y=3 \\Rightarrow 4+y=3 \\Rightarrow y=-1$.",
+    ],
   },
   {
     id: "sy-s5-9",
@@ -538,7 +732,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Fie sistemul $$\\begin{cases} mx + y = 3 \\\\ x + my = 3 \\end{cases}$$. Pentru $m=2$, determinați $x$.",
     correctAnswer: "1",
-    explanation: "Pentru $m=2$: $2x+y=3$, $x+2y=3$; scăzând de două ori a doua din prima: $x=1$, $y=1$.",
+    explanation: [
+      "Înlocuim $m=2$: sistemul devine $\\begin{cases}2x+y=3\\\\x+2y=3\\end{cases}$.",
+      "Înmulțim a doua ecuație cu $2$: $2x+4y=6$, apoi scădem prima ecuație: $(2x+4y)-(2x+y)=6-3 \\Rightarrow 3y=3 \\Rightarrow y=1$.",
+      "Înlocuim $y=1$ în a doua ecuație inițială: $x+2\\cdot1=3 \\Rightarrow x=1$.",
+    ],
   },
   {
     id: "sy-s5-10",
@@ -550,7 +748,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Determinați valoarea lui $m$ pentru care sistemul $$\\begin{cases} mx + y = 3 \\\\ x + my = 3 \\end{cases}$$ NU are soluție unică.",
     options: ["$1$ sau $-1$", "doar $1$", "doar $-1$", "niciun $m$"],
     correctAnswer: "$1$ sau $-1$",
-    explanation: "$\\det\\begin{pmatrix}m&1\\\\1&m\\end{pmatrix}=m^2-1=0 \\Rightarrow m=\\pm1$.",
+    explanation: [
+      "Calculăm determinantul sistemului: $\\Delta=\\det\\begin{pmatrix}m&1\\\\1&m\\end{pmatrix}=m\\cdot m-1\\cdot1=m^2-1$.",
+      "Sistemul nu are soluție unică atunci când $\\Delta=0$.",
+      "Rezolvăm $m^2-1=0 \\Rightarrow m=\\pm1$.",
+    ],
   },
 
   // Set 6 — Sisteme 3×3, rezolvare
@@ -563,7 +765,12 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Rezolvați sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y = 0 \\\\ y + z = 4 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "2",
-    explanation: "Din a doua ecuație $x=y$; din a treia $z=4-y$; înlocuind în prima: $y+y+4-y=6 \\Rightarrow y=2$, deci $x=2$.",
+    explanation: [
+      "Din a doua ecuație obținem $x=y$.",
+      "Din a treia ecuație obținem $z=4-y$.",
+      "Înlocuim în prima ecuație: $y+y+(4-y)=6 \\Rightarrow y+4=6 \\Rightarrow y=2$.",
+      "Deoarece $x=y$, rezultă $x=2$.",
+    ],
   },
   {
     id: "sy-s6-2",
@@ -574,7 +781,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru sistemul de mai sus, determinați $z$.",
     options: ["$2$", "$4$", "$0$", "$6$"],
     correctAnswer: "$2$",
-    explanation: "Cu $y=2$: $z=4-y=2$.",
+    explanation: [
+      "Din exercițiul anterior avem $y=2$.",
+      "Din a treia ecuație: $z=4-y$.",
+      "Calculăm: $z=4-2=2$.",
+    ],
   },
   {
     id: "sy-s6-3",
@@ -584,7 +795,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} x = 1 \\\\ y = 2 \\\\ x + y + z = 10 \\end{cases}$$ și determinați $z$.",
     correctAnswer: "7",
-    explanation: "$1+2+z=10 \\Rightarrow z=7$.",
+    explanation: [
+      "Înlocuim $x=1$ și $y=2$ în a treia ecuație: $1+2+z=10$.",
+      "Simplificăm: $3+z=10$.",
+      "Rezolvăm: $z=7$.",
+    ],
   },
   {
     id: "sy-s6-4",
@@ -596,7 +811,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Rezolvați sistemul $$\\begin{cases} x + y = 5 \\\\ y + z = 7 \\\\ x + z = 6 \\end{cases}$$ și determinați $x$.",
     options: ["$2$", "$3$", "$4$", "$5$"],
     correctAnswer: "$2$",
-    explanation: "Adunând toate trei: $2(x+y+z)=18 \\Rightarrow x+y+z=9$; scăzând $y+z=7$: $x=2$.",
+    explanation: [
+      "Adunăm toate cele trei ecuații: $(x+y)+(y+z)+(x+z)=5+7+6 \\Rightarrow 2(x+y+z)=18$.",
+      "Împărțim la $2$: $x+y+z=9$.",
+      "Scădem a doua ecuație ($y+z=7$) din acest rezultat: $x=9-7=2$.",
+    ],
   },
   {
     id: "sy-s6-5",
@@ -606,7 +825,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru sistemul de mai sus, determinați $y$.",
     correctAnswer: "3",
-    explanation: "$x+y+z=9$, scăzând $x+z=6$: $y=3$.",
+    explanation: [
+      "Din exercițiul anterior avem $x+y+z=9$.",
+      "Scădem a treia ecuație ($x+z=6$) din acest rezultat: $y=9-6$.",
+      "Calculăm: $y=3$.",
+    ],
   },
   {
     id: "sy-s6-6",
@@ -617,7 +840,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru sistemul de mai sus, determinați $z$.",
     options: ["$4$", "$3$", "$2$", "$5$"],
     correctAnswer: "$4$",
-    explanation: "$x+y+z=9$, scăzând $x+y=5$: $z=4$.",
+    explanation: [
+      "Din exercițiile anterioare avem $x+y+z=9$.",
+      "Scădem prima ecuație ($x+y=5$) din acest rezultat: $z=9-5$.",
+      "Calculăm: $z=4$.",
+    ],
   },
   {
     id: "sy-s6-7",
@@ -627,7 +854,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} 2x + y + z = 9 \\\\ x = 1 \\\\ y = 2 \\end{cases}$$ și determinați $z$.",
     correctAnswer: "5",
-    explanation: "$2+2+z=9 \\Rightarrow z=5$.",
+    explanation: [
+      "Înlocuim $x=1$ și $y=2$ în prima ecuație: $2\\cdot1+2+z=9$.",
+      "Simplificăm: $4+z=9$.",
+      "Rezolvăm: $z=5$.",
+    ],
   },
   {
     id: "sy-s6-8",
@@ -639,7 +870,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Rezolvați sistemul $$\\begin{cases} x + 2y + z = 10 \\\\ x = 2 \\\\ z = 2y \\end{cases}$$ și determinați $y$.",
     options: ["$2$", "$4$", "$1$", "$3$"],
     correctAnswer: "$2$",
-    explanation: "$2+2y+2y=10 \\Rightarrow 4y=8 \\Rightarrow y=2$.",
+    explanation: [
+      "Înlocuim $x=2$ și $z=2y$ în prima ecuație: $2+2y+2y=10$.",
+      "Simplificăm: $4y+2=10 \\Rightarrow 4y=8$.",
+      "Rezolvăm: $y=2$.",
+    ],
   },
   {
     id: "sy-s6-9",
@@ -649,7 +884,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru sistemul de mai sus, determinați $z$.",
     correctAnswer: "4",
-    explanation: "$z=2y=2\\cdot2=4$.",
+    explanation: [
+      "Din exercițiul anterior avem $y=2$.",
+      "Folosim relația $z=2y$.",
+      "Calculăm: $z=2\\cdot2=4$.",
+    ],
   },
   {
     id: "sy-s6-10",
@@ -660,7 +899,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Un sistem liniar de 3 ecuații cu 3 necunoscute, compatibil determinat, are:",
     options: ["exact o soluție (un triplet $(x,y,z)$)", "exact 3 soluții", "o infinitate de soluții", "nicio soluție"],
     correctAnswer: "exact o soluție (un triplet $(x,y,z)$)",
-    explanation: "\"Determinat\" înseamnă soluție unică.",
+    explanation: [
+      "Termenul \"determinat\" descrie un sistem compatibil cu soluție unică.",
+      "Pentru un sistem de $3$ ecuații cu $3$ necunoscute, soluția unică este un triplet $(x,y,z)$.",
+      "Deci sistemul are exact o soluție.",
+    ],
   },
 
   // Set 7 — Metoda lui Cramer pentru sisteme 3×3
@@ -673,7 +916,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Pentru sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y + z = 2 \\\\ x + y - z = 0 \\end{cases}$$, calculați $\\Delta=\\det\\begin{pmatrix} 1 & 1 & 1 \\\\ 1 & -1 & 1 \\\\ 1 & 1 & -1 \\end{pmatrix}$.",
     correctAnswer: "4",
-    explanation: "Dezvoltând Sarrus se obține $\\Delta=4$.",
+    explanation: [
+      "Aplicăm regula lui Sarrus: rescriem primele două coloane după matrice.",
+      "Adunăm produsele diagonalelor descendente și scădem produsele diagonalelor ascendente.",
+      "Obținem $\\Delta=4$.",
+    ],
   },
   {
     id: "sy-s7-2",
@@ -685,7 +932,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Pentru sistemul de mai sus, calculați $\\Delta_x=\\det\\begin{pmatrix} 6 & 1 & 1 \\\\ 2 & -1 & 1 \\\\ 0 & 1 & -1 \\end{pmatrix}$.",
     options: ["$4$", "$8$", "$2$", "$-4$"],
     correctAnswer: "$4$",
-    explanation: "Dezvoltând Sarrus se obține $\\Delta_x=4$.",
+    explanation: [
+      "Formăm $\\Delta_x$ înlocuind coloana lui $x$ cu termenii liberi.",
+      "Aplicăm regula lui Sarrus pentru a dezvolta acest determinant.",
+      "Obținem $\\Delta_x=4$.",
+    ],
   },
   {
     id: "sy-s7-3",
@@ -695,7 +946,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind $\\Delta=4$ și $\\Delta_x=4$, calculați $x$.",
     correctAnswer: "1",
-    explanation: "$x=\\Delta_x/\\Delta=4/4=1$.",
+    explanation: [
+      "Aplicăm formula lui Cramer: $x=\\dfrac{\\Delta_x}{\\Delta}$.",
+      "Înlocuim: $x=\\dfrac{4}{4}$.",
+      "Calculăm: $x=1$.",
+    ],
   },
   {
     id: "sy-s7-4",
@@ -706,7 +961,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru sistem, calculați $\\Delta_y=\\det\\begin{pmatrix} 1 & 6 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 0 & -1 \\end{pmatrix}$.",
     options: ["$8$", "$4$", "$12$", "$-8$"],
     correctAnswer: "$8$",
-    explanation: "Dezvoltând Sarrus se obține $\\Delta_y=8$.",
+    explanation: [
+      "Formăm $\\Delta_y$ înlocuind coloana lui $y$ cu termenii liberi.",
+      "Aplicăm regula lui Sarrus pentru a dezvolta acest determinant.",
+      "Obținem $\\Delta_y=8$.",
+    ],
   },
   {
     id: "sy-s7-5",
@@ -716,7 +975,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind $\\Delta=4$ și $\\Delta_y=8$, calculați $y$.",
     correctAnswer: "2",
-    explanation: "$y=\\Delta_y/\\Delta=8/4=2$.",
+    explanation: [
+      "Aplicăm formula lui Cramer: $y=\\dfrac{\\Delta_y}{\\Delta}$.",
+      "Înlocuim: $y=\\dfrac{8}{4}$.",
+      "Calculăm: $y=2$.",
+    ],
   },
   {
     id: "sy-s7-6",
@@ -727,7 +990,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru sistem, calculați $\\Delta_z=\\det\\begin{pmatrix} 1 & 1 & 6 \\\\ 1 & -1 & 2 \\\\ 1 & 1 & 0 \\end{pmatrix}$.",
     options: ["$12$", "$8$", "$4$", "$-12$"],
     correctAnswer: "$12$",
-    explanation: "Dezvoltând Sarrus se obține $\\Delta_z=12$.",
+    explanation: [
+      "Formăm $\\Delta_z$ înlocuind coloana lui $z$ cu termenii liberi.",
+      "Aplicăm regula lui Sarrus pentru a dezvolta acest determinant.",
+      "Obținem $\\Delta_z=12$.",
+    ],
   },
   {
     id: "sy-s7-7",
@@ -737,7 +1004,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Folosind $\\Delta=4$ și $\\Delta_z=12$, calculați $z$.",
     correctAnswer: "3",
-    explanation: "$z=\\Delta_z/\\Delta=12/4=3$.",
+    explanation: [
+      "Aplicăm formula lui Cramer: $z=\\dfrac{\\Delta_z}{\\Delta}$.",
+      "Înlocuim: $z=\\dfrac{12}{4}$.",
+      "Calculăm: $z=3$.",
+    ],
   },
   {
     id: "sy-s7-8",
@@ -748,7 +1019,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Verificați soluția $(x,y,z)=(1,2,3)$ înlocuind în ecuația $x-y+z=2$. Este verificată?",
     options: ["Da, $1-2+3=2$", "Nu, rezultă $0$", "Nu, rezultă $4$", "Nu se poate verifica"],
     correctAnswer: "Da, $1-2+3=2$",
-    explanation: "$1-2+3=2$, egalitatea este adevărată.",
+    explanation: [
+      "Înlocuim $x=1,y=2,z=3$ în ecuație: $1-2+3$.",
+      "Calculăm: $1-2+3=2$.",
+      "Egalitatea $2=2$ este adevărată, deci soluția verifică ecuația.",
+    ],
   },
   {
     id: "sy-s7-9",
@@ -764,7 +1039,11 @@ export const sistemeSetExercises: Exercise[] = [
       "2 determinanți",
     ],
     correctAnswer: "4 determinanți de ordinul 3 ($\\Delta,\\Delta_x,\\Delta_y,\\Delta_z$)",
-    explanation: "Se calculează $\\Delta$ și câte un determinant pentru fiecare necunoscută.",
+    explanation: [
+      "Pentru un sistem $3\\times3$ avem $3$ necunoscute: $x,y,z$.",
+      "Se calculează determinantul sistemului $\\Delta$ și câte un determinant modificat pentru fiecare necunoscută: $\\Delta_x,\\Delta_y,\\Delta_z$.",
+      "În total sunt necesari $4$ determinanți de ordinul $3$.",
+    ],
   },
   {
     id: "sy-s7-10",
@@ -774,7 +1053,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Pentru sistemul de mai sus, calculați suma $x+y+z$.",
     correctAnswer: "6",
-    explanation: "$1+2+3=6$.",
+    explanation: [
+      "Din exercițiile anterioare avem $x=1,y=2,z=3$.",
+      "Adunăm cele trei valori: $1+2+3$.",
+      "Calculăm: $x+y+z=6$.",
+    ],
   },
 
   // Set 8 — Sisteme omogene
@@ -787,7 +1070,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Un sistem liniar omogen $\\begin{cases} ax+by=0\\\\cx+dy=0 \\end{cases}$ admite întotdeauna soluția:",
     options: ["$(0,0)$ (soluția banală)", "$(1,1)$", "nicio soluție", "o infinitate de soluții nebanale"],
     correctAnswer: "$(0,0)$ (soluția banală)",
-    explanation: "$(0,0)$ verifică orice ecuație liniară omogenă.",
+    explanation: [
+      "Un sistem omogen are toți termenii liberi egali cu $0$.",
+      "Înlocuind $x=0,y=0$, fiecare ecuație de forma $ax+by=0$ devine $0=0$, adevărată.",
+      "Deci $(0,0)$ este întotdeauna soluție a sistemului.",
+    ],
   },
   {
     id: "sy-s8-2",
@@ -804,7 +1091,11 @@ export const sistemeSetExercises: Exercise[] = [
       "$b=d$",
     ],
     correctAnswer: "$\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=0$",
-    explanation: "Determinant nenul ar forța soluția unică $(0,0)$.",
+    explanation: [
+      "Dacă $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}\\ne0$, regula lui Cramer dă soluția unică $x=0,y=0$.",
+      "Pentru a exista și soluții nebanale, sistemul nu poate avea soluție unică.",
+      "Prin urmare condiția necesară și suficientă este $\\det\\begin{pmatrix}a&b\\\\c&d\\end{pmatrix}=0$.",
+    ],
   },
   {
     id: "sy-s8-3",
@@ -815,7 +1106,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Fie sistemul omogen $$\\begin{cases} x + y = 0 \\\\ 2x + 2y = 0 \\end{cases}$$. Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 2 & 2 \\end{pmatrix}$.",
     correctAnswer: "0",
-    explanation: "$\\det=1\\cdot2-1\\cdot2=0$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=1\\cdot2-1\\cdot2$.",
+      "Calculăm: $2-2=0$.",
+    ],
   },
   {
     id: "sy-s8-4",
@@ -832,7 +1127,11 @@ export const sistemeSetExercises: Exercise[] = [
       "exact 2 soluții",
     ],
     correctAnswer: "o infinitate de soluții (de forma $x=-y$)",
-    explanation: "Cele două ecuații sunt echivalente ($x=-y$).",
+    explanation: [
+      "Determinantul sistemului este $0$ (calculat anterior).",
+      "Observăm că a doua ecuație este de $2$ ori prima, deci cele două ecuații sunt echivalente și se reduc la $x=-y$.",
+      "Sistemul admite o infinitate de soluții de forma $x=-y$.",
+    ],
   },
   {
     id: "sy-s8-5",
@@ -843,7 +1142,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Fie sistemul omogen $$\\begin{cases} x + y = 0 \\\\ x - y = 0 \\end{cases}$$. Calculați $\\det\\begin{pmatrix} 1 & 1 \\\\ 1 & -1 \\end{pmatrix}$.",
     correctAnswer: "-2",
-    explanation: "$\\det=1\\cdot(-1)-1\\cdot1=-2$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=1\\cdot(-1)-1\\cdot1$.",
+      "Calculăm: $-1-1=-2$.",
+    ],
   },
   {
     id: "sy-s8-6",
@@ -860,7 +1163,11 @@ export const sistemeSetExercises: Exercise[] = [
       "exact 2 soluții nebanale",
     ],
     correctAnswer: "doar soluția banală $(0,0)$",
-    explanation: "Determinant nenul forțează soluție unică, deci $(0,0)$.",
+    explanation: [
+      "Determinantul sistemului este $-2\\ne0$ (calculat anterior).",
+      "Un determinant nenul implică soluție unică (regula lui Cramer).",
+      "Deoarece $(0,0)$ este întotdeauna soluție a unui sistem omogen, aceasta este singura soluție.",
+    ],
   },
   {
     id: "sy-s8-7",
@@ -871,7 +1178,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Determinați valoarea pozitivă a lui $m$ pentru care sistemul omogen $$\\begin{cases} mx + y = 0 \\\\ x + my = 0 \\end{cases}$$ admite soluții nebanale.",
     correctAnswer: "1",
-    explanation: "$\\det\\begin{pmatrix}m&1\\\\1&m\\end{pmatrix}=m^2-1=0 \\Rightarrow m=\\pm1$, valoarea pozitivă este $1$.",
+    explanation: [
+      "Calculăm determinantul sistemului: $\\det\\begin{pmatrix}m&1\\\\1&m\\end{pmatrix}=m\\cdot m-1\\cdot1=m^2-1$.",
+      "Sistemul omogen admite soluții nebanale atunci când $\\det=0$: $m^2-1=0 \\Rightarrow m=\\pm1$.",
+      "Valoarea pozitivă căutată este $m=1$.",
+    ],
   },
   {
     id: "sy-s8-8",
@@ -883,7 +1194,11 @@ export const sistemeSetExercises: Exercise[] = [
       "Sistemul omogen $$\\begin{cases} 2x + 4y = 0 \\\\ x + 2y = 0 \\end{cases}$$ (a doua ecuație fiind jumătate din prima) are:",
     options: ["o infinitate de soluții", "doar soluția banală", "nicio soluție", "exact 3 soluții"],
     correctAnswer: "o infinitate de soluții",
-    explanation: "Ecuațiile sunt echivalente, deci sistemul este compatibil nedeterminat.",
+    explanation: [
+      "Observăm că a doua ecuație este exact prima împărțită la $2$: $(2x+4y)/2=x+2y$.",
+      "Cele două ecuații sunt echivalente.",
+      "Sistemul este compatibil nedeterminat, deci are o infinitate de soluții.",
+    ],
   },
   {
     id: "sy-s8-9",
@@ -894,7 +1209,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Fie sistemul omogen $$\\begin{cases} 3x - y = 0 \\\\ 6x - 2y = 0 \\end{cases}$$. Calculați $\\det\\begin{pmatrix} 3 & -1 \\\\ 6 & -2 \\end{pmatrix}$.",
     correctAnswer: "0",
-    explanation: "$\\det=3\\cdot(-2)-(-1)\\cdot6=-6+6=0$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\det=ad-bc$.",
+      "Înlocuim: $\\det=3\\cdot(-2)-(-1)\\cdot6$.",
+      "Calculăm: $-6+6=0$.",
+    ],
   },
   {
     id: "sy-s8-10",
@@ -910,7 +1229,11 @@ export const sistemeSetExercises: Exercise[] = [
       "cu soluție unică nebanală",
     ],
     correctAnswer: "compatibil (are cel puțin soluția banală)",
-    explanation: "Soluția banală $(0,\\ldots,0)$ există întotdeauna.",
+    explanation: [
+      "Un sistem liniar omogen are toți termenii liberi nuli.",
+      "Soluția $(0,0,\\ldots,0)$ verifică întotdeauna orice astfel de sistem.",
+      "Prin urmare, un sistem omogen este întotdeauna compatibil.",
+    ],
   },
 
   // Set 9 — Interpretare geometrică a sistemelor
@@ -928,7 +1251,11 @@ export const sistemeSetExercises: Exercise[] = [
       "niciuna dintre variante",
     ],
     correctAnswer: "punctul de intersecție al celor două drepte",
-    explanation: "Fiecare ecuație reprezintă o dreaptă, iar soluția comună este intersecția lor.",
+    explanation: [
+      "Fiecare ecuație liniară $a_ix+b_iy=c_i$ reprezintă o dreaptă în plan.",
+      "O soluție a sistemului este o pereche $(x,y)$ care verifică ambele ecuații simultan.",
+      "Geometric, aceasta corespunde punctului de intersecție al celor două drepte.",
+    ],
   },
   {
     id: "sy-s9-2",
@@ -939,7 +1266,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Dacă sistemul este incompatibil, dreptele asociate celor două ecuații sunt:",
     options: ["paralele și distincte", "confundate (identice)", "perpendiculare", "secante într-un punct"],
     correctAnswer: "paralele și distincte",
-    explanation: "Drepte paralele distincte nu au niciun punct comun.",
+    explanation: [
+      "Un sistem incompatibil nu are nicio soluție.",
+      "Geometric, absența unei soluții comune înseamnă că dreptele nu se intersectează niciodată.",
+      "Aceasta se întâmplă exact când dreptele sunt paralele și distincte.",
+    ],
   },
   {
     id: "sy-s9-3",
@@ -950,7 +1281,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Dacă sistemul este compatibil nedeterminat, dreptele asociate sunt:",
     options: ["confundate (identice)", "paralele și distincte", "perpendiculare", "secante într-un punct"],
     correctAnswer: "confundate (identice)",
-    explanation: "O infinitate de soluții comune înseamnă că cele două drepte coincid.",
+    explanation: [
+      "Un sistem compatibil nedeterminat are o infinitate de soluții.",
+      "Geometric, o infinitate de puncte comune înseamnă că cele două drepte au toate punctele în comun.",
+      "Aceasta se întâmplă exact când dreptele sunt confundate (identice).",
+    ],
   },
   {
     id: "sy-s9-4",
@@ -961,7 +1296,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Dacă sistemul este compatibil determinat, dreptele asociate sunt:",
     options: ["secante (se intersectează într-un singur punct)", "paralele", "confundate", "nu se poate preciza"],
     correctAnswer: "secante (se intersectează într-un singur punct)",
-    explanation: "Soluție unică înseamnă un singur punct de intersecție.",
+    explanation: [
+      "Un sistem compatibil determinat are exact o soluție.",
+      "Geometric, o singură soluție înseamnă un singur punct comun celor două drepte.",
+      "Aceasta se întâmplă exact când dreptele sunt secante.",
+    ],
   },
   {
     id: "sy-s9-5",
@@ -972,7 +1311,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Rezolvați sistemul $$\\begin{cases} x - y = 1 \\\\ x + y = 5 \\end{cases}$$ (punctul de intersecție a două drepte) și determinați abscisa $x$.",
     correctAnswer: "3",
-    explanation: "Adunând: $2x=6 \\Rightarrow x=3$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(x-y)+(x+y)=1+5$.",
+      "Simplificăm: $2x=6$.",
+      "Împărțim la $2$: $x=3$.",
+    ],
   },
   {
     id: "sy-s9-6",
@@ -983,7 +1326,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Pentru sistemul de mai sus, determinați ordonata $y$ a punctului de intersecție.",
     options: ["$2$", "$3$", "$1$", "$4$"],
     correctAnswer: "$2$",
-    explanation: "Din $x+y=5$ cu $x=3$: $y=2$.",
+    explanation: [
+      "Din exercițiul anterior avem $x=3$.",
+      "Înlocuim în a doua ecuație: $3+y=5$.",
+      "Rezolvăm: $y=2$.",
+    ],
   },
   {
     id: "sy-s9-7",
@@ -994,7 +1341,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Dreptele $y=2x+1$ și $y=2x-3$ sunt paralele. Rezolvând sistemul $$\\begin{cases} y = 2x + 1 \\\\ y = 2x - 3 \\end{cases}$$ prin scădere se obține $0=4$, o contradicție. Câte soluții are acest sistem?",
     correctAnswer: "0",
-    explanation: "O contradicție înseamnă că sistemul este incompatibil, deci nu are soluții.",
+    explanation: [
+      "Scăzând cele două ecuații se obține relația imposibilă $0=4$.",
+      "O contradicție de acest tip arată că sistemul nu admite nicio soluție.",
+      "Sistemul este incompatibil, deci are $0$ soluții.",
+    ],
   },
   {
     id: "sy-s9-8",
@@ -1005,7 +1356,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Dreptele $y=3x+2$ și $2y=6x+4$ (a doua fiind de $2$ ori prima) sunt:",
     options: ["confundate (aceeași dreaptă)", "paralele și distincte", "perpendiculare", "secante"],
     correctAnswer: "confundate (aceeași dreaptă)",
-    explanation: "A doua ecuație este echivalentă cu prima.",
+    explanation: [
+      "Observăm că a doua ecuație $2y=6x+4$ este exact prima ecuație $y=3x+2$ înmulțită cu $2$.",
+      "Cele două ecuații reprezintă aceeași dreaptă.",
+      "Dreptele sunt confundate (identice).",
+    ],
   },
   {
     id: "sy-s9-9",
@@ -1016,7 +1371,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Numărul de puncte de intersecție a două drepte confundate (identice) este:",
     options: ["o infinitate", "exact $1$", "exact $0$", "exact $2$"],
     correctAnswer: "o infinitate",
-    explanation: "Toate punctele unei drepte confundate cu ea însăși sunt comune.",
+    explanation: [
+      "Două drepte confundate (identice) au toate punctele în comun.",
+      "O dreaptă conține o infinitate de puncte.",
+      "Prin urmare, numărul de puncte de intersecție este o infinitate.",
+    ],
   },
   {
     id: "sy-s9-10",
@@ -1028,7 +1387,12 @@ export const sistemeSetExercises: Exercise[] = [
       "Rezolvați sistemul $$\\begin{cases} 2x - y = 4 \\\\ x + y = 5 \\end{cases}$$ și determinați coordonatele punctului de intersecție a celor două drepte.",
     options: ["$(3,2)$", "$(2,3)$", "$(4,1)$", "$(1,4)$"],
     correctAnswer: "$(3,2)$",
-    explanation: "Adunând ecuațiile: $3x=9 \\Rightarrow x=3$, apoi $y=5-3=2$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(2x-y)+(x+y)=4+5$.",
+      "Simplificăm: $3x=9 \\Rightarrow x=3$.",
+      "Înlocuim în a doua ecuație: $y=5-3=2$.",
+      "Punctul de intersecție este $(3,2)$.",
+    ],
   },
 
   // Set 10 — Recapitulare
@@ -1040,7 +1404,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} x + y = 8 \\\\ x - y = 2 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "5",
-    explanation: "Adunând: $2x=10 \\Rightarrow x=5$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(x+y)+(x-y)=8+2$.",
+      "Simplificăm: $2x=10$.",
+      "Împărțim la $2$: $x=5$.",
+    ],
   },
   {
     id: "sy-s10-2",
@@ -1051,7 +1419,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Sistemul $$\\begin{cases} x + y = 4 \\\\ 2x + 2y = 9 \\end{cases}$$ este:",
     options: ["incompatibil", "compatibil determinat", "compatibil nedeterminat", "are exact 2 soluții"],
     correctAnswer: "incompatibil",
-    explanation: "Dacă $x+y=4$, atunci $2x+2y=8\\ne9$, contradicție.",
+    explanation: [
+      "Dacă $x+y=4$, atunci înmulțind cu $2$ obținem $2x+2y=8$.",
+      "Dar a doua ecuație cere $2x+2y=9$, iar $8\\ne9$.",
+      "Contradicția arată că sistemul este incompatibil.",
+    ],
   },
   {
     id: "sy-s10-3",
@@ -1062,7 +1434,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Pentru sistemul $$\\begin{cases} 3x + y = 10 \\\\ x - y = 2 \\end{cases}$$, calculați $\\Delta=\\det\\begin{pmatrix} 3 & 1 \\\\ 1 & -1 \\end{pmatrix}$.",
     correctAnswer: "-4",
-    explanation: "$\\Delta=3\\cdot(-1)-1\\cdot1=-3-1=-4$.",
+    explanation: [
+      "Aplicăm formula pentru determinantul de ordinul $2$: $\\Delta=ad-bc$.",
+      "Înlocuim: $\\Delta=3\\cdot(-1)-1\\cdot1$.",
+      "Calculăm: $-3-1=-4$.",
+    ],
   },
   {
     id: "sy-s10-4",
@@ -1073,7 +1449,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Un sistem liniar omogen $2\\times2$ admite soluții nebanale dacă și numai dacă determinantul sistemului este:",
     options: ["$0$", "diferit de $0$", "pozitiv", "negativ"],
     correctAnswer: "$0$",
-    explanation: "Determinant nul este condiția pentru soluții nebanale.",
+    explanation: [
+      "Dacă determinantul este nenul, regula lui Cramer dă soluția unică banală $(0,0)$.",
+      "Pentru a exista soluții nebanale, sistemul nu trebuie să aibă soluție unică.",
+      "Condiția necesară și suficientă este ca determinantul să fie $0$.",
+    ],
   },
   {
     id: "sy-s10-5",
@@ -1083,7 +1463,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați sistemul $$\\begin{cases} x + y + z = 9 \\\\ x = 2 \\\\ y = 3 \\end{cases}$$ și determinați $z$.",
     correctAnswer: "4",
-    explanation: "$2+3+z=9 \\Rightarrow z=4$.",
+    explanation: [
+      "Înlocuim $x=2$ și $y=3$ în ecuație: $2+3+z=9$.",
+      "Simplificăm: $5+z=9$.",
+      "Rezolvăm: $z=4$.",
+    ],
   },
   {
     id: "sy-s10-6",
@@ -1094,7 +1478,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Regula lui Cramer pentru un sistem $2\\times2$ se aplică atunci când:",
     options: ["$\\Delta\\ne0$", "$\\Delta=0$", "întotdeauna", "niciodată"],
     correctAnswer: "$\\Delta\\ne0$",
-    explanation: "Formulele lui Cramer necesită împărțirea la $\\Delta$.",
+    explanation: [
+      "Formulele lui Cramer sunt $x=\\dfrac{\\Delta_x}{\\Delta}$ și $y=\\dfrac{\\Delta_y}{\\Delta}$.",
+      "Aceste formule presupun împărțirea la $\\Delta$, imposibilă dacă $\\Delta=0$.",
+      "Deci regula lui Cramer se aplică atunci când $\\Delta\\ne0$.",
+    ],
   },
   {
     id: "sy-s10-7",
@@ -1105,7 +1493,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt:
       "Determinați valoarea lui $m$ pentru care sistemul $$\\begin{cases} x + y = 2 \\\\ mx + y = 3 \\end{cases}$$ nu are soluție unică.",
     correctAnswer: "1",
-    explanation: "$\\det\\begin{pmatrix}1&1\\\\m&1\\end{pmatrix}=1-m=0 \\Rightarrow m=1$.",
+    explanation: [
+      "Calculăm determinantul sistemului: $\\Delta=\\det\\begin{pmatrix}1&1\\\\m&1\\end{pmatrix}=1\\cdot1-1\\cdot m=1-m$.",
+      "Sistemul nu are soluție unică atunci când $\\Delta=0$.",
+      "Rezolvăm $1-m=0 \\Rightarrow m=1$.",
+    ],
   },
   {
     id: "sy-s10-8",
@@ -1116,7 +1508,11 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Dacă sistemul este compatibil determinat, dreptele asociate sunt:",
     options: ["secante", "paralele", "confundate", "nu se poate preciza"],
     correctAnswer: "secante",
-    explanation: "Soluție unică înseamnă un singur punct comun.",
+    explanation: [
+      "Un sistem compatibil determinat are exact o soluție.",
+      "Geometric, o singură soluție înseamnă un singur punct comun celor două drepte.",
+      "Dreptele sunt deci secante.",
+    ],
   },
   {
     id: "sy-s10-9",
@@ -1126,7 +1522,11 @@ export const sistemeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați prin adunare sistemul $$\\begin{cases} 2x + y = 7 \\\\ x - y = -1 \\end{cases}$$ și determinați $x$.",
     correctAnswer: "2",
-    explanation: "Adunând: $3x=6 \\Rightarrow x=2$.",
+    explanation: [
+      "Adunăm cele două ecuații pentru a elimina $y$: $(2x+y)+(x-y)=7+(-1)$.",
+      "Simplificăm: $3x=6$.",
+      "Împărțim la $3$: $x=2$.",
+    ],
   },
   {
     id: "sy-s10-10",
@@ -1137,6 +1537,10 @@ export const sistemeSetExercises: Exercise[] = [
     prompt: "Un sistem liniar de 2 ecuații cu 2 necunoscute, incompatibil, are:",
     options: ["nicio soluție", "exact o soluție", "o infinitate de soluții", "exact 2 soluții"],
     correctAnswer: "nicio soluție",
-    explanation: "\"Incompatibil\" înseamnă lipsă de soluții.",
+    explanation: [
+      "Termenul \"incompatibil\" descrie un sistem fără nicio soluție comună.",
+      "Geometric, aceasta corespunde unor drepte paralele și distincte, care nu se intersectează.",
+      "Deci sistemul are nicio soluție.",
+    ],
   },
 ];
