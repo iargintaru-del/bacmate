@@ -1403,12 +1403,12 @@ export const geometrieSetExercises: Exercise[] = [
     points: 6,
     prompt:
       "Se dau punctele $A(1,1)$, $B(3,5)$ și $C(5,9)$. Vectorii $\\overrightarrow{AB}$ și $\\overrightarrow{AC}$ sunt:",
-    options: ["coliniare", "necoliniare", "perpendiculare", "opuse"],
-    correctAnswer: "coliniare",
+    options: ["coliniari", "necoliniari", "perpendiculari", "opuși"],
+    correctAnswer: "coliniari",
     explanation: [
       "Calculăm $\\overrightarrow{AB}=(3-1,5-1)=(2,4)$ și $\\overrightarrow{AC}=(5-1,9-1)=(4,8)$.",
       "Verificăm coliniaritatea: $2\\cdot8-4\\cdot4=16-16=0$.",
-      "Rezultă că vectorii (și punctele $A$, $B$, $C$) sunt coliniare.",
+      "Rezultă că vectorii (și punctele $A$, $B$, $C$) sunt coliniari.",
     ],
   },
   {
