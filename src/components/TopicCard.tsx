@@ -19,18 +19,18 @@ export function TopicCard({ topic, label, accuracy, attempted, hasSets }: TopicC
         </div>
       )}
       <div className="topic-card__actions">
-        <Link to={`/quiz/${topic}`} className="topic-card__action">
-          Exersează
-        </Link>
         <Link to={`/theory/${topic}`} className="topic-card__action">
           Teorie
         </Link>
-      </div>
-      {hasSets && (
-        <Link to={`/quiz/${topic}/sets`} className="topic-card__sets-link">
-          Seturi de exerciții
+        <Link to={`/quiz/${topic}`} className="topic-card__action">
+          Exersează
         </Link>
-      )}
+        {hasSets && (
+          <Link to={`/quiz/${topic}/sets`} className="topic-card__action">
+            Seturi de exerciții
+          </Link>
+        )}
+      </div>
     </div>
   );
 }
