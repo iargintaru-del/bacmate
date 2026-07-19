@@ -6,7 +6,8 @@ export type Topic =
   | "sisteme"
   | "limite"
   | "derivate"
-  | "integrale";
+  | "integrale"
+  | "geometrie";
 
 export type AnswerType = "mcq" | "input";
 

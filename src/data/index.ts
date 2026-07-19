@@ -1,6 +1,8 @@
 import type { Exercise, Problem, Topic } from "../types";
 import { numereComplexeExercises } from "./questions/numereComplexe";
 import { numereComplexeSetExercises } from "./questions/numereComplexeSets";
+import { geometrieExercises } from "./questions/geometrie";
+import { geometrieSetExercises } from "./questions/geometrieSets";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
@@ -29,6 +31,7 @@ export const TOPICS: Topic[] = [
   "limite",
   "derivate",
   "integrale",
+  "geometrie",
 ];
 
 export const TOPIC_LABELS: Record<Topic, string> = {
@@ -40,6 +43,7 @@ export const TOPIC_LABELS: Record<Topic, string> = {
   limite: "Limite de funcții",
   derivate: "Derivate și aplicații",
   integrale: "Primitive și integrale definite",
+  geometrie: "Geometrie",
 };
 
 export const ALL_EXERCISES: Exercise[] = [
@@ -59,6 +63,8 @@ export const ALL_EXERCISES: Exercise[] = [
   ...derivateSetExercises,
   ...integraleExercises,
   ...integraleSetExercises,
+  ...geometrieExercises,
+  ...geometrieSetExercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [
