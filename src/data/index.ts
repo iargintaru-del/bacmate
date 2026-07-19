@@ -3,6 +3,8 @@ import { numereComplexeExercises } from "./questions/numereComplexe";
 import { numereComplexeSetExercises } from "./questions/numereComplexeSets";
 import { geometrieExercises } from "./questions/geometrie";
 import { geometrieSetExercises } from "./questions/geometrieSets";
+import { legiCompozitieExercises } from "./questions/legiCompozitie";
+import { legiCompozitieSetExercises } from "./questions/legiCompozitieSets";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
@@ -32,6 +34,7 @@ export const TOPICS: Topic[] = [
   "derivate",
   "integrale",
   "geometrie",
+  "legi-compozitie",
 ];
 
 export const TOPIC_LABELS: Record<Topic, string> = {
@@ -44,6 +47,7 @@ export const TOPIC_LABELS: Record<Topic, string> = {
   derivate: "Derivate și aplicații",
   integrale: "Primitive și integrale definite",
   geometrie: "Geometrie",
+  "legi-compozitie": "Legi de compoziție",
 };
 
 export const ALL_EXERCISES: Exercise[] = [
@@ -65,6 +69,8 @@ export const ALL_EXERCISES: Exercise[] = [
   ...integraleSetExercises,
   ...geometrieExercises,
   ...geometrieSetExercises,
+  ...legiCompozitieExercises,
+  ...legiCompozitieSetExercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [

@@ -7,7 +7,8 @@ export type Topic =
   | "limite"
   | "derivate"
   | "integrale"
-  | "geometrie";
+  | "geometrie"
+  | "legi-compozitie";
 
 export type AnswerType = "mcq" | "input";
 

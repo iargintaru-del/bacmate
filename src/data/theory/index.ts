@@ -8,6 +8,7 @@ import { limiteTheory } from "./limite";
 import { derivateTheory } from "./derivate";
 import { integraleTheory } from "./integrale";
 import { geometrieTheory } from "./geometrie";
+import { legiCompozitieTheory } from "./legiCompozitie";
 
 export const THEORY: Record<Topic, TheorySection> = {
   "numere-complexe": numereComplexeTheory,
@@ -19,6 +20,7 @@ export const THEORY: Record<Topic, TheorySection> = {
   derivate: derivateTheory,
   integrale: integraleTheory,
   geometrie: geometrieTheory,
+  "legi-compozitie": legiCompozitieTheory,
 };
 
 export function theoryForTopic(topic: Topic): TheorySection | undefined {
