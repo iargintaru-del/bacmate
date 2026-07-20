@@ -68,6 +68,9 @@ export function TopicQuiz() {
       <p className="page__progress">
         Întrebarea {index + 1} din {exercises.length}
       </p>
+      <p>
+        <Link to="/">Înapoi acasă</Link>
+      </p>
       <QuestionCard key={current.id} item={current} mode="practice" onSubmit={handleSubmit} />
       {currentAnswered && (
         <button type="button" onClick={handleNext}>
