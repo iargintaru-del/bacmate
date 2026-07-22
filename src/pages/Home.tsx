@@ -20,7 +20,7 @@ export function Home() {
         </p>
       )}
 
-      <div className="topic-grid">
+      <div className="chapter-list">
         {TOPICS.map((topic) => {
           const topicStats = stats.byTopic.find((t) => t.topic === topic)!;
           return (
