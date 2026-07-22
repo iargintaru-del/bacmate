@@ -55,45 +55,80 @@ body {
   max-width: 900px;
 }
 
-.topic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 12px;
+.chapter-list {
+  display: flex;
+  flex-direction: column;
   margin: 24px 0;
 }
 
-.topic-card {
-  padding: 16px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--card-bg);
+.chapter-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 10px 4px;
+  border-bottom: 1px solid var(--border);
 }
 
-.topic-card__title {
+.chapter-row:last-child {
+  border-bottom: none;
+}
+
+.chapter-row__title {
   font-weight: 600;
   font-size: 2rem;
-  margin-bottom: 6px;
+  flex: 1 1 auto;
+  min-width: 200px;
 }
 
-.topic-card__stats {
-  color: var(--muted);
-  font-size: 1.8rem;
-}
-
-.topic-card__actions {
+.chapter-row__actions {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
   gap: 8px 16px;
-  margin-top: 8px;
 }
 
-.topic-card__action {
+.chapter-row__action {
   font-size: 1.7rem;
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
   white-space: nowrap;
+}
+
+.progress-ring {
+  flex-shrink: 0;
+}
+
+.progress-ring__track,
+.progress-ring__arc {
+  fill: none;
+}
+
+.progress-ring__track {
+  stroke: var(--border);
+}
+
+.progress-ring__track--empty {
+  stroke-dasharray: 3 4;
+}
+
+.progress-ring__arc--weak {
+  stroke: var(--incorrect);
+}
+
+.progress-ring__arc--strong {
+  stroke: var(--correct);
+}
+
+.progress-ring__arc--mid {
+  stroke: var(--accent);
+}
+
+.progress-ring__label {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--fg);
 }
 
 .set-grid {
