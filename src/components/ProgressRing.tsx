@@ -12,7 +12,14 @@ const CENTER = SIZE / 2;
 export function ProgressRing({ accuracy, attempted }: ProgressRingProps) {
   if (attempted === 0) {
     return (
-      <svg className="progress-ring" width={SIZE} height={SIZE} viewBox={`0 0 ${SIZE} ${SIZE}`}>
+      <svg
+        className="progress-ring"
+        width={SIZE}
+        height={SIZE}
+        viewBox={`0 0 ${SIZE} ${SIZE}`}
+        role="img"
+        aria-label="Netestat"
+      >
         <circle
           className="progress-ring__track progress-ring__track--empty"
           cx={CENTER}
@@ -34,7 +41,14 @@ export function ProgressRing({ accuracy, attempted }: ProgressRingProps) {
         : "progress-ring__arc--mid";
 
   return (
-    <svg className="progress-ring" width={SIZE} height={SIZE} viewBox={`0 0 ${SIZE} ${SIZE}`}>
+    <svg
+      className="progress-ring"
+      width={SIZE}
+      height={SIZE}
+      viewBox={`0 0 ${SIZE} ${SIZE}`}
+      role="img"
+      aria-label={`${percent}% corect`}
+    >
       <circle className="progress-ring__track" cx={CENTER} cy={CENTER} r={RADIUS} strokeWidth={STROKE} />
       <circle
         className={`progress-ring__arc ${arcClass}`}
