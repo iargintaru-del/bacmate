@@ -73,7 +73,7 @@ export const FORMULA_SHEET: FormulaChapter[] = [
     },
     {
       label: "Probabilitate clasică",
-      latex: "P=\\dfrac{\\text{cazuri favorabile}}{\\text{cazuri posibile}}",
+      latex: "P=\\dfrac{\\text{numărul cazurilor favorabile}}{\\text{numărul cazurilor posibile}}",
       plain: "P = (cazuri favorabile) / (cazuri posibile)",
     },
   ]),
