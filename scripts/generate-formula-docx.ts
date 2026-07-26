@@ -39,7 +39,12 @@ for (const chapter of FORMULA_SHEET) {
   }
 }
 
-const doc = new Document({ sections: [{ children }] });
+const doc = new Document({
+  creator: "BacMate",
+  title: "Formule matematice (Bacalaureat M2)",
+  description: "Formulele esențiale din toate capitolele de teorie — BacMate.",
+  sections: [{ children }],
+});
 
 async function main() {
   const buffer = await Packer.toBuffer(doc);

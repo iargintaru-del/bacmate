@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import katex from "katex";
 import { TOPICS } from "./index";
 import { FORMULA_SHEET } from "./formulaSheet";
 
@@ -15,6 +16,14 @@ describe("formula sheet integrity", () => {
         expect(formula.label.trim().length).toBeGreaterThan(0);
         expect(formula.latex.trim().length).toBeGreaterThan(0);
         expect(formula.plain.trim().length).toBeGreaterThan(0);
+      }
+    }
+  });
+
+  it("every latex string is valid KaTeX", () => {
+    for (const chapter of FORMULA_SHEET) {
+      for (const formula of chapter.formulas) {
+        expect(() => katex.renderToString(formula.latex, { throwOnError: true })).not.toThrow();
       }
     }
   });

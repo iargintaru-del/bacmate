@@ -10,6 +10,13 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const katexDistDir = join(__dirname, "..", "node_modules", "katex", "dist");
 const outputPath = join(__dirname, "..", "public", "formule-bacalaureat.pdf");
 
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 function renderHtml(): string {
   const sections = FORMULA_SHEET.map((chapter) => {
     const formulas = chapter.formulas
@@ -20,14 +27,14 @@ function renderHtml(): string {
         });
         return `
           <div class="formula">
-            <div class="formula__label">${formula.label}</div>
+            <div class="formula__label">${escapeHtml(formula.label)}</div>
             <div class="formula__math">${math}</div>
           </div>`;
       })
       .join("\n");
     return `
       <section class="chapter">
-        <h2>${chapter.title}</h2>
+        <h2>${escapeHtml(chapter.title)}</h2>
         ${formulas}
       </section>`;
   }).join("\n");

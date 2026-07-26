@@ -1,3 +1,5 @@
+// Source of truth for public/formule-bacalaureat.{pdf,docx}.
+// After editing, run `npm run generate:formulas` and commit both regenerated files.
 import type { Topic } from "../types";
 import { TOPIC_LABELS } from "./index";
 
