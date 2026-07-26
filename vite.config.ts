@@ -10,6 +10,9 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["icon-192.png", "icon-512.png"],
+      workbox: {
+        navigateFallbackDenylist: [/\.(?:pdf|docx)$/],
+      },
       manifest: {
         name: "BacMate — Pregătire Bacalaureat M2",
         short_name: "BacMate",

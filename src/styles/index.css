@@ -42,8 +42,13 @@ body {
 
 .page__intro,
 .page__summary,
-.page__progress {
+.page__progress,
+.page__formula-links {
   color: var(--muted);
+}
+
+.page__formula-links {
+  margin-top: 16px;
 }
 
 /* .page--home, .page--quiz, .page--stats, .page--sets, .page--variants

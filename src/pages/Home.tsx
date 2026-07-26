@@ -44,6 +44,17 @@ export function Home() {
           Alege o variantă (1-25)
         </Link>
       </div>
+
+      <p className="page__formula-links">
+        Formule matematice:{" "}
+        <a href={`${import.meta.env.BASE_URL}formule-bacalaureat.pdf`} download>
+          Descarcă PDF
+        </a>
+        {" · "}
+        <a href={`${import.meta.env.BASE_URL}formule-bacalaureat.docx`} download>
+          Descarcă Word
+        </a>
+      </p>
     </div>
   );
 }
