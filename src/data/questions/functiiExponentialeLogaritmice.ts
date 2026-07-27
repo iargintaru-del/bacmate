@@ -1,0 +1,102 @@
+import type { Exercise } from "../../types";
+
+export const functiiExponentialeLogaritmiceExercises: Exercise[] = [
+  {
+    id: "fe-1",
+    topic: "functii-exponentiale-logaritmice",
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $3^{x-1}=27$ și scrieți valoarea lui $x$.",
+    correctAnswer: "4",
+    explanation: [
+      "Scriem $27$ ca putere a lui $3$: $27=3^3$.",
+      "Ecuația devine $3^{x-1}=3^3$.",
+      "Folosind injectivitatea: $x-1=3 \\Rightarrow x=4$.",
+    ],
+  },
+  {
+    id: "fe-2",
+    topic: "functii-exponentiale-logaritmice",
+    type: "mcq",
+    points: 6,
+    prompt: "Funcția $f(x)=\\left(\\dfrac12\\right)^x$ este:",
+    options: [
+      "strict descrescătoare pe $\\mathbb{R}$",
+      "strict crescătoare pe $\\mathbb{R}$",
+      "constantă",
+      "definită doar pentru $x>0$",
+    ],
+    correctAnswer: "strict descrescătoare pe $\\mathbb{R}$",
+    explanation: [
+      "Baza este $a=\\dfrac12$, cu $0<a<1$.",
+      "Pentru $0<a<1$, funcția exponențială este strict descrescătoare pe $\\mathbb{R}$.",
+    ],
+  },
+  {
+    id: "fe-3",
+    topic: "functii-exponentiale-logaritmice",
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_5(2x-1)=1$ și scrieți valoarea lui $x$.",
+    correctAnswer: "3",
+    explanation: [
+      "Punem condiția $2x-1>0$.",
+      "Scriem ecuația echivalentă: $2x-1=5^1=5$.",
+      "Rezolvăm: $2x=6 \\Rightarrow x=3$, care verifică condiția.",
+    ],
+  },
+  {
+    id: "fe-4",
+    topic: "functii-exponentiale-logaritmice",
+    type: "mcq",
+    points: 6,
+    prompt: "Graficul funcției exponențiale $f(x)=a^x$ (cu $a>0$, $a\\neq1$) trece prin punctul:",
+    options: ["$(0,1)$", "$(1,0)$", "$(0,0)$", "$(1,1)$"],
+    correctAnswer: "$(0,1)$",
+    explanation: [
+      "Pentru orice bază $a>0$, avem $a^0=1$.",
+      "Deci graficul trece prin punctul $(0,1)$.",
+    ],
+  },
+  {
+    id: "fe-5",
+    topic: "functii-exponentiale-logaritmice",
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $9^x-4\\cdot3^x+3=0$, notând $t=3^x$; scrieți soluția mai mare pentru $x$.",
+    correctAnswer: "1",
+    explanation: [
+      "Notăm $t=3^x$, $t>0$; cum $9^x=(3^x)^2$, ecuația devine $t^2-4t+3=0$.",
+      "Rezolvăm: $\\Delta=16-12=4$, $t_{1,2}=\\dfrac{4\\pm2}{2}$, deci $t_1=3$ și $t_2=1$.",
+      "Din $3^x=3$ obținem $x=1$; din $3^x=1$ obținem $x=0$.",
+      "Soluția mai mare este $x=1$.",
+    ],
+  },
+  {
+    id: "fe-6",
+    topic: "functii-exponentiale-logaritmice",
+    type: "mcq",
+    points: 6,
+    prompt: "Care dintre funcțiile următoare este inversa funcției $f(x)=2^x$?",
+    options: ["$g(x)=\\log_2 x$", "$g(x)=x^2$", "$g(x)=\\dfrac{1}{2^x}$", "$g(x)=\\log_{1/2} x$"],
+    correctAnswer: "$g(x)=\\log_2 x$",
+    explanation: [
+      "Funcția logaritmică în baza $2$ este inversa funcției exponențiale cu aceeași bază.",
+      "Deci inversa lui $f(x)=2^x$ este $g(x)=\\log_2 x$.",
+    ],
+  },
+  {
+    id: "fe-7",
+    topic: "functii-exponentiale-logaritmice",
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_2(x)+\\log_2(x-2)=3$ (cu $x>2$) și scrieți valoarea lui $x$.",
+    correctAnswer: "4",
+    explanation: [
+      "Aplicăm proprietatea $\\log_a m+\\log_a n=\\log_a(mn)$: $\\log_2\\left(x(x-2)\\right)=3$.",
+      "Scriem ecuația echivalentă: $x(x-2)=2^3=8$, adică $x^2-2x-8=0$.",
+      "Rezolvăm: $\\Delta=4+32=36$, $x_{1,2}=\\dfrac{2\\pm6}{2}$, deci $x_1=4$ și $x_2=-2$.",
+      "Cum $x>2$, soluția este $x=4$.",
+    ],
+  },
+];

@@ -9,6 +9,10 @@ import { multimiLogicaExercises } from "./questions/multimiLogica";
 import { functiaGradul1Exercises } from "./questions/functiaGradul1";
 import { functiaGradul2Exercises } from "./questions/functiaGradul2";
 import { siruriExercises } from "./questions/siruri";
+import { puteriRadicaliLogaritmiExercises } from "./questions/puteriRadicaliLogaritmi";
+import { functiiExponentialeLogaritmiceExercises } from "./questions/functiiExponentialeLogaritmice";
+import { matematiciFinanciareExercises } from "./questions/matematiciFinanciare";
+import { statisticaExercises } from "./questions/statistica";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
@@ -43,6 +47,10 @@ export const TOPICS: Topic[] = [
   "functia-gradul-1",
   "functia-gradul-2",
   "siruri",
+  "puteri-radicali-logaritmi",
+  "functii-exponentiale-logaritmice",
+  "matematici-financiare",
+  "statistica",
 ];
 
 export const TOPIC_LABELS: Record<Topic, string> = {
@@ -60,6 +68,10 @@ export const TOPIC_LABELS: Record<Topic, string> = {
   "functia-gradul-1": "Funcția de gradul I",
   "functia-gradul-2": "Funcția de gradul al II-lea",
   siruri: "Șiruri",
+  "puteri-radicali-logaritmi": "Puteri, radicali și logaritmi",
+  "functii-exponentiale-logaritmice": "Funcții putere, radical, exponențială și logaritmică",
+  "matematici-financiare": "Matematici financiare",
+  statistica: "Statistică",
 };
 
 export const ALL_EXERCISES: Exercise[] = [
@@ -87,6 +99,10 @@ export const ALL_EXERCISES: Exercise[] = [
   ...functiaGradul1Exercises,
   ...functiaGradul2Exercises,
   ...siruriExercises,
+  ...puteriRadicaliLogaritmiExercises,
+  ...functiiExponentialeLogaritmiceExercises,
+  ...matematiciFinanciareExercises,
+  ...statisticaExercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [

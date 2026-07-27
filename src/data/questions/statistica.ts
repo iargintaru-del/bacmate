@@ -1,0 +1,100 @@
+import type { Exercise } from "../../types";
+
+export const statisticaExercises: Exercise[] = [
+  {
+    id: "st-1",
+    topic: "statistica",
+    type: "input",
+    points: 6,
+    prompt: "Într-o clasă de $20$ de elevi, $8$ au ochii căprui. Determinați frecvența relativă (în procente) a elevilor cu ochii căprui.",
+    correctAnswer: "40",
+    acceptedAnswers: ["40%"],
+    explanation: [
+      "Frecvența relativă este raportul $\\dfrac{8}{20}$.",
+      "Calculăm: $\\dfrac{8}{20}=0{,}4$.",
+      "Exprimată în procente, frecvența relativă este $40\\%$.",
+    ],
+  },
+  {
+    id: "st-2",
+    topic: "statistica",
+    type: "mcq",
+    points: 6,
+    prompt: "Frecvența absolută a unei valori dintr-un set de date reprezintă:",
+    options: [
+      "numărul de apariții ale valorii în setul de date",
+      "raportul dintre valoare și numărul total de date",
+      "media aritmetică a datelor",
+      "valoarea maximă din setul de date",
+    ],
+    correctAnswer: "numărul de apariții ale valorii în setul de date",
+    explanation: [
+      "Aceasta este definiția frecvenței absolute.",
+      "Frecvența relativă, în schimb, este raportul dintre frecvența absolută și numărul total de date.",
+    ],
+  },
+  {
+    id: "st-3",
+    topic: "statistica",
+    type: "input",
+    points: 6,
+    prompt: "Datele $5,6,5,7,5,6,8$ reprezintă notele unor elevi. Determinați frecvența absolută a notei $5$.",
+    correctAnswer: "3",
+    explanation: [
+      "Numărăm aparițiile notei $5$ în șir: $5,5,5$.",
+      "Nota $5$ apare de $3$ ori.",
+      "Frecvența absolută este $3$.",
+    ],
+  },
+  {
+    id: "st-4",
+    topic: "statistica",
+    type: "mcq",
+    points: 6,
+    prompt: "Datele cantitative grupate pe intervale se reprezintă grafic, de regulă, prin:",
+    options: ["histogramă", "diagramă circulară", "tabel de valori", "niciuna dintre variante"],
+    correctAnswer: "histogramă",
+    explanation: [
+      "Histograma folosește bare adiacente pentru a reprezenta frecvențele datelor grupate pe intervale.",
+      "Diagrama circulară este mai potrivită pentru date calitative (categorii).",
+    ],
+  },
+  {
+    id: "st-5",
+    topic: "statistica",
+    type: "input",
+    points: 6,
+    prompt: "Calculați media aritmetică a datelor $4,6,8,10$.",
+    correctAnswer: "7",
+    explanation: [
+      "Calculăm suma: $4+6+8+10=28$.",
+      "Împărțim la numărul de date: $\\dfrac{28}{4}$.",
+      "Media aritmetică este $7$.",
+    ],
+  },
+  {
+    id: "st-6",
+    topic: "statistica",
+    type: "mcq",
+    points: 6,
+    prompt: "Într-un set de $50$ de date, o valoare are frecvența absolută $10$. Frecvența relativă a acesteia este:",
+    options: ["$20\\%$", "$10\\%$", "$50\\%$", "$5\\%$"],
+    correctAnswer: "$20\\%$",
+    explanation: [
+      "Frecvența relativă este $\\dfrac{10}{50}$.",
+      "Calculăm: $\\dfrac{10}{50}=0{,}2=20\\%$.",
+    ],
+  },
+  {
+    id: "st-7",
+    topic: "statistica",
+    type: "input",
+    points: 6,
+    prompt: "Datele $3,3,4,5,5,5,6$ reprezintă un set statistic. Determinați valoarea cu frecvența absolută cea mai mare.",
+    correctAnswer: "5",
+    explanation: [
+      "Numărăm frecvențele: $3$ apare de $2$ ori, $4$ apare o dată, $5$ apare de $3$ ori, $6$ apare o dată.",
+      "Valoarea cu frecvența cea mai mare este $5$, cu frecvența $3$.",
+    ],
+  },
+];

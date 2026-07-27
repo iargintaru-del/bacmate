@@ -338,4 +338,67 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "Sn = b1 · (qⁿ − 1) / (q − 1)",
     },
   ]),
+  chapter("puteri-radicali-logaritmi", [
+    {
+      label: "Puteri cu exponent rațional",
+      latex: "a^{\\frac{p}{q}}=\\sqrt[q]{a^p},\\ a>0",
+      plain: "a^(p/q) = (a^p)^(1/q),  a > 0",
+    },
+    {
+      label: "Proprietăți ale logaritmilor",
+      latex: "\\log_a(xy)=\\log_a x+\\log_a y,\\ \\log_a\\dfrac{x}{y}=\\log_a x-\\log_a y",
+      plain: "log_a(xy) = log_a x + log_a y,  log_a(x/y) = log_a x − log_a y",
+    },
+    {
+      label: "Media geometrică",
+      latex: "\\sqrt{ab}",
+      plain: "√(ab)",
+    },
+  ]),
+  chapter("functii-exponentiale-logaritmice", [
+    {
+      label: "Funcția exponențială",
+      latex: "f(x)=a^x,\\ a>0,\\ a\\neq1",
+      plain: "f(x) = aˣ,  a > 0,  a ≠ 1",
+    },
+    {
+      label: "Funcția logaritmică",
+      latex: "f(x)=\\log_a x,\\ a>0,\\ a\\neq1,\\ x>0",
+      plain: "f(x) = log_a x,  a > 0,  a ≠ 1,  x > 0",
+    },
+    {
+      label: "Rezolvarea ecuațiilor exponențiale prin substituție",
+      latex: "a^{2x}+ba^x+c=0,\\ t=a^x,\\ t>0",
+      plain: "a^(2x) + b·aˣ + c = 0,  t = aˣ,  t > 0",
+    },
+  ]),
+  chapter("matematici-financiare", [
+    {
+      label: "Dobânda simplă",
+      latex: "D=\\dfrac{C\\cdot p\\cdot n}{100}",
+      plain: "D = C · p · n / 100",
+    },
+    {
+      label: "Dobânda compusă",
+      latex: "S=C\\left(1+\\dfrac{p}{100}\\right)^n",
+      plain: "S = C · (1 + p/100)ⁿ",
+    },
+    {
+      label: "Prețul cu TVA",
+      latex: "P_{TVA}=P_{net}\\left(1+\\dfrac{p}{100}\\right)",
+      plain: "P_TVA = P_net · (1 + p/100)",
+    },
+  ]),
+  chapter("statistica", [
+    {
+      label: "Frecvența relativă",
+      latex: "f_r=\\dfrac{\\text{frecvența absolută}}{\\text{numărul total de date}}",
+      plain: "fr = (frecvența absolută) / (numărul total de date)",
+    },
+    {
+      label: "Media aritmetică a unui set de date",
+      latex: "\\bar{x}=\\dfrac{x_1+x_2+\\cdots+x_n}{n}",
+      plain: "x̄ = (x1 + x2 + ... + xn) / n",
+    },
+  ]),
 ];
