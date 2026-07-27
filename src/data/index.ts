@@ -11,6 +11,7 @@ import { functiaGradul2Exercises } from "./questions/functiaGradul2";
 import { siruriExercises } from "./questions/siruri";
 import { puteriRadicaliLogaritmiExercises } from "./questions/puteriRadicaliLogaritmi";
 import { functiiExponentialeLogaritmiceExercises } from "./questions/functiiExponentialeLogaritmice";
+import { matematiciFinanciareExercises } from "./questions/matematiciFinanciare";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
@@ -47,6 +48,7 @@ export const TOPICS: Topic[] = [
   "siruri",
   "puteri-radicali-logaritmi",
   "functii-exponentiale-logaritmice",
+  "matematici-financiare",
 ];
 
 export const TOPIC_LABELS: Record<Topic, string> = {
@@ -66,6 +68,7 @@ export const TOPIC_LABELS: Record<Topic, string> = {
   siruri: "Șiruri",
   "puteri-radicali-logaritmi": "Puteri, radicali și logaritmi",
   "functii-exponentiale-logaritmice": "Funcții putere, radical, exponențială și logaritmică",
+  "matematici-financiare": "Matematici financiare",
 };
 
 export const ALL_EXERCISES: Exercise[] = [
@@ -95,6 +98,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...siruriExercises,
   ...puteriRadicaliLogaritmiExercises,
   ...functiiExponentialeLogaritmiceExercises,
+  ...matematiciFinanciareExercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [

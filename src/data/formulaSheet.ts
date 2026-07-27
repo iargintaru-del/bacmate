@@ -372,4 +372,21 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "a^(2x) + b·aˣ + c = 0,  t = aˣ,  t > 0",
     },
   ]),
+  chapter("matematici-financiare", [
+    {
+      label: "Dobânda simplă",
+      latex: "D=\\dfrac{C\\cdot p\\cdot n}{100}",
+      plain: "D = C · p · n / 100",
+    },
+    {
+      label: "Dobânda compusă",
+      latex: "S=C\\left(1+\\dfrac{p}{100}\\right)^n",
+      plain: "S = C · (1 + p/100)ⁿ",
+    },
+    {
+      label: "Prețul cu TVA",
+      latex: "P_{TVA}=P_{net}\\left(1+\\dfrac{p}{100}\\right)",
+      plain: "P_TVA = P_net · (1 + p/100)",
+    },
+  ]),
 ];

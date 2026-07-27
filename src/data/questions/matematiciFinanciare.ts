@@ -1,0 +1,96 @@
+import type { Exercise } from "../../types";
+
+export const matematiciFinanciareExercises: Exercise[] = [
+  {
+    id: "mf-1",
+    topic: "matematici-financiare",
+    type: "input",
+    points: 6,
+    prompt: "Un produs costă $150$ lei și prețul se majorează cu $20\\%$. Determinați noul preț (în lei).",
+    correctAnswer: "180",
+    explanation: [
+      "Aplicăm formula: $V=V_0\\left(1+\\dfrac{p}{100}\\right)$.",
+      "Înlocuim: $V=150\\cdot1{,}2$.",
+      "Calculăm: $V=180$ lei.",
+    ],
+  },
+  {
+    id: "mf-2",
+    topic: "matematici-financiare",
+    type: "mcq",
+    points: 6,
+    prompt: "Dacă un preț de $400$ lei se reduce cu $25\\%$, noul preț este:",
+    options: ["$300$ lei", "$100$ lei", "$350$ lei", "$320$ lei"],
+    correctAnswer: "$300$ lei",
+    explanation: [
+      "Aplicăm formula scăderii cu procent: $V=V_0\\left(1-\\dfrac{p}{100}\\right)$.",
+      "Înlocuim: $V=400\\cdot0{,}75=300$ lei.",
+    ],
+  },
+  {
+    id: "mf-3",
+    topic: "matematici-financiare",
+    type: "input",
+    points: 6,
+    prompt: "Calculați dobânda simplă pentru un capital de $2000$ lei, cu rata anuală $5\\%$, pe o perioadă de $4$ ani (în lei).",
+    correctAnswer: "400",
+    explanation: [
+      "Aplicăm formula: $D=\\dfrac{C\\cdot p\\cdot n}{100}$.",
+      "Înlocuim: $D=\\dfrac{2000\\cdot5\\cdot4}{100}$.",
+      "Calculăm: $D=\\dfrac{40000}{100}=400$ lei.",
+    ],
+  },
+  {
+    id: "mf-4",
+    topic: "matematici-financiare",
+    type: "mcq",
+    points: 6,
+    prompt: "Un capital de $1000$ lei este depus cu dobândă compusă de $10\\%$ pe an, timp de $2$ ani. Suma finală este:",
+    options: ["$1210$ lei", "$1200$ lei", "$1100$ lei", "$1000$ lei"],
+    correctAnswer: "$1210$ lei",
+    explanation: [
+      "Aplicăm formula dobânzii compuse: $S=C\\left(1+\\dfrac{p}{100}\\right)^n$.",
+      "Înlocuim: $S=1000\\cdot1{,}1^2=1000\\cdot1{,}21$.",
+      "Calculăm: $S=1210$ lei.",
+    ],
+  },
+  {
+    id: "mf-5",
+    topic: "matematici-financiare",
+    type: "input",
+    points: 6,
+    prompt: "Un produs are prețul net $200$ lei, iar cota de TVA este $19\\%$. Determinați prețul cu TVA (în lei).",
+    correctAnswer: "238",
+    explanation: [
+      "Aplicăm formula: $P_{TVA}=P_{net}\\left(1+\\dfrac{p}{100}\\right)$.",
+      "Înlocuim: $P_{TVA}=200\\cdot1{,}19$.",
+      "Calculăm: $P_{TVA}=238$ lei.",
+    ],
+  },
+  {
+    id: "mf-6",
+    topic: "matematici-financiare",
+    type: "mcq",
+    points: 6,
+    prompt: "Suma finală obținută printr-o dobândă simplă de $200$ lei aplicată unui capital de $1000$ lei este:",
+    options: ["$1200$ lei", "$1000$ lei", "$200$ lei", "$800$ lei"],
+    correctAnswer: "$1200$ lei",
+    explanation: [
+      "Suma finală este capitalul plus dobânda: $S=C+D$.",
+      "Înlocuim: $S=1000+200=1200$ lei.",
+    ],
+  },
+  {
+    id: "mf-7",
+    topic: "matematici-financiare",
+    type: "input",
+    points: 6,
+    prompt: "Determinați câte procente reprezintă $50$ din $200$.",
+    correctAnswer: "25",
+    explanation: [
+      "Calculăm raportul $\\dfrac{50}{200}$ și îl exprimăm în procente.",
+      "$\\dfrac{50}{200}=0{,}25=25\\%$.",
+      "Rezultă $25\\%$.",
+    ],
+  },
+];
