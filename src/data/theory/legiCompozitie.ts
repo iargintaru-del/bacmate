@@ -1,4 +1,4 @@
-﻿import type { TheorySection } from "../../types";
+import type { TheorySection } from "../../types";
 
 export const legiCompozitieTheory: TheorySection = {
   topic: "legi-compozitie",
