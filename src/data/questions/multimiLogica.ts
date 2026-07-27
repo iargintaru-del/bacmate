@@ -43,7 +43,7 @@ export const multimiLogicaExercises: Exercise[] = [
     topic: "multimi-logica",
     type: "mcq",
     points: 6,
-    prompt: "Negația propoziției \"toate numerele naturale sunt pare\" este:",
+    prompt: "Negația propoziției „toate numerele naturale sunt pare” este:",
     options: [
       "Există cel puțin un număr natural care nu este par",
       "Toate numerele naturale sunt impare",
@@ -53,7 +53,7 @@ export const multimiLogicaExercises: Exercise[] = [
     correctAnswer: "Există cel puțin un număr natural care nu este par",
     explanation: [
       "Negația unei propoziții cu cuantificatorul universal $\\forall$ se obține folosind cuantificatorul existențial $\\exists$ pentru negația predicatului.",
-      "Negația lui \"$\\forall n, P(n)$\" este \"$\\exists n$ astfel încât $\\overline{P(n)}$\".",
+      "Negația lui „$\\forall n, P(n)$” este „$\\exists n$ astfel încât $\\overline{P(n)}$”.",
     ],
   },
   {

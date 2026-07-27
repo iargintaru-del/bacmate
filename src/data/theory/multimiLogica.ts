@@ -25,7 +25,7 @@ export const multimiLogicaTheory: TheorySection = {
       body: [
         "O propoziție este un enunț căruia i se poate atribui o valoare de adevăr: adevărat (1) sau fals (0).",
         "Un predicat este un enunț care depinde de una sau mai multe variabile și devine propoziție pentru fiecare valoare dată variabilelor.",
-        "Cuantificatorul universal $\\forall$ se citește \"oricare ar fi\", iar cuantificatorul existențial $\\exists$ se citește \"există\".",
+        "Cuantificatorul universal $\\forall$ se citește „oricare ar fi”, iar cuantificatorul existențial $\\exists$ se citește „există”.",
       ],
     },
     {
@@ -57,10 +57,10 @@ export const multimiLogicaTheory: TheorySection = {
       ],
     },
     {
-      statement: "Determinați valoarea de adevăr a propoziției $p$: \"3 este număr par\" și scrieți negația ei.",
+      statement: "Determinați valoarea de adevăr a propoziției $p$: „3 este număr par” și scrieți negația ei.",
       steps: [
         "Propoziția $p$ este falsă, deoarece $3$ este număr impar.",
-        "Negația este $\\bar p$: \"3 nu este număr par\", care este adevărată.",
+        "Negația este $\\bar p$: „3 nu este număr par”, care este adevărată.",
       ],
     },
     {

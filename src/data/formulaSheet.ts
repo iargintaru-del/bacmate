@@ -264,17 +264,17 @@ export const FORMULA_SHEET: FormulaChapter[] = [
     {
       label: "Reuniunea mulțimilor",
       latex: "A\\cup B=\\{x \\mid x\\in A \\text{ sau } x\\in B\\}",
-      plain: "A ∪ B = {x | x ∈ A or x ∈ B}",
+      plain: "A ∪ B = {x | x ∈ A sau x ∈ B}",
     },
     {
       label: "Intersecția mulțimilor",
       latex: "A\\cap B=\\{x \\mid x\\in A \\text{ și } x\\in B\\}",
-      plain: "A ∩ B = {x | x ∈ A and x ∈ B}",
+      plain: "A ∩ B = {x | x ∈ A și x ∈ B}",
     },
     {
       label: "Diferența mulțimilor",
       latex: "A\\setminus B=\\{x \\mid x\\in A \\text{ și } x\\notin B\\}",
-      plain: "A \\ B = {x | x ∈ A and x ∉ B}",
+      plain: "A \\ B = {x | x ∈ A și x ∉ B}",
     },
     {
       label: "Complementara",
