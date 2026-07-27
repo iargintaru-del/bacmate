@@ -77,7 +77,12 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
             }}
           />
           {mode === "practice" && (
-            <button type="button" onClick={() => submitPractice(practiceValue)} disabled={isLocked}>
+            <button
+              type="button"
+              className="question-card__submit"
+              onClick={() => submitPractice(practiceValue)}
+              disabled={isLocked}
+            >
               Verifică
             </button>
           )}

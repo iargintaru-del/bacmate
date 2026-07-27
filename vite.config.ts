@@ -21,8 +21,8 @@ export default defineConfig({
         start_url: "/bacmate/",
         scope: "/bacmate/",
         display: "standalone",
-        background_color: "#ffffff",
-        theme_color: "#2f5fda",
+        background_color: "#f6f0fb",
+        theme_color: "#f6f0fb",
         icons: [
           {
             src: "icon-192.png",
