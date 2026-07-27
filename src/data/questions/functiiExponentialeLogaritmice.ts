@@ -78,7 +78,7 @@ export const functiiExponentialeLogaritmiceExercises: Exercise[] = [
     type: "mcq",
     points: 6,
     prompt: "Care dintre funcțiile următoare este inversa funcției $f(x)=2^x$?",
-    options: ["$g(x)=\\log_2 x$", "$g(x)=x^2$", "$g(x)=\\dfrac{1}{2^x}$", "$g(x)=2^{-x}$"],
+    options: ["$g(x)=\\log_2 x$", "$g(x)=x^2$", "$g(x)=\\dfrac{1}{2^x}$", "$g(x)=\\log_{1/2} x$"],
     correctAnswer: "$g(x)=\\log_2 x$",
     explanation: [
       "Funcția logaritmică în baza $2$ este inversa funcției exponențiale cu aceeași bază.",
