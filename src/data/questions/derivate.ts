@@ -58,4 +58,18 @@ export const derivateExercises: Exercise[] = [
       "Dacă $f'(x)\\geq0$ pe un interval, atunci $f$ este crescătoare pe acel interval.",
     ],
   },
+  {
+    id: "dv-5",
+    topic: "derivate",
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\lim_{x\\to0}\\dfrac{e^x-1}{x}$ folosind regula lui l'Hospital.",
+    correctAnswer: "1",
+    explanation: [
+      "Înlocuirea directă $x=0$ dă forma nedeterminată $\\frac{0}{0}$.",
+      "Derivăm numărătorul și numitorul separat: $(e^x-1)'=e^x$, $(x)'=1$.",
+      "Aplicăm regula lui l'Hospital: limita devine $\\lim_{x\\to0}\\dfrac{e^x}{1}$.",
+      "Înlocuim $x=0$: $e^0=1$.",
+    ],
+  },
 ];

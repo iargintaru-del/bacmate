@@ -178,6 +178,11 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       latex: "\\left(\\dfrac{u}{v}\\right)' = \\dfrac{u'v-uv'}{v^2}",
       plain: "(u / v)' = (u'v − uv') / v²",
     },
+    {
+      label: "Regula lui l'Hospital",
+      latex: "\\lim \\dfrac{f(x)}{g(x)} = \\lim \\dfrac{f'(x)}{g'(x)} \\text{ (cazurile } \\tfrac{0}{0} \\text{ sau } \\tfrac{\\infty}{\\infty}\\text{)}",
+      plain: "lim f(x)/g(x) = lim f'(x)/g'(x)  (cazurile 0/0 sau ∞/∞)",
+    },
   ]),
   chapter("integrale", [
     {
