@@ -9,7 +9,8 @@ export type Topic =
   | "integrale"
   | "geometrie"
   | "legi-compozitie"
-  | "multimi-logica";
+  | "multimi-logica"
+  | "functia-gradul-1";
 
 export type AnswerType = "mcq" | "input";
 

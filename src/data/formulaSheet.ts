@@ -282,4 +282,21 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "C_E(A) = E \\ A",
     },
   ]),
+  chapter("functia-gradul-1", [
+    {
+      label: "Funcția de gradul I",
+      latex: "f(x)=ax+b,\\ a,b\\in\\mathbb{R},\\ a\\neq0",
+      plain: "f(x) = ax + b,  a, b ∈ ℝ,  a ≠ 0",
+    },
+    {
+      label: "Intersecția cu axele de coordonate",
+      latex: "f(0)=b,\\ f(x)=0 \\Rightarrow x=-\\dfrac{b}{a}",
+      plain: "f(0) = b;  f(x) = 0  ⇒  x = −b/a",
+    },
+    {
+      label: "Monotonia funcției de gradul I",
+      latex: "a>0 \\Rightarrow \\text{strict crescătoare};\\ a<0 \\Rightarrow \\text{strict descrescătoare}",
+      plain: "a > 0  ⇒  strict crescătoare;   a < 0  ⇒  strict descrescătoare",
+    },
+  ]),
 ];
