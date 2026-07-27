@@ -71,7 +71,7 @@ export const limiteExercises: Exercise[] = [
     correctAnswer: "are cel puțin o soluție în $(a,b)$",
     explanation: [
       "Proprietatea lui Darboux garantează existența a cel puțin unei soluții $c\\in(a,b)$ cu $f(c)=0$, atunci când $f$ este continuă pe $[a,b]$ și $f(a)\\cdot f(b)<0$.",
-      "Proprietatea nu garantează unicitatea — pot exista mai multe astfel de soluții, deci varianta 'exact o soluție' nu este corectă în general.",
+      "Proprietatea nu garantează unicitatea — pot exista mai multe astfel de soluții, deci varianta „exact o soluție” nu este corectă în general.",
     ],
   },
 ];
