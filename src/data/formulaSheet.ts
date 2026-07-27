@@ -355,4 +355,21 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "√(ab)",
     },
   ]),
+  chapter("functii-exponentiale-logaritmice", [
+    {
+      label: "Funcția exponențială",
+      latex: "f(x)=a^x,\\ a>0,\\ a\\neq1",
+      plain: "f(x) = aˣ,  a > 0,  a ≠ 1",
+    },
+    {
+      label: "Funcția logaritmică",
+      latex: "f(x)=\\log_a x,\\ a>0,\\ a\\neq1,\\ x>0",
+      plain: "f(x) = log_a x,  a > 0,  a ≠ 1,  x > 0",
+    },
+    {
+      label: "Rezolvarea ecuațiilor exponențiale prin substituție",
+      latex: "a^{2x}+ba^x+c=0,\\ t=a^x,\\ t>0",
+      plain: "a^(2x) + b·aˣ + c = 0,  t = aˣ,  t > 0",
+    },
+  ]),
 ];

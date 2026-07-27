@@ -17,7 +17,8 @@ export type Topic =
   | "functia-gradul-1"
   | "functia-gradul-2"
   | "siruri"
-  | "puteri-radicali-logaritmi";
+  | "puteri-radicali-logaritmi"
+  | "functii-exponentiale-logaritmice";
 
 export type AnswerType = "mcq" | "input";
 
