@@ -31,6 +31,13 @@ export const limiteTheory: TheorySection = {
         "Aceste limite se folosesc adesea prin substituție, atunci când argumentul funcției tinde tot la $0$ (respectiv $\\infty$).",
       ],
     },
+    {
+      heading: "Proprietatea lui Darboux",
+      body: [
+        "Dacă $f$ este continuă pe $[a,b]$ și $f(a)\\cdot f(b) < 0$ (adică $f(a)$ și $f(b)$ au semne opuse), atunci există $c \\in (a,b)$ astfel încât $f(c) = 0$.",
+        "Proprietatea garantează doar existența unei soluții, nu și unicitatea ei — pot exista mai multe puncte $c$ cu $f(c)=0$ în $(a,b)$.",
+      ],
+    },
   ],
   examples: [
     {
@@ -56,6 +63,15 @@ export const limiteTheory: TheorySection = {
         "Scriem expresia astfel încât să apară limita fundamentală: $\\dfrac{\\sin 3x}{x} = 3\\cdot\\dfrac{\\sin 3x}{3x}$.",
         "Cum $3x\\to0$ când $x\\to0$, avem $\\lim_{x\\to0}\\dfrac{\\sin 3x}{3x}=1$ (limita fundamentală).",
         "Rezultă limita cerută: $3 \\cdot 1 = 3$.",
+      ],
+    },
+    {
+      statement: "Arătați că ecuația $x^3-3x+1=0$ are cel puțin o soluție în intervalul $(0,1)$.",
+      steps: [
+        "Notăm $f(x)=x^3-3x+1$; $f$ este o funcție polinomială, deci continuă pe $\\mathbb{R}$, inclusiv pe $[0,1]$.",
+        "Calculăm $f(0)=0-0+1=1>0$.",
+        "Calculăm $f(1)=1-3+1=-1<0$.",
+        "Cum $f(0)\\cdot f(1)<0$, prin proprietatea lui Darboux există $c\\in(0,1)$ astfel încât $f(c)=0$.",
       ],
     },
   ],

@@ -56,4 +56,22 @@ export const limiteExercises: Exercise[] = [
       "Calculăm limita: $1^2+1+1=3$.",
     ],
   },
+  {
+    id: "lm-5",
+    topic: "limite",
+    type: "mcq",
+    points: 6,
+    prompt: "Fie $f$ o funcție continuă pe $[a,b]$ cu $f(a)\\cdot f(b)<0$. Conform proprietății lui Darboux, ecuația $f(x)=0$:",
+    options: [
+      "are cel puțin o soluție în $(a,b)$",
+      "nu are nicio soluție în $(a,b)$",
+      "are exact o soluție în $(a,b)$",
+      "nu se poate preciza dacă are soluții în $(a,b)$",
+    ],
+    correctAnswer: "are cel puțin o soluție în $(a,b)$",
+    explanation: [
+      "Proprietatea lui Darboux garantează existența a cel puțin unei soluții $c\\in(a,b)$ cu $f(c)=0$, atunci când $f$ este continuă pe $[a,b]$ și $f(a)\\cdot f(b)<0$.",
+      "Proprietatea nu garantează unicitatea — pot exista mai multe astfel de soluții, deci varianta 'exact o soluție' nu este corectă în general.",
+    ],
+  },
 ];
