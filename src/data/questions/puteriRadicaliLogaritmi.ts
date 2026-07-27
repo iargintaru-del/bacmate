@@ -20,7 +20,7 @@ export const puteriRadicaliLogaritmiExercises: Exercise[] = [
     type: "mcq",
     points: 6,
     prompt: "Expresia $\\sqrt{8}\\cdot\\sqrt{2}$ este egală cu:",
-    options: ["$4$", "$16$", "$\\sqrt{10}$", "$2\\sqrt{4}$"],
+    options: ["$4$", "$16$", "$\\sqrt{10}$", "$2\\sqrt{2}$"],
     correctAnswer: "$4$",
     explanation: [
       "Folosim $\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$: $\\sqrt{8}\\cdot\\sqrt{2}=\\sqrt{16}$.",
