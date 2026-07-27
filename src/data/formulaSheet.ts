@@ -260,4 +260,26 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "x∘x' = x'∘x = e",
     },
   ]),
+  chapter("multimi-logica", [
+    {
+      label: "Reuniunea mulțimilor",
+      latex: "A\\cup B=\\{x \\mid x\\in A \\text{ sau } x\\in B\\}",
+      plain: "A ∪ B = {x | x ∈ A or x ∈ B}",
+    },
+    {
+      label: "Intersecția mulțimilor",
+      latex: "A\\cap B=\\{x \\mid x\\in A \\text{ și } x\\in B\\}",
+      plain: "A ∩ B = {x | x ∈ A and x ∈ B}",
+    },
+    {
+      label: "Diferența mulțimilor",
+      latex: "A\\setminus B=\\{x \\mid x\\in A \\text{ și } x\\notin B\\}",
+      plain: "A \\ B = {x | x ∈ A and x ∉ B}",
+    },
+    {
+      label: "Complementara",
+      latex: "C_EA=E\\setminus A",
+      plain: "C_E(A) = E \\ A",
+    },
+  ]),
 ];

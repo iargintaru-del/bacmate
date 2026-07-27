@@ -8,7 +8,8 @@ export type Topic =
   | "derivate"
   | "integrale"
   | "geometrie"
-  | "legi-compozitie";
+  | "legi-compozitie"
+  | "multimi-logica";
 
 export type AnswerType = "mcq" | "input";
 
