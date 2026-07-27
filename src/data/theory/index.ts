@@ -9,6 +9,10 @@ import { derivateTheory } from "./derivate";
 import { integraleTheory } from "./integrale";
 import { geometrieTheory } from "./geometrie";
 import { legiCompozitieTheory } from "./legiCompozitie";
+import { multimiLogicaTheory } from "./multimiLogica";
+import { functiaGradul1Theory } from "./functiaGradul1";
+import { functiaGradul2Theory } from "./functiaGradul2";
+import { siruriTheory } from "./siruri";
 
 export const THEORY: Record<Topic, TheorySection> = {
   "numere-complexe": numereComplexeTheory,
@@ -21,6 +25,10 @@ export const THEORY: Record<Topic, TheorySection> = {
   integrale: integraleTheory,
   geometrie: geometrieTheory,
   "legi-compozitie": legiCompozitieTheory,
+  "multimi-logica": multimiLogicaTheory,
+  "functia-gradul-1": functiaGradul1Theory,
+  "functia-gradul-2": functiaGradul2Theory,
+  siruri: siruriTheory,
 };
 
 export function theoryForTopic(topic: Topic): TheorySection | undefined {

@@ -1,3 +1,7 @@
+// Adding a member here also requires a matching chapter in FORMULA_SHEET
+// (src/data/formulaSheet.ts), enforced by formulaSheet.test.ts, plus
+// running `npm run generate:formulas` to regenerate the downloadable
+// public/formule-bacalaureat.{pdf,docx}.
 export type Topic =
   | "numere-complexe"
   | "combinatorica"
@@ -8,7 +12,11 @@ export type Topic =
   | "derivate"
   | "integrale"
   | "geometrie"
-  | "legi-compozitie";
+  | "legi-compozitie"
+  | "multimi-logica"
+  | "functia-gradul-1"
+  | "functia-gradul-2"
+  | "siruri";
 
 export type AnswerType = "mcq" | "input";
 

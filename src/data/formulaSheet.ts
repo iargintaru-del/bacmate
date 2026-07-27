@@ -260,4 +260,82 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "x∘x' = x'∘x = e",
     },
   ]),
+  chapter("multimi-logica", [
+    {
+      label: "Reuniunea mulțimilor",
+      latex: "A\\cup B=\\{x \\mid x\\in A \\text{ sau } x\\in B\\}",
+      plain: "A ∪ B = {x | x ∈ A sau x ∈ B}",
+    },
+    {
+      label: "Intersecția mulțimilor",
+      latex: "A\\cap B=\\{x \\mid x\\in A \\text{ și } x\\in B\\}",
+      plain: "A ∩ B = {x | x ∈ A și x ∈ B}",
+    },
+    {
+      label: "Diferența mulțimilor",
+      latex: "A\\setminus B=\\{x \\mid x\\in A \\text{ și } x\\notin B\\}",
+      plain: "A \\ B = {x | x ∈ A și x ∉ B}",
+    },
+    {
+      label: "Complementara",
+      latex: "C_EA=E\\setminus A",
+      plain: "C_E(A) = E \\ A",
+    },
+  ]),
+  chapter("functia-gradul-1", [
+    {
+      label: "Funcția de gradul I",
+      latex: "f(x)=ax+b,\\ a,b\\in\\mathbb{R},\\ a\\neq0",
+      plain: "f(x) = ax + b,  a, b ∈ ℝ,  a ≠ 0",
+    },
+    {
+      label: "Intersecția cu axele de coordonate",
+      latex: "f(0)=b,\\ f(x)=0 \\Rightarrow x=-\\dfrac{b}{a}",
+      plain: "f(0) = b;  f(x) = 0  ⇒  x = −b/a",
+    },
+    {
+      label: "Monotonia funcției de gradul I",
+      latex: "a>0 \\Rightarrow \\text{strict crescătoare};\\ a<0 \\Rightarrow \\text{strict descrescătoare}",
+      plain: "a > 0  ⇒  strict crescătoare;   a < 0  ⇒  strict descrescătoare",
+    },
+  ]),
+  chapter("functia-gradul-2", [
+    {
+      label: "Funcția de gradul al II-lea",
+      latex: "f(x)=ax^2+bx+c,\\ a,b,c\\in\\mathbb{R},\\ a\\neq0",
+      plain: "f(x) = ax² + bx + c,  a, b, c ∈ ℝ,  a ≠ 0",
+    },
+    {
+      label: "Vârful parabolei",
+      latex: "V\\left(-\\dfrac{b}{2a},-\\dfrac{\\Delta}{4a}\\right),\\ \\Delta=b^2-4ac",
+      plain: "V(−b/2a, −Δ/4a),  Δ = b² − 4ac",
+    },
+    {
+      label: "Relațiile lui Viète",
+      latex: "x_1+x_2=-\\dfrac{b}{a},\\ x_1\\cdot x_2=\\dfrac{c}{a}",
+      plain: "x1 + x2 = −b/a,  x1 · x2 = c/a",
+    },
+  ]),
+  chapter("siruri", [
+    {
+      label: "Progresia aritmetică — termenul general",
+      latex: "a_n=a_1+(n-1)r",
+      plain: "an = a1 + (n−1)·r",
+    },
+    {
+      label: "Suma primilor n termeni (progresie aritmetică)",
+      latex: "S_n=\\dfrac{(a_1+a_n)\\cdot n}{2}",
+      plain: "Sn = (a1 + an) · n / 2",
+    },
+    {
+      label: "Progresia geometrică — termenul general",
+      latex: "b_n=b_1\\cdot q^{n-1}",
+      plain: "bn = b1 · q^(n−1)",
+    },
+    {
+      label: "Suma primilor n termeni (progresie geometrică, q≠1)",
+      latex: "S_n=b_1\\cdot\\dfrac{q^n-1}{q-1}",
+      plain: "Sn = b1 · (qⁿ − 1) / (q − 1)",
+    },
+  ]),
 ];
