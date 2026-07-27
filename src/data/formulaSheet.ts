@@ -316,4 +316,26 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "x1 + x2 = −b/a,  x1 · x2 = c/a",
     },
   ]),
+  chapter("siruri", [
+    {
+      label: "Progresia aritmetică — termenul general",
+      latex: "a_n=a_1+(n-1)r",
+      plain: "an = a1 + (n−1)·r",
+    },
+    {
+      label: "Suma primilor n termeni (progresie aritmetică)",
+      latex: "S_n=\\dfrac{(a_1+a_n)\\cdot n}{2}",
+      plain: "Sn = (a1 + an) · n / 2",
+    },
+    {
+      label: "Progresia geometrică — termenul general",
+      latex: "b_n=b_1\\cdot q^{n-1}",
+      plain: "bn = b1 · q^(n−1)",
+    },
+    {
+      label: "Suma primilor n termeni (progresie geometrică, q≠1)",
+      latex: "S_n=b_1\\cdot\\dfrac{q^n-1}{q-1}",
+      plain: "Sn = b1 · (qⁿ − 1) / (q − 1)",
+    },
+  ]),
 ];

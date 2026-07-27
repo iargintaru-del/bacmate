@@ -11,7 +11,8 @@ export type Topic =
   | "legi-compozitie"
   | "multimi-logica"
   | "functia-gradul-1"
-  | "functia-gradul-2";
+  | "functia-gradul-2"
+  | "siruri";
 
 export type AnswerType = "mcq" | "input";
 
