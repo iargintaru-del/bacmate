@@ -10,7 +10,8 @@ export type Topic =
   | "geometrie"
   | "legi-compozitie"
   | "multimi-logica"
-  | "functia-gradul-1";
+  | "functia-gradul-1"
+  | "functia-gradul-2";
 
 export type AnswerType = "mcq" | "input";
 

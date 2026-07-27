@@ -299,4 +299,21 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "a > 0  ⇒  strict crescătoare;   a < 0  ⇒  strict descrescătoare",
     },
   ]),
+  chapter("functia-gradul-2", [
+    {
+      label: "Funcția de gradul al II-lea",
+      latex: "f(x)=ax^2+bx+c,\\ a,b,c\\in\\mathbb{R},\\ a\\neq0",
+      plain: "f(x) = ax² + bx + c,  a, b, c ∈ ℝ,  a ≠ 0",
+    },
+    {
+      label: "Vârful parabolei",
+      latex: "V\\left(-\\dfrac{b}{2a},-\\dfrac{\\Delta}{4a}\\right),\\ \\Delta=b^2-4ac",
+      plain: "V(−b/2a, −Δ/4a),  Δ = b² − 4ac",
+    },
+    {
+      label: "Relațiile lui Viète",
+      latex: "x_1+x_2=-\\dfrac{b}{a},\\ x_1\\cdot x_2=\\dfrac{c}{a}",
+      plain: "x1 + x2 = −b/a,  x1 · x2 = c/a",
+    },
+  ]),
 ];

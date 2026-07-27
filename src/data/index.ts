@@ -7,6 +7,7 @@ import { legiCompozitieExercises } from "./questions/legiCompozitie";
 import { legiCompozitieSetExercises } from "./questions/legiCompozitieSets";
 import { multimiLogicaExercises } from "./questions/multimiLogica";
 import { functiaGradul1Exercises } from "./questions/functiaGradul1";
+import { functiaGradul2Exercises } from "./questions/functiaGradul2";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
@@ -39,6 +40,7 @@ export const TOPICS: Topic[] = [
   "legi-compozitie",
   "multimi-logica",
   "functia-gradul-1",
+  "functia-gradul-2",
 ];
 
 export const TOPIC_LABELS: Record<Topic, string> = {
@@ -54,6 +56,7 @@ export const TOPIC_LABELS: Record<Topic, string> = {
   "legi-compozitie": "Legi de compoziție",
   "multimi-logica": "Mulțimi și logică matematică",
   "functia-gradul-1": "Funcția de gradul I",
+  "functia-gradul-2": "Funcția de gradul al II-lea",
 };
 
 export const ALL_EXERCISES: Exercise[] = [
@@ -79,6 +82,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...legiCompozitieSetExercises,
   ...multimiLogicaExercises,
   ...functiaGradul1Exercises,
+  ...functiaGradul2Exercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [
