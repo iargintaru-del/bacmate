@@ -16,6 +16,7 @@ import { siruriTheory } from "./siruri";
 import { puteriRadicaliLogaritmiTheory } from "./puteriRadicaliLogaritmi";
 import { functiiExponentialeLogaritmiceTheory } from "./functiiExponentialeLogaritmice";
 import { matematiciFinanciareTheory } from "./matematiciFinanciare";
+import { statisticaTheory } from "./statistica";
 
 export const THEORY: Record<Topic, TheorySection> = {
   "numere-complexe": numereComplexeTheory,
@@ -35,6 +36,7 @@ export const THEORY: Record<Topic, TheorySection> = {
   "puteri-radicali-logaritmi": puteriRadicaliLogaritmiTheory,
   "functii-exponentiale-logaritmice": functiiExponentialeLogaritmiceTheory,
   "matematici-financiare": matematiciFinanciareTheory,
+  statistica: statisticaTheory,
 };
 
 export function theoryForTopic(topic: Topic): TheorySection | undefined {

@@ -389,4 +389,16 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "P_TVA = P_net · (1 + p/100)",
     },
   ]),
+  chapter("statistica", [
+    {
+      label: "Frecvența relativă",
+      latex: "f_r=\\dfrac{\\text{frecvența absolută}}{\\text{numărul total de date}}",
+      plain: "fr = (frecvența absolută) / (numărul total de date)",
+    },
+    {
+      label: "Media aritmetică a unui set de date",
+      latex: "\\bar{x}=\\dfrac{x_1+x_2+\\cdots+x_n}{n}",
+      plain: "x̄ = (x1 + x2 + ... + xn) / n",
+    },
+  ]),
 ];

@@ -19,7 +19,8 @@ export type Topic =
   | "siruri"
   | "puteri-radicali-logaritmi"
   | "functii-exponentiale-logaritmice"
-  | "matematici-financiare";
+  | "matematici-financiare"
+  | "statistica";
 
 export type AnswerType = "mcq" | "input";
 
