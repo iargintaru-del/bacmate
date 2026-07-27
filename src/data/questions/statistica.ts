@@ -8,6 +8,7 @@ export const statisticaExercises: Exercise[] = [
     points: 6,
     prompt: "Într-o clasă de $20$ de elevi, $8$ au ochii căprui. Determinați frecvența relativă (în procente) a elevilor cu ochii căprui.",
     correctAnswer: "40",
+    acceptedAnswers: ["40%"],
     explanation: [
       "Frecvența relativă este raportul $\\dfrac{8}{20}$.",
       "Calculăm: $\\dfrac{8}{20}=0{,}4$.",

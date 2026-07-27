@@ -342,7 +342,7 @@ export const FORMULA_SHEET: FormulaChapter[] = [
     {
       label: "Puteri cu exponent rațional",
       latex: "a^{\\frac{p}{q}}=\\sqrt[q]{a^p},\\ a>0",
-      plain: "a^(p/q) = ᵍ√(a^p),  a > 0",
+      plain: "a^(p/q) = (a^p)^(1/q),  a > 0",
     },
     {
       label: "Proprietăți ale logaritmilor",

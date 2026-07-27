@@ -8,6 +8,7 @@ export const matematiciFinanciareExercises: Exercise[] = [
     points: 6,
     prompt: "Un produs costă $150$ lei și prețul se majorează cu $20\\%$. Determinați noul preț (în lei).",
     correctAnswer: "180",
+    acceptedAnswers: ["180 lei"],
     explanation: [
       "Aplicăm formula: $V=V_0\\left(1+\\dfrac{p}{100}\\right)$.",
       "Înlocuim: $V=150\\cdot1{,}2$.",
@@ -34,6 +35,7 @@ export const matematiciFinanciareExercises: Exercise[] = [
     points: 6,
     prompt: "Calculați dobânda simplă pentru un capital de $2000$ lei, cu rata anuală $5\\%$, pe o perioadă de $4$ ani (în lei).",
     correctAnswer: "400",
+    acceptedAnswers: ["400 lei"],
     explanation: [
       "Aplicăm formula: $D=\\dfrac{C\\cdot p\\cdot n}{100}$.",
       "Înlocuim: $D=\\dfrac{2000\\cdot5\\cdot4}{100}$.",
@@ -61,6 +63,7 @@ export const matematiciFinanciareExercises: Exercise[] = [
     points: 6,
     prompt: "Un produs are prețul net $200$ lei, iar cota de TVA este $19\\%$. Determinați prețul cu TVA (în lei).",
     correctAnswer: "238",
+    acceptedAnswers: ["238 lei"],
     explanation: [
       "Aplicăm formula: $P_{TVA}=P_{net}\\left(1+\\dfrac{p}{100}\\right)$.",
       "Înlocuim: $P_{TVA}=200\\cdot1{,}19$.",
@@ -87,6 +90,7 @@ export const matematiciFinanciareExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați câte procente reprezintă $50$ din $200$.",
     correctAnswer: "25",
+    acceptedAnswers: ["25%"],
     explanation: [
       "Calculăm raportul $\\dfrac{50}{200}$ și îl exprimăm în procente.",
       "$\\dfrac{50}{200}=0{,}25=25\\%$.",
