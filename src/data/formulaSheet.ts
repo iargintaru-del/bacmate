@@ -338,4 +338,21 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       plain: "Sn = b1 · (qⁿ − 1) / (q − 1)",
     },
   ]),
+  chapter("puteri-radicali-logaritmi", [
+    {
+      label: "Puteri cu exponent rațional",
+      latex: "a^{\\frac{p}{q}}=\\sqrt[q]{a^p},\\ a>0",
+      plain: "a^(p/q) = ᵍ√(a^p),  a > 0",
+    },
+    {
+      label: "Proprietăți ale logaritmilor",
+      latex: "\\log_a(xy)=\\log_a x+\\log_a y,\\ \\log_a\\dfrac{x}{y}=\\log_a x-\\log_a y",
+      plain: "log_a(xy) = log_a x + log_a y,  log_a(x/y) = log_a x − log_a y",
+    },
+    {
+      label: "Media geometrică",
+      latex: "\\sqrt{ab}",
+      plain: "√(ab)",
+    },
+  ]),
 ];

@@ -16,7 +16,8 @@ export type Topic =
   | "multimi-logica"
   | "functia-gradul-1"
   | "functia-gradul-2"
-  | "siruri";
+  | "siruri"
+  | "puteri-radicali-logaritmi";
 
 export type AnswerType = "mcq" | "input";
 
