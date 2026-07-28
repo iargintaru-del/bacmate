@@ -8,6 +8,7 @@ import { legiCompozitieSetExercises } from "./questions/legiCompozitieSets";
 import { multimiLogicaExercises } from "./questions/multimiLogica";
 import { multimiLogicaSetExercises } from "./questions/multimiLogicaSets";
 import { functiaGradul1Exercises } from "./questions/functiaGradul1";
+import { functiaGradul1SetExercises } from "./questions/functiaGradul1Sets";
 import { functiaGradul2Exercises } from "./questions/functiaGradul2";
 import { siruriExercises } from "./questions/siruri";
 import { puteriRadicaliLogaritmiExercises } from "./questions/puteriRadicaliLogaritmi";
@@ -99,6 +100,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...multimiLogicaExercises,
   ...multimiLogicaSetExercises,
   ...functiaGradul1Exercises,
+  ...functiaGradul1SetExercises,
   ...functiaGradul2Exercises,
   ...siruriExercises,
   ...puteriRadicaliLogaritmiExercises,
