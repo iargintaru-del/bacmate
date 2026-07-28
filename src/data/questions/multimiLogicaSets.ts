@@ -902,7 +902,7 @@ export const multimiLogicaSetExercises: Exercise[] = [
     ],
     correctAnswer: "$p$ și $q$ sunt ambele adevărate",
     explanation: [
-      "Conjuncția (,,și'') este adevărată doar când ambele propoziții componente sunt adevărate.",
+      "Conjuncția („și”) este adevărată doar când ambele propoziții componente sunt adevărate.",
     ],
   },
   {
@@ -920,7 +920,7 @@ export const multimiLogicaSetExercises: Exercise[] = [
     ],
     correctAnswer: "$p$ și $q$ sunt ambele false",
     explanation: [
-      "Disjuncția (,,sau'') este falsă doar când ambele propoziții componente sunt false.",
+      "Disjuncția („sau”) este falsă doar când ambele propoziții componente sunt false.",
     ],
   },
   {
