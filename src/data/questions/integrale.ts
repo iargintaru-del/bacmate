@@ -57,4 +57,30 @@ export const integraleExercises: Exercise[] = [
       "Cum derivata coincide cu funcția însăși, $e^x$ este propria sa primitivă.",
     ],
   },
+  {
+    id: "in-5",
+    topic: "integrale",
+    type: "input",
+    points: 6,
+    prompt: "Calculați $$\\int_0^1 xe^x\\,dx.$$",
+    correctAnswer: "1",
+    explanation: [
+      "Aplicăm integrarea prin părți cu $u=x$, $v'=e^x$: $\\int xe^x\\,dx=(x-1)e^x+C$.",
+      "Evaluăm: la $x=1$, $(1-1)e^1=0$; la $x=0$, $(0-1)e^0=-1$.",
+      "Rezultatul este $0-(-1)=1$.",
+    ],
+  },
+  {
+    id: "in-6",
+    topic: "integrale",
+    type: "mcq",
+    points: 6,
+    prompt: "Calculați $$\\int_0^1 3x^2e^{x^3}\\,dx.$$",
+    options: ["$e-1$", "$e$", "$e^3-1$", "$1$"],
+    correctAnswer: "$e-1$",
+    explanation: [
+      "Notăm $t=x^3$, $dt=3x^2\\,dx$: integrala devine $\\int_0^1 e^t\\,dt$ (limitele rămân $0$ și $1$, deoarece $t=x^3$ variază tot de la $0$ la $1$).",
+      "Calculăm $\\int_0^1 e^t\\,dt = e^1-e^0=e-1$.",
+    ],
+  },
 ];

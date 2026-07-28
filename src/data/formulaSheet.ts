@@ -210,6 +210,16 @@ export const FORMULA_SHEET: FormulaChapter[] = [
       latex: "\\int_a^b f(x)\\,dx = F(b)-F(a)",
       plain: "∫[a,b] f(x) dx = F(b) − F(a)",
     },
+    {
+      label: "Integrarea prin părți",
+      latex: "\\int u\\,v'\\,dx = uv - \\int u'v\\,dx",
+      plain: "∫u·v' dx = u·v − ∫u'·v dx",
+    },
+    {
+      label: "Integrarea prin schimbare de variabilă",
+      latex: "\\int f(g(x))g'(x)\\,dx = F(g(x))+C",
+      plain: "∫f(g(x))·g'(x) dx = F(g(x)) + C",
+    },
   ]),
   chapter("geometrie", [
     {

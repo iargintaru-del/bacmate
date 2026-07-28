@@ -61,4 +61,52 @@ export const legiCompozitieExercises: Exercise[] = [
       "Simplificăm: $e-3=0 \\Rightarrow e=3$.",
     ],
   },
+  {
+    id: "lc-5",
+    topic: "legi-compozitie",
+    type: "input",
+    points: 6,
+    prompt: "În grupul aditiv al claselor de resturi modulo $5$, $(\\mathbb{Z}_5,+)$, determinați simetricul (opusul) elementului $\\hat{3}$.",
+    correctAnswer: "2",
+    explanation: [
+      "Simetricul elementului $\\hat{3}$ este elementul $\\hat{x}$ pentru care $\\hat{3}+\\hat{x}=\\hat{0}$.",
+      "Cum $3+2=5\\equiv0\\ (\\text{mod}\\ 5)$, rezultă $\\hat{x}=\\hat{2}$.",
+    ],
+  },
+  {
+    id: "lc-6",
+    topic: "legi-compozitie",
+    type: "mcq",
+    points: 6,
+    prompt: "Care dintre următoarele structuri $(\\mathbb{Z}_n,+,\\cdot)$ este corp?",
+    options: [
+      "$(\\mathbb{Z}_4,+,\\cdot)$",
+      "$(\\mathbb{Z}_5,+,\\cdot)$",
+      "$(\\mathbb{Z}_6,+,\\cdot)$",
+      "$(\\mathbb{Z}_8,+,\\cdot)$",
+    ],
+    correctAnswer: "$(\\mathbb{Z}_5,+,\\cdot)$",
+    explanation: [
+      "$(\\mathbb{Z}_n,+,\\cdot)$ este corp dacă și numai dacă $n$ este număr prim.",
+      "Dintre $4$, $5$, $6$, $8$, doar $5$ este prim, deci doar $(\\mathbb{Z}_5,+,\\cdot)$ este corp.",
+    ],
+  },
+  {
+    id: "lc-7",
+    topic: "legi-compozitie",
+    type: "mcq",
+    points: 6,
+    prompt: "Care dintre următoarele proprietăți NU este obligatorie pentru ca $(G,\\circ)$ să fie grup?",
+    options: [
+      "Comutativitatea legii $\\circ$",
+      "Asociativitatea legii $\\circ$",
+      "Existența elementului neutru",
+      "Orice element din $G$ este simetrizabil",
+    ],
+    correctAnswer: "Comutativitatea legii $\\circ$",
+    explanation: [
+      "Un grup cere doar asociativitate, element neutru și simetrizabilitatea fiecărui element.",
+      "Comutativitatea nu este obligatorie — un grup în care legea este și comutativă se numește grup abelian, dar există grupuri necomutative.",
+    ],
+  },
 ];
