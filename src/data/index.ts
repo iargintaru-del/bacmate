@@ -6,6 +6,7 @@ import { geometrieSetExercises } from "./questions/geometrieSets";
 import { legiCompozitieExercises } from "./questions/legiCompozitie";
 import { legiCompozitieSetExercises } from "./questions/legiCompozitieSets";
 import { multimiLogicaExercises } from "./questions/multimiLogica";
+import { multimiLogicaSetExercises } from "./questions/multimiLogicaSets";
 import { functiaGradul1Exercises } from "./questions/functiaGradul1";
 import { functiaGradul2Exercises } from "./questions/functiaGradul2";
 import { siruriExercises } from "./questions/siruri";
@@ -96,6 +97,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...legiCompozitieExercises,
   ...legiCompozitieSetExercises,
   ...multimiLogicaExercises,
+  ...multimiLogicaSetExercises,
   ...functiaGradul1Exercises,
   ...functiaGradul2Exercises,
   ...siruriExercises,
