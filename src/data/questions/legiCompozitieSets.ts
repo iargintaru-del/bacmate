@@ -1670,7 +1670,7 @@ export const legiCompozitieSetExercises: Exercise[] = [
       "morfism și izomorfism",
       "morfism, dar nu izomorfism",
       "nu este morfism",
-      "automorfism",
+      "morfism de inele",
     ],
     correctAnswer: "nu este morfism",
     explanation: [
@@ -1707,7 +1707,7 @@ export const legiCompozitieSetExercises: Exercise[] = [
     correctAnswer: "Orice corp este inel",
     explanation: [
       "Un corp este, prin definiție, un inel cu $1\\neq0$ în care orice element nenul este inversabil față de $\\cdot$ — deci orice corp este inel.",
-      "Reciproca e falsă: $(\\mathbb{Z},+,\\cdot)$ este inel, dar nu e corp, deoarece doar $\\hat{1}$ și $-1$ au invers față de înmulțire în $\\mathbb{Z}$.",
+      "Reciproca e falsă: $(\\mathbb{Z},+,\\cdot)$ este inel, dar nu e corp, deoarece doar $1$ și $-1$ au invers față de înmulțire în $\\mathbb{Z}$.",
     ],
   },
 ];
