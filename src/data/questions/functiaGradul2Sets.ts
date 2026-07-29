@@ -1113,7 +1113,7 @@ export const functiaGradul2SetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Fie $f(x)=x^2-7x+10$. Determinați suma abciselor punctelor de intersecție a graficului cu axa $Ox$.",
+    prompt: "Fie $f(x)=x^2-7x+10$. Determinați suma absciselor punctelor de intersecție a graficului cu axa $Ox$.",
     correctAnswer: "7",
     explanation: [
       "Conform relațiilor lui Viète, suma rădăcinilor este $x_1+x_2=-\\dfrac{b}{a}=7$.",
@@ -1201,7 +1201,7 @@ export const functiaGradul2SetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Fie $f(x)=x^2-8x+15$. Determinați produsul abciselor punctelor de intersecție cu axa $Ox$.",
+    prompt: "Fie $f(x)=x^2-8x+15$. Determinați produsul absciselor punctelor de intersecție cu axa $Ox$.",
     correctAnswer: "15",
     explanation: [
       "Conform relațiilor lui Viète, produsul rădăcinilor este $x_1\\cdot x_2=\\dfrac{c}{a}=15$.",
@@ -1213,7 +1213,7 @@ export const functiaGradul2SetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Fie $f(x)=3x^2-6x$. Determinați suma abciselor punctelor de intersecție cu axa $Ox$.",
+    prompt: "Fie $f(x)=3x^2-6x$. Determinați suma absciselor punctelor de intersecție cu axa $Ox$.",
     correctAnswer: "2",
     explanation: [
       "Factorizăm: $3x^2-6x=3x(x-2)$, cu rădăcinile $x=0$ și $x=2$.",
@@ -1244,11 +1244,11 @@ export const functiaGradul2SetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Fie $f(x)=x^2-5x+4$. Calculați suma dintre ordonata intersecției cu $Oy$ și suma abciselor intersecțiilor cu $Ox$.",
+    prompt: "Fie $f(x)=x^2-5x+4$. Calculați suma dintre ordonata intersecției cu $Oy$ și suma absciselor intersecțiilor cu $Ox$.",
     correctAnswer: "9",
     explanation: [
       "Ordonata intersecției cu $Oy$: $f(0)=4$.",
-      "Suma abciselor intersecțiilor cu $Ox$ (Viète): $x_1+x_2=5$.",
+      "Suma absciselor intersecțiilor cu $Ox$ (Viète): $x_1+x_2=5$.",
       "Suma totală este $4+5=9$.",
     ],
   },
