@@ -10,6 +10,7 @@ import { multimiLogicaSetExercises } from "./questions/multimiLogicaSets";
 import { functiaGradul1Exercises } from "./questions/functiaGradul1";
 import { functiaGradul1SetExercises } from "./questions/functiaGradul1Sets";
 import { functiaGradul2Exercises } from "./questions/functiaGradul2";
+import { functiaGradul2SetExercises } from "./questions/functiaGradul2Sets";
 import { siruriExercises } from "./questions/siruri";
 import { puteriRadicaliLogaritmiExercises } from "./questions/puteriRadicaliLogaritmi";
 import { functiiExponentialeLogaritmiceExercises } from "./questions/functiiExponentialeLogaritmice";
@@ -102,6 +103,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...functiaGradul1Exercises,
   ...functiaGradul1SetExercises,
   ...functiaGradul2Exercises,
+  ...functiaGradul2SetExercises,
   ...siruriExercises,
   ...puteriRadicaliLogaritmiExercises,
   ...functiiExponentialeLogaritmiceExercises,
