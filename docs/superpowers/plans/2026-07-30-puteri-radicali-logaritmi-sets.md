@@ -1,0 +1,1708 @@
+# Puteri, Radicali și Logaritmi Practice Sets Implementation Plan
+
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Add a 100-exercise practice-set bank (10 sets × 10 exercises) for the `puteri-radicali-logaritmi` (Puteri, radicali și logaritmi) topic, matching the convention already shipped for `multimi-logica`, `functia-gradul-1`, `functia-gradul-2`, and `siruri`.
+
+**Architecture:** One new file, `src/data/questions/puteriRadicaliLogaritmiSets.ts`, exporting `puteriRadicaliLogaritmiSetExercises: Exercise[]` (100 objects). Wired into `ALL_EXERCISES` in `src/data/index.ts` with a single import + spread (done once, in Task 1). Every other task only appends to `puteriRadicaliLogaritmiSets.ts`.
+
+**Tech Stack:** TypeScript, Vite, Vitest. No new dependencies.
+
+## Global Constraints
+
+- Base commit: `0997ee9` (design spec committed; baseline 40/40 tests passing).
+- Exercise ids: `pl-s<SET>-<N>` (e.g. `pl-s1-1`, `pl-s10-10`) — note the base exercises use prefix `pl`, and set exercises follow the same `pl` prefix with an `s<N>-` infix.
+- Every exercise: `topic: "puteri-radicali-logaritmi"`, `points: 6`, `set: <1..10>`.
+- `type` is `"input"` or `"mcq"`. For `mcq`, `correctAnswer` must be character-for-character present in `options`, and all 4 options must be genuinely distinct claims/values (not reworded restatements of the same value).
+- Inline LaTeX only (`$...$`), never display math (`$$...$$`).
+- **LaTeX escaping (Critical):** every LaTeX command in a TS string literal needs a double backslash (`\\log`, `\\sqrt`, `\\dfrac`, `\\cdot`, `\\left`, `\\right`, `\\mathbb`, `\\neq`) because the string is parsed once by the TS/JS compiler before KaTeX ever sees it. A single backslash silently drops or corrupts the command and is invisible to the test suite. Before every commit: run `git diff --stat` (expect 0 deletions — this is a pure append) and a mojibake-marker scan (see Step 2 in every task below). Never use an external script (Python/sed/etc.) to generate or edit file content — use the file-editing tool directly.
+- **Answer-variety discipline:** within each 10-exercise set, all `input`-type numeric `correctAnswer` values must be pairwise distinct. Already designed into every set below — do not let a transcription slip collapse two into the same value.
+- **Content-duplication discipline (vs. base exercises):** none of the 100 exercises below duplicate the numeric parameters of the 7 existing base exercises (`pl-1`..`pl-7` in `src/data/questions/puteriRadicaliLogaritmi.ts`) — already checked during plan-writing. Do not substitute different numbers than the ones given in each task's code block.
+- **Cross-set duplication discipline (new this round):** a prior round (`siruri-sets`) shipped two pairs of exercises with byte-identical parameters and answers, reused verbatim across two different sets — this was invisible to every per-task reviewer since neither had visibility into the other set, and was only caught by the final whole-branch review. This plan's 100 exercises were explicitly cross-checked against each other at plan-writing time — do not substitute different numbers than the ones given, since that could reintroduce a collision the plan-writing pass already ruled out.
+- **Romanian spelling:** proofread Romanian mathematical terminology as you transcribe (a prior round's final review caught a misspelling — "abciselor" instead of "absciselor" — that no automated check could see). Terms used here: rațional, exponent, radical, raționalizare, logaritm, medie aritmetică/geometrică/ponderată/armonică.
+- No changes to `src/data/theory/puteriRadicaliLogaritmi.ts` or the existing 7 base exercises in `src/data/questions/puteriRadicaliLogaritmi.ts`. No changes to `examVariants.ts`. No new `Topic` entries.
+
+---
+
+### Task 1: Set 1 (Puteri cu exponent rațional — calcul) + create file + wire index.ts
+
+**Files:**
+- Create: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+- Modify: `src/data/index.ts`
+
+**Interfaces:**
+- Consumes: `Exercise` type from `../../types` (see `src/data/questions/puteriRadicaliLogaritmi.ts` for the exact import path pattern to copy).
+- Produces: `puteriRadicaliLogaritmiSetExercises: Exercise[]`, imported and spread into `ALL_EXERCISES` in `src/data/index.ts`.
+
+- [ ] **Step 1: Create the file with Set 1's 10 exercises**
+
+Create `src/data/questions/puteriRadicaliLogaritmiSets.ts` with exactly this content:
+
+```ts
+import type { Exercise } from "../../types";
+
+export const puteriRadicaliLogaritmiSetExercises: Exercise[] = [
+  // Set 1 — Puteri cu exponent rațional — calcul
+  {
+    id: "pl-s1-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $4^{\\frac{3}{2}}$.",
+    correctAnswer: "8",
+    explanation: [
+      "Scriem puterea ca radical: $4^{\\frac{3}{2}}=\\left(\\sqrt{4}\\right)^3$.",
+      "Calculăm $\\sqrt{4}=2$, deci $2^3=8$.",
+    ],
+  },
+  {
+    id: "pl-s1-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $27^{\\frac{2}{3}}$.",
+    correctAnswer: "9",
+    explanation: [
+      "Scriem puterea ca radical: $27^{\\frac{2}{3}}=\\left(\\sqrt[3]{27}\\right)^2$.",
+      "Calculăm $\\sqrt[3]{27}=3$, deci $3^2=9$.",
+    ],
+  },
+  {
+    id: "pl-s1-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $16^{\\frac{3}{2}}$.",
+    correctAnswer: "64",
+    explanation: [
+      "Scriem puterea ca radical: $16^{\\frac{3}{2}}=\\left(\\sqrt{16}\\right)^3$.",
+      "Calculăm $\\sqrt{16}=4$, deci $4^3=64$.",
+    ],
+  },
+  {
+    id: "pl-s1-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $25^{\\frac{3}{2}}$.",
+    correctAnswer: "125",
+    explanation: [
+      "Scriem puterea ca radical: $25^{\\frac{3}{2}}=\\left(\\sqrt{25}\\right)^3$.",
+      "Calculăm $\\sqrt{25}=5$, deci $5^3=125$.",
+    ],
+  },
+  {
+    id: "pl-s1-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $8^{\\frac{4}{3}}$ este:",
+    options: ["$16$", "$12$", "$32$", "$8$"],
+    correctAnswer: "$16$",
+    explanation: [
+      "$8^{\\frac{4}{3}}=\\left(\\sqrt[3]{8}\\right)^4=2^4=16$.",
+    ],
+  },
+  {
+    id: "pl-s1-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $32^{\\frac{2}{5}}$.",
+    correctAnswer: "4",
+    explanation: [
+      "Scriem puterea ca radical: $32^{\\frac{2}{5}}=\\left(\\sqrt[5]{32}\\right)^2$.",
+      "Calculăm $\\sqrt[5]{32}=2$, deci $2^2=4$.",
+    ],
+  },
+  {
+    id: "pl-s1-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $a>0$ și $\\dfrac{p}{q}\\in\\mathbb{Q}$ (cu $q>0$), $a^{\\frac{p}{q}}$ este egal cu:",
+    options: [
+      "$\\sqrt[q]{a^p}$",
+      "$\\sqrt[p]{a^q}$",
+      "$a^{p\\cdot q}$",
+      "$a^{p+q}$",
+    ],
+    correctAnswer: "$\\sqrt[q]{a^p}$",
+    explanation: [
+      "Aceasta este definiția puterii cu exponent rațional.",
+    ],
+  },
+  {
+    id: "pl-s1-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $9^{\\frac{5}{2}}$.",
+    correctAnswer: "243",
+    explanation: [
+      "Scriem puterea ca radical: $9^{\\frac{5}{2}}=\\left(\\sqrt{9}\\right)^5$.",
+      "Calculăm $\\sqrt{9}=3$, deci $3^5=243$.",
+    ],
+  },
+  {
+    id: "pl-s1-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $4^{\\frac{5}{2}}$.",
+    correctAnswer: "32",
+    explanation: [
+      "Scriem puterea ca radical: $4^{\\frac{5}{2}}=\\left(\\sqrt{4}\\right)^5$.",
+      "Calculăm $\\sqrt{4}=2$, deci $2^5=32$.",
+    ],
+  },
+  {
+    id: "pl-s1-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 1,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $100^{\\frac{3}{2}}$ este:",
+    options: ["$1000$", "$300$", "$10000$", "$100$"],
+    correctAnswer: "$1000$",
+    explanation: [
+      "$100^{\\frac{3}{2}}=\\left(\\sqrt{100}\\right)^3=10^3=1000$.",
+    ],
+  },
+];
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+
+```bash
+git diff --stat
+node -e "const c=require('fs').readFileSync('src/data/questions/puteriRadicaliLogaritmiSets.ts','utf8'); console.log('A-tilde:',c.includes(String.fromCharCode(196)),'E-grave-marker:',c.includes(String.fromCharCode(200)),'A-tilde2:',c.includes(String.fromCharCode(195)))"
+```
+Expect: the file is new (no deletions possible); the three markers all print `false`.
+
+- [ ] **Step 3: Wire into `src/data/index.ts`**
+
+Add this import line immediately after the existing `import { puteriRadicaliLogaritmiExercises } from "./questions/puteriRadicaliLogaritmi";` line:
+
+```ts
+import { puteriRadicaliLogaritmiSetExercises } from "./questions/puteriRadicaliLogaritmiSets";
+```
+
+Add this spread line immediately after the existing `...puteriRadicaliLogaritmiExercises,` line inside `ALL_EXERCISES`:
+
+```ts
+  ...puteriRadicaliLogaritmiSetExercises,
+```
+
+- [ ] **Step 4: Run data integrity test** — expect PASS.
+
+```bash
+npm test
+```
+
+- [ ] **Step 5: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises — use `node -e "..."` with `fs.readFileSync` to print `JSON.stringify` of substrings around `\\sqrt`, `\\left`, `\\right`, `\\mathbb`, confirming each is a literal double backslash followed by the command name in the source text.
+
+- [ ] **Step 6: Verify no stray BOM.**
+
+```bash
+head -c 20 src/data/questions/puteriRadicaliLogaritmiSets.ts | xxd
+```
+Expect first bytes NOT `ef bb bf`.
+
+- [ ] **Step 7: Run the full test suite.**
+
+```bash
+npm test
+```
+Expect all test files pass (~40 tests).
+
+- [ ] **Step 8: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts src/data/index.ts
+git commit -m "Add practice Set 1 (Puteri cu exponent rational - calcul) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 2: Set 2 (Puteri cu exponent rațional — proprietăți)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Task 1.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 2's 10 exercises**
+
+```ts
+  // Set 2 — Puteri cu exponent rațional — proprietăți
+  {
+    id: "pl-s2-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $a^5\\cdot a^3$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "8",
+    explanation: [
+      "Aplicăm proprietatea $a^m\\cdot a^n=a^{m+n}$.",
+      "Calculăm exponentul: $5+3=8$.",
+    ],
+  },
+  {
+    id: "pl-s2-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\dfrac{a^{10}}{a^3}$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "7",
+    explanation: [
+      "Aplicăm proprietatea $\\dfrac{a^m}{a^n}=a^{m-n}$.",
+      "Calculăm exponentul: $10-3=7$.",
+    ],
+  },
+  {
+    id: "pl-s2-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\left(a^3\\right)^4$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "12",
+    explanation: [
+      "Aplicăm proprietatea $\\left(a^m\\right)^n=a^{mn}$.",
+      "Calculăm exponentul: $3\\cdot4=12$.",
+    ],
+  },
+  {
+    id: "pl-s2-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $a^4\\cdot a^9$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "13",
+    explanation: [
+      "Aplicăm proprietatea $a^m\\cdot a^n=a^{m+n}$.",
+      "Calculăm exponentul: $4+9=13$.",
+    ],
+  },
+  {
+    id: "pl-s2-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "mcq",
+    points: 6,
+    prompt: "Exponentul rezultat din simplificarea lui $\\left(a^5\\right)^2$ (pentru $a\\neq0$) este:",
+    options: ["$10$", "$7$", "$25$", "$3$"],
+    correctAnswer: "$10$",
+    explanation: [
+      "$\\left(a^5\\right)^2=a^{5\\cdot2}=a^{10}$.",
+    ],
+  },
+  {
+    id: "pl-s2-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\dfrac{a^{15}}{a^6}$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "9",
+    explanation: [
+      "Aplicăm proprietatea $\\dfrac{a^m}{a^n}=a^{m-n}$.",
+      "Calculăm exponentul: $15-6=9$.",
+    ],
+  },
+  {
+    id: "pl-s2-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $a\\neq0$, $a^m\\cdot a^n$ este egal cu:",
+    options: ["$a^{m+n}$", "$a^{mn}$", "$a^{m-n}$", "$a^{\\frac{m}{n}}$"],
+    correctAnswer: "$a^{m+n}$",
+    explanation: [
+      "Aceasta este proprietatea de bază a înmulțirii puterilor cu aceeași bază.",
+    ],
+  },
+  {
+    id: "pl-s2-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\left(a^2\\right)^7$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "14",
+    explanation: [
+      "Aplicăm proprietatea $\\left(a^m\\right)^n=a^{mn}$.",
+      "Calculăm exponentul: $2\\cdot7=14$.",
+    ],
+  },
+  {
+    id: "pl-s2-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\dfrac{a^{20}}{a^9}$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "11",
+    explanation: [
+      "Aplicăm proprietatea $\\dfrac{a^m}{a^n}=a^{m-n}$.",
+      "Calculăm exponentul: $20-9=11$.",
+    ],
+  },
+  {
+    id: "pl-s2-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 2,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $a\\neq0$, $\\left(a^m\\right)^n$ este egal cu:",
+    options: ["$a^{mn}$", "$a^{m+n}$", "$a^{m-n}$", "$a^{m^n}$"],
+    correctAnswer: "$a^{mn}$",
+    explanation: [
+      "Aceasta este proprietatea puterii unei puteri.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 2 (Proprietatile puterilor) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 3: Set 3 (Puteri cu exponent real — monotonie și comparații)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–2.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 3's 10 exercises**
+
+```ts
+  // Set 3 — Puteri cu exponent real — monotonie și comparații
+  {
+    id: "pl-s3-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "mcq",
+    points: 6,
+    prompt: "Funcția $f(x)=3^x$ este:",
+    options: ["strict crescătoare", "strict descrescătoare", "constantă", "nu se poate preciza"],
+    correctAnswer: "strict crescătoare",
+    explanation: [
+      "Cum baza $3>1$, funcția exponențială $f(x)=3^x$ este strict crescătoare.",
+    ],
+  },
+  {
+    id: "pl-s3-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "mcq",
+    points: 6,
+    prompt: "Funcția $f(x)=\\left(\\dfrac{1}{2}\\right)^x$ este:",
+    options: ["strict descrescătoare", "strict crescătoare", "constantă", "nu se poate preciza"],
+    correctAnswer: "strict descrescătoare",
+    explanation: [
+      "Cum baza $0<\\dfrac{1}{2}<1$, funcția $f(x)=\\left(\\dfrac{1}{2}\\right)^x$ este strict descrescătoare.",
+    ],
+  },
+  {
+    id: "pl-s3-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "mcq",
+    points: 6,
+    prompt: "Care dintre numerele $2^3$ și $2^5$ este mai mare?",
+    options: ["$2^5$", "$2^3$", "sunt egale", "nu se poate preciza"],
+    correctAnswer: "$2^5$",
+    explanation: [
+      "Cum baza $2>1$, funcția $x\\mapsto2^x$ este strict crescătoare, deci exponentul mai mare dă valoarea mai mare.",
+    ],
+  },
+  {
+    id: "pl-s3-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "mcq",
+    points: 6,
+    prompt: "Care dintre numerele $\\left(\\dfrac{1}{2}\\right)^3$ și $\\left(\\dfrac{1}{2}\\right)^5$ este mai mare?",
+    options: [
+      "$\\left(\\dfrac{1}{2}\\right)^3$",
+      "$\\left(\\dfrac{1}{2}\\right)^5$",
+      "sunt egale",
+      "nu se poate preciza",
+    ],
+    correctAnswer: "$\\left(\\dfrac{1}{2}\\right)^3$",
+    explanation: [
+      "Cum baza $0<\\dfrac{1}{2}<1$, funcția este strict descrescătoare, deci exponentul mai mic dă valoarea mai mare.",
+    ],
+  },
+  {
+    id: "pl-s3-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "input",
+    points: 6,
+    prompt: "Determinați cel mai mic număr natural $n$ pentru care $2^n>100$.",
+    correctAnswer: "7",
+    explanation: [
+      "Calculăm: $2^6=64<100$ și $2^7=128>100$.",
+      "Cel mai mic astfel de $n$ este $7$.",
+    ],
+  },
+  {
+    id: "pl-s3-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "input",
+    points: 6,
+    prompt: "Determinați cel mai mare număr natural $n$ pentru care $3^n<50$.",
+    correctAnswer: "3",
+    explanation: [
+      "Calculăm: $3^3=27<50$ și $3^4=81>50$.",
+      "Cel mai mare astfel de $n$ este $3$.",
+    ],
+  },
+  {
+    id: "pl-s3-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "mcq",
+    points: 6,
+    prompt: "Dacă $a>1$ și $x_1<x_2$, atunci:",
+    options: [
+      "$a^{x_1}<a^{x_2}$",
+      "$a^{x_1}>a^{x_2}$",
+      "$a^{x_1}=a^{x_2}$",
+      "nu se poate compara",
+    ],
+    correctAnswer: "$a^{x_1}<a^{x_2}$",
+    explanation: [
+      "Pentru $a>1$, funcția exponențială este strict crescătoare, deci $x_1<x_2\\Rightarrow a^{x_1}<a^{x_2}$.",
+    ],
+  },
+  {
+    id: "pl-s3-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "mcq",
+    points: 6,
+    prompt: "Dacă $0<a<1$ și $x_1<x_2$, atunci:",
+    options: [
+      "$a^{x_1}>a^{x_2}$",
+      "$a^{x_1}<a^{x_2}$",
+      "$a^{x_1}=a^{x_2}$",
+      "nu se poate compara",
+    ],
+    correctAnswer: "$a^{x_1}>a^{x_2}$",
+    explanation: [
+      "Pentru $0<a<1$, funcția exponențială este strict descrescătoare, deci $x_1<x_2\\Rightarrow a^{x_1}>a^{x_2}$.",
+    ],
+  },
+  {
+    id: "pl-s3-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați inecuația $2^x>16$ și determinați cea mai mică soluție întreagă.",
+    correctAnswer: "5",
+    explanation: [
+      "Scriem $16=2^4$, deci inecuația devine $2^x>2^4$.",
+      "Cum baza $2>1$, funcția este strict crescătoare, deci $x>4$.",
+      "Cea mai mică soluție întreagă este $5$.",
+    ],
+  },
+  {
+    id: "pl-s3-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 3,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați inecuația $\\left(\\dfrac{1}{2}\\right)^x<\\dfrac{1}{8}$ și determinați cea mai mică soluție întreagă.",
+    correctAnswer: "4",
+    explanation: [
+      "Scriem $\\dfrac{1}{8}=\\left(\\dfrac{1}{2}\\right)^3$, deci inecuația devine $\\left(\\dfrac{1}{2}\\right)^x<\\left(\\dfrac{1}{2}\\right)^3$.",
+      "Cum baza $0<\\dfrac{1}{2}<1$, funcția este strict descrescătoare, deci $x>3$.",
+      "Cea mai mică soluție întreagă este $4$.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises (check `\\dfrac`, `\\left`, `\\right`, `\\Rightarrow`).
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 3 (Puteri exponent real - monotonie) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 4: Set 4 (Radicali — proprietăți)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–3.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 4's 10 exercises**
+
+```ts
+  // Set 4 — Radicali — proprietăți
+  {
+    id: "pl-s4-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\sqrt{3}\\cdot\\sqrt{27}$.",
+    correctAnswer: "9",
+    explanation: [
+      "Folosim $\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$: $\\sqrt{3}\\cdot\\sqrt{27}=\\sqrt{81}$.",
+      "Calculăm $\\sqrt{81}=9$.",
+    ],
+  },
+  {
+    id: "pl-s4-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\sqrt{50}\\cdot\\sqrt{2}$.",
+    correctAnswer: "10",
+    explanation: [
+      "Folosim $\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$: $\\sqrt{50}\\cdot\\sqrt{2}=\\sqrt{100}$.",
+      "Calculăm $\\sqrt{100}=10$.",
+    ],
+  },
+  {
+    id: "pl-s4-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\dfrac{\\sqrt{45}}{\\sqrt{5}}$.",
+    correctAnswer: "3",
+    explanation: [
+      "Folosim $\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}$: $\\dfrac{\\sqrt{45}}{\\sqrt{5}}=\\sqrt{9}$.",
+      "Calculăm $\\sqrt{9}=3$.",
+    ],
+  },
+  {
+    id: "pl-s4-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\dfrac{\\sqrt{72}}{\\sqrt{2}}$.",
+    correctAnswer: "6",
+    explanation: [
+      "Folosim $\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}$: $\\dfrac{\\sqrt{72}}{\\sqrt{2}}=\\sqrt{36}$.",
+      "Calculăm $\\sqrt{36}=6$.",
+    ],
+  },
+  {
+    id: "pl-s4-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $\\sqrt{5}\\cdot\\sqrt{45}$ este:",
+    options: ["$15$", "$25$", "$50$", "$9$"],
+    correctAnswer: "$15$",
+    explanation: [
+      "$\\sqrt{5}\\cdot\\sqrt{45}=\\sqrt{225}=15$.",
+    ],
+  },
+  {
+    id: "pl-s4-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\dfrac{\\sqrt{98}}{\\sqrt{2}}$.",
+    correctAnswer: "7",
+    explanation: [
+      "Folosim $\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}$: $\\dfrac{\\sqrt{98}}{\\sqrt{2}}=\\sqrt{49}$.",
+      "Calculăm $\\sqrt{49}=7$.",
+    ],
+  },
+  {
+    id: "pl-s4-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $a,b\\ge0$, $\\sqrt{a}\\cdot\\sqrt{b}$ este egal cu:",
+    options: ["$\\sqrt{ab}$", "$\\sqrt{a+b}$", "$\\sqrt{a}+\\sqrt{b}$", "$a\\sqrt{b}$"],
+    correctAnswer: "$\\sqrt{ab}$",
+    explanation: [
+      "Aceasta este proprietatea de bază a înmulțirii radicalilor de același ordin.",
+    ],
+  },
+  {
+    id: "pl-s4-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\sqrt{6}\\cdot\\sqrt{24}$.",
+    correctAnswer: "12",
+    explanation: [
+      "Folosim $\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$: $\\sqrt{6}\\cdot\\sqrt{24}=\\sqrt{144}$.",
+      "Calculăm $\\sqrt{144}=12$.",
+    ],
+  },
+  {
+    id: "pl-s4-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\dfrac{\\sqrt{125}}{\\sqrt{5}}$.",
+    correctAnswer: "5",
+    explanation: [
+      "Folosim $\\dfrac{\\sqrt{a}}{\\sqrt{b}}=\\sqrt{\\dfrac{a}{b}}$: $\\dfrac{\\sqrt{125}}{\\sqrt{5}}=\\sqrt{25}$.",
+      "Calculăm $\\sqrt{25}=5$.",
+    ],
+  },
+  {
+    id: "pl-s4-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 4,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $\\dfrac{\\sqrt{80}}{\\sqrt{5}}$ este:",
+    options: ["$4$", "$16$", "$8$", "$75$"],
+    correctAnswer: "$4$",
+    explanation: [
+      "$\\dfrac{\\sqrt{80}}{\\sqrt{5}}=\\sqrt{16}=4$.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 4 (Proprietatile radicalilor) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 5: Set 5 (Radicali — simplificare și raționalizarea numitorului)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–4.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 5's 10 exercises**
+
+```ts
+  // Set 5 — Radicali — simplificare și raționalizarea numitorului
+  {
+    id: "pl-s5-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\sqrt{50}$ sub forma $a\\sqrt{2}$ și determinați $a$.",
+    correctAnswer: "5",
+    explanation: [
+      "Scriem $50=25\\cdot2$, deci $\\sqrt{50}=\\sqrt{25}\\cdot\\sqrt{2}=5\\sqrt{2}$.",
+      "Rezultă $a=5$.",
+    ],
+  },
+  {
+    id: "pl-s5-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\sqrt{48}$ sub forma $a\\sqrt{3}$ și determinați $a$.",
+    correctAnswer: "4",
+    explanation: [
+      "Scriem $48=16\\cdot3$, deci $\\sqrt{48}=\\sqrt{16}\\cdot\\sqrt{3}=4\\sqrt{3}$.",
+      "Rezultă $a=4$.",
+    ],
+  },
+  {
+    id: "pl-s5-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\sqrt{72}$ sub forma $a\\sqrt{2}$ și determinați $a$.",
+    correctAnswer: "6",
+    explanation: [
+      "Scriem $72=36\\cdot2$, deci $\\sqrt{72}=\\sqrt{36}\\cdot\\sqrt{2}=6\\sqrt{2}$.",
+      "Rezultă $a=6$.",
+    ],
+  },
+  {
+    id: "pl-s5-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Raționalizați numitorul fracției $\\dfrac{4}{\\sqrt{7}}$ (amplificând cu $\\sqrt{7}$) și determinați noul numitor (număr întreg).",
+    correctAnswer: "7",
+    explanation: [
+      "Amplificăm cu $\\sqrt{7}$: $\\dfrac{4}{\\sqrt{7}}=\\dfrac{4\\sqrt{7}}{\\sqrt{7}\\cdot\\sqrt{7}}=\\dfrac{4\\sqrt{7}}{7}$.",
+      "Noul numitor este $7$.",
+    ],
+  },
+  {
+    id: "pl-s5-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "mcq",
+    points: 6,
+    prompt: "Raționalizând numitorul, fracția $\\dfrac{6}{\\sqrt{3}}$ devine:",
+    options: ["$2\\sqrt{3}$", "$3\\sqrt{2}$", "$6\\sqrt{3}$", "$\\sqrt{3}$"],
+    correctAnswer: "$2\\sqrt{3}$",
+    explanation: [
+      "$\\dfrac{6}{\\sqrt{3}}=\\dfrac{6\\sqrt{3}}{3}=2\\sqrt{3}$.",
+    ],
+  },
+  {
+    id: "pl-s5-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\sqrt{200}$ sub forma $a\\sqrt{2}$ și determinați $a$.",
+    correctAnswer: "10",
+    explanation: [
+      "Scriem $200=100\\cdot2$, deci $\\sqrt{200}=\\sqrt{100}\\cdot\\sqrt{2}=10\\sqrt{2}$.",
+      "Rezultă $a=10$.",
+    ],
+  },
+  {
+    id: "pl-s5-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru a raționaliza numitorul fracției $\\dfrac{1}{\\sqrt{a}}$ (cu $a>0$), se amplifică fracția cu:",
+    options: ["$\\sqrt{a}$", "$a$", "$\\dfrac{1}{\\sqrt{a}}$", "$\\sqrt{a^2}$"],
+    correctAnswer: "$\\sqrt{a}$",
+    explanation: [
+      "Amplificând cu $\\sqrt{a}$, numitorul devine $\\sqrt{a}\\cdot\\sqrt{a}=a$, un număr rațional.",
+    ],
+  },
+  {
+    id: "pl-s5-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\sqrt{128}$ sub forma $a\\sqrt{2}$ și determinați $a$.",
+    correctAnswer: "8",
+    explanation: [
+      "Scriem $128=64\\cdot2$, deci $\\sqrt{128}=\\sqrt{64}\\cdot\\sqrt{2}=8\\sqrt{2}$.",
+      "Rezultă $a=8$.",
+    ],
+  },
+  {
+    id: "pl-s5-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "input",
+    points: 6,
+    prompt: "Raționalizați numitorul fracției $\\dfrac{5}{\\sqrt{11}}$ (amplificând cu $\\sqrt{11}$) și determinați noul numitor (număr întreg).",
+    correctAnswer: "11",
+    explanation: [
+      "Amplificăm cu $\\sqrt{11}$: $\\dfrac{5}{\\sqrt{11}}=\\dfrac{5\\sqrt{11}}{\\sqrt{11}\\cdot\\sqrt{11}}=\\dfrac{5\\sqrt{11}}{11}$.",
+      "Noul numitor este $11$.",
+    ],
+  },
+  {
+    id: "pl-s5-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 5,
+    type: "mcq",
+    points: 6,
+    prompt: "Raționalizând numitorul, fracția $\\dfrac{10}{\\sqrt{5}}$ devine:",
+    options: ["$2\\sqrt{5}$", "$5\\sqrt{2}$", "$10\\sqrt{5}$", "$\\sqrt{5}$"],
+    correctAnswer: "$2\\sqrt{5}$",
+    explanation: [
+      "$\\dfrac{10}{\\sqrt{5}}=\\dfrac{10\\sqrt{5}}{5}=2\\sqrt{5}$.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 5 (Simplificare si rationalizare radicali) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 6: Set 6 (Logaritmi — calcul direct)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–5.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 6's 10 exercises**
+
+```ts
+  // Set 6 — Logaritmi — calcul direct
+  {
+    id: "pl-s6-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 32$.",
+    correctAnswer: "5",
+    explanation: [
+      "Căutăm $x$ astfel încât $2^x=32$.",
+      "Observăm că $2^5=32$, deci $\\log_2 32=5$.",
+    ],
+  },
+  {
+    id: "pl-s6-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_5 125$.",
+    correctAnswer: "3",
+    explanation: [
+      "Căutăm $x$ astfel încât $5^x=125$.",
+      "Observăm că $5^3=125$, deci $\\log_5 125=3$.",
+    ],
+  },
+  {
+    id: "pl-s6-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_4 256$.",
+    correctAnswer: "4",
+    explanation: [
+      "Căutăm $x$ astfel încât $4^x=256$.",
+      "Observăm că $4^4=256$, deci $\\log_4 256=4$.",
+    ],
+  },
+  {
+    id: "pl-s6-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 64$.",
+    correctAnswer: "6",
+    explanation: [
+      "Căutăm $x$ astfel încât $2^x=64$.",
+      "Observăm că $2^6=64$, deci $\\log_2 64=6$.",
+    ],
+  },
+  {
+    id: "pl-s6-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $\\log_{10} 100$ este:",
+    options: ["$2$", "$20$", "$10$", "$200$"],
+    correctAnswer: "$2$",
+    explanation: [
+      "$10^2=100$, deci $\\log_{10} 100=2$.",
+    ],
+  },
+  {
+    id: "pl-s6-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_3 9$.",
+    correctAnswer: "2",
+    explanation: [
+      "Căutăm $x$ astfel încât $3^x=9$.",
+      "Observăm că $3^2=9$, deci $\\log_3 9=2$.",
+    ],
+  },
+  {
+    id: "pl-s6-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $\\log_6 216$ este:",
+    options: ["$3$", "$36$", "$6$", "$216$"],
+    correctAnswer: "$3$",
+    explanation: [
+      "$6^3=216$, deci $\\log_6 216=3$.",
+    ],
+  },
+  {
+    id: "pl-s6-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 128$.",
+    correctAnswer: "7",
+    explanation: [
+      "Căutăm $x$ astfel încât $2^x=128$.",
+      "Observăm că $2^7=128$, deci $\\log_2 128=7$.",
+    ],
+  },
+  {
+    id: "pl-s6-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_{10} 10$.",
+    correctAnswer: "1",
+    explanation: [
+      "Căutăm $x$ astfel încât $10^x=10$.",
+      "Observăm că $10^1=10$, deci $\\log_{10} 10=1$.",
+    ],
+  },
+  {
+    id: "pl-s6-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 6,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $a>0$, $a\\neq1$, $\\log_a 1$ este egal cu:",
+    options: ["$0$", "$1$", "$a$", "nu se poate determina"],
+    correctAnswer: "$0$",
+    explanation: [
+      "$a^0=1$ pentru orice $a>0$, deci $\\log_a 1=0$.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises (check `\\log`).
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 6 (Calculul logaritmilor) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 7: Set 7 (Logaritmi — proprietăți)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–6.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 7's 10 exercises**
+
+```ts
+  // Set 7 — Logaritmi — proprietăți
+  {
+    id: "pl-s7-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_3 9+\\log_3 3$.",
+    correctAnswer: "3",
+    explanation: [
+      "Aplicăm $\\log_a x+\\log_a y=\\log_a(xy)$: $\\log_3 9+\\log_3 3=\\log_3 27$.",
+      "Calculăm $\\log_3 27=3$ (deoarece $3^3=27$).",
+    ],
+  },
+  {
+    id: "pl-s7-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 64-\\log_2 2$.",
+    correctAnswer: "5",
+    explanation: [
+      "Aplicăm $\\log_a x-\\log_a y=\\log_a\\dfrac{x}{y}$: $\\log_2 64-\\log_2 2=\\log_2 32$.",
+      "Calculăm $\\log_2 32=5$ (deoarece $2^5=32$).",
+    ],
+  },
+  {
+    id: "pl-s7-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $3\\log_5 25$.",
+    correctAnswer: "6",
+    explanation: [
+      "Calculăm mai întâi $\\log_5 25=2$ (deoarece $5^2=25$).",
+      "Rezultă $3\\log_5 25=3\\cdot2=6$.",
+    ],
+  },
+  {
+    id: "pl-s7-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_3 4+\\log_3\\dfrac{9}{4}$.",
+    correctAnswer: "2",
+    explanation: [
+      "Aplicăm $\\log_a x+\\log_a y=\\log_a(xy)$: $\\log_3 4+\\log_3\\dfrac{9}{4}=\\log_3\\left(4\\cdot\\dfrac{9}{4}\\right)=\\log_3 9$.",
+      "Calculăm $\\log_3 9=2$ (deoarece $3^2=9$).",
+    ],
+  },
+  {
+    id: "pl-s7-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $\\log_2 24-\\log_2 3$ este:",
+    options: ["$3$", "$8$", "$21$", "$4$"],
+    correctAnswer: "$3$",
+    explanation: [
+      "$\\log_2 24-\\log_2 3=\\log_2\\dfrac{24}{3}=\\log_2 8=3$.",
+    ],
+  },
+  {
+    id: "pl-s7-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $2\\log_2 3+\\log_2\\dfrac{16}{9}$.",
+    correctAnswer: "4",
+    explanation: [
+      "Scriem $2\\log_2 3=\\log_2 9$ (folosind $\\log_a(x^n)=n\\log_a x$).",
+      "Adunăm: $\\log_2 9+\\log_2\\dfrac{16}{9}=\\log_2\\left(9\\cdot\\dfrac{16}{9}\\right)=\\log_2 16$.",
+      "Calculăm $\\log_2 16=4$.",
+    ],
+  },
+  {
+    id: "pl-s7-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $x,y>0$, $\\log_a x-\\log_a y$ este egal cu:",
+    options: [
+      "$\\log_a\\dfrac{x}{y}$",
+      "$\\log_a(x-y)$",
+      "$\\dfrac{\\log_a x}{\\log_a y}$",
+      "$\\log_a x\\cdot\\log_a y$",
+    ],
+    correctAnswer: "$\\log_a\\dfrac{x}{y}$",
+    explanation: [
+      "Aceasta este proprietatea logaritmului unui cât.",
+    ],
+  },
+  {
+    id: "pl-s7-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 640-\\log_2 5$.",
+    correctAnswer: "7",
+    explanation: [
+      "Aplicăm $\\log_a x-\\log_a y=\\log_a\\dfrac{x}{y}$: $\\log_2 640-\\log_2 5=\\log_2\\dfrac{640}{5}=\\log_2 128$.",
+      "Calculăm $\\log_2 128=7$.",
+    ],
+  },
+  {
+    id: "pl-s7-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 1280-\\log_2 5$.",
+    correctAnswer: "8",
+    explanation: [
+      "Aplicăm $\\log_a x-\\log_a y=\\log_a\\dfrac{x}{y}$: $\\log_2 1280-\\log_2 5=\\log_2\\dfrac{1280}{5}=\\log_2 256$.",
+      "Calculăm $\\log_2 256=8$.",
+    ],
+  },
+  {
+    id: "pl-s7-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 7,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $x>0$ și $n\\in\\mathbb{R}$, $\\log_a(x^n)$ este egal cu:",
+    options: [
+      "$n\\log_a x$",
+      "$\\left(\\log_a x\\right)^n$",
+      "$n+\\log_a x$",
+      "$\\log_a x^{\\frac{1}{n}}$",
+    ],
+    correctAnswer: "$n\\log_a x$",
+    explanation: [
+      "Aceasta este proprietatea logaritmului unei puteri.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 7 (Proprietatile logaritmilor) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 8: Set 8 (Logaritmi — cazuri particulare și aplicații)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–7.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 8's 10 exercises**
+
+```ts
+  // Set 8 — Logaritmi — cazuri particulare și aplicații
+  {
+    id: "pl-s8-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_7 1$.",
+    correctAnswer: "0",
+    explanation: [
+      "$7^0=1$, deci $\\log_7 1=0$.",
+    ],
+  },
+  {
+    id: "pl-s8-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_9 9$.",
+    correctAnswer: "1",
+    explanation: [
+      "$9^1=9$, deci $\\log_9 9=1$.",
+    ],
+  },
+  {
+    id: "pl-s8-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_2 x=5$ și determinați $x$.",
+    correctAnswer: "32",
+    explanation: [
+      "Din definiția logaritmului: $x=2^5$.",
+      "Calculăm $x=32$.",
+    ],
+  },
+  {
+    id: "pl-s8-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_3 x=4$ și determinați $x$.",
+    correctAnswer: "81",
+    explanation: [
+      "Din definiția logaritmului: $x=3^4$.",
+      "Calculăm $x=81$.",
+    ],
+  },
+  {
+    id: "pl-s8-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "mcq",
+    points: 6,
+    prompt: "Valoarea lui $\\log_5 1+\\log_5 5$ este:",
+    options: ["$1$", "$0$", "$5$", "$25$"],
+    correctAnswer: "$1$",
+    explanation: [
+      "$\\log_5 1=0$ și $\\log_5 5=1$, deci suma este $0+1=1$.",
+    ],
+  },
+  {
+    id: "pl-s8-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_2 x=6$ și determinați $x$.",
+    correctAnswer: "64",
+    explanation: [
+      "Din definiția logaritmului: $x=2^6$.",
+      "Calculăm $x=64$.",
+    ],
+  },
+  {
+    id: "pl-s8-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "mcq",
+    points: 6,
+    prompt: "Pentru $a>0$, $a\\neq1$, $\\log_a a$ este egal cu:",
+    options: ["$1$", "$0$", "$a$", "nu se poate determina"],
+    correctAnswer: "$1$",
+    explanation: [
+      "$a^1=a$, deci $\\log_a a=1$.",
+    ],
+  },
+  {
+    id: "pl-s8-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_5 x=3$ și determinați $x$.",
+    correctAnswer: "125",
+    explanation: [
+      "Din definiția logaritmului: $x=5^3$.",
+      "Calculăm $x=125$.",
+    ],
+  },
+  {
+    id: "pl-s8-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_{10} x=3$ și determinați $x$.",
+    correctAnswer: "1000",
+    explanation: [
+      "Din definiția logaritmului: $x=10^3$.",
+      "Calculăm $x=1000$.",
+    ],
+  },
+  {
+    id: "pl-s8-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 8,
+    type: "mcq",
+    points: 6,
+    prompt: "Dacă $\\log_a x=0$ (cu $a>0$, $a\\neq1$), atunci $x$ este egal cu:",
+    options: ["$1$", "$0$", "$a$", "nu se poate determina"],
+    correctAnswer: "$1$",
+    explanation: [
+      "Din definiția logaritmului: $x=a^0=1$.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 8 (Cazuri particulare logaritmi) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 9: Set 9 (Medii)
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–8.
+- Produces: nothing consumed by later tasks beyond the shared file.
+
+- [ ] **Step 1: Append Set 9's 10 exercises**
+
+```ts
+  // Set 9 — Medii
+  {
+    id: "pl-s9-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media aritmetică a numerelor $8$ și $24$.",
+    correctAnswer: "16",
+    explanation: [
+      "Media aritmetică este $\\dfrac{8+24}{2}$.",
+      "Calculăm $\\dfrac{32}{2}=16$.",
+    ],
+  },
+  {
+    id: "pl-s9-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media aritmetică a numerelor $-3$ și $11$.",
+    correctAnswer: "4",
+    explanation: [
+      "Media aritmetică este $\\dfrac{-3+11}{2}$.",
+      "Calculăm $\\dfrac{8}{2}=4$.",
+    ],
+  },
+  {
+    id: "pl-s9-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media geometrică a numerelor $3$ și $27$.",
+    correctAnswer: "9",
+    explanation: [
+      "Media geometrică este $\\sqrt{3\\cdot27}=\\sqrt{81}$.",
+      "Rezultă media geometrică $=9$.",
+    ],
+  },
+  {
+    id: "pl-s9-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media geometrică a numerelor $5$ și $20$.",
+    correctAnswer: "10",
+    explanation: [
+      "Media geometrică este $\\sqrt{5\\cdot20}=\\sqrt{100}$.",
+      "Rezultă media geometrică $=10$.",
+    ],
+  },
+  {
+    id: "pl-s9-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "mcq",
+    points: 6,
+    prompt: "Media armonică a numerelor $4$ și $12$ este:",
+    options: ["$6$", "$8$", "$48$", "$4$"],
+    correctAnswer: "$6$",
+    explanation: [
+      "Media armonică este $\\dfrac{2\\cdot4\\cdot12}{4+12}=\\dfrac{96}{16}=6$.",
+    ],
+  },
+  {
+    id: "pl-s9-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media ponderată a numerelor $a_1=8$ (pondere $p_1=1$) și $a_2=20$ (pondere $p_2=3$).",
+    correctAnswer: "17",
+    explanation: [
+      "Media ponderată este $\\dfrac{a_1p_1+a_2p_2}{p_1+p_2}=\\dfrac{8\\cdot1+20\\cdot3}{1+3}$.",
+      "Calculăm $\\dfrac{8+60}{4}=\\dfrac{68}{4}=17$.",
+    ],
+  },
+  {
+    id: "pl-s9-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "mcq",
+    points: 6,
+    prompt: "Media armonică a numerelor pozitive $a$ și $b$ este:",
+    options: [
+      "$\\dfrac{2ab}{a+b}$",
+      "$\\dfrac{a+b}{2}$",
+      "$\\sqrt{ab}$",
+      "$\\dfrac{2}{a+b}$",
+    ],
+    correctAnswer: "$\\dfrac{2ab}{a+b}$",
+    explanation: [
+      "Aceasta este definiția mediei armonice a două numere pozitive.",
+    ],
+  },
+  {
+    id: "pl-s9-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media geometrică a numerelor $6$ și $24$.",
+    correctAnswer: "12",
+    explanation: [
+      "Media geometrică este $\\sqrt{6\\cdot24}=\\sqrt{144}$.",
+      "Rezultă media geometrică $=12$.",
+    ],
+  },
+  {
+    id: "pl-s9-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media ponderată a numerelor $a_1=6$ (pondere $p_1=1$) și $a_2=18$ (pondere $p_2=2$).",
+    correctAnswer: "14",
+    explanation: [
+      "Media ponderată este $\\dfrac{a_1p_1+a_2p_2}{p_1+p_2}=\\dfrac{6\\cdot1+18\\cdot2}{1+2}$.",
+      "Calculăm $\\dfrac{6+36}{3}=\\dfrac{42}{3}=14$.",
+    ],
+  },
+  {
+    id: "pl-s9-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 9,
+    type: "mcq",
+    points: 6,
+    prompt: "Media armonică a numerelor $2$ și $6$ este:",
+    options: ["$3$", "$4$", "$12$", "$8$"],
+    correctAnswer: "$3$",
+    explanation: [
+      "Media armonică este $\\dfrac{2\\cdot2\\cdot6}{2+6}=\\dfrac{24}{8}=3$.",
+    ],
+  },
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Run the full test suite.**
+- [ ] **Step 7: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 9 (Medii) for Puteri, radicali si logaritmi"
+```
+
+---
+
+### Task 10: Set 10 (Recapitulare / aplicații mixte) + final verification
+
+**Files:**
+- Modify: `src/data/questions/puteriRadicaliLogaritmiSets.ts`
+
+**Interfaces:**
+- Consumes: the file from Tasks 1–9 (must have exactly 90 exercises, Sets 1–9, before this task starts).
+- Produces: the completed 100-exercise file — no further tasks depend on this one.
+
+- [ ] **Step 1: Append Set 10's 10 exercises**
+
+```ts
+  // Set 10 — Recapitulare / aplicații mixte
+  {
+    id: "pl-s10-1",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $9^{\\frac{3}{2}}$.",
+    correctAnswer: "27",
+    explanation: [
+      "Scriem puterea ca radical: $9^{\\frac{3}{2}}=\\left(\\sqrt{9}\\right)^3$.",
+      "Calculăm $\\sqrt{9}=3$, deci $3^3=27$.",
+    ],
+  },
+  {
+    id: "pl-s10-2",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Simplificați $\\dfrac{a^{10}}{a^4}$ (pentru $a\\neq0$) și scrieți exponentul rezultat.",
+    correctAnswer: "6",
+    explanation: [
+      "Aplicăm proprietatea $\\dfrac{a^m}{a^n}=a^{m-n}$.",
+      "Calculăm exponentul: $10-4=6$.",
+    ],
+  },
+  {
+    id: "pl-s10-3",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "mcq",
+    points: 6,
+    prompt: "Funcția $f(x)=\\left(\\dfrac{2}{5}\\right)^x$ este:",
+    options: ["strict descrescătoare", "strict crescătoare", "constantă", "nu se poate preciza"],
+    correctAnswer: "strict descrescătoare",
+    explanation: [
+      "Cum baza $0<\\dfrac{2}{5}<1$, funcția este strict descrescătoare.",
+    ],
+  },
+  {
+    id: "pl-s10-4",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\sqrt{7}\\cdot\\sqrt{63}$.",
+    correctAnswer: "21",
+    explanation: [
+      "Folosim $\\sqrt{a}\\cdot\\sqrt{b}=\\sqrt{ab}$: $\\sqrt{7}\\cdot\\sqrt{63}=\\sqrt{441}$.",
+      "Calculăm $\\sqrt{441}=21$.",
+    ],
+  },
+  {
+    id: "pl-s10-5",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "mcq",
+    points: 6,
+    prompt: "Raționalizând numitorul, fracția $\\dfrac{8}{\\sqrt{2}}$ devine:",
+    options: ["$4\\sqrt{2}$", "$2\\sqrt{2}$", "$8\\sqrt{2}$", "$\\sqrt{2}$"],
+    correctAnswer: "$4\\sqrt{2}$",
+    explanation: [
+      "$\\dfrac{8}{\\sqrt{2}}=\\dfrac{8\\sqrt{2}}{2}=4\\sqrt{2}$.",
+    ],
+  },
+  {
+    id: "pl-s10-6",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 16$.",
+    correctAnswer: "4",
+    explanation: [
+      "Căutăm $x$ astfel încât $2^x=16$.",
+      "Observăm că $2^4=16$, deci $\\log_2 16=4$.",
+    ],
+  },
+  {
+    id: "pl-s10-7",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $\\log_2 4+\\log_2 8$.",
+    correctAnswer: "5",
+    explanation: [
+      "Aplicăm $\\log_a x+\\log_a y=\\log_a(xy)$: $\\log_2 4+\\log_2 8=\\log_2 32$.",
+      "Calculăm $\\log_2 32=5$.",
+    ],
+  },
+  {
+    id: "pl-s10-8",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Rezolvați ecuația $\\log_5 x=2$ și determinați $x$.",
+    correctAnswer: "25",
+    explanation: [
+      "Din definiția logaritmului: $x=5^2$.",
+      "Calculăm $x=25$.",
+    ],
+  },
+  {
+    id: "pl-s10-9",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "input",
+    points: 6,
+    prompt: "Calculați media geometrică a numerelor $4$ și $16$.",
+    correctAnswer: "8",
+    explanation: [
+      "Media geometrică este $\\sqrt{4\\cdot16}=\\sqrt{64}$.",
+      "Rezultă media geometrică $=8$.",
+    ],
+  },
+  {
+    id: "pl-s10-10",
+    topic: "puteri-radicali-logaritmi",
+    set: 10,
+    type: "mcq",
+    points: 6,
+    prompt: "Media armonică a numerelor $8$ și $24$ este:",
+    options: ["$12$", "$16$", "$192$", "$8$"],
+    correctAnswer: "$12$",
+    explanation: [
+      "Media armonică este $\\dfrac{2\\cdot8\\cdot24}{8+24}=\\dfrac{384}{32}=12$.",
+    ],
+  },
+];
+```
+
+- [ ] **Step 2: Run the two encoding-safety checks.**
+- [ ] **Step 3: Run data integrity test** — expect PASS.
+- [ ] **Step 4: Verify LaTeX escaping at the runtime-string level** for at least 3 exercises.
+- [ ] **Step 5: Verify no stray BOM.**
+- [ ] **Step 6: Verify the file has exactly 100 exercises across 10 sets**
+
+Run: `grep -c 'id: "pl-s' src/data/questions/puteriRadicaliLogaritmiSets.ts` — expected output: `100`. Also verify each of the 10 sets has exactly 10 exercises (`id: "pl-sN-` prefix count for each N=1..10).
+
+- [ ] **Step 7: Run typecheck and build**
+
+Run: `npm run typecheck` — expect exit 0.
+Run: `npm run build` — expect exit 0.
+
+- [ ] **Step 8: Run the full test suite**
+
+Run: `npm test` — expect all test files pass.
+
+- [ ] **Step 9: Commit**
+
+```bash
+git add src/data/questions/puteriRadicaliLogaritmiSets.ts
+git commit -m "Add practice Set 10 (Recapitulare) — completes Puteri, radicali si logaritmi practice bank"
+```
