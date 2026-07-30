@@ -14,6 +14,7 @@ import { functiaGradul2SetExercises } from "./questions/functiaGradul2Sets";
 import { siruriExercises } from "./questions/siruri";
 import { siruriSetExercises } from "./questions/siruriSets";
 import { puteriRadicaliLogaritmiExercises } from "./questions/puteriRadicaliLogaritmi";
+import { puteriRadicaliLogaritmiSetExercises } from "./questions/puteriRadicaliLogaritmiSets";
 import { functiiExponentialeLogaritmiceExercises } from "./questions/functiiExponentialeLogaritmice";
 import { matematiciFinanciareExercises } from "./questions/matematiciFinanciare";
 import { statisticaExercises } from "./questions/statistica";
@@ -108,6 +109,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...siruriExercises,
   ...siruriSetExercises,
   ...puteriRadicaliLogaritmiExercises,
+  ...puteriRadicaliLogaritmiSetExercises,
   ...functiiExponentialeLogaritmiceExercises,
   ...matematiciFinanciareExercises,
   ...statisticaExercises,
