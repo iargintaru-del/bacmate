@@ -1223,11 +1223,11 @@ export const puteriRadicaliLogaritmiSetExercises: Exercise[] = [
     set: 10,
     type: "input",
     points: 6,
-    prompt: "Calculați $9^{\\frac{3}{2}}$.",
-    correctAnswer: "27",
+    prompt: "Calculați $64^{\\frac{2}{3}}$.",
+    correctAnswer: "16",
     explanation: [
-      "Scriem puterea ca radical: $9^{\\frac{3}{2}}=\\left(\\sqrt{9}\\right)^3$.",
-      "Calculăm $\\sqrt{9}=3$, deci $3^3=27$.",
+      "Scriem puterea ca radical: $64^{\\frac{2}{3}}=\\left(\\sqrt[3]{64}\\right)^2$.",
+      "Calculăm $\\sqrt[3]{64}=4$, deci $4^2=16$.",
     ],
   },
   {
