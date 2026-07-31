@@ -344,13 +344,13 @@ export const matematiciFinanciareSetExercises: Exercise[] = [
     set: 3,
     type: "input",
     points: 6,
-    prompt: "Un preț a crescut cu $10\\%$ și a ajuns la $220$ lei. Determinați prețul inițial (în lei).",
-    correctAnswer: "200",
-    acceptedAnswers: ["200 lei"],
+    prompt: "Un preț a crescut cu $15\\%$ și a ajuns la $299$ lei. Determinați prețul inițial (în lei).",
+    correctAnswer: "260",
+    acceptedAnswers: ["260 lei"],
     explanation: [
       "Din formula $V=V_0\\left(1+\\dfrac{p}{100}\\right)$ obținem $V_0=\\dfrac{V}{1+\\frac{p}{100}}$.",
-      "Înlocuim: $V_0=\\dfrac{220}{1{,}1}$.",
-      "Calculăm: $V_0=200$ lei.",
+      "Înlocuim: $V_0=\\dfrac{299}{1{,}15}$.",
+      "Calculăm: $V_0=260$ lei.",
     ],
   },
   {
