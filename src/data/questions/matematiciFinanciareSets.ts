@@ -674,12 +674,12 @@ export const matematiciFinanciareSetExercises: Exercise[] = [
     set: 5,
     type: "input",
     points: 6,
-    prompt: "Suma finală obținută printr-o dobândă simplă de $450$ lei aplicată unui capital de $3000$ lei este (în lei):",
-    correctAnswer: "3450",
-    acceptedAnswers: ["3450 lei"],
+    prompt: "Suma finală obținută printr-o dobândă simplă de $375$ lei aplicată unui capital de $2500$ lei este (în lei):",
+    correctAnswer: "2875",
+    acceptedAnswers: ["2875 lei"],
     explanation: [
       "Suma finală este capitalul plus dobânda: $S=C+D$.",
-      "Înlocuim: $S=3000+450=3450$ lei.",
+      "Înlocuim: $S=2500+375=2875$ lei.",
     ],
   },
   {
