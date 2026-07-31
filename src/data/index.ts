@@ -18,6 +18,7 @@ import { puteriRadicaliLogaritmiSetExercises } from "./questions/puteriRadicaliL
 import { functiiExponentialeLogaritmiceExercises } from "./questions/functiiExponentialeLogaritmice";
 import { functiiExponentialeLogaritmiceSetExercises } from "./questions/functiiExponentialeLogaritmiceSets";
 import { matematiciFinanciareExercises } from "./questions/matematiciFinanciare";
+import { matematiciFinanciareSetExercises } from "./questions/matematiciFinanciareSets";
 import { statisticaExercises } from "./questions/statistica";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
@@ -114,6 +115,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...functiiExponentialeLogaritmiceExercises,
   ...functiiExponentialeLogaritmiceSetExercises,
   ...matematiciFinanciareExercises,
+  ...matematiciFinanciareSetExercises,
   ...statisticaExercises,
 ];
 
