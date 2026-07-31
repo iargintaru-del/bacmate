@@ -1,0 +1,131 @@
+import type { Exercise } from "../../types";
+
+export const functiiExponentialeLogaritmiceSetExercises: Exercise[] = [
+  // Set 1 — Funcția putere și funcția radical
+  {
+    id: "fe-s1-1",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(3)$ pentru $f(x)=x^4$.",
+    correctAnswer: "81",
+    explanation: [
+      "Înlocuim $x=3$ în $f(x)=x^4$: $f(3)=3^4=81$.",
+    ],
+  },
+  {
+    id: "fe-s1-2",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(-2)$ pentru $f(x)=x^3$.",
+    correctAnswer: "-8",
+    explanation: [
+      "Înlocuim $x=-2$ în $f(x)=x^3$: $f(-2)=(-2)^3=-8$.",
+    ],
+  },
+  {
+    id: "fe-s1-3",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(16)$ pentru $f(x)=\\sqrt[4]{x}$.",
+    correctAnswer: "2",
+    explanation: [
+      "Căutăm numărul care ridicat la puterea $4$ dă $16$.",
+      "Cum $2^4=16$, rezultă $f(16)=2$.",
+    ],
+  },
+  {
+    id: "fe-s1-4",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(-27)$ pentru $f(x)=\\sqrt[3]{x}$.",
+    correctAnswer: "-3",
+    explanation: [
+      "Căutăm numărul care ridicat la puterea $3$ dă $-27$.",
+      "Cum $(-3)^3=-27$, rezultă $f(-27)=-3$.",
+    ],
+  },
+  {
+    id: "fe-s1-5",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "mcq",
+    points: 6,
+    prompt: "Domeniul funcției $f(x)=\\sqrt[4]{x}$ este:",
+    options: ["$[0,+\\infty)$", "$\\mathbb{R}$", "$(0,+\\infty)$", "$(-\\infty,0]$"],
+    correctAnswer: "$[0,+\\infty)$",
+    explanation: [
+      "Cum $4$ este par, domeniul funcției radical de ordin $4$ este $[0,+\\infty)$.",
+    ],
+  },
+  {
+    id: "fe-s1-6",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "mcq",
+    points: 6,
+    prompt: "Domeniul funcției $f(x)=\\sqrt[5]{x}$ este:",
+    options: ["$\\mathbb{R}$", "$[0,+\\infty)$", "$(0,+\\infty)$", "$\\{0\\}$"],
+    correctAnswer: "$\\mathbb{R}$",
+    explanation: [
+      "Cum $5$ este impar, domeniul funcției radical de ordin $5$ este $\\mathbb{R}$.",
+    ],
+  },
+  {
+    id: "fe-s1-7",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(5)$ pentru $f(x)=x^2$.",
+    correctAnswer: "25",
+    explanation: [
+      "Înlocuim $x=5$ în $f(x)=x^2$: $f(5)=5^2=25$.",
+    ],
+  },
+  {
+    id: "fe-s1-8",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(64)$ pentru $f(x)=\\sqrt[3]{x}$.",
+    correctAnswer: "4",
+    explanation: [
+      "Căutăm numărul care ridicat la puterea $3$ dă $64$.",
+      "Cum $4^3=64$, rezultă $f(64)=4$.",
+    ],
+  },
+  {
+    id: "fe-s1-9",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "mcq",
+    points: 6,
+    prompt: "Câte soluții reale are ecuația $x^4=16$?",
+    options: ["$2$", "$1$", "$4$", "$0$"],
+    correctAnswer: "$2$",
+    explanation: [
+      "Ecuația $x^4=16$ are soluțiile $x=2$ și $x=-2$, deci $2$ soluții reale.",
+    ],
+  },
+  {
+    id: "fe-s1-10",
+    topic: "functii-exponentiale-logaritmice",
+    set: 1,
+    type: "input",
+    points: 6,
+    prompt: "Calculați $f(-1)$ pentru $f(x)=x^5$.",
+    correctAnswer: "-1",
+    explanation: [
+      "Înlocuim $x=-1$ în $f(x)=x^5$: $f(-1)=(-1)^5=-1$.",
+    ],
+  },
+];
