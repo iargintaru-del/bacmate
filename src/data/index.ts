@@ -20,6 +20,7 @@ import { functiiExponentialeLogaritmiceSetExercises } from "./questions/functiiE
 import { matematiciFinanciareExercises } from "./questions/matematiciFinanciare";
 import { matematiciFinanciareSetExercises } from "./questions/matematiciFinanciareSets";
 import { statisticaExercises } from "./questions/statistica";
+import { statisticaSetExercises } from "./questions/statisticaSets";
 import { combinatoricaExercises } from "./questions/combinatorica";
 import { combinatoricaSetExercises } from "./questions/combinatoricaSets";
 import { matriceExercises } from "./questions/matrice";
@@ -117,6 +118,7 @@ export const ALL_EXERCISES: Exercise[] = [
   ...matematiciFinanciareExercises,
   ...matematiciFinanciareSetExercises,
   ...statisticaExercises,
+  ...statisticaSetExercises,
 ];
 
 export const ALL_PROBLEMS: Problem[] = [
