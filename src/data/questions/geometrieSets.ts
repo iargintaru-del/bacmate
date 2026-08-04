@@ -332,6 +332,7 @@ export const geometrieSetExercises: Exercise[] = [
     points: 6,
     prompt: "O dreaptă are panta $m=4$. Determinați panta unei drepte perpendiculare pe aceasta.",
     correctAnswer: "-1/4",
+    acceptedAnswers: ["-0.25", "-0,25"],
     explanation: [
       "Pentru două drepte perpendiculare, produsul pantelor este $-1$: $m\\cdot m'=-1$.",
       "Rezultă $m'=-\\dfrac{1}{m}=-\\dfrac{1}{4}$.",
@@ -373,6 +374,7 @@ export const geometrieSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați $m$ pentru care dreptele $y=mx+5$ și $y=-3x+1$ sunt perpendiculare.",
     correctAnswer: "1/3",
+    acceptedAnswers: ["0.33", "0,33"],
     explanation: [
       "Condiția de perpendicularitate este $m\\cdot(-3)=-1$.",
       "Rezultă $m=\\dfrac{-1}{-3}=\\dfrac{1}{3}$.",
@@ -743,6 +745,7 @@ export const geometrieSetExercises: Exercise[] = [
     prompt:
       "Într-un triunghi dreptunghic $ABC$, cu unghiul drept în $A$, $AB=3$, $AC=4$ și $BC=5$. Calculați $\\sin B$.",
     correctAnswer: "4/5",
+    acceptedAnswers: ["0.8", "0,8"],
     explanation: [
       "$\\sin B=\\dfrac{\\text{cateta opusă lui }B}{\\text{ipotenuză}}=\\dfrac{AC}{BC}$.",
       "Înlocuim: $\\sin B=\\dfrac{4}{5}$.",
@@ -757,6 +760,7 @@ export const geometrieSetExercises: Exercise[] = [
     prompt:
       "Într-un triunghi dreptunghic $ABC$, cu unghiul drept în $A$, $AB=3$, $AC=4$ și $BC=5$. Calculați $\\cos B$.",
     correctAnswer: "3/5",
+    acceptedAnswers: ["0.6", "0,6"],
     explanation: [
       "$\\cos B=\\dfrac{\\text{cateta alăturată lui }B}{\\text{ipotenuză}}=\\dfrac{AB}{BC}$.",
       "Înlocuim: $\\cos B=\\dfrac{3}{5}$.",
@@ -786,6 +790,7 @@ export const geometrieSetExercises: Exercise[] = [
     prompt:
       "Într-un triunghi dreptunghic $ABC$, cu unghiul drept în $A$, $AB=5$, $AC=12$ și $BC=13$. Calculați $\\sin C$.",
     correctAnswer: "5/13",
+    acceptedAnswers: ["0.38", "0,38"],
     explanation: [
       "$\\sin C=\\dfrac{\\text{cateta opusă lui }C}{\\text{ipotenuză}}=\\dfrac{AB}{BC}$.",
       "Înlocuim: $\\sin C=\\dfrac{5}{13}$.",
@@ -815,6 +820,7 @@ export const geometrieSetExercises: Exercise[] = [
     prompt:
       "Într-un triunghi dreptunghic $ABC$, cu unghiul drept în $A$, $AB=8$, $AC=15$ și $BC=17$. Calculați $\\tan B$.",
     correctAnswer: "15/8",
+    acceptedAnswers: ["1.875", "1,875"],
     explanation: [
       "$\\tan B=\\dfrac{\\text{cateta opusă lui }B}{\\text{cateta alăturată lui }B}=\\dfrac{AC}{AB}$.",
       "Înlocuim: $\\tan B=\\dfrac{15}{8}$.",
@@ -1118,6 +1124,7 @@ export const geometrieSetExercises: Exercise[] = [
     points: 6,
     prompt: "Într-un triunghi $ABC$ se cunosc $BC=a=7$, $AB=c=8$ și $AC=b=5$. Calculați $\\cos A$.",
     correctAnswer: "1/2",
+    acceptedAnswers: ["0.5", "0,5"],
     explanation: [
       "Aplicăm teorema cosinusului sub forma $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$.",
       "Înlocuim: $\\cos A=\\dfrac{25+64-49}{2\\cdot5\\cdot8}=\\dfrac{40}{80}$.",
@@ -1147,6 +1154,7 @@ export const geometrieSetExercises: Exercise[] = [
     points: 6,
     prompt: "Într-un triunghi $ABC$ se cunosc $BC=a=13$, $AC=b=7$ și $AB=c=8$. Calculați $\\cos A$.",
     correctAnswer: "-1/2",
+    acceptedAnswers: ["-0.5", "-0,5"],
     explanation: [
       "Aplicăm teorema cosinusului sub forma $\\cos A=\\dfrac{b^2+c^2-a^2}{2bc}$.",
       "Înlocuim: $\\cos A=\\dfrac{49+64-169}{2\\cdot7\\cdot8}=\\dfrac{-56}{112}$.",

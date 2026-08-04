@@ -1631,6 +1631,7 @@ export const combinatoricaSetExercises: Exercise[] = [
     points: 6,
     prompt: "Se aruncă două zaruri. Determinați probabilitatea ca ambele zaruri să arate fața cu numărul $6$.",
     correctAnswer: "1/36",
+    acceptedAnswers: ["0.03", "0,03"],
     explanation: [
       "Cele două aruncări sunt evenimente independente.",
       "Probabilitatea ca un zar să arate $6$ este $\\dfrac16$ pentru fiecare zar.",
