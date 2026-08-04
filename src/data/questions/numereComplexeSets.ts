@@ -957,7 +957,8 @@ export const numereComplexeSetExercises: Exercise[] = [
     set: 7,
     type: "mcq",
     points: 6,
-    prompt: "Pentru $z_1,z_2$ de mai sus, determinați un argument al lui $z_1z_2$.",
+    prompt:
+      "Dacă $z_1=2(\\cos(\\pi/6)+i\\sin(\\pi/6))$ și $z_2=3(\\cos(\\pi/3)+i\\sin(\\pi/3))$, determinați un argument al lui $z_1z_2$.",
     options: ["$\\pi/2$", "$\\pi/3$", "$\\pi/6$", "$2\\pi/3$"],
     correctAnswer: "$\\pi/2$",
     explanation: [
@@ -1320,7 +1321,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Pentru punctele de mai sus, calculați $|BC|$.",
+    prompt: "Se dau $A(1,1)$, $B(4,1)$, $C(4,5)$. Calculați $|BC|$.",
     correctAnswer: "4",
     explanation: [
       "Segmentul $BC$ este vertical, deoarece $B$ și $C$ au aceeași abscisă.",
@@ -1334,10 +1335,10 @@ export const numereComplexeSetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Pentru punctele de mai sus, calculați $|AC|$.",
+    prompt: "Se dau $A(1,1)$, $B(4,1)$, $C(4,5)$. Calculați $|AC|$.",
     correctAnswer: "5",
     explanation: [
-      "Din pașii anteriori, $|AB|=3$ și $|BC|=4$, iar $AB\\perp BC$ (unul orizontal, celălalt vertical), deci triunghiul $ABC$ este dreptunghic în $B$.",
+      "Calculăm $|AB|=|4-1|=3$ (segment orizontal) și $|BC|=|5-1|=4$ (segment vertical), deci $AB\\perp BC$ și triunghiul $ABC$ este dreptunghic în $B$.",
       "Aplicăm teorema lui Pitagora: $|AC|=\\sqrt{|AB|^2+|BC|^2}=\\sqrt{3^2+4^2}$.",
       "Rezultă $|AC|=\\sqrt{25}=5$.",
     ],
@@ -1348,7 +1349,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     set: 9,
     type: "input",
     points: 6,
-    prompt: "Calculați aria triunghiului $ABC$ de mai sus.",
+    prompt: "Se dau $A(1,1)$, $B(4,1)$, $C(4,5)$. Calculați aria triunghiului $ABC$.",
     correctAnswer: "6",
     explanation: [
       "Triunghiul $ABC$ este dreptunghic în $B$, cu catetele $|AB|=3$ și $|BC|=4$.",

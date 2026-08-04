@@ -809,7 +809,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Legea definită prin tabla de la exercițiul anterior (pe $M=\\{1,2,3,4\\}$) este comutativă deoarece:",
+    prompt:
+      "Legea definită pe $M=\\{1,2,3,4\\}$ prin tabla $$\\begin{array}{c|cccc} \\circ & 1 & 2 & 3 & 4 \\\\ \\hline 1 & 1 & 2 & 3 & 4 \\\\ 2 & 2 & 4 & 1 & 3 \\\\ 3 & 3 & 1 & 4 & 2 \\\\ 4 & 4 & 3 & 2 & 1 \\end{array}$$ este comutativă deoarece:",
     options: [
       "tabla este simetrică față de diagonala principală",
       "toate elementele de pe diagonala principală sunt egale între ele",
@@ -829,7 +830,7 @@ export const legiCompozitieSetExercises: Exercise[] = [
     type: "input",
     points: 6,
     prompt:
-      "Folosind tabla legii de la primul exercițiu din acest set (pe $M=\\{1,2,3,4\\}$), determinați elementul neutru $e$ al legii.",
+      "Pe mulțimea $M=\\{1,2,3,4\\}$, legea $\\circ$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 1 & 2 & 3 & 4 \\\\ \\hline 1 & 1 & 2 & 3 & 4 \\\\ 2 & 2 & 4 & 1 & 3 \\\\ 3 & 3 & 1 & 4 & 2 \\\\ 4 & 4 & 3 & 2 & 1 \\end{array}$$ Determinați elementul neutru $e$ al legii.",
     correctAnswer: "1",
     explanation: [
       "Elementul neutru $e$ este acel element pentru care linia lui $e$ din tablă reproduce exact linia de antet: $1,2,3,4$.",
@@ -842,7 +843,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "input",
     points: 6,
-    prompt: "Folosind aceeași tablă (element neutru $e=1$), determinați simetricul elementului $2$.",
+    prompt:
+      "Pe mulțimea $M=\\{1,2,3,4\\}$, legea $\\circ$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 1 & 2 & 3 & 4 \\\\ \\hline 1 & 1 & 2 & 3 & 4 \\\\ 2 & 2 & 4 & 1 & 3 \\\\ 3 & 3 & 1 & 4 & 2 \\\\ 4 & 4 & 3 & 2 & 1 \\end{array}$$ (element neutru $e=1$). Determinați simetricul elementului $2$.",
     correctAnswer: "3",
     explanation: [
       "Simetricul lui $2$ este elementul $y$ pentru care $2\\circ y=1$.",
@@ -856,7 +858,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Din aceeași tablă, simetricul elementului $4$ (față de $e=1$) este:",
+    prompt:
+      "Pe mulțimea $M=\\{1,2,3,4\\}$, legea $\\circ$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 1 & 2 & 3 & 4 \\\\ \\hline 1 & 1 & 2 & 3 & 4 \\\\ 2 & 2 & 4 & 1 & 3 \\\\ 3 & 3 & 1 & 4 & 2 \\\\ 4 & 4 & 3 & 2 & 1 \\end{array}$$ Simetricul elementului $4$ (față de $e=1$) este:",
     options: ["$4$", "$1$", "$2$", "$3$"],
     correctAnswer: "$4$",
     explanation: [
@@ -871,7 +874,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "input",
     points: 6,
-    prompt: "Folosind aceeași tablă, verificați asociativitatea calculând $(2\\circ3)\\circ4$ și $2\\circ(3\\circ4)$.",
+    prompt:
+      "Pe mulțimea $M=\\{1,2,3,4\\}$, legea $\\circ$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 1 & 2 & 3 & 4 \\\\ \\hline 1 & 1 & 2 & 3 & 4 \\\\ 2 & 2 & 4 & 1 & 3 \\\\ 3 & 3 & 1 & 4 & 2 \\\\ 4 & 4 & 3 & 2 & 1 \\end{array}$$ Verificați asociativitatea calculând $(2\\circ3)\\circ4$ și $2\\circ(3\\circ4)$.",
     correctAnswer: "4",
     explanation: [
       "Din tablă: $2\\circ3=1$, apoi $1\\circ4=4$, deci $(2\\circ3)\\circ4=4$.",
@@ -900,7 +904,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Din tabla legii de la exercițiul anterior (pe $M=\\{0,1,2,3\\}$), elementul neutru al legii este:",
+    prompt:
+      "Legea $\\circ$ pe $M=\\{0,1,2,3\\}$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 0 & 1 & 2 & 3 \\\\ \\hline 0 & 0 & 1 & 2 & 3 \\\\ 1 & 1 & 2 & 3 & 0 \\\\ 2 & 2 & 3 & 0 & 1 \\\\ 3 & 3 & 0 & 1 & 2 \\end{array}$$ Elementul neutru al legii este:",
     options: ["$0$", "$1$", "$2$", "$3$"],
     correctAnswer: "$0$",
     explanation: [
@@ -914,7 +919,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "input",
     points: 6,
-    prompt: "Folosind aceeași tablă (element neutru $e=0$), determinați simetricul elementului $1$.",
+    prompt:
+      "Legea $\\circ$ pe $M=\\{0,1,2,3\\}$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 0 & 1 & 2 & 3 \\\\ \\hline 0 & 0 & 1 & 2 & 3 \\\\ 1 & 1 & 2 & 3 & 0 \\\\ 2 & 2 & 3 & 0 & 1 \\\\ 3 & 3 & 0 & 1 & 2 \\end{array}$$ (element neutru $e=0$). Determinați simetricul elementului $1$.",
     correctAnswer: "3",
     explanation: [
       "Simetricul lui $1$ este $y$ cu $1\\circ y=0$.",
@@ -928,7 +934,8 @@ export const legiCompozitieSetExercises: Exercise[] = [
     set: 6,
     type: "input",
     points: 6,
-    prompt: "Folosind aceeași tablă, calculați $(1\\circ2)\\circ3$ și $1\\circ(2\\circ3)$, pentru a verifica asociativitatea.",
+    prompt:
+      "Legea $\\circ$ pe $M=\\{0,1,2,3\\}$ este definită prin tabla $$\\begin{array}{c|cccc} \\circ & 0 & 1 & 2 & 3 \\\\ \\hline 0 & 0 & 1 & 2 & 3 \\\\ 1 & 1 & 2 & 3 & 0 \\\\ 2 & 2 & 3 & 0 & 1 \\\\ 3 & 3 & 0 & 1 & 2 \\end{array}$$ Calculați $(1\\circ2)\\circ3$ și $1\\circ(2\\circ3)$, pentru a verifica asociativitatea.",
     correctAnswer: "2",
     explanation: [
       "Din tablă: $1\\circ2=3$, apoi $3\\circ3=2$ (deoarece $3+3=6$, rest $2$ la împărțirea cu $4$), deci $(1\\circ2)\\circ3=2$.",
@@ -1506,7 +1513,7 @@ export const legiCompozitieSetExercises: Exercise[] = [
     type: "mcq",
     points: 6,
     prompt:
-      "Pentru legea de la exercițiul anterior (pe $M=\\{1,2,3,4\\}$, $x\\circ y=$ restul lui $xy$ la $5$), elementul neutru este:",
+      "Pentru legea $x\\circ y=$ restul lui $xy$ la $5$ (pe $M=\\{1,2,3,4\\}$), elementul neutru este:",
     options: ["$1$", "$2$", "$3$", "$4$"],
     correctAnswer: "$1$",
     explanation: [

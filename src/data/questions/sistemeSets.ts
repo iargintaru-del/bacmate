@@ -475,7 +475,8 @@ export const sistemeSetExercises: Exercise[] = [
     set: 4,
     type: "mcq",
     points: 6,
-    prompt: "Pentru același sistem, calculați $\\Delta_x=\\det\\begin{pmatrix} 5 & 1 \\\\ 1 & -1 \\end{pmatrix}$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} 2x + y = 5 \\\\ x - y = 1 \\end{cases}$$, calculați $\\Delta_x=\\det\\begin{pmatrix} 5 & 1 \\\\ 1 & -1 \\end{pmatrix}$.",
     options: ["$-6$", "$6$", "$-4$", "$4$"],
     correctAnswer: "$-6$",
     explanation: [
@@ -520,7 +521,8 @@ export const sistemeSetExercises: Exercise[] = [
     set: 4,
     type: "input",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, calculați $\\Delta_y=\\det\\begin{pmatrix} 3 & 7 \\\\ 1 & -1 \\end{pmatrix}$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} 3x + 2y = 7 \\\\ x - y = -1 \\end{cases}$$, calculați $\\Delta_y=\\det\\begin{pmatrix} 3 & 7 \\\\ 1 & -1 \\end{pmatrix}$.",
     correctAnswer: "-10",
     explanation: [
       "Formăm $\\Delta_y$ înlocuind coloana lui $y$ cu termenii liberi: $\\Delta_y=\\begin{vmatrix}3&7\\\\1&-1\\end{vmatrix}$.",
@@ -564,7 +566,8 @@ export const sistemeSetExercises: Exercise[] = [
     set: 4,
     type: "mcq",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, calculați $\\Delta_x=\\det\\begin{pmatrix} 6 & 4 \\\\ 3 & -1 \\end{pmatrix}$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + 4y = 6 \\\\ 2x - y = 3 \\end{cases}$$, calculați $\\Delta_x=\\det\\begin{pmatrix} 6 & 4 \\\\ 3 & -1 \\end{pmatrix}$.",
     options: ["$-18$", "$18$", "$-6$", "$6$"],
     correctAnswer: "$-18$",
     explanation: [
@@ -674,7 +677,7 @@ export const sistemeSetExercises: Exercise[] = [
       "Determinați valoarea lui $m$ pentru care sistemul $$\\begin{cases} 2x + my = 4 \\\\ x + y = 3 \\end{cases}$$ nu are soluție unică.",
     correctAnswer: "2",
     explanation: [
-      "Din exercițiul anterior, determinantul sistemului este $\\Delta=2-m$.",
+      "Determinantul sistemului este $\\Delta=\\det\\begin{pmatrix}2&m\\\\1&1\\end{pmatrix}=2\\cdot1-m\\cdot1=2-m$.",
       "Sistemul nu are soluție unică atunci când $\\Delta=0$.",
       "Rezolvăm $2-m=0 \\Rightarrow m=2$.",
     ],
@@ -778,13 +781,14 @@ export const sistemeSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, determinați $z$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y = 0 \\\\ y + z = 4 \\end{cases}$$, determinați $z$.",
     options: ["$2$", "$4$", "$0$", "$6$"],
     correctAnswer: "$2$",
     explanation: [
-      "Din exercițiul anterior avem $y=2$.",
-      "Din a treia ecuație: $z=4-y$.",
-      "Calculăm: $z=4-2=2$.",
+      "Din a doua ecuație obținem $x=y$, iar din a treia $z=4-y$.",
+      "Înlocuim în prima ecuație: $y+y+(4-y)=6 \\Rightarrow y+4=6 \\Rightarrow y=2$.",
+      "Calculăm: $z=4-y=4-2=2$.",
     ],
   },
   {
@@ -823,10 +827,11 @@ export const sistemeSetExercises: Exercise[] = [
     set: 6,
     type: "input",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, determinați $y$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + y = 5 \\\\ y + z = 7 \\\\ x + z = 6 \\end{cases}$$, determinați $y$.",
     correctAnswer: "3",
     explanation: [
-      "Din exercițiul anterior avem $x+y+z=9$.",
+      "Adunăm toate cele trei ecuații: $(x+y)+(y+z)+(x+z)=5+7+6 \\Rightarrow 2(x+y+z)=18 \\Rightarrow x+y+z=9$.",
       "Scădem a treia ecuație ($x+z=6$) din acest rezultat: $y=9-6$.",
       "Calculăm: $y=3$.",
     ],
@@ -837,11 +842,12 @@ export const sistemeSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, determinați $z$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + y = 5 \\\\ y + z = 7 \\\\ x + z = 6 \\end{cases}$$, determinați $z$.",
     options: ["$4$", "$3$", "$2$", "$5$"],
     correctAnswer: "$4$",
     explanation: [
-      "Din exercițiile anterioare avem $x+y+z=9$.",
+      "Adunăm toate cele trei ecuații: $(x+y)+(y+z)+(x+z)=5+7+6 \\Rightarrow 2(x+y+z)=18 \\Rightarrow x+y+z=9$.",
       "Scădem prima ecuație ($x+y=5$) din acest rezultat: $z=9-5$.",
       "Calculăm: $z=4$.",
     ],
@@ -882,12 +888,13 @@ export const sistemeSetExercises: Exercise[] = [
     set: 6,
     type: "input",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, determinați $z$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + 2y + z = 10 \\\\ x = 2 \\\\ z = 2y \\end{cases}$$, determinați $z$.",
     correctAnswer: "4",
     explanation: [
-      "Din exercițiul anterior avem $y=2$.",
-      "Folosim relația $z=2y$.",
-      "Calculăm: $z=2\\cdot2=4$.",
+      "Înlocuim $x=2$ și $z=2y$ în prima ecuație: $2+2y+2y=10$.",
+      "Simplificăm: $4y+2=10 \\Rightarrow 4y=8 \\Rightarrow y=2$.",
+      "Folosim relația $z=2y=2\\cdot2=4$.",
     ],
   },
   {
@@ -929,7 +936,7 @@ export const sistemeSetExercises: Exercise[] = [
     type: "mcq",
     points: 6,
     prompt:
-      "Pentru sistemul de mai sus, calculați $\\Delta_x=\\det\\begin{pmatrix} 6 & 1 & 1 \\\\ 2 & -1 & 1 \\\\ 0 & 1 & -1 \\end{pmatrix}$.",
+      "Pentru sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y + z = 2 \\\\ x + y - z = 0 \\end{cases}$$, calculați $\\Delta_x=\\det\\begin{pmatrix} 6 & 1 & 1 \\\\ 2 & -1 & 1 \\\\ 0 & 1 & -1 \\end{pmatrix}$.",
     options: ["$4$", "$8$", "$2$", "$-4$"],
     correctAnswer: "$4$",
     explanation: [
@@ -958,7 +965,8 @@ export const sistemeSetExercises: Exercise[] = [
     set: 7,
     type: "mcq",
     points: 6,
-    prompt: "Pentru sistem, calculați $\\Delta_y=\\det\\begin{pmatrix} 1 & 6 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 0 & -1 \\end{pmatrix}$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y + z = 2 \\\\ x + y - z = 0 \\end{cases}$$, calculați $\\Delta_y=\\det\\begin{pmatrix} 1 & 6 & 1 \\\\ 1 & 2 & 1 \\\\ 1 & 0 & -1 \\end{pmatrix}$.",
     options: ["$8$", "$4$", "$12$", "$-8$"],
     correctAnswer: "$8$",
     explanation: [
@@ -987,7 +995,8 @@ export const sistemeSetExercises: Exercise[] = [
     set: 7,
     type: "mcq",
     points: 6,
-    prompt: "Pentru sistem, calculați $\\Delta_z=\\det\\begin{pmatrix} 1 & 1 & 6 \\\\ 1 & -1 & 2 \\\\ 1 & 1 & 0 \\end{pmatrix}$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y + z = 2 \\\\ x + y - z = 0 \\end{cases}$$, calculați $\\Delta_z=\\det\\begin{pmatrix} 1 & 1 & 6 \\\\ 1 & -1 & 2 \\\\ 1 & 1 & 0 \\end{pmatrix}$.",
     options: ["$12$", "$8$", "$4$", "$-12$"],
     correctAnswer: "$12$",
     explanation: [
@@ -1051,12 +1060,13 @@ export const sistemeSetExercises: Exercise[] = [
     set: 7,
     type: "input",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, calculați suma $x+y+z$.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x + y + z = 6 \\\\ x - y + z = 2 \\\\ x + y - z = 0 \\end{cases}$$, calculați suma $x+y+z$.",
     correctAnswer: "6",
     explanation: [
-      "Din exercițiile anterioare avem $x=1,y=2,z=3$.",
-      "Adunăm cele trei valori: $1+2+3$.",
-      "Calculăm: $x+y+z=6$.",
+      "Prima ecuație a sistemului este chiar $x+y+z=6$.",
+      "Suma cerută este deci egală cu termenul liber al primei ecuații.",
+      "Rezultă $x+y+z=6$.",
     ],
   },
 
@@ -1119,7 +1129,7 @@ export const sistemeSetExercises: Exercise[] = [
     type: "mcq",
     points: 6,
     prompt:
-      "Deoarece determinantul de mai sus este $0$, sistemul $$\\begin{cases} x + y = 0 \\\\ 2x + 2y = 0 \\end{cases}$$ are:",
+      "Deoarece determinantul sistemului $$\\begin{cases} x + y = 0 \\\\ 2x + 2y = 0 \\end{cases}$$ este $0$, acesta are:",
     options: [
       "o infinitate de soluții (de forma $x=-y$)",
       "doar soluția banală",
@@ -1128,7 +1138,7 @@ export const sistemeSetExercises: Exercise[] = [
     ],
     correctAnswer: "o infinitate de soluții (de forma $x=-y$)",
     explanation: [
-      "Determinantul sistemului este $0$ (calculat anterior).",
+      "Determinantul este $\\det\\begin{pmatrix}1&1\\\\2&2\\end{pmatrix}=1\\cdot2-1\\cdot2=0$.",
       "Observăm că a doua ecuație este de $2$ ori prima, deci cele două ecuații sunt echivalente și se reduc la $x=-y$.",
       "Sistemul admite o infinitate de soluții de forma $x=-y$.",
     ],
@@ -1155,7 +1165,7 @@ export const sistemeSetExercises: Exercise[] = [
     type: "mcq",
     points: 6,
     prompt:
-      "Deoarece determinantul de mai sus este nenul, sistemul $$\\begin{cases} x + y = 0 \\\\ x - y = 0 \\end{cases}$$ are:",
+      "Deoarece determinantul sistemului $$\\begin{cases} x + y = 0 \\\\ x - y = 0 \\end{cases}$$ este nenul, acesta are:",
     options: [
       "doar soluția banală $(0,0)$",
       "o infinitate de soluții nebanale",
@@ -1164,7 +1174,7 @@ export const sistemeSetExercises: Exercise[] = [
     ],
     correctAnswer: "doar soluția banală $(0,0)$",
     explanation: [
-      "Determinantul sistemului este $-2\\ne0$ (calculat anterior).",
+      "Determinantul este $\\det\\begin{pmatrix}1&1\\\\1&-1\\end{pmatrix}=1\\cdot(-1)-1\\cdot1=-2\\ne0$.",
       "Un determinant nenul implică soluție unică (regula lui Cramer).",
       "Deoarece $(0,0)$ este întotdeauna soluție a unui sistem omogen, aceasta este singura soluție.",
     ],
@@ -1323,11 +1333,12 @@ export const sistemeSetExercises: Exercise[] = [
     set: 9,
     type: "mcq",
     points: 6,
-    prompt: "Pentru sistemul de mai sus, determinați ordonata $y$ a punctului de intersecție.",
+    prompt:
+      "Pentru sistemul $$\\begin{cases} x - y = 1 \\\\ x + y = 5 \\end{cases}$$ (punctul de intersecție a două drepte), determinați ordonata $y$ a punctului de intersecție.",
     options: ["$2$", "$3$", "$1$", "$4$"],
     correctAnswer: "$2$",
     explanation: [
-      "Din exercițiul anterior avem $x=3$.",
+      "Adunăm cele două ecuații pentru a elimina $y$: $(x-y)+(x+y)=1+5 \\Rightarrow 2x=6 \\Rightarrow x=3$.",
       "Înlocuim în a doua ecuație: $3+y=5$.",
       "Rezolvăm: $y=2$.",
     ],

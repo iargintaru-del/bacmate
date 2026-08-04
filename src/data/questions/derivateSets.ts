@@ -752,7 +752,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, ecuația tangentei la grafic în $x_0=1$ este:",
+    prompt: "Pentru funcția $f(x)=x^2$, ecuația tangentei la grafic în $x_0=1$ este:",
     options: ["$y=2x-1$", "$y=2x+1$", "$y=x-1$", "$y=2x$"],
     correctAnswer: "$y=2x-1$",
     explanation: [
@@ -810,7 +810,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 6,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, ecuația tangentei la grafic în $x_0=0$ este:",
+    prompt: "Pentru funcția $f(x)=x^2-2x$, ecuația tangentei la grafic în $x_0=0$ este:",
     options: ["$y=-2x$", "$y=-2x+2$", "$y=2x$", "$y=-2x-2$"],
     correctAnswer: "$y=-2x$",
     explanation: [
@@ -913,7 +913,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 7,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, pe intervalul $(-\\infty,2)$ funcția este:",
+    prompt: "Pentru funcția $f(x)=x^2-4x+3$, pe intervalul $(-\\infty,2)$ funcția este:",
     options: ["descrescătoare", "crescătoare", "constantă", "nu se poate preciza"],
     correctAnswer: "descrescătoare",
     explanation: [
@@ -942,7 +942,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 7,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, pe intervalul $(3,\\infty)$ funcția este:",
+    prompt: "Pentru funcția $f(x)=-x^2+6x-5$, pe intervalul $(3,\\infty)$ funcția este:",
     options: ["descrescătoare", "crescătoare", "constantă", "nu se poate preciza"],
     correctAnswer: "descrescătoare",
     explanation: [
@@ -1045,7 +1045,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 8,
     type: "input",
     points: 6,
-    prompt: "Pentru funcția de mai sus, calculați valoarea minimă $f(2)$.",
+    prompt: "Pentru funcția $f(x)=x^2-4x+3$, calculați valoarea minimă $f(2)$.",
     correctAnswer: "-1",
     explanation: [
       "Calculăm valoarea funcției în punctul de minim: $f(2) = 2^2 - 4\\cdot2 + 3 = 4 - 8 + 3$.",
@@ -1073,7 +1073,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 8,
     type: "input",
     points: 6,
-    prompt: "Pentru funcția de mai sus, calculați valoarea maximă $f(3)$.",
+    prompt: "Pentru funcția $f(x)=-x^2+6x-5$, calculați valoarea maximă $f(3)$.",
     correctAnswer: "4",
     explanation: [
       "Calculăm valoarea funcției în punctul de maxim: $f(3) = -3^2 + 6\\cdot3 - 5 = -9 + 18 - 5$.",
@@ -1099,7 +1099,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, $x=1$ este punct de:",
+    prompt: "Pentru funcția $f(x)=x^3-3x$, $x=1$ este punct de:",
     options: ["minim local", "maxim local", "inflexiune", "nu este punct de extrem"],
     correctAnswer: "minim local",
     explanation: [
@@ -1127,7 +1127,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, $x=-1$ este punct de:",
+    prompt: "Pentru funcția $f(x)=x^3-3x$, $x=-1$ este punct de:",
     options: ["maxim local", "minim local", "inflexiune", "nu este punct de extrem"],
     correctAnswer: "maxim local",
     explanation: [
@@ -1388,7 +1388,7 @@ export const derivateSetExercises: Exercise[] = [
     set: 10,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, punctul $x=3$ este punct de:",
+    prompt: "Pentru funcția $f(x)=x^2-6x+8$, punctul $x=3$ este punct de:",
     options: ["minim", "maxim", "inflexiune", "nu este extrem"],
     correctAnswer: "minim",
     explanation: [

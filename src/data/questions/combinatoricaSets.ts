@@ -729,7 +729,7 @@ export const combinatoricaSetExercises: Exercise[] = [
     set: 5,
     type: "input",
     points: 6,
-    prompt: "Folosind proprietatea de mai sus, calculați $C_4^0+C_4^1+C_4^2+C_4^3+C_4^4$.",
+    prompt: "Folosind proprietatea $C_n^0+C_n^1+\\cdots+C_n^n=2^n$, calculați $C_4^0+C_4^1+C_4^2+C_4^3+C_4^4$.",
     correctAnswer: "16",
     explanation: [
       "Aplicăm proprietatea $C_n^0+C_n^1+\\cdots+C_n^n=2^n$, cu $n=4$.",

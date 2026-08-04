@@ -499,7 +499,7 @@ export const limiteSetExercises: Exercise[] = [
     ],
     correctAnswer: "limita globală în $x=0$ nu există",
     explanation: [
-      "Limitele laterale calculate anterior sunt $+\\infty$ (la dreapta) și $-\\infty$ (la stânga), deci diferite.",
+      "Limita la dreapta este $+\\infty$, iar limita la stânga este $-\\infty$, deci diferite.",
       "O limită globală într-un punct există doar dacă limitele laterale sunt egale între ele.",
       "Rezultă că limita globală în $x=0$ nu există.",
     ],
@@ -573,7 +573,8 @@ export const limiteSetExercises: Exercise[] = [
     set: 4,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, calculați $\\lim_{x \\to 1, x>1} f(x)$.",
+    prompt:
+      "Fie $f(x)=x+2$ pentru $x\\le1$ și $f(x)=3x$ pentru $x>1$. Calculați $\\lim_{x \\to 1, x>1} f(x)$.",
     options: ["$3$", "$1$", "$4$", "$0$"],
     correctAnswer: "$3$",
     explanation: [
@@ -588,10 +589,11 @@ export const limiteSetExercises: Exercise[] = [
     set: 4,
     type: "input",
     points: 6,
-    prompt: "Deoarece cele două limite laterale de mai sus sunt egale, determinați valoarea limitei globale $\\lim_{x \\to 1} f(x)$.",
+    prompt:
+      "Fie $f(x)=x+2$ pentru $x\\le1$ și $f(x)=3x$ pentru $x>1$. Deoarece limita la stânga și limita la dreapta în $x=1$ sunt ambele egale cu $3$, determinați valoarea limitei globale $\\lim_{x \\to 1} f(x)$.",
     correctAnswer: "3",
     explanation: [
-      "Limitele laterale calculate anterior sunt egale: ambele valorează $3$.",
+      "Limitele laterale sunt egale: ambele valorează $3$.",
       "Deoarece limitele laterale există și coincid, limita globală există și este egală cu această valoare comună.",
       "Rezultă limita globală $3$.",
     ],
@@ -1119,7 +1121,7 @@ export const limiteSetExercises: Exercise[] = [
     set: 8,
     type: "input",
     points: 6,
-    prompt: "Pentru funcția de mai sus, calculați $\\lim_{x \\to 2, x>2} f(x)$.",
+    prompt: "Fie $f(x)=x+1$ pentru $x\\le2$ și $f(x)=3$ pentru $x>2$. Calculați $\\lim_{x \\to 2, x>2} f(x)$.",
     correctAnswer: "3",
     explanation: [
       "Analizăm limita la dreapta: folosim ramura $f(x)=3$ valabilă pentru $x>2$.",
@@ -1133,11 +1135,12 @@ export const limiteSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Deoarece cele două limite laterale de mai sus coincid (ambele $3$) și $f(2)=2+1=3$, funcția $f$ este:",
+    prompt:
+      "Fie $f(x)=x+1$ pentru $x\\le2$ și $f(x)=3$ pentru $x>2$. Deoarece limita la stânga și limita la dreapta în $x=2$ coincid (ambele $3$) și $f(2)=2+1=3$, funcția $f$ este:",
     options: ["continuă în $x=2$", "discontinuă în $x=2$", "nedefinită în $x=2$", "nu se poate preciza"],
     correctAnswer: "continuă în $x=2$",
     explanation: [
-      "Limitele laterale calculate anterior sunt egale (ambele $3$), deci limita globală $\\lim_{x\\to2}f(x)$ există și este $3$.",
+      "Limitele laterale sunt egale (ambele $3$), deci limita globală $\\lim_{x\\to2}f(x)$ există și este $3$.",
       "În plus, $f(2)=2+1=3$, deci limita coincide cu valoarea funcției în punct.",
       "Rezultă că $f$ este continuă în $x=2$.",
     ],
@@ -1162,7 +1165,8 @@ export const limiteSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Pentru funcția de mai sus, calculați $\\lim_{x \\to 1, x\\ge1} f(x)=f(1)$.",
+    prompt:
+      "Fie $f(x)=2x$ pentru $x<1$ și $f(x)=5$ pentru $x\\ge1$. Calculați $\\lim_{x \\to 1, x\\ge1} f(x)=f(1)$.",
     options: ["$5$", "$2$", "$3$", "$1$"],
     correctAnswer: "$5$",
     explanation: [
@@ -1177,11 +1181,12 @@ export const limiteSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Deoarece limitele laterale de mai sus sunt diferite ($2\\ne5$), funcția $f$ este:",
+    prompt:
+      "Fie $f(x)=2x$ pentru $x<1$ și $f(x)=5$ pentru $x\\ge1$. Deoarece limita la stânga și limita la dreapta în $x=1$ sunt diferite ($2\\ne5$), funcția $f$ este:",
     options: ["discontinuă în $x=1$", "continuă în $x=1$", "nedefinită peste tot", "derivabilă în $x=1$"],
     correctAnswer: "discontinuă în $x=1$",
     explanation: [
-      "Limitele laterale calculate anterior sunt diferite: $2$ (la stânga) și $5$ (la dreapta).",
+      "Limitele laterale sunt diferite: $2$ (la stânga) și $5$ (la dreapta).",
       "Deoarece limitele laterale nu coincid, limita globală $\\lim_{x\\to1}f(x)$ nu există.",
       "Rezultă că $f$ este discontinuă în $x=1$.",
     ],
@@ -1205,11 +1210,12 @@ export const limiteSetExercises: Exercise[] = [
     set: 8,
     type: "mcq",
     points: 6,
-    prompt: "Deoarece $\\lim_{x \\to 0} f(x)=1=f(0)$ pentru funcția de mai sus, rezultă că $f$ este:",
+    prompt:
+      "Fie $f(x)=\\dfrac{\\sin x}{x}$ pentru $x\\ne0$ și $f(0)=1$. Deoarece $\\lim_{x \\to 0} f(x)=1=f(0)$, rezultă că $f$ este:",
     options: ["continuă în $x=0$", "discontinuă în $x=0$", "nedefinită în $x=0$", "nu se poate determina"],
     correctAnswer: "continuă în $x=0$",
     explanation: [
-      "Limita calculată anterior este $\\lim_{x\\to0}f(x)=1$.",
+      "Limita este $\\lim_{x\\to0}f(x)=1$.",
       "Această valoare coincide cu $f(0)=1$, dat prin definiția funcției.",
       "Rezultă că $f$ este continuă în $x=0$.",
     ],

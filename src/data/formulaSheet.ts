@@ -60,8 +60,8 @@ export const FORMULA_SHEET: FormulaChapter[] = [
     },
     {
       label: "Aranjamente",
-      latex: "A_n^k = \\dfrac{n!}{(n-k)!}",
-      plain: "A(n,k) = n! / (n−k)!",
+      latex: "A_n^k = \\dfrac{n!}{(n-k)!} = n(n-1)\\cdots(n-k+1)",
+      plain: "A(n,k) = n! / (n−k)! = n·(n−1)·…·(n−k+1)",
     },
     {
       label: "Combinări",
