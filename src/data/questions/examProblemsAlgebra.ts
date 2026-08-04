@@ -1449,7 +1449,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(2)",
-        acceptedAnswers: ["\u221a2", "1.41", "1,41"],
+        acceptedAnswers: ["\u221a2", "1.41", "1,41", "radical din 2"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-2=0$.",
           "Rezultă $m=\\pm\\sqrt{2}$, iar soluția pozitivă este $\\sqrt{2}$.",
@@ -1495,7 +1495,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(3)",
-        acceptedAnswers: ["\u221a3", "1.73", "1,73"],
+        acceptedAnswers: ["\u221a3", "1.73", "1,73", "radical din 3"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-3=0$.",
           "Rezultă $m=\\pm\\sqrt{3}$, iar soluția pozitivă este $\\sqrt{3}$.",
@@ -1541,7 +1541,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(6)",
-        acceptedAnswers: ["\u221a6", "2.45", "2,45"],
+        acceptedAnswers: ["\u221a6", "2.45", "2,45", "radical din 6"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-6=0$.",
           "Rezultă $m=\\pm\\sqrt{6}$, iar soluția pozitivă este $\\sqrt{6}$.",
@@ -1632,7 +1632,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(12)",
-        acceptedAnswers: ["\u221a12", "3.46", "3,46", "2sqrt(3)", "2\u221a3"],
+        acceptedAnswers: ["\u221a12", "3.46", "3,46", "2sqrt(3)", "2\u221a3", "radical din 12", "2 radical din 3"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-12=0$.",
           "Rezultă $m=\\pm\\sqrt{12}$, iar soluția pozitivă este $\\sqrt{12}=2\\sqrt{3}$.",
@@ -1678,7 +1678,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(10)",
-        acceptedAnswers: ["\u221a10", "3.16", "3,16"],
+        acceptedAnswers: ["\u221a10", "3.16", "3,16", "radical din 10"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-10=0$.",
           "Rezultă $m=\\pm\\sqrt{10}$, iar soluția pozitivă este $\\sqrt{10}$.",
@@ -1724,7 +1724,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(6)",
-        acceptedAnswers: ["\u221a6", "2.45", "2,45"],
+        acceptedAnswers: ["\u221a6", "2.45", "2,45", "radical din 6"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-6=0$.",
           "Rezultă $m=\\pm\\sqrt{6}$, iar soluția pozitivă este $\\sqrt{6}$.",
@@ -1770,7 +1770,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(20)",
-        acceptedAnswers: ["\u221a20", "4.47", "4,47", "2sqrt(5)", "2\u221a5"],
+        acceptedAnswers: ["\u221a20", "4.47", "4,47", "2sqrt(5)", "2\u221a5", "radical din 20", "2 radical din 5"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-20=0$.",
           "Rezultă $m=\\pm\\sqrt{20}$, iar soluția pozitivă este $\\sqrt{20}=2\\sqrt{5}$.",
@@ -1861,7 +1861,7 @@ export const examAlgebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(14)",
-        acceptedAnswers: ["\u221a14", "3.74", "3,74"],
+        acceptedAnswers: ["\u221a14", "3.74", "3,74", "radical din 14"],
         explanation: [
           "Punem condiția $\\det(A)=0$: $m^2-14=0$.",
           "Rezultă $m=\\pm\\sqrt{14}$, iar soluția pozitivă este $\\sqrt{14}$.",

@@ -782,7 +782,7 @@ export const numereComplexeSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați modulul lui $z=1+i$.",
     correctAnswer: "sqrt(2)",
-    acceptedAnswers: ["√2", "1.41", "1,41"],
+    acceptedAnswers: ["√2", "1.41", "1,41", "radical din 2"],
     explanation: [
       "Modulul lui $z=a+bi$ este $|z|=\\sqrt{a^2+b^2}$.",
       "Aici $a=1$, $b=1$: $|z|=\\sqrt{1^2+1^2}$.",

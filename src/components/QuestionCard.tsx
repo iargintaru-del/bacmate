@@ -55,6 +55,10 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
     return shuffleOptions(item.options, hashString(item.id));
   }, [item.id, item.options]);
 
+  const hasRadicalAnswer =
+    item.type === "input" &&
+    [item.correctAnswer, ...(item.acceptedAnswers ?? [])].some((answer) => /sqrt\(|√/.test(answer));
+
   const submitPractice = (answer: string) => {
     if (isLocked) return;
     const correct = isCorrectAnswer(answer, item);
@@ -120,6 +124,11 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
               Verifică
             </button>
           )}
+        </div>
+      )}
+      {hasRadicalAnswer && !isLocked && (
+        <div className="question-card__hint">
+          Dacă nu ai simbolul „√” pe tastatură, poți scrie „radical din 2” (sau numărul corespunzător).
         </div>
       )}
 

@@ -321,6 +321,12 @@ a {
   cursor: pointer;
 }
 
+.question-card__hint {
+  margin-top: 8px;
+  font-size: 0.85em;
+  color: var(--muted);
+}
+
 .question-card__feedback--correct {
   margin-top: 12px;
   color: var(--correct);

@@ -622,7 +622,7 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Determinați valoarea pozitivă a lui $m$ pentru care $\\det\\begin{pmatrix} m & 2 \\\\ 1 & m \\end{pmatrix}=0$.",
     correctAnswer: "sqrt(2)",
-    acceptedAnswers: ["√2", "1.41", "1,41"],
+    acceptedAnswers: ["√2", "1.41", "1,41", "radical din 2"],
     explanation: [
       "Punem condiția $\\det(A)=0$: $m^2-2=0$.",
       "Rezolvăm: $m^2=2\\Rightarrow m=\\pm\\sqrt2$.",
@@ -740,7 +740,7 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 2 \\\\ 3 & x \\end{pmatrix}=0$ și determinați soluția pozitivă.",
     correctAnswer: "sqrt(6)",
-    acceptedAnswers: ["√6", "2.45", "2,45", "2.44", "2,44"],
+    acceptedAnswers: ["√6", "2.45", "2,45", "2.44", "2,44", "radical din 6"],
     explanation: [
       "Calculăm determinantul: $\\det=x\\cdot x-2\\cdot3=x^2-6$.",
       "Punem condiția $\\det=0$: $x^2-6=0$.",
@@ -770,7 +770,7 @@ export const determinantiSetExercises: Exercise[] = [
     points: 6,
     prompt: "Rezolvați ecuația $\\det\\begin{pmatrix} x & 3 \\\\ 2 & x \\end{pmatrix}=1$ și determinați soluția pozitivă.",
     correctAnswer: "sqrt(7)",
-    acceptedAnswers: ["√7", "2.65", "2,65"],
+    acceptedAnswers: ["√7", "2.65", "2,65", "radical din 7"],
     explanation: [
       "Calculăm determinantul: $\\det=x\\cdot x-3\\cdot2=x^2-6$.",
       "Punem condiția $\\det=1$: $x^2-6=1\\Rightarrow x^2=7$.",

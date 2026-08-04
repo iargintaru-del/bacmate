@@ -193,7 +193,7 @@ export const algebraProblems: Problem[] = [
         points: 5,
         prompt: "Determinați soluția pozitivă a ecuației $\\det(A) = 0$.",
         correctAnswer: "sqrt(2)",
-        acceptedAnswers: ["√2", "radical(2)", "1.41"],
+        acceptedAnswers: ["√2", "radical(2)", "radical din 2", "1.41"],
         explanation: [
           "Din subpunctele anterioare, $\\det(A)=m^2-2$.",
           "Punem condiția $\\det(A)=0$: $m^2-2=0 \\Rightarrow m^2=2$.",
