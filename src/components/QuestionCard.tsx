@@ -1,7 +1,36 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import type { GradableItem } from "../types";
 import { isCorrectAnswer } from "../lib/grading";
 import { MathText } from "./MathText";
+
+function hashString(value: string): number {
+  let hash = 2166136261;
+  for (let i = 0; i < value.length; i++) {
+    hash ^= value.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+// Deterministic per-question shuffle (xorshift32 seeded by the question id) so the
+// correct option isn't always in the same position, but a given question's option
+// order stays stable across renders/sessions instead of jumping around.
+function shuffleOptions<T>(items: T[], seed: number): T[] {
+  const result = [...items];
+  let state = seed || 1;
+  const next = () => {
+    state ^= state << 13;
+    state ^= state >>> 17;
+    state ^= state << 5;
+    state >>>= 0;
+    return state / 4294967296;
+  };
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(next() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
 
 interface QuestionCardProps {
   item: GradableItem;
@@ -20,6 +49,11 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
 
   const currentValue = mode === "practice" ? practiceValue : value ?? "";
   const isLocked = mode === "review" || (mode === "practice" && practiceSubmitted);
+
+  const displayedOptions = useMemo(() => {
+    if (!item.options) return undefined;
+    return shuffleOptions(item.options, hashString(item.id));
+  }, [item.id, item.options]);
 
   const submitPractice = (answer: string) => {
     if (isLocked) return;
@@ -41,7 +75,7 @@ export function QuestionCard({ item, label, mode, value, onChange, onSubmit, rev
 
       {item.type === "mcq" ? (
         <div className="question-card__options">
-          {item.options?.map((option) => {
+          {displayedOptions?.map((option) => {
             const selected = currentValue === option;
             return (
               <button
